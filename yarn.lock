@@ -10222,6 +10222,11 @@
   "resolved" "https://registry.npmjs.org/vue-client-only/-/vue-client-only-2.1.0.tgz"
   "version" "2.1.0"
 
+"vue-country-flag@^2.3.2":
+  "integrity" "sha512-YhSS+GbLT9tp8tjMXxJKlqpBUd6dbhQJrttKj8ZbHtBocorIomFDMVMxraWVMs3hxaCW6SsAYaREkoYM00ORiA=="
+  "resolved" "https://registry.npmjs.org/vue-country-flag/-/vue-country-flag-2.3.2.tgz"
+  "version" "2.3.2"
+
 "vue-eslint-parser@^9.0.1", "vue-eslint-parser@^9.0.3":
   "integrity" "sha512-NGn/iQy8/Wb7RrRa4aRkokyCZfOUWk19OP5HP6JEozQFX5AoS/t+Z0ZN7FY4LlmWc4FNI922V7cvX28zctN8dQ=="
   "resolved" "https://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-9.1.0.tgz"

@@ -65,6 +65,7 @@ export default {
       },
     ],
     defaultLocale: 'de',
+    vueI18nLoader: true,
     vueI18n: {
       fallbackLocale: 'de',
       messages: {

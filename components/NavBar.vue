@@ -23,12 +23,12 @@
       <div class="flex flex-column items-end justify-center bg-white self-start h-16 w-13 rounded-b-md ml-2 flex-none">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            lng
+            <country-flag :country="$t('flag')" size='small'/> {{this.$i18n.locale.toUpperCase()}}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarAnchor">
-            <nuxt-link class="dropdown-item" :to="switchLocalePath('en')">En</nuxt-link>
-            <nuxt-link class="dropdown-item" :to="switchLocalePath('de')">De</nuxt-link>
-            <nuxt-link class="dropdown-item" :to="switchLocalePath('ru')">Ru</nuxt-link>
+            <nuxt-link class="dropdown-item" :to="switchLocalePath('en')">EN</nuxt-link>
+            <nuxt-link class="dropdown-item" :to="switchLocalePath('de')">DE</nuxt-link>
+            <nuxt-link class="dropdown-item" :to="switchLocalePath('ru')">RU</nuxt-link>
           </div>
         </li>
       </div>
@@ -106,6 +106,18 @@
                   <nuxt-link class="dropdown-item" :to="localePath('/about/team')">{{$t('menu.about_us.contacts')}}</nuxt-link>
                 </div>
               </li>
+              <li>
+                <b-button v-b-hover.sidebar-1>Toggle Sidebar</b-button>
+                <b-sidebar id="sidebar-1" title="Sidebar" shadow>
+                  <div class="px-3 py-2">
+                    <p>
+                      Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
+                      in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                    </p>
+                    <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
+                  </div>
+                </b-sidebar>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{$t('menu.exams.self')}}
@@ -176,15 +188,19 @@ import logo from "~/assets/edu-stream_logo.png"
 import studentsPhoto from "~/assets/students_photo.png"
 import facebookLogo from "~/assets/facebook_logo.svg"
 import instagramLogo from "~/assets/instagram_logo.svg"
+import countryFlag from 'vue-country-flag'
 
 
 export default {
+  components: {
+    countryFlag
+  },
   data: function () {
     return {
       logo: logo,      
       studentsPhoto: studentsPhoto,
       facebookLogo:facebookLogo,
-      instagramLogo: instagramLogo
+      instagramLogo: instagramLogo,
     }
   }
 }

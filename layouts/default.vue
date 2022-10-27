@@ -3,11 +3,12 @@
     <NavBar />
 
     <main>
-      <div class="container">
+      <div class="container pd-10" style="overflow: auto">
         <nuxt/>
       </div>
+      
+      <NavFooter class="w-full" style="bottom:0"></NavFooter>
     </main>
-    <NavFooter class="w-full" style="position:fixed; bottom:0"></NavFooter>
   </div>
 </template>
 
