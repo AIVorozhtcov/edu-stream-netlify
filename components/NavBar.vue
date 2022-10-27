@@ -21,10 +21,19 @@
           </div>
       </div>
       <div class="flex flex-column items-end justify-center bg-white self-start h-16 w-13 rounded-b-md ml-2 flex-none">
-          <p class="text-black text-xs"><span> 🇩🇪 </span> GER</p>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            lng
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarAnchor">
+            <nuxt-link class="dropdown-item" :to="switchLocalePath('en')">En</nuxt-link>
+            <nuxt-link class="dropdown-item" :to="switchLocalePath('de')">De</nuxt-link>
+            <nuxt-link class="dropdown-item" :to="switchLocalePath('ru')">Ru</nuxt-link>
+          </div>
+        </li>
       </div>
   </div>
-    <ul style="list-style-type:''; margin:0; padding:0">
+    <ul style="list-style-type:''; margin:0; padding:0;">
       <!-- <li style="float:left; width:100%; padding-left: 22%; background-color:#253984;">
         <ul class="topnavbar-list">
           <li> 
@@ -90,38 +99,33 @@
               </li> -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  About us
+                  {{$t('menu.about_us.self')}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarAnchor">
-                  <nuxt-link class="dropdown-item" to="/about/info">About us</nuxt-link>
-                  <nuxt-link class="dropdown-item" to="/about/team">Team</nuxt-link>
-                  <nuxt-link class="dropdown-item" to="/about/photos">Photos</nuxt-link>
-                  <nuxt-link class="dropdown-item" to="/about/reviews">Reviews</nuxt-link>
+                  <nuxt-link class="dropdown-item" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
+                  <nuxt-link class="dropdown-item" :to="localePath('/about/team')">{{$t('menu.about_us.contacts')}}</nuxt-link>
                 </div>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Exams
+                  {{$t('menu.exams.self')}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarAnchor">
-                  <nuxt-link class="dropdown-item" to="/exams/oif">OIF</nuxt-link>
-                  <nuxt-link class="dropdown-item" to="/exams/osd">OSD</nuxt-link>
+                  <nuxt-link class="dropdown-item" :to="localePath('/exams/oif')">OIF</nuxt-link>
+                  <nuxt-link class="dropdown-item" :to="localePath('/exams/osd')">OSD</nuxt-link>
                 </div>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Courses
+                  {{$t('menu.courses.self')}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarAnchor">
-                  <nuxt-link class="dropdown-item" to="/courses/german">German course</nuxt-link>
-                  <nuxt-link class="dropdown-item" to="/courses/english">English course</nuxt-link>
-                  <nuxt-link class="dropdown-item" to="/courses/italian">Italian course</nuxt-link>
+                  <nuxt-link class="dropdown-item" :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
+                  <nuxt-link class="dropdown-item" :to="localePath('/courses/english')">{{$t('menu.courses.en')}}</nuxt-link>
+                  <nuxt-link class="dropdown-item" :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
                 </div>
               </li>
               
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                  <li class="nav-item"><a class="nav-link" style="color:white" href="#">Log In</a></li>
             </ul>
             
           </div>

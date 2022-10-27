@@ -32,7 +32,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxt/postcss8',
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -40,8 +40,46 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/i18n',
   ],
+  i18n: {
+    locales: ['de','en', 'ru'],
+    baseUrl: '',
+    langDir:'~/locales/',
+    locales: [
+      {
+        code: 'de',
+        iso: 'de-DE',
+        file:'de.json'
+      },
+      {
+        code: 'en',
+        iso: 'en-US',
+        file:'en.json'
+      },
+      {
+        code: 'ru',
+        iso: 'ru-RU',
+        file:'ru.json'
+      },
+    ],
+    defaultLocale: 'de',
+    vueI18n: {
+      fallbackLocale: 'de',
+      messages: {
+        en: {
+          welcome: 'Welcome'
+        },
+        de: {
+          welcome: 'Bienvenue'
+        },
+        ru: {
+          welcome: 'Bienvenido'
+        }
+      }
+    }    /* module options */
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},

@@ -1,0 +1,22 @@
+{
+    "about_us":{
+        "title":"About us",
+        "text":"EDUStream GmbH is a language school that mainly offers German and English courses for beginners and advanced learners (levels A1, A2, B1, B2, C1, C2). EDUStream is also a recognized and certified test center for the Austrian Language Diploma (ÖSD) and for the Austrian Integration Fund (ÖIF)./n/nThe best relationships are also maintained with the Vienna Employee Promotion Fund (WAFF) and the Labor Market Service (AMS)./n /nEDUStream has long enjoyed an excellent reputation and is recognized and used by a wide variety of organizations and people from politics, business and culture. Partnerships with international universities connect EDUStream to the academic world. We cooperate with the City of Vienna (MA 17 - Diversity and Integration), which means that participants can redeem their education pass and the Blue Federal Voucher (MA 35) for integration courses. The range of courses is diverse and flexible in terms of time. In addition to the intensive and integration courses, there are also standard courses. In addition, targeted exam preparation and individual lessons are offered./n/nThe atmosphere in our language school is informal. There is an open, appreciative and friendly culture of discussion between teachers, customers and the management./nTeaching is done exclusively by very qualified and experienced teachers who are constantly undergoing further training in order to support the learners in their language acquisition in the best possible way./nThe cultural differences of the learners from different countries are a great enrichment and are integrated into the lessons as a matter of course. Small course groups enable a more intensive exchange and a more individual support of our customers. We consider the teaching of language skills to be an important social and cultural contribution. The focus is on topics of everyday and professional life, which are very helpful for the participants in their current life situation./n/nVienna, June 10th, 2022"
+    },
+    "menu":{
+        "about_us":{
+            "self":"About",
+            "about_us":"About us",
+            "contacts":"Contacts"
+        },
+        "courses":{
+            "self":"Course",
+            "en":"English courses",
+            "de":"German courses",
+            "it":"Italian courses"
+        },
+        "exams":{
+            "self":"Exams"
+        }
+    }
+}
