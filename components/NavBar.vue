@@ -2,12 +2,12 @@
 <template>
   <div>
     <div class="edu-color w-full h-24 flex flex-row items-center">
-      <div class="w-22 h-22" style="margin-left: 22%">
+      <div class="w-22 h-22" style="margin-left: 2%">
         <nuxt-link to="/">  
           <img :src="logo" />
         </nuxt-link>
       </div>
-      <div class="flex flex-row items-center flex-none" style="margin-left: 25%">
+      <div class="flex flex-row items-center flex-none" style="margin-left: 35%">
           <div>
               <p class="text-white">+43 1 890 89 48 | Rennweg 9/6, 1030 Wien |</p>
           </div>
@@ -66,7 +66,7 @@
       </li>
     -->
 
-      <li style="float: left; width: 100%; padding-left:21%; background-color: background: rgba(255, 255, 255, 0.85);">
+      <li style="float: left; width: 100%; padding-left:2%; background-color: background: rgba(255, 255, 255, 0.85);">
         <nav class="navbar navbar-expand-lg navbar-light">        
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -106,20 +106,8 @@
                   <nuxt-link class="dropdown-item" :to="localePath('/about/team')">{{$t('menu.about_us.contacts')}}</nuxt-link>
                 </div>
               </li>
-              <li>
-                <b-button v-b-hover.sidebar-1>Toggle Sidebar</b-button>
-                <b-sidebar id="sidebar-1" title="Sidebar" shadow>
-                  <div class="px-3 py-2">
-                    <p>
-                      Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-                      in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                    </p>
-                    <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
-                  </div>
-                </b-sidebar>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <li  class="nav-item dropdown">
+                <a @mouseenter="openSidebar" class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{$t('menu.exams.self')}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarAnchor">
@@ -137,7 +125,19 @@
                   <nuxt-link class="dropdown-item" :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
                 </div>
               </li>
-              
+            <li>
+                <b-sidebar width="700px"  v-model="isSidebarOpen" id="sidebar-1" title="Sidebar" backdrop=true>
+                  <div class="w-full h-full px-3 py-2" @mouseleave="closeSidebar">
+                    <div>
+                      <p>
+                        <!-- Сделать эти дивы зависимыми от ивента изменюнамбер он. Их менять, когда наводится мышка на любой из поинтов меню -->
+
+                      </p>
+                    </div>
+                  </div>
+                </b-sidebar>
+            </li>
+            
             </ul>
             
           </div>
@@ -201,7 +201,16 @@ export default {
       studentsPhoto: studentsPhoto,
       facebookLogo:facebookLogo,
       instagramLogo: instagramLogo,
+      isSidebarOpen: false
     }
+  },
+  methods: {
+    openSidebar() {
+      this.isSidebarOpen = true
+    },
+    closeSidebar() {
+      this.isSidebarOpen = false
+    },
   }
 }
 
