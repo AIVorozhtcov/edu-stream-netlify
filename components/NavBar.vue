@@ -70,7 +70,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">        
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>  
+          </button>
           <div class="" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <!--<li class="nav-item">
@@ -98,41 +98,74 @@
               
               </li> -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div  @mouseenter="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false" :class="[aboutIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']">
+                  <p>{{$t('menu.about_us.self')}}</p>
+                  <b-icon :icon="this.aboutHoverHandler()"/>
+                </div>
+                <!--<a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{$t('menu.about_us.self')}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarAnchor">
                   <nuxt-link class="dropdown-item" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
                   <nuxt-link class="dropdown-item" :to="localePath('/about/team')">{{$t('menu.about_us.contacts')}}</nuxt-link>
-                </div>
+                </div> -->
               </li>
-              <li  class="nav-item dropdown">
-                <a @mouseenter="openSidebar" class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <li class="pl-5">
+                <div @mouseenter="examsIsSelected = true; coursesIsSelected = false; aboutIsSelected = false" :class="[examsIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']">
+                  <p>{{$t('menu.exams.self')}}</p>
+                  <b-icon :icon="this.examsHoverHandler()" />
+                </div>
+                <!--<a @mouseenter="openSidebar" class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{$t('menu.exams.self')}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarAnchor">
                   <nuxt-link class="dropdown-item" :to="localePath('/exams/oif')">OIF</nuxt-link>
                   <nuxt-link class="dropdown-item" :to="localePath('/exams/osd')">OSD</nuxt-link>
-                </div>
+                </div> -->
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <li class="pl-5">
+                <div @mouseenter="coursesIsSelected = true; examsIsSelected = false; aboutIsSelected = false" :class="[coursesIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']">
+                  <p>{{$t('menu.courses.self')}}</p>
+                  <b-icon :icon="this.coursesHoverHandler()" />
+                </div>
+                <!-- <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{$t('menu.courses.self')}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarAnchor">
                   <nuxt-link class="dropdown-item" :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
                   <nuxt-link class="dropdown-item" :to="localePath('/courses/english')">{{$t('menu.courses.en')}}</nuxt-link>
                   <nuxt-link class="dropdown-item" :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
-                </div>
+                </div> -->
               </li>
             <li>
-                <b-sidebar width="700px"  v-model="isSidebarOpen" id="sidebar-1" title="Sidebar" backdrop=true>
-                  <div class="w-full h-full px-3 py-2" @mouseleave="closeSidebar">
-                    <div>
-                      <p>
-                        <!-- Сделать эти дивы зависимыми от ивента изменюнамбер он. Их менять, когда наводится мышка на любой из поинтов меню -->
-
-                      </p>
+                <b-sidebar width="700px" class="flex"  v-model="isSidebarOpen" id="sidebar-1" backdrop=true>                  
+                  <div class="w-full h-full px-4 py-2 flex-column" @mouseleave="closeSidebar">
+                    <div class="flex flex-row items-center mt-12 pd-56">
+                      <div @mouseenter="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false"  :class="[aboutIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']">
+                        <p>{{$t('menu.about_us.self')}}</p>
+                        <b-icon :icon="this.aboutHoverHandler()"/>
+                      </div>
+                      <div @mouseenter="examsIsSelected = true; coursesIsSelected = false; aboutIsSelected = false" :class="[examsIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl pl-5']">
+                        <p>{{$t('menu.exams.self')}}</p>
+                        <b-icon :icon="this.examsHoverHandler()" />
+                      </div>
+                      <div @mouseenter="coursesIsSelected = true; examsIsSelected = false; aboutIsSelected = false" :class="[coursesIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl pl-5']">
+                        <p>{{$t('menu.courses.self')}}</p>
+                        <b-icon :icon="this.coursesHoverHandler()" />
+                      </div>
+                    </div>
+                    <div  :class="[aboutIsSelected ? '' : 'isHidden', 'flex flex-column justify-around text-5xl']">
+                      <nuxt-link class="pt-7" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
+                      <nuxt-link class="pt-7" :to="localePath('/about/team')">{{$t('menu.about_us.contacts')}}</nuxt-link>
+                    </div>
+                    <div :class="[coursesIsSelected ? '' : 'isHidden', 'flex flex-column justify-around text-5xl']">
+                      <nuxt-link class="pt-5" :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
+                      <nuxt-link class="pt-5" :to="localePath('/courses/english')">{{$t('menu.courses.en')}}</nuxt-link>
+                      <nuxt-link class="pt-5" :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
+                    </div>
+                    <div :class="[examsIsSelected ? '' : 'isHidden', 'flex flex-column justify-around text-5xl']">
+                      <nuxt-link class="pt-7" :to="localePath('/exams/oif')">OIF</nuxt-link>
+                      <nuxt-link class="pt-7" :to="localePath('/exams/osd')">OSD</nuxt-link>
                     </div>
                   </div>
                 </b-sidebar>
@@ -155,6 +188,14 @@
     display: block;
     margin-top: 0; 
  }
+ .isHidden {
+  display: none;
+}
+
+.menu-selected p{
+  color:rgb(67, 44, 243);
+  text-decoration: underline
+}
  .bg-dark{
   background-color: rgba(59, 39, 239, 0.763);
  }
@@ -201,7 +242,10 @@ export default {
       studentsPhoto: studentsPhoto,
       facebookLogo:facebookLogo,
       instagramLogo: instagramLogo,
-      isSidebarOpen: false
+      isSidebarOpen: false,
+      examsIsSelected: false,
+      aboutIsSelected: false,
+      coursesIsSelected: false
     }
   },
   methods: {
@@ -209,8 +253,35 @@ export default {
       this.isSidebarOpen = true
     },
     closeSidebar() {
-      this.isSidebarOpen = false
+      this.isSidebarOpen = false;
+      this.aboutIsSelected = false;
+      this.examsIsSelected = false;
+      this.coursesIsSelected = false;
     },
+    aboutHoverHandler(){
+      if (this.aboutIsSelected){
+        this.openSidebar();
+        return "chevron-compact-up";
+      } else {
+        return "chevron-compact-down";
+      }
+    },
+    examsHoverHandler(){
+      if (this.examsIsSelected){
+        this.openSidebar();
+        return "chevron-compact-up";
+      } else {
+        return "chevron-compact-down";
+      }
+    },
+    coursesHoverHandler(){
+      if (this.coursesIsSelected){
+        this.openSidebar();
+        return "chevron-compact-up";
+      } else {
+        return "chevron-compact-down";
+      }
+    }
   }
 }
 

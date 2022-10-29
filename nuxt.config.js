@@ -43,6 +43,9 @@ export default {
     '@nuxt/content',
     '@nuxtjs/i18n',
   ],
+  bootstrapVue: {
+    icons: true
+  },
   i18n: {
     locales: ['de','en', 'ru'],
     baseUrl: '',
