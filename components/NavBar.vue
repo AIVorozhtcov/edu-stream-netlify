@@ -138,7 +138,7 @@
                 </div> -->
               </li>
             <li>
-                <b-sidebar width="700px" class="flex"  v-model="isSidebarOpen" id="sidebar-1" backdrop=true>                  
+                <b-sidebar width="500px" class="flex"  v-model="isSidebarOpen" id="sidebar-1" backdrop=true>                  
                   <div class="w-full h-full px-4 py-2 flex-column" @mouseleave="closeSidebar">
                     <div class="flex flex-row items-center mt-12 pd-56">
                       <div @mouseenter="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false"  :class="[aboutIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']">
@@ -156,7 +156,7 @@
                     </div>
                     <div  :class="[aboutIsSelected ? '' : 'isHidden', 'flex flex-column justify-around text-5xl']">
                       <nuxt-link class="pt-7" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
-                      <nuxt-link class="pt-7" :to="localePath('/about/team')">{{$t('menu.about_us.contacts')}}</nuxt-link>
+                      <nuxt-link class="pt-7" :to="localePath('/about/contacts')">{{$t('menu.about_us.contacts')}}</nuxt-link>
                     </div>
                     <div :class="[coursesIsSelected ? '' : 'isHidden', 'flex flex-column justify-around text-5xl']">
                       <nuxt-link class="pt-5" :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
