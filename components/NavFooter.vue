@@ -68,7 +68,6 @@
 <script>
 
 import logo from "~/assets/edu-stream_logo.png"
-import studentsPhoto from "~/assets/students_photo.png"
 import facebookLogo from "~/assets/facebook_logo.svg"
 import instagramLogo from "~/assets/instagram_logo.svg"
 
@@ -76,8 +75,7 @@ import instagramLogo from "~/assets/instagram_logo.svg"
 export default {
   data: function () {
     return {
-      logo: logo,      
-      studentsPhoto: studentsPhoto,
+      logo: logo,
       facebookLogo:facebookLogo,
       instagramLogo: instagramLogo
     }

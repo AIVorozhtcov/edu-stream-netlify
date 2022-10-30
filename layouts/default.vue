@@ -3,7 +3,9 @@
     <NavBar />
 
     <main>
-      <div class="container pd-10" style="overflow: auto">
+      <div class="w-full relative pd-10" style="overflow: auto">
+        
+        <SideNavBar class="sidenavbar absolute w-full top-0 z-40" />
         <nuxt/>
       </div>
       
@@ -15,16 +17,19 @@
 <script>
 import NavBar from '/components/NavBar.vue'
 import NavFooter from '/components/NavFooter.vue'
+import SideNavBar from '/components/SideNavBar.vue'
 export default {
   components: {
     NavBar: NavBar,
-    NavFooter: NavFooter
-
+    NavFooter: NavFooter,
+    SideNavBar:SideNavBar,
   }
 }
 </script>
 
 
 <style>
-
+  .sidenavbar{
+    background-color: rgba(128, 128, 128, 0.58);
+  }
 </style>
