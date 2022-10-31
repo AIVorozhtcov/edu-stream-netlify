@@ -18,6 +18,25 @@
         "agreement": "Durch Klicken auf die Schaltfläche stimmen Sie den Datenschutzbestimmungen zu"
 
     },
+    "FAQ":{
+        "titles":{
+            "t_1":"What does ÖIF mean?",
+            "t_2":"Why do I need to take an integration exam A1?",
+            "t_3":"Why do I need to take an integration exam A2?",
+            "t_4":"Why do I need to take an integration exam B1?",
+            "t_5":"How do I determine which level is right for me? ",
+            "t_6":"Where can I register for the ÖIF exam?"
+            
+        },
+        "answers":{
+            "a_1":"<br />+43 1 890 89 48<br />info@edu-stream.at<br />Rennweg 9/6, 1030 Wien<br /><br />Montag – Donnerstag: 09:00 - 17:00<br />Freitag: 09:00 - 15:00<br />Samstag & Sonntag: geschlossen",
+            "a_2":" checking ssr",
+            "a_3":"",
+            "a_4":"",
+            "a_5":"",
+            "a_6":""
+        }
+    },
     "about_us":{
         "contacts":{
             "contacts":"en",

@@ -44,21 +44,33 @@
     </div>
     <div class="flex flex-column bg-slate-100 pl-3 pt-5">
       <div class="pb-3" v-html="$t('exams.oif.FAQ-preview')"></div>
+      <FAQAccordion />
       <!-- <b-button v-b-toggle="'collapse-2'" class="m-1">Toggle Collapse</b-button>
       <p v-b-toggle="'collapse-2'"> also open</p>        
       <b-collapse class="container bg-slate-800" id="collapse-2">
         <p>wow</p>
-      </b-collapse>-->
-    </div>
-    <div class="h-80 flex relative flex-column">
-      <div class="h-1/6 bg-slate-100"></div>
-      <div class="h-5/6 bg-blue-400">
-                
-        <img class="absolute left-2/4 bottom-0 h-4/12 w-4/12 z-40" :src="overlappingStudent" />
+      </b-collapse>
+    <div class="h-fit flex relative flex-column">
+      <div class="h-fit bg-slate-100"></div>
+        <img class="h-1/12 w-1/12 hidden" :src="overlappingStudent" /> 
+      <div class=" h-fitbg-blue-400">
+        <img class="h-4/12 w-4/12 hidden" :src="overlappingStudent" /> 
+        <img class="absolute left-2/4 top-0 h-4/12 w-4/12 z-40" :src="overlappingStudent" />               
       </div>
+      
+    </div>-->
+    </div>
+    <div class="h-fit flex relative flex-column bg-slate-100">
+      <div class="h-fit bg-slate-100"></div>
+        <img class="h-1/12 w-1/12 invisible" :src="overlappingStudent" /> 
+      <div class=" h-fit bg-blue-400">
+        <img class="h-4/12 w-4/12 invisible" :src="overlappingStudent" /> 
+        <img class="absolute left-2/4 top-0 h-4/12 w-4/12 z-40" :src="overlappingStudent" />               
+      </div>
+      
     </div>
     
-    <div>
+  <div>
       
       <b-modal centered busy=true id="modal-1" :title="$t('modals.title')">
         <template #modal-header>
@@ -100,7 +112,7 @@
 
         </div>
       </b-modal>
-    </div>   
+  </div>   
     
 
   </div>
@@ -117,6 +129,7 @@ import oifWelcome from "~/assets/oif_welcome.png"
 import oeifLogo from "~/assets/oeif-logo.png"
 import overlappingStudent from "~/assets/overlapping_student.png"
 import ModalResponse from '/components/ModalResponse.vue'
+import FAQAccordion from '/components/FAQAccordion.vue'
 
 export default {
   data: function () {
@@ -125,6 +138,7 @@ export default {
       oeifLogo: oeifLogo,
       overlappingStudent: overlappingStudent,
       ModalResponse:ModalResponse,
+      FAQAccordion: FAQAccordion,
       showModal: false,
       isNameWrong: false,
       isPhoneWrong: false,
