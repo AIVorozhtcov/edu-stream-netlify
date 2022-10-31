@@ -1,5 +1,48 @@
 {
     "flag":"gb",
+    "main":{
+        "color_tabs":{
+            "t_1":"Learn with qualified and experienced native speakers who have 20 years of experience and speaks in 5 languages",
+            "t_2":"ÖIF – zetifizierter Kursträger<br /><br />ÖIF – zetifiziertes Prüfungszentrum",
+            "t_3":"ÖIF – zetifizierter Kursträger<br /><br />ÖIF – zetifiziertes Prüfungszentrum",
+            "t_4":"Preparation Centre<br />Prepare for IELTS, TOEFL, Cambridge ESOL exams for 14 days with Edustream"
+        },
+        "info_columns":{
+            "titles":{
+                "t_1":"Learn German at the highest standard",
+                "t_2":"Certified by the City of Vienna",
+                "t_3":"International Language School"
+            },
+            "bodies":{
+                "b_1":"Our teaching staff is native-language german and specialised in teaching german as foreign language. All of our teachers have a university degree and years of experience in teaching.",
+                "b_2":" IKI is an accredited examination centre for the ÖSD Austrian German Diploma in accordance with the level placement of the Council of Europe as well as for the ÖIF Integration Exam of the Austrian Integration Fund.",
+                "b_3":"Every month 450-500 students from all around the world attend our German courses. IKI is a partner institute of the University of Washington, the NC State University and the University of Kansas."
+            }
+        },
+        "courses_and_exams":{
+            "self":"Kurse und Prüfungen",
+            "courses":{
+                "titles":{
+                    "t_1":"Deutsch lernen",
+                    "t_2":"Englisch lernen"
+                },
+                "bodies":{
+                    "b_1":"Es gibt für Anfänger und Fortgeschrittene 13 Kursstufen (Sprachlevel A1, A2, B1, B2, C1, C2). Mach jetzt den kostenlosen Einstufungstest, um dein Sprachniveau in Deutsch zu testen.",
+                    "b_2":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen."
+                }
+            },
+            "exams":{
+                "titles":{
+                    "t_1":"ÖSD",
+                    "t_2":"ÖIF"
+                },
+                "bodies":{
+                    "b_1":"Es gibt für Anfänger und Fortgeschrittene 13 Kursstufen (Sprachlevel A1, A2, B1, B2, C1, C2). Mach jetzt den kostenlosen Einstufungstest, um dein Sprachniveau in Deutsch zu testen.",
+                    "b_2":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen."
+                }
+            }
+        }
+    },
     "modals":{
         "title":"Please fill the form",
         "required": "Required field",

@@ -87,16 +87,16 @@
           </div>
         </template> 
         <div class="flex flex-column items-start">
-          <div class="pt-4 font-bold" v-html="$t('modals.name_title')"></div>
+          <div class="pt-3 font-bold" v-html="$t('modals.name_title')"></div>
           <input @focusout="checkName" class="bg-slate-200 w-full rounded-sm py-1" type="text" v-model="response_name" :placeholder="$t('modals.name')" required>
-          <div class="pt-4 font-bold text-red-600 text-xs" v-if="isNameWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-4 font-bold" v-html="$t('modals.email_title')"></div>
+          <div class="pt-3 font-bold text-red-600 text-xs" v-if="isNameWrong" v-html="$t('modals.required')"></div>
+          <div class="pt-3 font-bold" v-html="$t('modals.email_title')"></div>
           <input @focusout="checkEmail" type="email" class="bg-slate-200 w-full rounded-sm py-1" v-model="response_email" :placeholder="$t('modals.email')" required>
-          <div class="pt-4 font-bold text-red-600 text-xs" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-4 font-bold" v-html="$t('modals.phone_title')"></div>
+          <div class="pt-3 font-bold text-red-600 text-xs" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
+          <div class="pt-3 font-bold" v-html="$t('modals.phone_title')"></div>
           <input @focusout="checkPhone" type="tel" class="bg-slate-200 w-full rounded-sm py-1" v-model="response_phone" :placeholder="$t('modals.phone')" required>
-          <div class="pt-4 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-4 flex flex-row">
+          <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
+          <div class="pt-3 flex flex-row">
               <input @animationend="checkTimes" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
             <div class="pl-3" v-html="$t('modals.mon_wed')"></div>
           </div>
@@ -108,7 +108,7 @@
             <input @animationend="checkTimes" type="checkbox" :value="$t('modals.any_day')" v-model="checkedTimes">
             <div class="pl-3" v-html="$t('modals.any_day')"></div>
           </div>
-          <div class="pt-4 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
+          <div class="pt-3 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
 
         </div>
       </b-modal>
