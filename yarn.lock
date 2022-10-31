@@ -10278,6 +10278,11 @@
   "resolved" "https://registry.npmjs.org/vue-no-ssr/-/vue-no-ssr-1.1.1.tgz"
   "version" "1.1.1"
 
+"vue-nuxt-accordion@^1.0.4":
+  "integrity" "sha512-pa7VbDYWXtwwnL4YvXlUBk8h0h1a8pl2mkyz+yL7bxMlCTeXvyYk/4FhU9kYxO4WX2CHYjfNBpRb+Efi9m3UvA=="
+  "resolved" "https://registry.npmjs.org/vue-nuxt-accordion/-/vue-nuxt-accordion-1.0.4.tgz"
+  "version" "1.0.4"
+
 "vue-router@^3.5.1":
   "integrity" "sha512-VYXZQLtjuvKxxcshuRAwjHnciqZVoXAjTjcqBTz4rKc8qih9g9pI3hbDjmqXaHdgL3v8pV6P8Z335XvHzESxLQ=="
   "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-3.6.5.tgz"

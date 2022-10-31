@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <div class="edu-color w-full h-24 flex flex-row items-center">
+    <div class="edu-color w-full h-20 flex flex-row items-center">
       <div class="w-22 h-22" style="margin-left: 2%">
         <nuxt-link to="/">  
           <img :src="logo" />

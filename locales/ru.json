@@ -1,5 +1,23 @@
 {
     "flag":"ru",
+    "modals":{
+        "title":"Please fill the form",
+        "required": "Required field",
+        "name_title": "Your name",
+        "name": "Name",
+        "email_title": "Your email",
+        "email": "Email",
+        "phone_title": "Phone",
+        "phone": "+43 949 437 32567",
+        "address_title": "Your address",
+        "address": "Address",
+        "mon_wed": "Montag/Mittwoch",
+        "tue_thu": "Dienstag/Donnerstag",
+        "any_day": "Мне удобно в любой день",
+        "send": "Senden",
+        "agreement": "Durch Klicken auf die Schaltfläche stimmen Sie den Datenschutzbestimmungen zu"
+
+    },
     "about_us":{
         "contacts":{
             "contacts":"ru",
