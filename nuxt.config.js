@@ -100,6 +100,5 @@ export default {
       },
     },
   },
-  plugins: [
-  ],
+  plugins: [{ src: '~plugins/vue-carousel', ssr: false }]
 }

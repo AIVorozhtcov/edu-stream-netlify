@@ -46,7 +46,7 @@
     </div>
     <div class="border-y py-16 flex flex-column items-start justify-between w-full">
       <h1 class="text-2xl font-bold">{{$t('main.courses_and_exams.self')}}</h1>
-      <div class="flex flex-row w-full justify-around h-fit items-start pt-8">
+      <div class="flex flex-row w-full justify-around h-1/2 items-start pt-8">
         <div class="flex w-5/12 h-full flex-column items-start" style="background-color:rgba(239, 248, 255, 1);">
           <h1 class="text-xl pl-2 font-bold pt-3">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
           <p class="text-base pl-2 pb-4">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
@@ -58,6 +58,58 @@
       </div>
       
     </div>
+    <no-ssr class=" h-1/12">
+      <carousel class="" loop="true" autoplay="true" adjustableHeight="true" perPage="1" scrollPerPage="false" spacePadding="40" >
+        <slide class="w-1/2 pr-15">
+          <img :src="promoBanner1" />
+        </slide>
+        <slide class="w-1/2">
+          <img :src="promoBanner2" />
+        </slide>
+        <slide class="w-1/2">
+          <img :src="promoBanner2" />
+        </slide>
+      </carousel>
+    </no-ssr>
+    <b-carousel 
+      id="carousel-1"
+      v-model="slide"
+      :interval="4000"
+      controls
+      indicators
+      background="#ababab"
+      img-width=""
+      img-height="512"
+      style="text-shadow: 1px 1px 2px #333; height:300px"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
+    >
+      <!-- Text slides with image -->
+      <nuxt-link :to="localePath('/about/info')"><b-carousel-slide style="height:300px" class="" :img-src="promoBanner1"></b-carousel-slide></nuxt-link>
+
+      <!-- Slides with custom text -->
+      <b-carousel-slide style="height:300px" class="" :img-src="promoBanner2 ">
+      </b-carousel-slide>
+
+      <!-- Slides with image only -->
+      <nuxt-link :to="localePath('/about/info')"><b-carousel-slide style="height:300px" class="" :img-src="promoBanner1"></b-carousel-slide></nuxt-link>
+
+      <!-- Slides with img slot -->
+      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment
+      <b-carousel-slide>
+        <template #img>
+          <img
+            class="d-block img-fluid w-100"
+            width="1024"
+            height="480"
+            src="https://picsum.photos/1024/480/?image=55"
+            alt="image slot"
+          >
+        </template>
+      </b-carousel-slide> -->
+
+      
+    </b-carousel>
     <div>
       <b-modal centered busy=true id="modal-1" :title="$t('modals.title')">
         <template #modal-header>
@@ -110,6 +162,8 @@ import colorTabsIcon1 from "~/assets/color_tabs_icon_1.svg"
 import colorTabsIcon2 from "~/assets/color_tabs_icon_2.svg"
 import colorTabsIcon3 from "~/assets/color_tabs_icon_3.svg"
 import colorTabsIcon4 from "~/assets/color_tabs_icon_4.svg"
+import promoBanner1 from "~/assets/promo_banner_1.png"
+import promoBanner2 from "~/assets/promo_banner_2.png"
 export default {
   data: function () {
     return {
@@ -118,6 +172,8 @@ export default {
       colorTabsIcon2: colorTabsIcon2,
       colorTabsIcon3: colorTabsIcon3,      
       colorTabsIcon4: colorTabsIcon4,
+      promoBanner1: promoBanner1,
+      promoBanner2:promoBanner2,
       showModal: false,
       isNameWrong: false,
       isPhoneWrong: false,
@@ -127,6 +183,8 @@ export default {
       response_email: null,
       response_phone: null,
       checkedTimes:[],
+      slide: 0,
+      sliding: null
     }
   },
   methods:{
@@ -172,6 +230,12 @@ export default {
         window.open('https://checkout.stripe.com', '_blank');
       }
       
+    },
+    onSlideStart(slide) {
+        this.sliding = true
+      },
+    onSlideEnd(slide) {
+      this.sliding = false
     }
   }
 
