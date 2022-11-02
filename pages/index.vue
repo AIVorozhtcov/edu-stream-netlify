@@ -46,20 +46,30 @@
     </div>
     <div class="border-y py-16 flex flex-column items-start justify-between w-full">
       <h1 class="text-2xl font-bold">{{$t('main.courses_and_exams.self')}}</h1>
-      <div class="flex flex-row w-full justify-around h-1/2 items-start pt-8">
-        <div class="flex w-5/12 h-full flex-column items-start" style="background-color:rgba(239, 248, 255, 1);">
-          <h1 class="text-xl pl-2 font-bold pt-3">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
+      <div class="flex flex-row w-full justify-around h-1/2 items-start pt-8 ">
+        <div class="flex w-5/12 flex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1); height:200px">
+          <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
           <p class="text-base pl-2 pb-4">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
         </div>
-        <div class="flex w-5/12 h-full flex-column items-start" style="background-color:rgba(239, 248, 255, 1);">
-          <h1 class="text-xl pl-2 font-bold pt-3">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
+        <div class="flex w-5/12 flex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1); height:200px">
+          <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
           <p class="text-base pl-2 pb-4">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
+        </div>
+      </div>
+      <div class="flex flex-row w-full justify-around h-1/2 items-start pt-8">
+        <div class="flex w-5/12 flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1); height:200px">
+          <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
+          <p class="text-base pl-2 pb-4">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
+        </div>
+        <div class="flex w-5/12 flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1); height:200px">
+          <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
+          <p class="text-base pl-2 pb-4">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
         </div>
       </div>
       
     </div>
-    <no-ssr class=" h-1/12">
-      <carousel class="" loop="true" autoplay="true" adjustableHeight="true" perPage="1" scrollPerPage="false" spacePadding="40" >
+    <client-only class=" h-1/12">
+      <carousel class="" :loop="true" :autoplay="true" :adjustableHeight="true" :perPage="1" :scrollPerPage="false" :spacePadding="40" >
         <slide class="w-1/2 pr-15">
           <img :src="promoBanner1" />
         </slide>
@@ -70,29 +80,32 @@
           <img :src="promoBanner2" />
         </slide>
       </carousel>
-    </no-ssr>
+    </client-only>
+    <div @click="trigger" class="trigger">Click me</div>
     <b-carousel 
       id="carousel-1"
       v-model="slide"
+      ref="carouselInput"
       :interval="4000"
       controls
       indicators
       background="#ababab"
       img-width=""
-      img-height="512"
-      style="text-shadow: 1px 1px 2px #333; height:300px"
+      img-height="300px"
+      style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
       <!-- Text slides with image -->
-      <nuxt-link :to="localePath('/about/info')"><b-carousel-slide style="height:300px" class="" :img-src="promoBanner1"></b-carousel-slide></nuxt-link>
+      <nuxt-link :to="localePath('/about/info')"><b-carousel-slide style="" class="" :img-src="promoBanner1"></b-carousel-slide></nuxt-link>
 
       <!-- Slides with custom text -->
-      <b-carousel-slide style="height:300px" class="" :img-src="promoBanner2 ">
+      <b-carousel-slide style="" class="" :img-src="promoBanner2 ">
+        <div style="background-image: promoBanner2; background-size: cover;" />
       </b-carousel-slide>
 
       <!-- Slides with image only -->
-      <nuxt-link :to="localePath('/about/info')"><b-carousel-slide style="height:300px" class="" :img-src="promoBanner1"></b-carousel-slide></nuxt-link>
+      <nuxt-link :to="localePath('/about/info')"><b-carousel-slide style="" class="" :img-src="promoBanner1"></b-carousel-slide></nuxt-link>
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment
@@ -111,7 +124,7 @@
       
     </b-carousel>
     <div>
-      <b-modal centered busy=true id="modal-1" :title="$t('modals.title')">
+      <b-modal centered :busy="true" id="modal-1" :title="$t('modals.title')">
         <template #modal-header>
           <div class="mx-auto font-bold" v-html="$t('modals.title')"></div>
         </template>
@@ -164,10 +177,12 @@ import colorTabsIcon3 from "~/assets/color_tabs_icon_3.svg"
 import colorTabsIcon4 from "~/assets/color_tabs_icon_4.svg"
 import promoBanner1 from "~/assets/promo_banner_1.png"
 import promoBanner2 from "~/assets/promo_banner_2.png"
+import oeifLogo from "~/assets/oeif-logo.png"
 export default {
   data: function () {
     return {
       frontpageWelcome: frontpageWelcome,
+      oeifLogo: oeifLogo,
       colorTabsIcon1:colorTabsIcon1,
       colorTabsIcon2: colorTabsIcon2,
       colorTabsIcon3: colorTabsIcon3,      
@@ -188,6 +203,9 @@ export default {
     }
   },
   methods:{
+    trigger () {
+    	this.$refs.carouselInput.nVation-click()
+    },
     checkEmail(){
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.response_email))
       {
@@ -243,4 +261,5 @@ export default {
 </script>
 
 <style>
+
 </style>

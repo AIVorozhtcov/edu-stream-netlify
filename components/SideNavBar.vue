@@ -1,5 +1,5 @@
 <template>
-    <ul style="list-style-type:''; margin:0; padding:0;">
+    <ul style="list-style-typ;:''; margin:0; padding:0;">
       <!-- <li style="float:left; width:100%; padding-left: 22%; background-color:#253984;">
         <ul class="topnavbar-list">
           <li> 
@@ -104,9 +104,16 @@
                 </div> -->
               </li>
             <li>
-                <b-sidebar width="500px" class="flex"  v-model="isSidebarOpen" id="sidebar-1" backdrop=true>                  
-                  <div class="w-full h-full pl-5 py-3 flex-column" @mouseleave="closeSidebar">
-                    <div class="flex flex-row items-center mt-12 pd-56">
+                <b-sidebar width="500px" class="flex"  v-model="isSidebarOpen" id="sidebar-1" :backdrop="true" no-header>                  
+                  <div class="w-full h-full flex-column" @mouseleave="closeSidebar">
+                    <div class="w-full edu-color h-20 flex flex-row items-center">  
+                      <div class="w-22 h-22" style="margin-left: 2%">
+                        <nuxt-link to="/">  
+                          <img :src="logo" />
+                        </nuxt-link>
+                      </div>
+                    </div>
+                    <div class="flex pl-5 flex-row items-center">
                       <div @mouseenter="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false"  :class="[aboutIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']">
                         <p>{{$t('menu.about_us.self')}}</p>
                         <b-icon :icon="this.aboutHoverHandler()"/>
@@ -120,16 +127,16 @@
                         <b-icon :icon="this.coursesHoverHandler()" />
                       </div>
                     </div>
-                    <div  :class="[aboutIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 flex-end justify-around text-5xl']">
+                    <div  :class="[aboutIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 pl-5 flex-end justify-around text-5xl']">
                       <nuxt-link class="pt-7" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
                       <nuxt-link class="pt-7" :to="localePath('/about/contacts')">{{$t('menu.about_us.contacts')}}</nuxt-link>
                     </div>
-                    <div :class="[coursesIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 justify-around text-5xl']">
+                    <div :class="[coursesIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 pl-5 justify-around text-5xl']">
                       <nuxt-link class="pt-5" :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
                       <nuxt-link class="pt-5" :to="localePath('/courses/english')">{{$t('menu.courses.en')}}</nuxt-link>
                       <nuxt-link class="pt-5" :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
                     </div>
-                    <div :class="[examsIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 justify-around text-5xl']">
+                    <div :class="[examsIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 pl-5 justify-around text-5xl']">
                       <nuxt-link class="pt-7" :to="localePath('/exams/oif')">OIF</nuxt-link>
                       <nuxt-link class="pt-7" :to="localePath('/exams/osd')">OSD</nuxt-link>
                     </div>
