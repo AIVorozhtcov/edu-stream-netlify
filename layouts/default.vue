@@ -1,4 +1,4 @@
-<template>
+<template style="background-color:#E7E7E7">
   <div>
     <NavBar />
 

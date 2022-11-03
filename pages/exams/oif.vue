@@ -64,7 +64,7 @@
       <div class="h-fit bg-slate-100"></div>
         <img class="h-1/12 w-1/12 invisible" :src="overlappingStudent" /> 
       <div class=" h-fit bg-blue-400">
-        <img class="h-3  /12 w-3/12 invisible" :src="overlappingStudent" /> 
+        <img class="h-3/12  /12 w-3/12 invisible" :src="overlappingStudent" /> 
         <img class="absolute left-2/4 top-0 h-4/12 w-4/12 z-40" :src="overlappingStudent" />               
       </div>
       

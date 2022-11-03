@@ -68,21 +68,91 @@
       </div>
       
     </div>
-    <client-only class=" h-1/12">
-      <carousel class="" :loop="true" :autoplay="true" :adjustableHeight="true" :perPage="1" :scrollPerPage="false" :spacePadding="40" >
-        <slide class="w-1/2 pr-15">
-          <img :src="promoBanner1" />
-        </slide>
-        <slide class="w-1/2">
-          <img :src="promoBanner2" />
-        </slide>
-        <slide class="w-1/2">
-          <img :src="promoBanner2" />
-        </slide>
-      </carousel>
-    </client-only>
-    <div @click="trigger" class="trigger">Click me</div>
-    <b-carousel 
+    <div class="border-b py-16 flex flex-row justify-around">
+      <img class="w-1/12" :src="bannerRow1" />
+      <img class="w-1/12" :src="bannerRow2" />
+      <img class="w-1/12" :src="bannerRow3" />
+      <img class="w-1/12" :src="bannerRow4" />
+    </div>
+      <client-only>
+        <div class="relative py-16 flex flex-row items-center h-1/12">
+          <div class="absolute left-14 z-40">
+            <button @click.prevent="prevBanner" class="">
+              <img :src="bannerArrowLeft" class="w-2/12" style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)" />
+            </button>
+          </div>
+          <carousel class="left-0 w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :scrollPerPage="false" :spacePadding="40" >
+            
+            <slide class="w-1/2 pr-15">
+              <img :src="promoBanner1" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="promoBanner2" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="promoBanner2" />
+            </slide>
+            
+          
+          </carousel>
+          <div class="absolute right-14 z-40">
+            <button @click.prevent="nextBanner" class="">
+              <img :src="bannerArrowRight" class="w-4/12" style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)" />
+            </button>
+          </div>
+        </div>
+      </client-only>
+    
+    
+    <div class="flex flex-column items-start">
+      <h1 class="pl-30"> {{$t('main.about.our_school')}}</h1>
+      <p class=" pl-30 pt-6 pb-16">{{$t('main.about.our_school_expanded')}}</p>
+      <client-only class=" pl-30 justify-center h-1/12">
+        
+        <carousel ref="gallery" class="w-11/12 justify-between" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="height" :perPage="3" :scrollPerPage="false" :spacePadding="40" >
+          <slide class="w-1/2 pr-15">
+            <img :src="promoBanner1" />
+          </slide>
+          <slide class="w-1/2">
+            <img :src="promoBanner1" />
+          </slide>
+          <slide class="w-1/2">
+            <img :src="promoBanner1" />
+          </slide>
+          <slide class="w-1/2">
+            <img :src="promoBanner1" />
+          </slide>
+          <slide class="w-1/2">
+            <img :src="promoBanner1" />
+          </slide>
+          
+          
+        </carousel>
+      </client-only>
+    
+    
+      <div class=" py-3  pl-5 flex flex-row justify-between ">
+        <nuxt-link :to="localePath('/about/info')">
+          <button class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(32, 88, 182, 1)">
+            <div class="px-5 py-1 text-white" v-html="$t('menu.about_us.self')"></div>
+          </button>
+        </nuxt-link>
+        <button @click.prevent="nextGalleryImage" class="px-5 py-2">
+          <img :src="galleryArrow" />
+        </button>
+
+      </div>
+      <div class="flex py-16 flex-row justify-between">
+        <div class="flex flex-column w-1/2">              
+          <h1 class="pl-30"> {{$t('main.about.location')}}</h1>
+          <p class=" pl-30 pt-6 pb-16">{{$t('main.about.location_expanded')}}</p>
+        </div>
+        <img :src="locationPhoto" />
+
+      </div>
+    </div>
+    <!-- <div @click="trigger" class="trigger">Click me</div> -->
+    <!--<b-carousel 
       id="carousel-1"
       v-model="slide"
       ref="carouselInput"
@@ -95,19 +165,15 @@
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
-    >
-      <!-- Text slides with image -->
-      <nuxt-link :to="localePath('/about/info')"><b-carousel-slide style="" class="" :img-src="promoBanner1"></b-carousel-slide></nuxt-link>
+    >-->
+      <!--<nuxt-link :to="localePath('/about/info')"><b-carousel-slide style="" class="" :img-src="promoBanner1"></b-carousel-slide></nuxt-link>
 
-      <!-- Slides with custom text -->
       <b-carousel-slide style="" class="" :img-src="promoBanner2 ">
         <div style="background-image: promoBanner2; background-size: cover;" />
       </b-carousel-slide>
 
-      <!-- Slides with image only -->
       <nuxt-link :to="localePath('/about/info')"><b-carousel-slide style="" class="" :img-src="promoBanner1"></b-carousel-slide></nuxt-link>
-
-      <!-- Slides with img slot -->
+    -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment
       <b-carousel-slide>
         <template #img>
@@ -119,10 +185,10 @@
             alt="image slot"
           >
         </template>
-      </b-carousel-slide> -->
+      </b-carousel-slide> 
 
       
-    </b-carousel>
+    </b-carousel> -->
     <div>
       <b-modal centered :busy="true" id="modal-1" :title="$t('modals.title')">
         <template #modal-header>
@@ -178,6 +244,15 @@ import colorTabsIcon4 from "~/assets/color_tabs_icon_4.svg"
 import promoBanner1 from "~/assets/promo_banner_1.png"
 import promoBanner2 from "~/assets/promo_banner_2.png"
 import oeifLogo from "~/assets/oeif-logo.png"
+import galleryArrow from "~/assets/gallery_arrow.svg"
+import bannerArrowLeft from "~/assets/banner_arrow_left.png"
+import bannerArrowRight from "~/assets/banner_arrow_right.png"
+import bannerRow1 from "~/assets/banner_row_1.png"
+import bannerRow2 from "~/assets/banner_row_2.png"
+import bannerRow3 from "~/assets/banner_row_3.png"
+import bannerRow4 from "~/assets/banner_row_4.png"
+import locationPhoto from "~/assets/location_photo.png"
+
 export default {
   data: function () {
     return {
@@ -189,6 +264,14 @@ export default {
       colorTabsIcon4: colorTabsIcon4,
       promoBanner1: promoBanner1,
       promoBanner2:promoBanner2,
+      galleryArrow:galleryArrow,
+      bannerArrowLeft: bannerArrowLeft,
+      bannerArrowRight: bannerArrowRight,
+      bannerRow1: bannerRow1,
+      bannerRow2: bannerRow2,
+      bannerRow3: bannerRow3,
+      bannerRow4: bannerRow4,
+      locationPhoto: locationPhoto,
       showModal: false,
       isNameWrong: false,
       isPhoneWrong: false,
@@ -205,6 +288,15 @@ export default {
   methods:{
     trigger () {
     	this.$refs.carouselInput.nVation-click()
+    },
+    nextBanner() {
+      this.$refs.bannerCarousel.goToPage(this.$refs.bannerCarousel.getNextPage());
+    },
+    prevBanner() {
+      this.$refs.bannerCarousel.goToPage(this.$refs.bannerCarousel.getPreviousPage());
+    },
+      nextGalleryImage() {
+      this.$refs.gallery.goToPage(this.$refs.gallery.getNextPage());
     },
     checkEmail(){
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.response_email))
@@ -261,5 +353,14 @@ export default {
 </script>
 
 <style>
+.VueCarousel-navigation-button {
+                position: relative;
+}
+.VueCarousel-navigation-next {
+                position: relative;
+}
 
+.text-block {
+    white-space: pre-line;
+}
 </style>

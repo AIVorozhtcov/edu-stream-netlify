@@ -26,9 +26,9 @@
             <country-flag :country="$t('flag')" size='small'/> {{this.$i18n.locale.toUpperCase()}}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarAnchor">
-            <nuxt-link class="dropdown-item" :to="switchLocalePath('en')">EN</nuxt-link>
-            <nuxt-link class="dropdown-item" :to="switchLocalePath('de')">DE</nuxt-link>
-            <nuxt-link class="dropdown-item" :to="switchLocalePath('ru')">RU</nuxt-link>
+            <nuxt-link class="dropdown-item" :to="switchLocalePath('en')"><country-flag size="small" country="gb" />EN</nuxt-link>
+            <nuxt-link class="dropdown-item" :to="switchLocalePath('ru')"><country-flag size="small" country="ru" />DE</nuxt-link>
+            <nuxt-link class="dropdown-item" :to="switchLocalePath('de')"><country-flag size="small" country="de" />RU</nuxt-link>
           </div>
         </li>
       </div>
