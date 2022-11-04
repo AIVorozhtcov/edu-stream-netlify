@@ -4,8 +4,8 @@
       <img class="w-full h-3/4" :src="oifWelcome" />
       <div class="absolute right-1/4 bottom-0 w-30 rounded-lg bg-white"><img class="w-6/12 py-2 mx-auto h-1/12" :src="oeifLogo" /></div>      
       <div class="flex flex-column absolute top-2/4 left-0 w-5/12">
-        <div class="h-fit text-white pb-4 text-2xl font-bold" v-html="$t('exams.oif.image-text')"></div>
-        <button type="button" class="btn bg-orange-500 rounded-2xl h-fit w-fit" @click="$bvModal.show('modal-1')" >
+        <div class="h-fit text-white pb-4 text-xl font-bold" v-html="$t('exams.oif.image-text')"></div>
+        <button type="button" class="btn rounded-2xl h-fit w-fit" style="background_color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
           <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
         </button>
       </div>
@@ -80,7 +80,7 @@
           <div class="mx-auto w-full">
             <div
             @click="checkAll">
-              <div class="bg-blue-700 rounded-xl mx-auto flex flex-column items-center h-fit w-full">
+              <div class="rounded-xl mx-auto flex flex-column items-center h-fit w-full" style="background-color:rgba(67, 133, 245, 1)">
                 <div class="mx-auto text-white py-2" v-html="$t('modals.send')"></div>
               </div>
             </div>

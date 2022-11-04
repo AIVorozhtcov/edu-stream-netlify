@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-column">
     <div class="relative h-fit">   
-      <img class="w-full h-3/4" :src="frontpageWelcome" />
+      <img class="w-full h-3/4" :src="frontpageWelcome">
       <div class="absolute right-1/4 bottom-0 w-30 rounded-lg bg-white"><img class="w-6/12 py-2 mx-auto h-1/12" :src="oeifLogo" /></div>      
-      <div class="flex flex-column absolute top-2/4 left-0 w-5/12">
-        <div class="h-fit text-white pb-4 text-2xl font-bold" v-html="$t('exams.oif.image-text')"></div>
-        <button type="button" class="btn bg-white-500 rounded-2xl h-fit w-fit" @click="$bvModal.show('modal-1')" >
+      <div class="absolute h-full flex flex-column -translate-y-2/4 left-0 w-5/12" style="">
+        <div class="h-fit text-white pb-4 text-2xl font-bold" v-html="$t('main.image_text')"></div>
+        <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
           <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
         </button>
       </div>
@@ -69,10 +69,10 @@
       
     </div>
     <div class="border-b py-16 flex flex-row justify-around">
-      <img class="w-1/12" :src="bannerRow1" />
-      <img class="w-1/12" :src="bannerRow2" />
-      <img class="w-1/12" :src="bannerRow3" />
-      <img class="w-1/12" :src="bannerRow4" />
+      <img class="w-1/12 h-auto" :src="bannerRow1" />
+      <img class="w-1/12 h-auto" :src="bannerRow2" />
+      <img class="w-1/12 h-auto" :src="bannerRow3" />
+      <img class="w-1/12 h-auto" :src="bannerRow4" />
     </div>
       <client-only>
         <div class="relative py-16 flex flex-row items-center h-1/12">
@@ -109,7 +109,7 @@
       <p class=" pl-30 pt-6 pb-16">{{$t('main.about.our_school_expanded')}}</p>
       <client-only class=" pl-30 justify-center h-1/12">
         
-        <carousel ref="gallery" class="w-11/12 justify-between" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="height" :perPage="3" :scrollPerPage="false" :spacePadding="40" >
+        <carousel ref="gallery" class="w-11/12 justify-between" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="3" :scrollPerPage="false" :spacePadding="40" >
           <slide class="w-1/2 pr-15">
             <img :src="promoBanner1" />
           </slide>
@@ -131,24 +131,73 @@
       </client-only>
     
     
-      <div class=" py-3  pl-5 flex flex-row justify-between ">
+      <div class=" py-3  pl-5 flex flex-row justify-between items-center">
         <nuxt-link :to="localePath('/about/info')">
           <button class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(32, 88, 182, 1)">
             <div class="px-5 py-1 text-white" v-html="$t('menu.about_us.self')"></div>
           </button>
         </nuxt-link>
-        <button @click.prevent="nextGalleryImage" class="px-5 py-2">
+        <button @click.prevent="nextGalleryImage" class="p-5 py-2">
           <img :src="galleryArrow" />
         </button>
-
       </div>
       <div class="flex py-16 flex-row justify-between">
-        <div class="flex flex-column w-1/2">              
-          <h1 class="pl-30"> {{$t('main.about.location')}}</h1>
-          <p class=" pl-30 pt-6 pb-16">{{$t('main.about.location_expanded')}}</p>
+        <div class="mx-5 flex flex-column w-5/12">              
+          <h1 class=""><div class="" v-html="$t('main.about.location')"> </div></h1>
+          <div class="pt-6 pb-16" v-html="$t('main.about.location_expanded')"></div>
         </div>
-        <img :src="locationPhoto" />
+        <img class="mx-5 w-5/12" :src="locationPhoto" />
 
+      </div>
+      <div class="flex flex-column w-full py-5 items-center justify-around rounded-md" style="background-color:rgba(37, 57, 132, 1)">
+        <h1 class="w-3/4"><div class=" text-3xl text-white" v-html="$t('main.form_text')"> </div></h1>
+        <div class="flex flex-row justify-end items-start w-full">
+          <div class="flex flex-column items-center justify-center w-1/4 py-4 mx-1">
+            <input @focusout="checkName" class="rounded-md w-full h-full rounded-sm" style="background-color:rgba(255, 255, 255, 0.42);  aspect-ratio:19/5; font-size: x-large;" type="text" v-model="response_name" :placeholder="$t('modals.name')" required>
+            <div class="pt-3 font-bold text-red-600 text-xs" v-if="isNameWrong" v-html="$t('modals.required')"></div>
+            <div class="pt-3 font-bold text-red-600 text-xs invisible" v-else v-html="$t('modals.required')"></div>
+          </div>
+          <div class="flex flex-column items-center justify-center w-1/4 h-full py-4 mx-1">
+            <input @focusout="checkEmail" type="email" class="rounded-md w-full rounded-sm py-1" style="background-color:rgba(255, 255, 255, 0.42); aspect-ratio:19/5; font-size: x-large;" v-model="response_email" :placeholder="$t('modals.email')" required>
+            <div class="pt-3 font-bold text-red-600 text-xs" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
+            <div class="pt-3 font-bold text-red-600 text-xs invisible" v-else v-html="$t('modals.required')"></div>
+          </div>
+          <div class="flex flex-column items-center justify-center w-1/4 py-4 mx-1">
+            <input @focusout="checkPhone" type="tel" class="rounded-md w-full h-full text-xl rounded-sm py-1" style="background-color:rgba(255, 255, 255, 0.42);  aspect-ratio:19/5; font-size: x-large;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
+            <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
+            <div class="pt-3 font-bold text-red-600 text-xs invisible" v-else v-html="$t('modals.required')"></div>
+          </div>
+          <button @click="checkAllNoTimes" class="rounded-md h-fit my-4 w-1/6 mr-3" style="background-color:rgba(255, 124, 51, 1);  aspect-ratio:10/4; font-size: x-large;">
+            <div class="mx-auto text-white py-2" v-html="$t('modals.send')"></div>
+          </button>
+        </div>
+        <h1 class="mx-center"><div class="text-base text-white" v-html="$t('main.form_subtext')"> </div></h1>
+      </div>
+      <div class="my-16 h-full w-full flex flex-column items-start">
+        <client-only class=" w-full h-full pl-30 justify-center">        
+          <carousel ref="logoGallery" class="w-11/12 h-full justify-between" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="3" :scrollPerPage="false" :spacePadding="40" >
+            <slide class="w-full pr-15">
+              <img :src="logoGallery1" />
+            </slide>
+            <slide class="w-full">
+              <img :src="logoGallery2" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="logoGallery3" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="logoGallery4" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="logoGallery2" />
+            </slide>
+            
+            
+          </carousel>
+        </client-only> 
+        <button @click.prevent="nextLogoGalleryImage" class="py-2">
+          <img :src="galleryArrow" />
+        </button>
       </div>
     </div>
     <!-- <div @click="trigger" class="trigger">Click me</div> -->
@@ -198,7 +247,7 @@
           <div class="mx-auto w-full">
             <div
             @click="checkAll">
-              <div class="bg-blue-700 rounded-xl mx-auto flex flex-column items-center h-fit w-full">
+              <div class="rounded-xl mx-auto flex flex-column items-center h-fit w-full" style="background-color:rgba(67, 133, 245, 1)">
                 <div class="mx-auto text-white py-2" v-html="$t('modals.send')"></div>
               </div>
             </div>
@@ -251,6 +300,10 @@ import bannerRow1 from "~/assets/banner_row_1.png"
 import bannerRow2 from "~/assets/banner_row_2.png"
 import bannerRow3 from "~/assets/banner_row_3.png"
 import bannerRow4 from "~/assets/banner_row_4.png"
+import logoGallery1 from "~/assets/logo_gallery_1.png"
+import logoGallery2 from "~/assets/logo_gallery_2.png"
+import logoGallery3 from "~/assets/logo_gallery_3.png"
+import logoGallery4 from "~/assets/logo_gallery_4.png"
 import locationPhoto from "~/assets/location_photo.png"
 
 export default {
@@ -271,6 +324,10 @@ export default {
       bannerRow2: bannerRow2,
       bannerRow3: bannerRow3,
       bannerRow4: bannerRow4,
+      logoGallery1: logoGallery1,
+      logoGallery2: logoGallery2,
+      logoGallery3: logoGallery3,
+      logoGallery4: logoGallery4,
       locationPhoto: locationPhoto,
       showModal: false,
       isNameWrong: false,
@@ -297,6 +354,9 @@ export default {
     },
       nextGalleryImage() {
       this.$refs.gallery.goToPage(this.$refs.gallery.getNextPage());
+    },
+    nextLogoGalleryImage() {
+      this.$refs.logoGallery.goToPage(this.$refs.logoGallery.getNextPage());
     },
     checkEmail(){
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.response_email))
@@ -336,6 +396,16 @@ export default {
       this.checkTimes();
       this.checkPhone();
       if (!this.isNameWrong && !this.isEmailWrong && !this.isPhoneWrong && !this.isTimesWrong){
+      let routeData = this.$router.resolve({name: 'https://checkout.stripe.com/c/pay/cs_live_a18PAktLRCExf4QbCUahRYb2YzgjJYrWSZhmctnue81qkIPRJWEwkivg4y#fidkdWxOYHwnPyd1blppbHNgWjA0TnZVUn1AV19LRjZhVUtWf0JsbTBiV2g9VWxuZmo1MjRqXHNsd2pOalVCN0Rhan1mVzZ2VjVfREFjQ1Z3V20wQT1GfTZUcjdTNjJSajZ1XXFpT2xuQVFANTVGa3ZjbXB1aicpJ2hsYXYnP34nYnBsYSc%2FJ0tEJyknaHBsYSc%2FJ0tEJykndmxhJz8nS0QneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%2FJ21xcXV2PyoqYGFwKHZxd2BkaCtkcSd4JSUl', /*query: {data: "someData"}*/});
+        window.open('https://checkout.stripe.com', '_blank');
+      }
+      
+    },
+    checkAllNoTimes(){
+      this.checkEmail();
+      this.checkName();
+      this.checkPhone();
+      if (!this.isNameWrong && !this.isEmailWrong && !this.isPhoneWrong){
       let routeData = this.$router.resolve({name: 'https://checkout.stripe.com/c/pay/cs_live_a18PAktLRCExf4QbCUahRYb2YzgjJYrWSZhmctnue81qkIPRJWEwkivg4y#fidkdWxOYHwnPyd1blppbHNgWjA0TnZVUn1AV19LRjZhVUtWf0JsbTBiV2g9VWxuZmo1MjRqXHNsd2pOalVCN0Rhan1mVzZ2VjVfREFjQ1Z3V20wQT1GfTZUcjdTNjJSajZ1XXFpT2xuQVFANTVGa3ZjbXB1aicpJ2hsYXYnP34nYnBsYSc%2FJ0tEJyknaHBsYSc%2FJ0tEJykndmxhJz8nS0QneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%2FJ21xcXV2PyoqYGFwKHZxd2BkaCtkcSd4JSUl', /*query: {data: "someData"}*/});
         window.open('https://checkout.stripe.com', '_blank');
       }

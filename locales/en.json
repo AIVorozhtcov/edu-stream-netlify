@@ -1,6 +1,9 @@
 {
     "flag":"gb",
     "main":{
+        "image_text":"Sprachschule<br />im Zentrum von Wien",
+        "form_text": "Schicken Sie uns eine Anfrage und wir werden für Sie den bestmöglichen Kurs auswählen",
+        "form_subtext": "Durch Klicken auf die Schaltfläche stimmen Sie der Verarbeitung personenbezogener Daten zu",
         "color_tabs":{
             "t_1":"Learn with qualified and experienced native speakers who have 20 years of experience and speaks in 5 languages",
             "t_2":"ÖIF – zetifizierter Kursträger<br /><br />ÖIF – zetifiziertes Prüfungszentrum",

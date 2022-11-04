@@ -68,7 +68,7 @@
           <div class="mx-auto w-full">
             <div
             @click="checkAll">
-              <div class="bg-blue-700 rounded-xl mx-auto flex flex-column items-center h-fit w-full">
+              <div class="rounded-xl mx-auto flex flex-column items-center h-fit w-full" style="background-color:rgba(67, 133, 245, 1)">
                 <div class="mx-auto text-white py-2" v-html="$t('modals.send')"></div>
               </div>
             </div>
