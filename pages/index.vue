@@ -1,10 +1,9 @@
 <template>
   <div class="flex flex-column">
     <div class="relative h-fit">   
-      <img class="w-full h-3/4" :src="frontpageWelcome">
-      <div class="absolute right-1/4 bottom-0 w-30 rounded-lg bg-white"><img class="w-6/12 py-2 mx-auto h-1/12" :src="oeifLogo" /></div>      
+      <img class="w-full h-3/4" :src="frontpageWelcome">    
       <div class="absolute h-full flex flex-column -translate-y-2/4 left-0 w-5/12" style="">
-        <div class="h-fit text-white pb-4 text-2xl font-bold" v-html="$t('main.image_text')"></div>
+        <div class="h-fit text-white mb-4 text-2xl font-bold" v-html="$t('main.image_text')"></div>
         <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
           <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
         </button>
@@ -343,9 +342,6 @@ export default {
     }
   },
   methods:{
-    trigger () {
-    	this.$refs.carouselInput.nVation-click()
-    },
     nextBanner() {
       this.$refs.bannerCarousel.goToPage(this.$refs.bannerCarousel.getNextPage());
     },
