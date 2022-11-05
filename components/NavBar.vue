@@ -7,7 +7,7 @@
           <img :src="logo" />
         </nuxt-link>
       </div>
-      <div class="flex flex-row items-center flex-none" style="margin-left: 35%">
+      <div class="flex flex-row items-center" style="margin-left: 35%">
           <div class="flex items-center flex-row">
               <a class="text-white" href="tel:+43 1 890 89 48">+43 1 890 89 48</a> <p class="text-white pl-1"> | Rennweg 9/6, 1030 Wien |</p>
           </div>
@@ -20,15 +20,15 @@
               </a>
           </div>
       </div>
-      <div class="flex flex-column items-end justify-center bg-white self-start h-16 w-13 rounded-b-md ml-2 flex-none">
+      <div class="flex flex-column items-end justify-center bg-white self-start h-16 rounded-b-md ml-2 flex-none">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <country-flag :country="$t('flag')" size='small'/> {{this.$i18n.locale.toUpperCase()}}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarAnchor">
             <nuxt-link class="dropdown-item" :to="switchLocalePath('en')"><country-flag size="small" country="gb" />EN</nuxt-link>
-            <nuxt-link class="dropdown-item" :to="switchLocalePath('ru')"><country-flag size="small" country="ru" />DE</nuxt-link>
-            <nuxt-link class="dropdown-item" :to="switchLocalePath('de')"><country-flag size="small" country="de" />RU</nuxt-link>
+            <nuxt-link class="dropdown-item" :to="switchLocalePath('ru')"><country-flag size="small" country="de" />DE</nuxt-link>
+            <nuxt-link class="dropdown-item" :to="switchLocalePath('de')"><country-flag size="small" country="ru" />RU</nuxt-link>
           </div>
         </li>
       </div>

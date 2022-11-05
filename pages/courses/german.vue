@@ -1,44 +1,244 @@
 <template>
   <div class="flex flex-column">
-      <div class="relative h-fit">   
+      <div class="relative flex h-fit ignore-global-margins" style="">
+        <div class="absolute flex flex-column h-2/4 w-5/12" style="margin-left:5%; margin-top:20%">
+          <div class="text-black mb-4 text-2xl font-bold" v-html="$t('courses.english.image_title')"></div>          
+          <div class="text-black mb-4 text-base font-bold" v-html="$t('courses.english.image_subtitle')"></div>
+          <button type="button" class="btn rounded-2xl w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
+            <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
+          </button>
+        </div>   
         <img class="w-full h-3/4" :src="germanCoursesWelcome">    
-        <div class="absolute h-full flex flex-column -translate-y-2/4 left-0 w-5/12" style="">
-          <div class="h-fit text-white mb-4 text-2xl font-bold" v-html="$t('courses.english.image_title')"></div>          
-          <div class="h-fit text-white mb-4 text-base font-bold" v-html="$t('courses.english.image_subtitle')"></div>
-          <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
-            <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
-          </button>
-        </div>
+        
       </div>
-      <div class="flex flex-row items-start justify-between w-full" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04); padding-left: 7%; padding-right: 7%;">
-        <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
-          <h1 class="text-xl font-bold pl-5">{{$t('courses.english.cards.1.title')}}</h1>
-          <ul>
-            <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.1')"></li>
-            <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.2')"></li>
-            <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.3')"></li>
-            <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.4')"></li>
-            <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.5')"></li>
-            <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.6')"></li>
-          </ul>
-        </div>
-        <div class="flex flex-column border-l-2" style="padding-top: 8%; padding-bottom: 3%; padding-left: 5%;">
-          <p>4 {{$t('courses.weeks')}}</p>
-          <div class="flex flex-row items-end">
-            <p class="text-blue-600 font-bold text-3xl">{{$t('courses.english.cards.1.price_1')}}</p>
-            <p class=" text-xs" style="color:rgba(155, 155, 155, 1);">{{$t('courses.english.cards.1.comment_price_1')}}</p>
-            
+      <b-tabs active-nav-item-class="text-orange-400" class="border-b-2 w-full" fill content-class="mt-3">
+        <b-tab :title="$t('courses.german.tabs.1')" active>
+          <div class="flex flex-row mx-auto items-start justify-between w-full" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:7%; background-color: rgba(255, 255, 255, 1);">
+            <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 3%;">
+              <div class="flex flex-row items-center">
+                <h1 class="text-2xl font-bold pl-5">{{$t('courses.english.cards.1.title')}}</h1>
+                <div class="offline-tag" v-if="$t('courses.english.cards.1.is_offline')=='true'">Offline</div>
+                <div class="online-tag" v-if="$t('courses.english.cards.1.is_online')=='true'">Online</div>
+              </div>
+              <ul>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.1')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.2')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.3')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.4')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.5')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.6')"></li>
+              </ul>
+            </div>
+            <div class="flex flex-column h-full border-l-2" style="padding-top: 8%; padding-bottom: 3%; padding-left: 5%; padding-right:2%;">
+              <p>4 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.1.price_1')}}</p>
+                <p class=" text-xs" style="color:rgba(155, 155, 155, 1);">{{$t('courses.english.cards.1.comment_price_1')}}</p>
+                
+              </div>
+              <p  style="padding-top:10%">8 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.1.price_2')}}</p>
+                
+              </div>
+              <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+                <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
+              </button>
+            </div>
+          </div>          
+          <div class="flex flex-row mx-auto items-start justify-between w-full" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:5%; background-color: rgba(255, 255, 255, 1);">
+            <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
+              <div class="flex flex-row items-center">
+                <h1 class="text-2xl font-bold pl-5">{{$t('courses.english.cards.3.title')}}</h1>
+                <div class="offline-tag" v-if="$t('courses.english.cards.3.is_offline')=='true'">Offline</div>
+                <div class="online-tag" v-if="$t('courses.english.cards.3.is_online')=='true'">Online</div>
+              </div>
+              <ul>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.1')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.2')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.3')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.4')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.5')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.6')"></li>
+              </ul>
+            </div>
+            <div class="flex flex-column h-full border-l-2" style="padding-top: 8%; padding-bottom: 3%; padding-left: 5%; padding-right:2%;">
+              <p>4 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.3.price_1')}}</p>
+                <p class=" text-xs" style="color:rgba(155, 155, 155, 1);">{{$t('courses.english.cards.3.comment_price_1')}}</p>
+                
+              </div>
+              <p  style="padding-top:10%">8 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_2')}}</p>
+                
+              </div>
+              <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+                <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
+              </button>
+            </div>
           </div>
-          <p  style="padding-top:10%">8 {{$t('courses.weeks')}}</p>
-          <div class="flex flex-row items-end">
-            <p class="text-blue-600 font-bold text-3xl">{{$t('courses.english.cards.1.price_2')}}</p>
-            
+        </b-tab>
+        <b-tab :title="$t('courses.german.tabs.2')">
+          <div class="flex flex-row mx-auto items-start justify-between w-full" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:5%; background-color: rgba(255, 255, 255, 1);">
+            <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
+              <div class="flex flex-row items-center">
+                <h1 class="text-2xl font-bold pl-5">{{$t('courses.english.cards.2.title')}}</h1>
+                <div class="offline-tag" v-if="$t('courses.english.cards.2.is_offline')=='true'">Offline</div>
+                <div class="online-tag" v-if="$t('courses.english.cards.2.is_online')=='true'">Online</div>
+              </div>
+              <ul>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.2.1')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.2.2')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.2.3')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.2.4')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.2.5')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.2.6')"></li>
+              </ul>
+            </div>
+            <div class="flex flex-column h-full border-l-2" style="padding-top: 8%; padding-bottom: 3%; padding-left: 5%; padding-right:2%;">
+              <p>4 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_1')}}</p>
+                <p class=" text-xs" style="color:rgba(155, 155, 155, 1);">{{$t('courses.english.cards.2.comment_price_1')}}</p>
+                
+              </div>
+              <p  style="padding-top:10%">8 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_2')}}</p>
+                
+              </div>
+              <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+                <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
+              </button>
+            </div>
+          </div>          
+        </b-tab>
+        <b-tab :title="$t('courses.german.tabs.3')">
+          <div class="flex flex-row mx-auto items-start justify-between w-full" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:5%; background-color: rgba(255, 255, 255, 1);">
+            <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
+              <div class="flex flex-row items-center">
+                <h1 class="text-2xl font-bold pl-5">{{$t('courses.english.cards.3.title')}}</h1>
+                <div class="offline-tag" v-if="$t('courses.english.cards.3.is_offline')=='true'">Offline</div>
+                <div class="online-tag" v-if="$t('courses.english.cards.3.is_online')=='true'">Online</div>
+              </div>
+              <ul>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.1')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.2')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.3')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.4')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.5')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.6')"></li>
+              </ul>
+            </div>
+            <div class="flex flex-column h-full border-l-2" style="padding-top: 8%; padding-bottom: 3%; padding-left: 5%; padding-right:2%;">
+              <p>4 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.3.price_1')}}</p>
+                <p class=" text-xs" style="color:rgba(155, 155, 155, 1);">{{$t('courses.english.cards.3.comment_price_1')}}</p>
+                
+              </div>
+              <p  style="padding-top:10%">8 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_2')}}</p>
+                
+              </div>
+              <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+                <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
+              </button>
+            </div>
           </div>
-          <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
-            <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
-          </button>
-        </div>
-      </div>
+        </b-tab>
+        <b-tab :title="$t('courses.german.tabs.4')">
+          <div class="flex flex-row mx-auto items-start justify-between w-full" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:5%; background-color: rgba(255, 255, 255, 1);">
+            <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
+              <div class="flex flex-row items-center">
+                <h1 class="text-2xl font-bold pl-5">{{$t('courses.english.cards.3.title')}}</h1>
+                <div class="offline-tag" v-if="$t('courses.english.cards.3.is_offline')=='true'">Offline</div>
+                <div class="online-tag" v-if="$t('courses.english.cards.3.is_online')=='true'">Online</div>
+              </div>
+              <ul>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.1')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.2')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.3')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.4')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.5')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.6')"></li>
+              </ul>
+            </div>
+            <div class="flex flex-column h-full border-l-2" style="padding-top: 8%; padding-bottom: 3%; padding-left: 5%; padding-right:2%;">
+              <p>4 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.3.price_1')}}</p>
+                <p class=" text-xs" style="color:rgba(155, 155, 155, 1);">{{$t('courses.english.cards.3.comment_price_1')}}</p>
+                
+              </div>
+              <p  style="padding-top:10%">8 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_2')}}</p>
+                
+              </div>
+              <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+                <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-row mx-auto items-start justify-between w-full" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:5%; background-color: rgba(255, 255, 255, 1);">
+            <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
+              <div class="flex flex-row items-center">
+                <h1 class="text-2xl font-bold pl-5">{{$t('courses.english.cards.3.title')}}</h1>
+                <div class="offline-tag" v-if="$t('courses.english.cards.3.is_offline')=='true'">Offline</div>
+                <div class="online-tag" v-if="$t('courses.english.cards.3.is_online')=='true'">Online</div>
+              </div>
+              <ul>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.1')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.2')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.3')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.4')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.5')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.6')"></li>
+              </ul>
+            </div>
+            <div class="flex flex-column h-full border-l-2" style="padding-top: 8%; padding-bottom: 3%; padding-left: 5%; padding-right:2%;">
+              <p>4 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.3.price_1')}}</p>
+                <p class=" text-xs" style="color:rgba(155, 155, 155, 1);">{{$t('courses.english.cards.3.comment_price_1')}}</p>
+                
+              </div>
+              <p  style="padding-top:10%">8 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_2')}}</p>
+                
+              </div>
+              <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+                <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
+              </button>
+            </div>
+          </div>
+        </b-tab>
+        <b-tab :title="$t('courses.german.tabs.5')">
+          no courses
+        </b-tab>
+        <b-tab :title="$t('courses.german.tabs.6')">
+          <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
+              <div class="flex flex-row items-center">
+                <h1 class="text-2xl font-bold pl-5">{{$t('courses.english.cards.3.title')}}</h1>
+                <div class="offline-tag" v-if="$t('courses.english.cards.3.is_offline')=='true'">Offline</div>
+                <div class="online-tag" v-if="$t('courses.english.cards.3.is_online')=='true'">Online</div>
+              </div>
+              <ul>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.1')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.2')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.3')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.4')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.5')"></li>
+                <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.6')"></li>
+              </ul>
+            </div>
+        </b-tab>
+      </b-tabs>      
       <div>
       <b-modal centered :busy="true" id="modal-1" :title="$t('modals.title')">
         <template #modal-header>
@@ -85,6 +285,30 @@
 </template>
 
 <style scoped>
+  .offline-tag{
+    margin-left:1%;
+    border-radius: 0.25rem;
+    background-color:#DEEFFF;
+    color:#5F98F5;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top:1%;
+    padding-bottom:1%;
+  }
+  .online-tag{
+    margin-left:1%;
+    border-radius: 0.25rem;
+    background-color:#E2FFD9;
+    color:#4EE120;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top:1%;
+    padding-bottom:1%;
+  }
+  .active-tab{
+    border-color: rgba(255, 124, 51, 1);
+    color:rgba(255, 124, 51, 1)
+  }
   ul {
     list-style: none;
   }
@@ -92,6 +316,10 @@
   ul li:before {
     content: '✓';
   }
+  .nav-link.active.tab-active-class {
+  background-color: red;
+}
+
 </style>
 <script>
 

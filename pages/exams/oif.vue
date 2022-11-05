@@ -3,7 +3,7 @@
     <div class="relative h-fit">   
       <img class="w-full h-3/4" :src="oifWelcome" />
       <div class="absolute right-1/4 bottom-0 w-30 rounded-lg bg-white"><img class="w-6/12 py-2 mx-auto h-1/12" :src="oeifLogo" /></div>      
-      <div class="flex flex-column absolute top-2/4 left-0 w-5/12">
+      <div class="flex flex-column absolute top-2/4 left-0 w-5/12" style=" margin-left:5%;">
         <div class="h-fit text-white pb-4 text-xl font-bold" v-html="$t('exams.oif.image-text')"></div>
         <button type="button" class="btn rounded-2xl h-fit w-fit" style="background_color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
           <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>

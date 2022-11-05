@@ -1,5 +1,6 @@
 <template>
-    <div class="pt-5 flex flex-row items-center">
+  <div>
+    <div class="pt-5 flex flex-row items-center" style="margin-bottom:10%">
       <iframe 
         width="600"
         height="450"
@@ -22,6 +23,7 @@
       </GmapMap> -->
   
     </div>
+  </div>
 </template>
 
 <script>

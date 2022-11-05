@@ -32,13 +32,16 @@
       </li>
     -->
 
-      <li style="float: left; width: 100%; padding-left:3%; background-color:rgba(255, 255, 255, 0.67);">
-        <nav class="navbar navbar-expand-lg navbar-light">        
+      <li style="float: left; width: 100%; padding-left:4%; background-color:rgba(255, 255, 255, 0.67);">
+           <!--
+            <nav class="navbar navbar-expand-lg navbar-light">        
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+           -->  
+          
           <div class="" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="flex flex-row pt-2">
               <!--<li class="nav-item">
                 <a class="nav-link white" id="navbarAnchor" href="/exams">Exams <span class="sr-only">(current)</span></a>
               </li>
@@ -113,7 +116,7 @@
                         </nuxt-link>
                       </div>
                     </div>
-                    <div class="flex pl-5 flex-row items-center">
+                    <div class="flex pl-5 pt-2 flex-row items-center">
                       <div @mouseenter="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false"  :class="[aboutIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']">
                         <p>{{$t('menu.about_us.self')}}</p>
                         <b-icon :icon="this.aboutHoverHandler()"/>
@@ -147,7 +150,6 @@
             </ul>
             
           </div>
-        </nav>
       </li>
       
     </ul>

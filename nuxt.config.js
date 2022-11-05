@@ -15,7 +15,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Montserrat'
+        href: 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900'
       }
     ]
   },
@@ -35,6 +35,15 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxt/postcss8',
+    /*'@nuxtjs/google-fonts',
+    {
+      families: {
+        Montserrat: {
+          wght: [300, 400, 500, 600, 700, 800, 900],
+        },
+      },
+      display: 'swap'
+    },*/
     //'@nuxtjs/eslint-module',
   ],
 

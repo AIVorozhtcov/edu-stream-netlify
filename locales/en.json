@@ -113,8 +113,142 @@
                     "6":"Flexible Kurszeiten",
                     "price_1":"€ 360",
                     "comment_price_1":" per Monat",
-                    "price_2":"€ 680"
-                }
+                    "price_2":"€ 680",
+                    "is_offline":"true",
+                    "is_online":"false"
+                },
+                "2":{
+                    "title":"Intensiv Deutschkurs",
+                    "1":"Alle Sprachniveaus (A1-C1)",
+                    "2":"Montag bis Freitag, 3 Stunden pro Tag",
+                    "3":"Mini Gruppen: 4 – 10 Personen",
+                    "4":"80 Unterrichtseinheiten/160 Unterrichtseinheiten",
+                    "5":"4 Wochen = ½ Sprachniveau 8 Wochen = 1 Sprachniveau",
+                    "6":"Flexible Kurszeiten",
+                    "price_1":"€ 360",
+                    "comment_price_1":" per Monat",
+                    "price_2":"€ 680",
+                    "is_offline":"true",
+                    "is_online":"false"
+                },
+                "3":{
+                    "title":"Standard Deutschkurs A1-A2",
+                    "1":"Sprachniveaus (A1-A2)",
+                    "2":"Montag/Mittwoch oder Dienstag/Donnerstag, 2 Stunden und 15 Minuten pro Tag",
+                    "3":"Mini Gruppen: 4 – 10 Personen",
+                    "4":"24 Unterrichtseinheiten in 4 Wochen",
+                    "5":"72 Unterrichtseinheiten in 12 Wochen = 1 Sprachniveau",
+                    "6":"Flexible Kurszeiten",
+                    "price_1":"€ 199",
+                    "comment_price_1":" per Monat",
+                    "price_2":"€ 499",
+                    "is_offline":"true",
+                    "is_online":"true"
+                }            
+            }
+        },
+        "italian":{
+            "image_title":"Deutschkurse",
+            "image_subtitle":"Testen Sie Ihr Sprachniveau!",
+            "cards":{
+                "1":{
+                    "title":"ÖIF Intensiv Deutschkurs",
+                    "1":"Sprachniveaus (A1-B1)",
+                    "2":"Montag bis Freitag, 3 Stunden pro Tag",
+                    "3":"Freitag ist für Konversation, Grammatik oder Freizeitangebot / 3 Stunden pro Tag",
+                    "4":"Mini Gruppen: 4 – 10 Personen",
+                    "5":"80 Unterrichtseinheiten/160 Unterrichtseinheite",
+                    "6":"Flexible Kurszeiten",
+                    "price_1":"€ 360",
+                    "comment_price_1":" per Monat",
+                    "price_2":"€ 680",
+                    "is_offline":"true",
+                    "is_online":"false"
+                },
+                "2":{
+                    "title":"Intensiv Deutschkurs",
+                    "1":"Alle Sprachniveaus (A1-C1)",
+                    "2":"Montag bis Freitag, 3 Stunden pro Tag",
+                    "3":"Mini Gruppen: 4 – 10 Personen",
+                    "4":"80 Unterrichtseinheiten/160 Unterrichtseinheiten",
+                    "5":"4 Wochen = ½ Sprachniveau 8 Wochen = 1 Sprachniveau",
+                    "6":"Flexible Kurszeiten",
+                    "price_1":"€ 360",
+                    "comment_price_1":" per Monat",
+                    "price_2":"€ 680",
+                    "is_offline":"true",
+                    "is_online":"false"
+                },
+                "3":{
+                    "title":"Standard Deutschkurs A1-A2",
+                    "1":"Sprachniveaus (A1-A2)",
+                    "2":"Montag/Mittwoch oder Dienstag/Donnerstag, 2 Stunden und 15 Minuten pro Tag",
+                    "3":"Mini Gruppen: 4 – 10 Personen",
+                    "4":"24 Unterrichtseinheiten in 4 Wochen",
+                    "5":"72 Unterrichtseinheiten in 12 Wochen = 1 Sprachniveau",
+                    "6":"Flexible Kurszeiten",
+                    "price_1":"€ 199",
+                    "comment_price_1":" per Monat",
+                    "price_2":"€ 499",
+                    "is_offline":"true",
+                    "is_online":"true"
+                }            
+            }
+        },
+        "german":{
+            "image_title":"Deutschkurse",
+            "image_subtitle":"Testen Sie Ihr Sprachniveau!",
+            "tabs":{
+                "1":"Intensiv",
+                "2":"Standard",
+                "3":"ÖIF, ÖSD",
+                "4":"EPD",
+                "5":"Grammatik/Konversationskurs",
+                "6":"Samstagskurs"
+            },
+            "cards":{
+                "1":{
+                    "title":"ÖIF Intensiv Deutschkurs",
+                    "1":"Sprachniveaus (A1-B1)",
+                    "2":"Montag bis Freitag, 3 Stunden pro Tag",
+                    "3":"Freitag ist für Konversation, Grammatik oder Freizeitangebot / 3 Stunden pro Tag",
+                    "4":"Mini Gruppen: 4 – 10 Personen",
+                    "5":"80 Unterrichtseinheiten/160 Unterrichtseinheite",
+                    "6":"Flexible Kurszeiten",
+                    "price_1":"€ 360",
+                    "comment_price_1":" per Monat",
+                    "price_2":"€ 680",
+                    "is_offline":"true",
+                    "is_online":"false"
+                },
+                "2":{
+                    "title":"Intensiv Deutschkurs",
+                    "1":"Alle Sprachniveaus (A1-C1)",
+                    "2":"Montag bis Freitag, 3 Stunden pro Tag",
+                    "3":"Mini Gruppen: 4 – 10 Personen",
+                    "4":"80 Unterrichtseinheiten/160 Unterrichtseinheiten",
+                    "5":"4 Wochen = ½ Sprachniveau 8 Wochen = 1 Sprachniveau",
+                    "6":"Flexible Kurszeiten",
+                    "price_1":"€ 360",
+                    "comment_price_1":" per Monat",
+                    "price_2":"€ 680",
+                    "is_offline":"true",
+                    "is_online":"false"
+                },
+                "3":{
+                    "title":"Standard Deutschkurs A1-A2",
+                    "1":"Sprachniveaus (A1-A2)",
+                    "2":"Montag/Mittwoch oder Dienstag/Donnerstag, 2 Stunden und 15 Minuten pro Tag",
+                    "3":"Mini Gruppen: 4 – 10 Personen",
+                    "4":"24 Unterrichtseinheiten in 4 Wochen",
+                    "5":"72 Unterrichtseinheiten in 12 Wochen = 1 Sprachniveau",
+                    "6":"Flexible Kurszeiten",
+                    "price_1":"€ 199",
+                    "comment_price_1":" per Monat",
+                    "price_2":"€ 499",
+                    "is_offline":"true",
+                    "is_online":"true"
+                }            
             }
         }
     },

@@ -6,7 +6,7 @@
       <div class="w-full relative pd-10" style="overflow: auto">
         
         <SideNavBar class="sidenavbar absolute w-full top-0 z-40" />
-        <nuxt/>
+        <nuxt style="margin-left: 15%; margin-right: 15%;"/>
       </div>
       
       <NavFooter class="w-full" style="bottom:0"></NavFooter>
@@ -32,4 +32,6 @@ export default {
   .sidenavbar{
     background-color: rgba(128, 128, 128, 0.58);
   }
+
+  
 </style>

@@ -4,4 +4,10 @@
 body
 {
   font-family: 'Montserrat', sans-serif;
+  
 }
+.ignore-global-margins{
+  margin-left:calc(15/70 * -100%); 
+  margin-right:calc(15/70 * -100%);
+  }
+

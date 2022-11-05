@@ -1,6 +1,6 @@
 <template>
     <div style="background-color: #253984">
-        <div class="flex flex-column items-start text-xs" style="margin-left: 22%">
+        <div class="flex flex-column items-start text-xs">
             <div class="flex flex-row items-start pt-2">
                 <div class="w-22 h-22">
                     <nuxt-link to="/">  

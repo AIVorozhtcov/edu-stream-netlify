@@ -2,7 +2,7 @@
   <div class="flex flex-column">
     <div class="relative h-fit">   
       <img class="w-full h-3/4" :src="frontpageWelcome">    
-      <div class="absolute h-full flex flex-column -translate-y-2/4 left-0 w-5/12" style="">
+      <div class="absolute h-full flex flex-column -translate-y-2/4 left-0 w-5/12" style=" margin-left:5%;">
         <div class="h-fit text-white mb-4 text-2xl font-bold" v-html="$t('main.image_text')"></div>
         <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
           <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
@@ -43,16 +43,16 @@
           <p class="text-base">{{$t('main.info_columns.bodies.b_3')}}</p>
         </div>
     </div>
-    <div class="border-y py-16 flex flex-column items-start justify-between w-full">
+    <div class="border-y py-16 flex flex-column items-start justify-between w-full h-full">
       <h1 class="text-2xl font-bold">{{$t('main.courses_and_exams.self')}}</h1>
-      <div class="flex flex-row w-full justify-around h-1/2 items-start pt-8 ">
-        <div class="flex w-5/12 flex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1); height:200px">
+      <div class="flex flex-row w-full justify-around h-full items-start pt-8 ">
+        <div class="flex w-5/12 flex-column items-start h-full justify-between" style="background-color:rgba(239, 248, 255, 1)">
           <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
-          <p class="text-base pl-2 pb-4">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
+          <p class="text-base pl-2 pb-4 h-full">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
         </div>
-        <div class="flex w-5/12 flex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1); height:200px">
+        <div class="flex w-5/12 flex-column h-2/4 items-start justify-between" style="background-color:rgba(239, 248, 255, 1)">
           <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
-          <p class="text-base pl-2 pb-4">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
+          <p class="text-base pl-2 pb-4 h-full">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
         </div>
       </div>
       <div class="flex flex-row w-full justify-around h-1/2 items-start pt-8">
