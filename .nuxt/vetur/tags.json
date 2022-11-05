@@ -1,0 +1,23 @@
+{
+  "ExNavFooter": {
+    "description": "Auto imported from components/exNavFooter.vue"
+  },
+  "FAQAccordion": {
+    "description": "Auto imported from components/FAQAccordion.vue"
+  },
+  "ModalResponse": {
+    "description": "Auto imported from components/ModalResponse.vue"
+  },
+  "NavBar": {
+    "description": "Auto imported from components/NavBar.vue"
+  },
+  "NavFooter": {
+    "description": "Auto imported from components/NavFooter.vue"
+  },
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "SideNavBar": {
+    "description": "Auto imported from components/SideNavBar.vue"
+  }
+}
