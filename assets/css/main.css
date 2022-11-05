@@ -10,4 +10,11 @@ body
   margin-left:calc(15/70 * -100%); 
   margin-right:calc(15/70 * -100%);
   }
+  .ignore-r-global-margin{
+    margin-right:calc(15/70 * -100%);
+  }
+  .ignore-l-global-margin{
+    margin-left:calc(15/70 * -100%);
+  }
+
 

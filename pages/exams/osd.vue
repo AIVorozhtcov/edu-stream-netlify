@@ -1,15 +1,15 @@
 <template>
   <div class="flex flex-column">
-    <div class="relative h-fit">   
-      <img class="w-full h-3/4" :src="osdWelcome" />
-      <div class="absolute right-1/4 bottom-0 w-30 rounded-lg bg-white"><img class="w-6/12 py-2 mx-auto h-1/12" :src="oeifLogo" /></div>      
-      <div class="flex flex-column absolute top-2/4 left-0 w-5/12" style=" margin-left:5%;">
-        <div class="h-fit text-white pb-4 text-2xl font-bold" v-html="$t('exams.oif.image-text')"></div>
-        <button type="button" class="btn bg-orange-500 rounded-2xl h-fit w-fit" @click="$bvModal.show('modal-1')" >
-          <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
-        </button>
-      </div>
+    <div class="relative flex h-fit ignore-global-margins">   
+        <div class="absolute flex flex-column h-2/4 w-6/12" style=" margin-left:21%; margin-top:23%">       
+          <div class="h-fit text-white mb-4 text-base font-bold" v-html="$t('exams.oif.image-text')"></div>
+          <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
+            <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
+          </button>
+        </div>
+        <img class="h-3/4" :src="osdWelcome">            
     </div>
+    
     <div class="flex flex-column w-full bg-white py-10">
       <div class="pl-5 w-5/12 text-3xl py-5 font-bold" v-html="$t('exams.oif.subtitle')"></div>
       <div class="pl-5 flex flex-row items-center">
@@ -60,7 +60,7 @@
     
     <div>
       
-      <b-modal centered busy=true id="modal-1" :title="$t('modals.title')">
+      <b-modal centered :busy="true" id="modal-1" :title="$t('modals.title')">
         <template #modal-header>
           <div class="mx-auto font-bold" v-html="$t('modals.title')"></div>
         </template>

@@ -1,14 +1,14 @@
 <template>
   <div class="flex flex-column">
-      <div class="relative h-fit">   
-        <img class="w-full h-3/4" :src="englishCoursesWelcome">    
-        <div class="absolute h-full flex flex-column -translate-y-2/4 left-0 w-5/12" style=" margin-left:5%;">
+      <div class="relative flex h-fit ignore-global-margins">   
+        <div class="absolute flex flex-column h-2/4 w-5/12" style=" margin-left:21%; margin-top:20%">
           <div class="h-fit text-white mb-4 text-4xl font-extrabold" v-html="$t('courses.english.image_title')"></div>          
           <div class="h-fit text-white mb-4 text-base font-bold" v-html="$t('courses.english.image_subtitle')"></div>
           <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
             <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
+        <img class="w-full h-3/4" :src="englishCoursesWelcome">            
       </div>
       <div class="flex flex-row mx-auto items-start justify-between w-11/12" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:7%; background-color: rgba(255, 255, 255, 1);">
         <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 3%;">

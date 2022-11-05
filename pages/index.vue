@@ -1,15 +1,17 @@
 <template>
   <div class="flex flex-column">
-    <div class="relative h-fit">   
-      <img class="w-full h-3/4" :src="frontpageWelcome">    
-      <div class="absolute h-full flex flex-column -translate-y-2/4 left-0 w-5/12" style=" margin-left:5%;">
-        <div class="h-fit text-white mb-4 text-2xl font-bold" v-html="$t('main.image_text')"></div>
-        <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
-          <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
-        </button>
-      </div>
+    <div class="relative flex h-fit ignore-global-margins">   
+        <div class="absolute flex flex-column h-2/4 w-6/12" style=" margin-left:21%; margin-top:23%">       
+          <div class="h-fit text-white mb-4 text-4xl font-extrabold" v-html="$t('main.image_text')"></div>
+          <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 255, 255, 1)" @click="$bvModal.show('modal-1')" >
+            <div class="px-5 py-1 text-black" v-html="$t('exams.oif.register')"></div>
+          </button>
+        </div>
+        <img class="h-3/4" :src="frontpageWelcome">            
     </div>
-    <div class="flex flex-row justify-evenly  h-3/4">
+    
+    <div class="flex flex-row justify-evenly h-3/4 ignore-global-margins">
+      <div class="flex pl-6 w-full flex-column py-10 items-start text-base text-white" style="background-color:#FF7C33;"></div>
       <div class="flex pl-6 w-full flex-column py-10 items-start text-base text-white" style="background-color:#FF7C33;">
         <img class="left-1/2 h-2/12 w-2/12 pb-2 pr-3" :src="colorTabsIcon1">
         <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_1')"></div>
@@ -26,6 +28,7 @@
         <img class="left-1/2 h-2/12 w-2/12 pb-2 pr-3" :src="colorTabsIcon4" />
         <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_4')"></div>
       </div>
+      <div class="flex pl-6 w-full flex-column py-10 items-start text-base text-white" style="background-color:#253984;"></div>
       
 
     </div>
@@ -74,7 +77,7 @@
       <img class="w-1/12 h-auto" :src="bannerRow4" />
     </div>
       <client-only>
-        <div class="relative py-16 flex flex-row items-center h-1/12">
+        <div class="relative py-16 flex flex-row items-center h-1/12  ignore-r-global-margin">
           <div class="absolute left-14 z-40">
             <button @click.prevent="prevBanner" class="">
               <img :src="bannerArrowLeft" class="w-2/12" style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)" />
@@ -86,10 +89,10 @@
               <img :src="promoBanner1" />
             </slide>
             <slide class="w-1/2">
-              <img :src="promoBanner2" />
+              <img :src="promoBanner1" />
             </slide>
             <slide class="w-1/2">
-              <img :src="promoBanner2" />
+              <img :src="promoBanner1" />
             </slide>
             
           
@@ -103,10 +106,10 @@
       </client-only>
     
     
-    <div class="flex flex-column items-start">
+    <div class="flex flex-column items-start w-full">
       <h1 class="pl-30"> {{$t('main.about.our_school')}}</h1>
       <p class=" pl-30 pt-6 pb-16">{{$t('main.about.our_school_expanded')}}</p>
-      <client-only class=" pl-30 justify-center h-1/12">
+      <client-only class=" pl-30 justify-center h-1/12 w-full ignore-r-global-margin">
         
         <carousel ref="gallery" class="w-11/12 justify-between" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="3" :scrollPerPage="false" :spacePadding="40" >
           <slide class="w-1/2 pr-15">
@@ -130,7 +133,7 @@
       </client-only>
     
     
-      <div class=" py-3  pl-5 flex flex-row justify-between items-center">
+      <div class=" py-3  pl-5 flex flex-row justify-between items-center w-full">
         <nuxt-link :to="localePath('/about/info')">
           <button class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(32, 88, 182, 1)">
             <div class="px-5 py-1 text-white" v-html="$t('menu.about_us.self')"></div>
@@ -172,9 +175,9 @@
         </div>
         <h1 class="mx-center"><div class="text-base text-white" v-html="$t('main.form_subtext')"> </div></h1>
       </div>
-      <div class="my-16 h-full w-full flex flex-column items-start">
-        <client-only class=" w-full h-full pl-30 justify-center">        
-          <carousel ref="logoGallery" class="w-11/12 h-full justify-between" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="3" :scrollPerPage="false" :spacePadding="40" >
+      <div class="my-16 h-full w-full flex flex-column items-start ignore-r-global-margin">
+        <client-only class=" w-full h-full pl-30 justify-center ignore-r-global-margin">        
+          <carousel ref="logoGallery" class="w-full h-full justify-between ignore-r-global-margin" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="3" :scrollPerPage="false" :spacePadding="40" >
             <slide class="w-full pr-15">
               <img :src="logoGallery1" />
             </slide>

@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-column">
       <div class="relative flex h-fit ignore-global-margins" style="">
-        <div class="absolute flex flex-column h-2/4 w-5/12" style="margin-left:5%; margin-top:20%">
-          <div class="text-black mb-4 text-2xl font-bold" v-html="$t('courses.english.image_title')"></div>          
+        <div class="absolute flex flex-column h-2/4 w-5/12" style="margin-left:21%; margin-top:20%">
+          <div class="text-black mb-4 text-4xl font-extrabold" v-html="$t('courses.english.image_title')"></div>          
           <div class="text-black mb-4 text-base font-bold" v-html="$t('courses.english.image_subtitle')"></div>
           <button type="button" class="btn rounded-2xl w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
             <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>

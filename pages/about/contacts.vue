@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="pt-5 flex flex-row items-center" style="margin-bottom:10%">
+    <div class="pt-5 flex flex-row items-center ignore-l-global-margin" style="margin-bottom:10%">
       <iframe 
         width="600"
         height="450"
