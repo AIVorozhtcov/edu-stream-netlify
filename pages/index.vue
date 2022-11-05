@@ -58,12 +58,12 @@
           <p class="text-base pl-2 pb-4 h-full">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
         </div>
       </div>
-      <div class="flex flex-row w-full justify-around h-1/2 items-start pt-8">
-        <div class="flex w-5/12 flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1); height:200px">
+      <div class="flex flex-row w-full justify-around h-2/4 items-start pt-8">
+        <div class="flex w-5/12 flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1)">
           <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
           <p class="text-base pl-2 pb-4">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
         </div>
-        <div class="flex w-5/12 flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1); height:200px">
+        <div class="flex w-5/12 flex-column h-2/4 items-start justify-between" style="background-color:rgba(239, 239, 239, 1)">
           <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
           <p class="text-base pl-2 pb-4">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
         </div>
