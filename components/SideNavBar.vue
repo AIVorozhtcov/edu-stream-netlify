@@ -1,5 +1,5 @@
 <template>
-    <ul style="list-style-typ;:''; margin:0; padding:0;">
+    <ul style="list-style-typ;:''; padding-left: 15%; padding-right: 15%;  background-color:rgba(255, 255, 255, 0.67);">
       <!-- <li style="float:left; width:100%; padding-left: 22%; background-color:#253984;">
         <ul class="topnavbar-list">
           <li> 
@@ -32,7 +32,7 @@
       </li>
     -->
 
-      <li style="float: left; width: 100%; padding-left:4%; background-color:rgba(255, 255, 255, 0.67);">
+      <li style="float: left; width: 100%;">
            <!--
             <nav class="navbar navbar-expand-lg navbar-light">        
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,7 +79,7 @@
                   <nuxt-link class="dropdown-item" :to="localePath('/about/team')">{{$t('menu.about_us.contacts')}}</nuxt-link>
                 </div> -->
               </li>
-              <li class="pl-5">
+              <li class="margin-5-for-rows">
                 <div @mouseenter="examsIsSelected = true; coursesIsSelected = false; aboutIsSelected = false" :class="[examsIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']">
                   <p>{{$t('menu.exams.self')}}</p>
                   <b-icon :icon="this.examsHoverHandler()" />
@@ -92,7 +92,7 @@
                   <nuxt-link class="dropdown-item" :to="localePath('/exams/osd')">OSD</nuxt-link>
                 </div> -->
               </li>
-              <li class="pl-5">
+              <li class="margin-5-for-rows">
                 <div @mouseenter="coursesIsSelected = true; examsIsSelected = false; aboutIsSelected = false" :class="[coursesIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']">
                   <p>{{$t('menu.courses.self')}}</p>
                   <b-icon :icon="this.coursesHoverHandler()" />
@@ -107,39 +107,39 @@
                 </div> -->
               </li>
             <li>
-                <b-sidebar width="500px" class="flex"  v-model="isSidebarOpen" id="sidebar-1" :backdrop="true" no-header>                  
-                  <div class="w-full h-full flex-column" @mouseleave="closeSidebar">
-                    <div class="w-full edu-color h-20 flex flex-row items-center">  
-                      <div class="w-22 h-22" style="margin-left: 2%">
-                        <nuxt-link to="/">  
+                <b-sidebar width="55%" class="flex"  v-model="isSidebarOpen" id="sidebar-1" :backdrop="true" no-header>                  
+                  <div class="w-full h-full flex-column" @mouseleave="closeSidebar"  style="margin-left:calc(15/70 * 100%);">
+                    <div class="w-full edu-color h-20 flex flex-row items-center ignore-l-global-margin">  
+                      <div class="w-22 h-22" style="margin-left: 30%;">
+                        <nuxt-link :to="localePath('/')">  
                           <img :src="logo" />
                         </nuxt-link>
                       </div>
                     </div>
-                    <div class="flex pl-5 pt-2 flex-row items-center">
+                    <div class="flex margin-5-for-rows pt-2 flex-row items-center">
                       <div @mouseenter="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false"  :class="[aboutIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']">
                         <p>{{$t('menu.about_us.self')}}</p>
                         <b-icon :icon="this.aboutHoverHandler()"/>
                       </div>
-                      <div @mouseenter="examsIsSelected = true; coursesIsSelected = false; aboutIsSelected = false" :class="[examsIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl pl-5']">
+                      <div @mouseenter="examsIsSelected = true; coursesIsSelected = false; aboutIsSelected = false" :class="[examsIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl margin-7-for-rows']">
                         <p>{{$t('menu.exams.self')}}</p>
                         <b-icon :icon="this.examsHoverHandler()" />
                       </div>
-                      <div @mouseenter="coursesIsSelected = true; examsIsSelected = false; aboutIsSelected = false" :class="[coursesIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl pl-5']">
+                      <div @mouseenter="coursesIsSelected = true; examsIsSelected = false; aboutIsSelected = false" :class="[coursesIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl margin-7-for-rows']">
                         <p>{{$t('menu.courses.self')}}</p>
                         <b-icon :icon="this.coursesHoverHandler()" />
                       </div>
                     </div>
-                    <div  :class="[aboutIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 pl-5 flex-end justify-around text-4xl']">
+                    <div  :class="[aboutIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 margin-5-for-rows flex-end justify-around text-4xl']">
                       <nuxt-link class="pt-7" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
                       <nuxt-link class="pt-7" :to="localePath('/about/contacts')">{{$t('menu.about_us.contacts')}}</nuxt-link>
                     </div>
-                    <div :class="[coursesIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 pl-5 justify-around text-4xl']">
+                    <div :class="[coursesIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 margin-5-for-rows justify-around text-4xl']">
                       <nuxt-link class="pt-5" :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
                       <nuxt-link class="pt-5" :to="localePath('/courses/english')">{{$t('menu.courses.en')}}</nuxt-link>
                       <nuxt-link class="pt-5" :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
                     </div>
-                    <div :class="[examsIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 pl-5 justify-around text-4xl']">
+                    <div :class="[examsIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 margin-5-for-rows justify-around text-4xl']">
                       <nuxt-link class="pt-7" :to="localePath('/exams/oif')">OIF</nuxt-link>
                       <nuxt-link class="pt-7" :to="localePath('/exams/osd')">OSD</nuxt-link>
                     </div>
@@ -166,6 +166,12 @@
   display: none;
 }
 
+.margin-5-for-rows{
+  margin-left:5%
+}
+.margin-7-for-rows{
+  margin-left:7%
+}
 .menu-selected p{
   color:rgb(67, 44, 243);
   text-decoration: underline

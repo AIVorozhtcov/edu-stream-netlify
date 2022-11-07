@@ -14,9 +14,6 @@
   "NavFooter": {
     "description": "Auto imported from components/NavFooter.vue"
   },
-  "NuxtLogo": {
-    "description": "Auto imported from components/NuxtLogo.vue"
-  },
   "SideNavBar": {
     "description": "Auto imported from components/SideNavBar.vue"
   }

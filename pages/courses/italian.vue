@@ -8,7 +8,7 @@
             <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
-        <img class="h-3/4" :src="italianCoursesWelcome">            
+        <img class="w-full h-3/4" :src="italianCoursesWelcome">            
       </div>
       <div class="flex flex-row mx-auto items-start justify-between w-11/12" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:7%; background-color: rgba(255, 255, 255, 1);">
         <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 3%;">

@@ -6,6 +6,10 @@ body
   font-family: 'Montserrat', sans-serif;
   
 }
+.global-margins{
+  margin-left: 15%;
+  margin-right: 15%;
+}
 .ignore-global-margins{
   margin-left:calc(15/70 * -100%); 
   margin-right:calc(15/70 * -100%);

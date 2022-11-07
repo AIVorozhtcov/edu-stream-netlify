@@ -1,31 +1,34 @@
 <template>
     <div style="background-color: #253984">
-        <div class="flex flex-column items-start text-xs">
-            <div class="flex flex-row items-start pt-2">
-                <div class="w-22 h-22">
+        <div class="flex flex-column items-start justify-around text-base" style="">
+            <div class="flex w-full flex-row items-start pt-2 justify-around">
+                <div class="w-1/6">
                     <nuxt-link to="/">  
                         <img :src="logo" />
                     </nuxt-link>
                 </div>
-                <div>
-                    <div class="flex flex-column items-start pl-20">
-                        <h1>Courses</h1>
-                        <nuxt-link to="/courses/german"><p>German course</p></nuxt-link>
-                        <nuxt-link to="/courses/english"><p>English course</p></nuxt-link>
-                        <nuxt-link to="/courses/italian"><p>Italian course</p></nuxt-link>
+                <div class="w-1/6" style="margin-left:2%">
+                    <div class="flex flex-column items-start">
+                        <h1 class="text-lg font-bold">{{$t('menu.exams.self')}}</h1>
+                        <nuxt-link class="text-white" :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
+                        <nuxt-link class="text-white" :to="localePath('/courses/english')">{{$t('menu.courses.en')}}</nuxt-link>
+                        <nuxt-link class="text-white" :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
                     </div>
                 </div>
-                <div>
-                    <div class="flex flex-column items-start pl-20">
-                        <h1>Exams</h1>
-                        <nuxt-link to="/exams/oif"><p>OIF</p></nuxt-link>
-                        <nuxt-link to="/exams/osd"><p>OSD</p></nuxt-link>
+                <div class="w-1/6" style="margin-left:2%">
+                    <div class="flex flex-column items-start">
+                        <h1 class="text-lg font-bold">{{$t('menu.exams.self')}}</h1>
+                        <nuxt-link class="text-white" :to="localePath('/exams/oif')">OIF</nuxt-link>
+                        <nuxt-link class="text-white" :to="localePath('/exams/osd')">OSD</nuxt-link>
                     </div>
                 </div>
-                <div class="flex pl-20">
-                    <h1>About us</h1>
+                <div class="flex flex-column w-1/6" style="margin-left:2%">
+                    <h1 class="text-lg font-bold">{{$t('menu.about_us.self')}}</h1>
+                    <nuxt-link class="text-white" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
+                    <nuxt-link class="text-white" :to="localePath('/about/contacts')">{{$t('menu.about_us.contacts')}}</nuxt-link>
                 </div>
-                <div class="flex flex-column items-start pl-20" id="last-column">
+                <div class="w-1/6"></div>
+                <div class="flex flex-column items-start " >
                     <h1>Address</h1>
                     <p>Rennweg 9/6, 1030 Wien</p>
                     <p>Öffnungszeiten</p>
@@ -33,11 +36,11 @@
                     <p>Samstag & Sonntag: geschlossen</p>
                 </div>
             </div>
-            <div class="flex flex-row items-start border-y-1 pt-3">
+            <div class="flex w-full flex-row items-start justify-around border-y-1 pt-3">
                 <p>
                   Aus Gründen der besseren Lesbarkeit wird auf die gleichzeitige Verwendung der Sprachformen männlich, weiblich und divers (m/w/d) verzichtet. Sämtliche Personenbezeichnungen gelten gleichermaßen für alle Geschlechter.
                 </p>
-                <div id="last-column" class="flex flex-row ml-1.5 space-x-1.5">
+                <div id="last-column" class="flex flex-row">
                     <a href="https://www.facebook.com" target="_blank">
                         <img :src="facebookLogo" />
                     </a>
@@ -46,7 +49,7 @@
                     </a>
                 </div>
             </div>
-            <div class="flex flex-row items-start pb-1 pt-3">
+            <div class="flex w-full flex-row items-start pb-1 pt-3">
                 <p>© 2022 EduStream GmbH  |  AGB  |  Impressum  |  Datenschutz</p>
             </div>
         </div>
@@ -55,9 +58,7 @@
 
 <style scoped>
 
-    #last-column{
-        margin-left:auto;
-    }
+   
 
     p, h1{
         color:white;

@@ -3,10 +3,10 @@
     <NavBar />
 
     <main>
-      <div class="w-full relative pd-10" style="overflow: auto">
+      <div class="relative pd-10" style="overflow: auto">
         
         <SideNavBar class="sidenavbar absolute w-full top-0 z-40" />
-        <nuxt style="margin-left: 15%; margin-right: 15%;"/>
+        <nuxt class="global-margins"/>
       </div>
       
       <NavFooter class="w-full" style="bottom:0"></NavFooter>

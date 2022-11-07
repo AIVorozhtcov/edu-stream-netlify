@@ -3,7 +3,6 @@ export const FAQAccordion = () => import('../..\\components\\FAQAccordion.vue' /
 export const ModalResponse = () => import('../..\\components\\ModalResponse.vue' /* webpackChunkName: "components/modal-response" */).then(c => wrapFunctional(c.default || c))
 export const NavBar = () => import('../..\\components\\NavBar.vue' /* webpackChunkName: "components/nav-bar" */).then(c => wrapFunctional(c.default || c))
 export const NavFooter = () => import('../..\\components\\NavFooter.vue' /* webpackChunkName: "components/nav-footer" */).then(c => wrapFunctional(c.default || c))
-export const NuxtLogo = () => import('../..\\components\\NuxtLogo.vue' /* webpackChunkName: "components/nuxt-logo" */).then(c => wrapFunctional(c.default || c))
 export const SideNavBar = () => import('../..\\components\\SideNavBar.vue' /* webpackChunkName: "components/side-nav-bar" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607

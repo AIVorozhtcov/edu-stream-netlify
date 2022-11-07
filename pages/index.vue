@@ -7,32 +7,32 @@
             <div class="px-5 py-1 text-black" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
-        <img class="h-3/4" :src="frontpageWelcome">            
+        <img class="w-full h-3/4" :src="frontpageWelcome">            
     </div>
     
     <div class="flex flex-row justify-evenly h-3/4 ignore-global-margins">
-      <div class="flex pl-6 w-full flex-column py-10 items-start text-base text-white" style="background-color:#FF7C33;"></div>
-      <div class="flex pl-6 w-full flex-column py-10 items-start text-base text-white" style="background-color:#FF7C33;">
+      <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#FF7C33; width:15%"></div>
+      <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#FF7C33; width:calc(70%/4)">
         <img class="left-1/2 h-2/12 w-2/12 pb-2 pr-3" :src="colorTabsIcon1">
         <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_1')"></div>
       </div>
-      <div class="flex pl-6 w-full flex-column py-10 items-start text-base text-white" style="background-color:#96BDFF;">
+      <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#96BDFF; padding-left:2%; width:calc(70%/4)">
         <img class="left-1/2 h-2/12 w-2/12 pb-2 pr-3" :src="colorTabsIcon2">
         <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_2')"></div>
       </div>
-      <div class="flex pl-6 w-full flex-column py-10 items-start text-base text-white" style="background-color:#4385F5;">
+      <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#4385F5; padding-left:2%; width:calc(70%/4)">
         <img class="left-1/2 h-2/12 w-2/12 pb-2 pr-3" :src="colorTabsIcon3">
         <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_3')"></div>
       </div>
-      <div class="flex pl-6 w-full flex-column py-10 items-start text-base text-white" style="background-color:#253984;">
+      <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#253984; padding-left:2%; width:calc(70%/4)">
         <img class="left-1/2 h-2/12 w-2/12 pb-2 pr-3" :src="colorTabsIcon4" />
         <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_4')"></div>
       </div>
-      <div class="flex pl-6 w-full flex-column py-10 items-start text-base text-white" style="background-color:#253984;"></div>
+      <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#253984;width:15%"></div>
       
 
     </div>
-    <div class="flex flex-row py-16 pl-2 w-full items-start justify-between">
+    <div class="flex flex-row py-16 w-full items-start justify-between">
         <div class="flex flex-column pr-5 items-start">
           <h1 class="font-bold w-3/4 text-xl">{{$t('main.info_columns.titles.t_1')}}</h1>
           <p class="text-base">{{$t('main.info_columns.bodies.b_1')}}</p>
@@ -48,7 +48,7 @@
     </div>
     <div class="border-y py-16 flex flex-column items-start justify-between w-full h-full">
       <h1 class="text-2xl font-bold">{{$t('main.courses_and_exams.self')}}</h1>
-      <div class="flex flex-row w-full justify-around h-full items-start pt-8 ">
+      <div class="flex flex-row w-full justify-between h-full items-start pt-8 ">
         <div class="flex w-5/12 flex-column items-start h-full justify-between" style="background-color:rgba(239, 248, 255, 1)">
           <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
           <p class="text-base pl-2 pb-4 h-full">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
@@ -58,7 +58,7 @@
           <p class="text-base pl-2 pb-4 h-full">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
         </div>
       </div>
-      <div class="flex flex-row w-full justify-around h-2/4 items-start pt-8">
+      <div class="flex flex-row w-full justify-between h-2/4 items-start pt-8">
         <div class="flex w-5/12 flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1)">
           <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
           <p class="text-base pl-2 pb-4">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
@@ -78,12 +78,12 @@
     </div>
       <client-only>
         <div class="relative py-16 flex flex-row items-center h-1/12  ignore-r-global-margin">
-          <div class="absolute left-14 z-40">
+          <div class="absolute z-40">
             <button @click.prevent="prevBanner" class="">
               <img :src="bannerArrowLeft" class="w-2/12" style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)" />
             </button>
           </div>
-          <carousel class="left-0 w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :scrollPerPage="false" :spacePadding="40" >
+          <carousel class=" w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :scrollPerPage="false" :spacePadding="40" >
             
             <slide class="w-1/2 pr-15">
               <img :src="promoBanner1" />
@@ -107,8 +107,8 @@
     
     
     <div class="flex flex-column items-start w-full">
-      <h1 class="pl-30"> {{$t('main.about.our_school')}}</h1>
-      <p class=" pl-30 pt-6 pb-16">{{$t('main.about.our_school_expanded')}}</p>
+      <h1 class=" text-2xl font-extrabold"> {{$t('main.about.our_school')}}</h1>
+      <p class="pt-6 pb-16">{{$t('main.about.our_school_expanded')}}</p>
       <client-only class=" pl-30 justify-center h-1/12 w-full ignore-r-global-margin">
         
         <carousel ref="gallery" class="w-11/12 justify-between" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="3" :scrollPerPage="false" :spacePadding="40" >

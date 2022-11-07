@@ -7,12 +7,12 @@
             <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
-        <img class="h-3/4" :src="osdWelcome">            
+        <img class="w-full h-3/4" :src="osdWelcome">            
     </div>
     
     <div class="flex flex-column w-full bg-white py-10">
-      <div class="pl-5 w-5/12 text-3xl py-5 font-bold" v-html="$t('exams.oif.subtitle')"></div>
-      <div class="pl-5 flex flex-row items-center">
+      <div class="w-5/12 text-3xl py-5 font-bold" v-html="$t('exams.oif.subtitle')"></div>
+      <div class="flex flex-row items-center">
         <div class="bg-slate-100 rounded h-fit w-fit flex flex-column">
           <div class="px-4 font-bold pb-3 pt-3" v-html="$t('exams.oif.exam-1')"></div>
           <p class="px-4 py-1">03.11.2022; 13:00</p>

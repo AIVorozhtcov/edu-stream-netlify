@@ -9,7 +9,7 @@
         allowfullscreen
         src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJM3oBv8sHbUcR1eSwnYIfPGs&key=AIzaSyCT6NQDoiw-1qHVzogFs3VVhy0HKu4SHjY">
       </iframe>
-      <div class="pl-10 flex flex-column">
+      <div class="flex flex-column" style="margin-left:10%">
         <h1>{{$t('about_us.contacts.contacts')}}</h1>
         <div class="pt-3 text-base" v-html="$t('about_us.contacts.info')"></div>
       </div>

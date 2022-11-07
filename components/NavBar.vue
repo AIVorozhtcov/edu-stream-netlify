@@ -1,13 +1,13 @@
 
 <template>
   <div>
-    <div class="edu-color w-full h-20 flex flex-row items-center">
-      <div class="w-22 h-22" style="margin-left: 2%">
-        <nuxt-link to="/">  
+    <div class="edu-color h-20 flex flex-row items-center" style="padding-left: 15%; padding-right: 15%;">
+      <div class="w-22 h-22" style="">
+        <nuxt-link :to="localePath('/')">  
           <img :src="logo" />
         </nuxt-link>
       </div>
-      <div class="flex flex-row items-center" style="margin-left: 35%">
+      <div class="flex flex-row items-center" style="margin-left: 20%">
           <div class="flex items-center flex-row">
               <a class="text-white" href="tel:+43 1 890 89 48">+43 1 890 89 48</a> <p class="text-white pl-1"> | Rennweg 9/6, 1030 Wien |</p>
           </div>

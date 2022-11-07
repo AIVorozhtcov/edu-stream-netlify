@@ -11,5 +11,4 @@ You can directly use them in pages and other components without the need to impo
 - `<ModalResponse>` | `<modal-response>` (components/ModalResponse.vue)
 - `<NavBar>` | `<nav-bar>` (components/NavBar.vue)
 - `<NavFooter>` | `<nav-footer>` (components/NavFooter.vue)
-- `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
 - `<SideNavBar>` | `<side-nav-bar>` (components/SideNavBar.vue)
