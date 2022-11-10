@@ -273,7 +273,10 @@
             "self":"Course",
             "en":"English courses",
             "de":"German courses",
-            "it":"Italian courses"
+            "it":"Italian courses",
+            "en_short":"English",
+            "de_short":"German",
+            "it_short":"Italian"
         },
         "exams":{
             "self":"Exams"

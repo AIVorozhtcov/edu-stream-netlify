@@ -9,7 +9,7 @@
         <nuxt class="global-margins"/>
       </div>
       
-      <NavFooter class="w-full" style="bottom:0"></NavFooter>
+      <NavFooter class="w-full" style="bottom:0; margin-top:5%"></NavFooter>
     </main>
   </div>
 </template>

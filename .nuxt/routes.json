@@ -18,6 +18,12 @@
     "chunkName": "pages/about/contacts"
   },
   {
+    "name": "about-events___de",
+    "path": "/about/events",
+    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\events.vue",
+    "chunkName": "pages/about/events"
+  },
+  {
     "name": "about-info___de",
     "path": "/about/info",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\info.vue",
@@ -28,12 +34,6 @@
     "path": "/about/photos",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\photos.vue",
     "chunkName": "pages/about/photos"
-  },
-  {
-    "name": "about-reviews___de",
-    "path": "/about/reviews",
-    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\reviews.vue",
-    "chunkName": "pages/about/reviews"
   },
   {
     "name": "courses-english___de",
@@ -72,6 +72,12 @@
     "chunkName": "pages/about/contacts"
   },
   {
+    "name": "about-events___en",
+    "path": "/en/about/events",
+    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\events.vue",
+    "chunkName": "pages/about/events"
+  },
+  {
     "name": "about-info___en",
     "path": "/en/about/info",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\info.vue",
@@ -82,12 +88,6 @@
     "path": "/en/about/photos",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\photos.vue",
     "chunkName": "pages/about/photos"
-  },
-  {
-    "name": "about-reviews___en",
-    "path": "/en/about/reviews",
-    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\reviews.vue",
-    "chunkName": "pages/about/reviews"
   },
   {
     "name": "courses-english___en",
@@ -126,6 +126,12 @@
     "chunkName": "pages/about/contacts"
   },
   {
+    "name": "about-events___ru",
+    "path": "/ru/about/events",
+    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\events.vue",
+    "chunkName": "pages/about/events"
+  },
+  {
     "name": "about-info___ru",
     "path": "/ru/about/info",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\info.vue",
@@ -136,12 +142,6 @@
     "path": "/ru/about/photos",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\photos.vue",
     "chunkName": "pages/about/photos"
-  },
-  {
-    "name": "about-reviews___ru",
-    "path": "/ru/about/reviews",
-    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\reviews.vue",
-    "chunkName": "pages/about/reviews"
   },
   {
     "name": "courses-english___ru",

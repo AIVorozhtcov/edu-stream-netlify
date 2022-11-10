@@ -272,7 +272,10 @@
             "self":"Kurse",
             "en":"Englischkurse",
             "de":"Deutschkurse",
-            "it":"Italienischkurse"
+            "it":"Italienischkurse",
+            "en_short":"Englisch",
+            "de_short":"Deutsch",
+            "it_short":"Italienisch"
         },
         "exams":{
             "self":"Prüfungen"

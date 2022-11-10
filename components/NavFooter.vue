@@ -1,6 +1,6 @@
 <template>
     <div style="background-color: #253984">
-        <div class="flex flex-column items-start justify-around text-base" style="">
+        <div class="flex flex-column items-start justify-around text-base global-margins" style="">
             <div class="flex w-full flex-row items-start pt-2 justify-around">
                 <div class="w-1/6">
                     <nuxt-link to="/">  
@@ -9,10 +9,10 @@
                 </div>
                 <div class="w-1/6" style="margin-left:2%">
                     <div class="flex flex-column items-start">
-                        <h1 class="text-lg font-bold">{{$t('menu.exams.self')}}</h1>
-                        <nuxt-link class="text-white" :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
-                        <nuxt-link class="text-white" :to="localePath('/courses/english')">{{$t('menu.courses.en')}}</nuxt-link>
-                        <nuxt-link class="text-white" :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
+                        <h1 class="text-lg font-bold">{{$t('menu.courses.self')}}</h1>
+                        <nuxt-link class="text-white" :to="localePath('/courses/german')">{{$t('menu.courses.de_short')}}</nuxt-link>
+                        <nuxt-link class="text-white" :to="localePath('/courses/english')">{{$t('menu.courses.en_short')}}</nuxt-link>
+                        <nuxt-link class="text-white" :to="localePath('/courses/italian')">{{$t('menu.courses.it_short')}}</nuxt-link>
                     </div>
                 </div>
                 <div class="w-1/6" style="margin-left:2%">

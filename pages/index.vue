@@ -13,26 +13,26 @@
     <div class="flex flex-row justify-evenly h-3/4 ignore-global-margins">
       <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#FF7C33; width:15%"></div>
       <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#FF7C33; width:calc(70%/4)">
-        <img class="left-1/2 h-2/12 w-2/12 pb-2 pr-3" :src="colorTabsIcon1">
+        <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon1">
         <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_1')"></div>
       </div>
       <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#96BDFF; padding-left:2%; width:calc(70%/4)">
-        <img class="left-1/2 h-2/12 w-2/12 pb-2 pr-3" :src="colorTabsIcon2">
+        <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon2">
         <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_2')"></div>
       </div>
       <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#4385F5; padding-left:2%; width:calc(70%/4)">
-        <img class="left-1/2 h-2/12 w-2/12 pb-2 pr-3" :src="colorTabsIcon3">
+        <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon3">
         <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_3')"></div>
       </div>
       <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#253984; padding-left:2%; width:calc(70%/4)">
-        <img class="left-1/2 h-2/12 w-2/12 pb-2 pr-3" :src="colorTabsIcon4" />
+        <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon4" />
         <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_4')"></div>
       </div>
       <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#253984;width:15%"></div>
       
 
     </div>
-    <div class="flex flex-row py-16 w-full items-start justify-between">
+    <div class="hidden flex flex-row py-16 w-full items-start justify-between">
         <div class="flex flex-column pr-5 items-start">
           <h1 class="font-bold w-3/4 text-xl">{{$t('main.info_columns.titles.t_1')}}</h1>
           <p class="text-base">{{$t('main.info_columns.bodies.b_1')}}</p>
@@ -71,10 +71,10 @@
       
     </div>
     <div class="border-b py-16 flex flex-row justify-around">
-      <img class="w-1/12 h-auto" :src="bannerRow1" />
-      <img class="w-1/12 h-auto" :src="bannerRow2" />
-      <img class="w-1/12 h-auto" :src="bannerRow3" />
-      <img class="w-1/12 h-auto" :src="bannerRow4" />
+      <img class="w-auto h-2/12" :src="bannerRow1" />
+      <img class="w-auto h-2/12" :src="bannerRow2" />
+      <img class="w-auto h-2/12" :src="bannerRow3" />
+      <img class="w-auto h-2/12" :src="bannerRow4" />
     </div>
       <client-only>
         <div class="relative py-16 flex flex-row items-center h-1/12  ignore-r-global-margin">
@@ -257,13 +257,13 @@
         </template> 
         <div class="flex flex-column items-start">
           <div class="pt-3 font-bold" v-html="$t('modals.name_title')"></div>
-          <input @focusout="checkName" class="bg-slate-200 w-full rounded-sm py-1" type="text" v-model="response_name" :placeholder="$t('modals.name')" required>
+          <input @focusout="checkName" class="pl-1 bg-slate-200 w-full rounded-sm py-1" type="text" v-model="response_name" :placeholder="$t('modals.name')" required>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isNameWrong" v-html="$t('modals.required')"></div>
           <div class="pt-3 font-bold" v-html="$t('modals.email_title')"></div>
-          <input @focusout="checkEmail" type="email" class="bg-slate-200 w-full rounded-sm py-1" v-model="response_email" :placeholder="$t('modals.email')" required>
+          <input @focusout="checkEmail" type="email" class="pl-1 bg-slate-200 w-full rounded-sm py-1" v-model="response_email" :placeholder="$t('modals.email')" required>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
           <div class="pt-3 font-bold" v-html="$t('modals.phone_title')"></div>
-          <input @focusout="checkPhone" type="tel" class="bg-slate-200 w-full rounded-sm py-1" v-model="response_phone" :placeholder="$t('modals.phone')" required>
+          <input @focusout="checkPhone" type="tel" class="pl-1 bg-slate-200 w-full rounded-sm py-1" v-model="response_phone" :placeholder="$t('modals.phone')" required>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
           <div class="pt-3 flex flex-row">
               <input @animationend="checkTimes" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
