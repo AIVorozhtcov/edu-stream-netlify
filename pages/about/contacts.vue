@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="pt-5 flex flex-row items-center ignore-l-global-margin" style="margin-bottom:10%">
+    <div class="pt-5 flex flex-row items-center ignore-l-global-margin" style="margin-bottom:10%;">
       <iframe 
         width="600"
         height="450"
-        style="border:0"
+        style="border:0; margin-left:3%"
         loading="lazy"
         allowfullscreen
         src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJM3oBv8sHbUcR1eSwnYIfPGs&key=AIzaSyCT6NQDoiw-1qHVzogFs3VVhy0HKu4SHjY">

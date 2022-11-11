@@ -79,10 +79,11 @@
       
     </div>
     <div class="border-b py-16 flex flex-row justify-around">
-      <img class="w-auto h-2/12" :src="bannerRow1" />
-      <img class="w-auto h-2/12" :src="bannerRow2" />
-      <img class="w-auto h-2/12" :src="bannerRow3" />
-      <img class="w-auto h-2/12" :src="bannerRow4" />
+      <img class="h-auto w-1/5" :src="bannerRow1" />
+      <img class="h-auto w-1/5" :src="bannerRow2" />
+      <img class="h-auto w-1/5" :src="bannerRow3" />
+      <img class="h-auto w-1/5" :src="bannerRow4" />
+      <img class="h-auto w-1/5" :src="bannerRow5" />
     </div>
       <client-only>
         <div class="relative py-16 flex flex-row items-center h-1/12  ignore-r-global-margin">
@@ -185,7 +186,7 @@
       </div>
       <div class="my-16 h-full w-full flex flex-column items-start ignore-r-global-margin">
         <client-only class=" w-full h-full pl-30 justify-center ignore-r-global-margin">        
-          <carousel ref="logoGallery" class="w-full h-full justify-between ignore-r-global-margin" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="3" :scrollPerPage="false" :spacePadding="40" >
+          <carousel ref="logoGallery" class="w-full h-full justify-between ignore-r-global-margin" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="true" :adjustableHeight="false" :perPage="3" :scrollPerPage="true" :spacePadding="40" >
             <slide class="w-full pr-15">
               <img :src="logoGallery1" />
             </slide>
@@ -199,13 +200,40 @@
               <img :src="logoGallery4" />
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery2" />
+              <img :src="logoGallery5" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="logoGallery6" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="logoGallery7" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="logoGallery8" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="logoGallery9" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="logoGallery10" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="logoGallery11" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="logoGallery12" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="logoGallery13" />
+            </slide>
+            <slide class="w-1/2">
+              <img :src="logoGallery14" />
             </slide>
             
             
           </carousel>
         </client-only> 
-        <button @click.prevent="nextLogoGalleryImage" class="py-2">
+        <button @click.prevent="nextLogoGalleryImage" class="hidden py-2">
           <img :src="galleryArrow" />
         </button>
       </div>
@@ -314,10 +342,21 @@ import bannerRow1 from "~/assets/banner_row_1.png"
 import bannerRow2 from "~/assets/banner_row_2.png"
 import bannerRow3 from "~/assets/banner_row_3.png"
 import bannerRow4 from "~/assets/banner_row_4.png"
-import logoGallery1 from "~/assets/logo_gallery_1.png"
-import logoGallery2 from "~/assets/logo_gallery_2.png"
-import logoGallery3 from "~/assets/logo_gallery_3.png"
-import logoGallery4 from "~/assets/logo_gallery_4.png"
+import bannerRow5 from "~/assets/banner_row_5.png"
+import logoGallery1 from "~/assets/logo_gallery/1.png"
+import logoGallery2 from "~/assets/logo_gallery/2.png"
+import logoGallery3 from "~/assets/logo_gallery/3.png"
+import logoGallery4 from "~/assets/logo_gallery/4.png"
+import logoGallery5 from "~/assets/logo_gallery/5.png"
+import logoGallery6 from "~/assets/logo_gallery/6.png"
+import logoGallery7 from "~/assets/logo_gallery/7.png"
+import logoGallery8 from "~/assets/logo_gallery/8.png"
+import logoGallery9 from "~/assets/logo_gallery/9.png"
+import logoGallery10 from "~/assets/logo_gallery/10.png"
+import logoGallery11 from "~/assets/logo_gallery/11.png"
+import logoGallery12 from "~/assets/logo_gallery/12.png"
+import logoGallery13 from "~/assets/logo_gallery/13.png"
+import logoGallery14 from "~/assets/logo_gallery/14.png"
 import locationPhoto from "~/assets/location_photo.png"
 
 export default {
@@ -338,10 +377,21 @@ export default {
       bannerRow2: bannerRow2,
       bannerRow3: bannerRow3,
       bannerRow4: bannerRow4,
+      bannerRow5: bannerRow5,
       logoGallery1: logoGallery1,
       logoGallery2: logoGallery2,
       logoGallery3: logoGallery3,
       logoGallery4: logoGallery4,
+      logoGallery5: logoGallery5,
+      logoGallery6: logoGallery6,
+      logoGallery7: logoGallery7,
+      logoGallery8: logoGallery8,
+      logoGallery9: logoGallery9,
+      logoGallery10: logoGallery10,
+      logoGallery11: logoGallery11,
+      logoGallery12: logoGallery12,
+      logoGallery13: logoGallery13,
+      logoGallery14: logoGallery14,
       locationPhoto: locationPhoto,
       showModal: false,
       isNameWrong: false,
