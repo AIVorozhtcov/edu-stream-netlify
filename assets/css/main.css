@@ -6,6 +6,12 @@ body
   font-family: 'Montserrat', sans-serif;
   
 }
+.text-base-responsive{
+  font-size: calc(2px + 1.10625vw);
+}
+.text-xl-responsive{
+  font-size: calc(3px + 1.40625vw);
+}
 .global-margins{
   margin-left: 15%;
   margin-right: 15%;

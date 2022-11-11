@@ -110,7 +110,7 @@
             
           </div>
           <div>
-                <b-sidebar width="55%" class="flex" v-model="isSidebarOpen" id="sidebar-1" :backdrop-variant="whiteBackdrop" :backdrop="true" no-header>                  
+                <b-sidebar width="55%" class="flex" v-model="isSidebarOpen" id="sidebar-1" :backdrop-variant="whiteBackdrop"  :backdrop="true" no-header>                  
                   <div class="h-full flex" @mouseleave="closeSidebar"  style="background-color:rgba(255, 255, 255, 1)">
                     <div class="flex-column w-full" style="height:90%" >
                       <div class="w-full edu-color h-20 flex flex-row items-center">  
@@ -137,7 +137,7 @@
                       </div>
                       <div  :class="[aboutIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 items-start justify-end font-bold text-5xl']" style="padding-left:33%;">
                         <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
-                        <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/events')">{{$t('menu.about_us.about_us')}}</nuxt-link>
+                        <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/events')">{{$t('menu.about_us.events')}}</nuxt-link>
                         <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/contacts')">{{$t('menu.about_us.contacts')}}</nuxt-link>
                       </div>
                       <div :class="[coursesIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 items-start justify-end font-bold text-5xl']" style="padding-left:33%; ">

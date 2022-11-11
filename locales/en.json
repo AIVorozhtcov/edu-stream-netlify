@@ -267,7 +267,8 @@
         "about_us":{
             "self":"About",
             "about_us":"About us",
-            "contacts":"Contacts"
+            "contacts":"Contacts",
+            "events":"Events"
         },
         "courses":{
             "self":"Course",

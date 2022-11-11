@@ -1,34 +1,34 @@
 <template>
   <div class="flex flex-column">
     <div class="relative flex h-fit ignore-global-margins">   
-        <div class="absolute flex flex-column h-2/4 w-6/12" style=" margin-left:21%; margin-top:23%">       
-          <div class="h-fit text-white mb-4 text-4xl font-extrabold" v-html="$t('main.image_text')"></div>
+        <div class="absolute flex flex-column" style=" margin-left:21%; margin-top:23%">       
+          <div class="h-fit text-white font-extrabold" style="font-size: calc(6px + 2.450625vw); margin-bottom: 6%;" v-html="$t('main.image_text')"></div>
           <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 255, 255, 1)" @click="$bvModal.show('modal-1')" >
-            <div class="px-5 py-1 text-black" v-html="$t('exams.oif.register')"></div>
+            <div class="text-black" style="font-size: calc(3px + 1.10625vw); padding-top:0.5vw; padding-right: 4vw; padding-left: 4vw" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
         <img class="w-full h-3/4" :src="frontpageWelcome">            
     </div>
     
     <div class="flex flex-row justify-evenly h-3/4 ignore-global-margins">
-      <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#FF7C33; width:15%"></div>
-      <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#FF7C33; width:calc(70%/4)">
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:15%"></div>
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:calc(70%/4)">
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon1">
-        <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_1')"></div>
+        <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_1')"></div>
       </div>
-      <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#96BDFF; padding-left:2%; width:calc(70%/4)">
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#96BDFF; padding-left:2%; width:calc(70%/4)">
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon2">
-        <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_2')"></div>
+        <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_2')"></div>
       </div>
-      <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#4385F5; padding-left:2%; width:calc(70%/4)">
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#4385F5; padding-left:2%; width:calc(70%/4)">
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon3">
-        <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_3')"></div>
+        <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_3')"></div>
       </div>
-      <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#253984; padding-left:2%; width:calc(70%/4)">
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:2%; width:calc(70%/4)">
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon4" />
-        <div class="pr-6 pb-6" v-html="$t('main.color_tabs.t_4')"></div>
+        <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_4')"></div>
       </div>
-      <div class="flex w-full flex-column py-10 items-start text-base text-white" style="background-color:#253984;width:15%"></div>
+      <div class="flex w-full flex-column items-start text-base text-whitpadding-top:5%; padding-bottom:5%;e" style="background-color:#253984;width:15%"></div>
       
 
     </div>
@@ -49,23 +49,23 @@
     <div class="border-y py-16 flex flex-column items-start justify-between w-full h-full">
       <h1 class="text-2xl font-bold">{{$t('main.courses_and_exams.self')}}</h1>
       <div class="flex flex-row w-full justify-between h-full items-start pt-8 ">
-        <div class="flex w-5/12 flex-column items-start h-full justify-between" style="background-color:rgba(239, 248, 255, 1)">
-          <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
-          <p class="text-base pl-2 pb-4 h-full">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
+        <div class="bg-sky-50 hover:bg-sky-200 cursor-pointer rounded-sm flex w-5/12 flex-column items-start justify-between">
+          <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
+          <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
         </div>
-        <div class="flex w-5/12 flex-column h-2/4 items-start justify-between" style="background-color:rgba(239, 248, 255, 1)">
-          <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
-          <p class="text-base pl-2 pb-4 h-full">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
+        <div class="bg-sky-50 hover:bg-sky-200 cursor-pointer rounded-sm flex w-5/12 flex-column items-start justify-between">
+          <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
+          <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
         </div>
       </div>
       <div class="flex flex-row w-full justify-between h-2/4 items-start pt-8">
-        <div class="flex w-5/12 flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1)">
-          <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
-          <p class="text-base pl-2 pb-4">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
+        <div class="bg-gray-100 hover:bg-gray-300 cursor-pointer rounded-sm flex w-5/12 flex-column items-start justify-between">
+          <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
+          <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
         </div>
-        <div class="flex w-5/12 flex-column h-2/4 items-start justify-between" style="background-color:rgba(239, 239, 239, 1)">
-          <h1 class="text-xl pl-2 font-bold pt-6">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
-          <p class="text-base pl-2 pb-4">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
+        <div class="bg-gray-100 hover:bg-gray-300 cursor-pointer rounded-sm flex w-5/12 flex-column h-2/4 items-start justify-between">
+          <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
+          <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
         </div>
       </div>
       
@@ -241,43 +241,47 @@
       
     </b-carousel> -->
     <div>
-      <b-modal centered :busy="true" id="modal-1" :title="$t('modals.title')">
-        <template #modal-header>
-          <div class="mx-auto font-bold" v-html="$t('modals.title')"></div>
+      <b-modal centered :busy="true" id="modal-1" :hide-header='true' :hide-footer='true' style="width:30%;">
+        <template #modal-header class="">
+          <header class=""></header>
+          
         </template>
         <template #modal-footer>
-          <div class="mx-auto w-full">
-            <div
-            @click="checkAll">
-              <div class="rounded-xl mx-auto flex flex-column items-center h-fit w-full" style="background-color:rgba(67, 133, 245, 1)">
-                <div class="mx-auto text-white py-2" v-html="$t('modals.send')"></div>
-              </div>
-            </div>
+          <div class="mx-auto w-full" style="margin-left:7%; margin-right:7%">
+            
           </div>
         </template> 
-        <div class="flex flex-column items-start">
+        <div class="flex flex-column items-start" style="margin-left:7%; margin-right:7%">
+          <div class="mx-auto font-bold text-xl" style="color:rgba(90, 90, 90, 1); margin-top:3vh; margin-bottom:3vh" v-html="$t('modals.title')"></div>
           <div class="pt-3 font-bold" v-html="$t('modals.name_title')"></div>
-          <input @focusout="checkName" class="pl-1 bg-slate-200 w-full rounded-sm py-1" type="text" v-model="response_name" :placeholder="$t('modals.name')" required>
+          <input @focusout="checkName" class="pl-3 bg-slate-200 w-full rounded-sm" type="text" style="height:9vh;" v-model="response_name" :placeholder="$t('modals.name')" required>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isNameWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-3 font-bold" v-html="$t('modals.email_title')"></div>
-          <input @focusout="checkEmail" type="email" class="pl-1 bg-slate-200 w-full rounded-sm py-1" v-model="response_email" :placeholder="$t('modals.email')" required>
+          <div class="pt-3 font-bold" style="margin-top:2vh" v-html="$t('modals.email_title')"></div>
+          <input @focusout="checkEmail" type="email" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_email" :placeholder="$t('modals.email')" required>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-3 font-bold" v-html="$t('modals.phone_title')"></div>
-          <input @focusout="checkPhone" type="tel" class="pl-1 bg-slate-200 w-full rounded-sm py-1" v-model="response_phone" :placeholder="$t('modals.phone')" required>
+          <div class="pt-3 font-bold" style="margin-top:2vh" v-html="$t('modals.phone_title')"></div>
+          <input @focusout="checkPhone" type="tel" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
           <div class="pt-3 flex flex-row">
               <input @animationend="checkTimes" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
             <div class="pl-3" v-html="$t('modals.mon_wed')"></div>
           </div>
-          <div class="pt-2 flex flex-row">
+          <div class="pt-1 flex flex-row">
             <input @animationend="checkTimes" type="checkbox" :value="$t('modals.tue_thu')" v-model="checkedTimes">
             <div class="pl-3" v-html="$t('modals.tue_thu')"></div>
           </div>
-          <div class="pt-2 flex flex-row">
-            <input @animationend="checkTimes" type="checkbox" :value="$t('modals.any_day')" v-model="checkedTimes">
+          <div class="pt-1 flex flex-row">
+            <input @animationend="checkTimes" type="checkbox" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
             <div class="pl-3" v-html="$t('modals.any_day')"></div>
           </div>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
+          <div
+            @click="checkAll" class="w-full flex">
+              <div class="rounded-md mx-auto flex flex-column items-center h-fit w-full" style="background-color:rgba(67, 133, 245, 1); margin-top:3vh">
+                <div class="mx-auto text-white py-2" v-html="$t('modals.send')"></div>
+              </div>
+          </div>
+          <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
 
         </div>
       </b-modal>
@@ -422,13 +426,23 @@ export default {
 </script>
 
 <style>
+.bg-slate-200{
+    background-color: rgba(244, 244, 244, 1);
+  }
 .VueCarousel-navigation-button {
                 position: relative;
 }
 .VueCarousel-navigation-next {
                 position: relative;
 }
-
+.courses-exams-h1-padding{
+  padding-top:7%;
+  padding-left:3%;
+}
+.courses-exams-p-padding{
+  padding-bottom:7%;
+  padding-left:3%;
+}
 .text-block {
     white-space: pre-line;
 }

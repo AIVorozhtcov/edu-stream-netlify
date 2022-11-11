@@ -1,15 +1,15 @@
 <template>
   <div class="flex flex-column">
       <div class="relative flex h-fit ignore-global-margins">   
-        <div class="absolute flex flex-column h-2/4 w-5/12" style=" margin-left:21%; margin-top:20%">
-          <div class="h-fit text-white mb-4 text-4xl font-extrabold" v-html="$t('courses.english.image_title')"></div>          
-          <div class="h-fit text-white mb-4 text-base font-bold" v-html="$t('courses.english.image_subtitle')"></div>
+        <div class="absolute flex flex-column" style=" margin-left:21%; margin-top:20%">         
+          <div class="h-fit text-white mb-4 font-extrabold" style="font-size: calc(6px + 2.450625vw);" v-html="$t('courses.english.image_title')"></div>
+          <div class="h-fit text-white mb-4 font-bold" style="font-size: calc(2px + 1.150625vw);" v-html="$t('courses.english.image_subtitle')"></div>
           <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
-            <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
+            <div class="text-white" style="font-size: calc(3px + 1.10625vw); padding-top:0.5vw; padding-right: 4vw; padding-left: 4vw" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
         <img class="w-full h-3/4" :src="englishCoursesWelcome">            
-      </div>
+      </div>      
       <div class="flex flex-row mx-auto items-start justify-between w-11/12" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:7%; background-color: rgba(255, 255, 255, 1);">
         <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 3%;">
           <div class="flex flex-row items-center">
@@ -110,43 +110,47 @@
         </div>
       </div>
       <div>
-      <b-modal centered :busy="true" id="modal-1" :title="$t('modals.title')">
-        <template #modal-header>
-          <div class="mx-auto font-bold" v-html="$t('modals.title')"></div>
+      <b-modal centered :busy="true" id="modal-1" :hide-header='true' :hide-footer='true' style="width:30%;">
+        <template #modal-header class="">
+          <header class=""></header>
+          
         </template>
         <template #modal-footer>
-          <div class="mx-auto w-full">
-            <div
-            @click="checkAll">
-              <div class="rounded-xl mx-auto flex flex-column items-center h-fit w-full" style="background-color:rgba(67, 133, 245, 1)">
-                <div class="mx-auto text-white py-2" v-html="$t('modals.send')"></div>
-              </div>
-            </div>
+          <div class="mx-auto w-full" style="margin-left:7%; margin-right:7%">
+            
           </div>
         </template> 
-        <div class="flex flex-column items-start">
+        <div class="flex flex-column items-start" style="margin-left:7%; margin-right:7%">
+          <div class="mx-auto font-bold text-xl" style="color:rgba(90, 90, 90, 1); margin-top:3vh; margin-bottom:3vh" v-html="$t('modals.title')"></div>
           <div class="pt-3 font-bold" v-html="$t('modals.name_title')"></div>
-          <input @focusout="checkName" class="bg-slate-200 w-full rounded-sm py-1" type="text" v-model="response_name" :placeholder="$t('modals.name')" required>
+          <input @focusout="checkName" class="pl-3 bg-slate-200 w-full rounded-sm" type="text" style="height:9vh;" v-model="response_name" :placeholder="$t('modals.name')" required>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isNameWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-3 font-bold" v-html="$t('modals.email_title')"></div>
-          <input @focusout="checkEmail" type="email" class="bg-slate-200 w-full rounded-sm py-1" v-model="response_email" :placeholder="$t('modals.email')" required>
+          <div class="pt-3 font-bold" style="margin-top:2vh" v-html="$t('modals.email_title')"></div>
+          <input @focusout="checkEmail" type="email" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_email" :placeholder="$t('modals.email')" required>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-3 font-bold" v-html="$t('modals.phone_title')"></div>
-          <input @focusout="checkPhone" type="tel" class="bg-slate-200 w-full rounded-sm py-1" v-model="response_phone" :placeholder="$t('modals.phone')" required>
+          <div class="pt-3 font-bold" style="margin-top:2vh" v-html="$t('modals.phone_title')"></div>
+          <input @focusout="checkPhone" type="tel" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
           <div class="pt-3 flex flex-row">
               <input @animationend="checkTimes" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
             <div class="pl-3" v-html="$t('modals.mon_wed')"></div>
           </div>
-          <div class="pt-2 flex flex-row">
+          <div class="pt-1 flex flex-row">
             <input @animationend="checkTimes" type="checkbox" :value="$t('modals.tue_thu')" v-model="checkedTimes">
             <div class="pl-3" v-html="$t('modals.tue_thu')"></div>
           </div>
-          <div class="pt-2 flex flex-row">
-            <input @animationend="checkTimes" type="checkbox" :value="$t('modals.any_day')" v-model="checkedTimes">
+          <div class="pt-1 flex flex-row">
+            <input @animationend="checkTimes" type="checkbox" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
             <div class="pl-3" v-html="$t('modals.any_day')"></div>
           </div>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
+          <div
+            @click="checkAll" class="w-full flex">
+              <div class="rounded-md mx-auto flex flex-column items-center h-fit w-full" style="background-color:rgba(67, 133, 245, 1); margin-top:3vh">
+                <div class="mx-auto text-white py-2" v-html="$t('modals.send')"></div>
+              </div>
+          </div>
+          <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
 
         </div>
       </b-modal>
@@ -155,6 +159,9 @@
 </template>
 
 <style scoped>
+.bg-slate-200{
+    background-color: rgba(244, 244, 244, 1);
+  }
   .offline-tag{
     margin-left:1%;
     border-radius: 0.25rem;

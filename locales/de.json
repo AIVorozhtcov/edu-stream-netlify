@@ -266,7 +266,8 @@
         "about_us":{
             "self":"Über uns",
             "about_us":"Über uns",
-            "contacts":"Kontakte"
+            "contacts":"Kontakte",
+            "events":"Events"
         },
         "courses":{
             "self":"Kurse",
