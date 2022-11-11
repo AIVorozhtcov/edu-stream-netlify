@@ -13,10 +13,10 @@
           </div>
           <div class="flex items-center flex-row ml-1.5 space-x-1.5">
               <a href="https://www.facebook.com" target="_blank">
-                <img :src="facebookLogo" />
+                <img style="width: calc(15px + 1.090625vw); height: auto" :src="facebookLogo" />
               </a>
               <a href="https://www.instagram.com" target="_blank">
-                <img :src="instagramLogo" />
+                <img style="width: calc(15px + 1.090625vw); height: auto" :src="instagramLogo" />
               </a>
           </div>
       </div>

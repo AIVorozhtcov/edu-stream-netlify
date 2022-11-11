@@ -1,4 +1,3 @@
-export { default as ExNavFooter } from '../..\\components\\exNavFooter.vue'
 export { default as FAQAccordion } from '../..\\components\\FAQAccordion.vue'
 export { default as ModalResponse } from '../..\\components\\ModalResponse.vue'
 export { default as NavBar } from '../..\\components\\NavBar.vue'
