@@ -49,24 +49,32 @@
     <div class="border-y py-16 flex flex-column items-start justify-between w-full h-full">
       <h1 class="text-2xl font-bold">{{$t('main.courses_and_exams.self')}}</h1>
       <div class="flex flex-row w-full justify-between h-full items-start pt-8 ">
-        <div class="bg-sky-50 hover:bg-sky-200 cursor-pointer rounded-sm flex w-5/12 flex-column items-start justify-between">
-          <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
-          <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
-        </div>
-        <div class="bg-sky-50 hover:bg-sky-200 cursor-pointer rounded-sm flex w-5/12 flex-column items-start justify-between">
-          <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
-          <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
-        </div>
+        <nuxt-link class="w-fit flex  w-5/12" :to="localePath('/courses/german')">  
+          <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1)">
+            <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
+            <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
+          </div>
+         </nuxt-link> 
+         <nuxt-link class="w-fit flex  w-5/12" :to="localePath('/courses/english')">  
+          <div class="cursor-pointer rounded-sm flexflex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1)">
+            <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
+            <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
+          </div>
+        </nuxt-link>  
       </div>
       <div class="flex flex-row w-full justify-between h-2/4 items-start pt-8">
-        <div class="bg-gray-100 hover:bg-gray-300 cursor-pointer rounded-sm flex w-5/12 flex-column items-start justify-between">
-          <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
-          <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
-        </div>
-        <div class="bg-gray-100 hover:bg-gray-300 cursor-pointer rounded-sm flex w-5/12 flex-column h-2/4 items-start justify-between">
-          <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
-          <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
-        </div>
+        <nuxt-link class="w-fit flex  w-5/12" :to="localePath('/exams/osd')">  
+          <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1)">
+            <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
+            <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
+          </div>
+        </nuxt-link>
+        <nuxt-link class="w-fit flex  w-5/12" :to="localePath('/exams/oif')">
+          <div class="cursor-pointer rounded-sm flex flex-column h-2/4 items-start justify-between" style="background-color:rgba(239, 239, 239, 1)">
+            <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
+            <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
+          </div>
+        </nuxt-link>
       </div>
       
     </div>
