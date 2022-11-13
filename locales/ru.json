@@ -114,7 +114,7 @@
                     "price_1":"€ 360",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 680",
-                    "is_offline":"true",
+                    "is_offline":"false",
                     "is_online":"false"
                 },
                 "2":{
@@ -128,7 +128,7 @@
                     "price_1":"€ 360",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 680",
-                    "is_offline":"true",
+                    "is_offline":"false",
                     "is_online":"false"
                 },
                 "3":{
@@ -142,8 +142,8 @@
                     "price_1":"€ 199",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 499",
-                    "is_offline":"true",
-                    "is_online":"true"
+                    "is_offline":"false",
+                    "is_online":"false"
                 }
             }
         },
@@ -162,7 +162,7 @@
                     "price_1":"€ 360",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 680",
-                    "is_offline":"true",
+                    "is_offline":"false",
                     "is_online":"false"
                 },
                 "2":{
@@ -176,7 +176,7 @@
                     "price_1":"€ 360",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 680",
-                    "is_offline":"true",
+                    "is_offline":"false",
                     "is_online":"false"
                 },
                 "3":{
@@ -190,8 +190,8 @@
                     "price_1":"€ 199",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 499",
-                    "is_offline":"true",
-                    "is_online":"true"
+                    "is_offline":"false",
+                    "is_online":"false"
                 }            
             }
         },
@@ -201,10 +201,11 @@
             "tabs":{
                 "1":"Intensiv",
                 "2":"Standard",
-                "3":"ÖIF, ÖSD",
-                "4":"EPD",
-                "5":"Grammatik/Konversationskurs",
-                "6":"Samstagskurs"
+                "3":"Individual courses",
+                "4":"ÖIF, ÖSD",
+                "5":"EPD",
+                "6":"Grammatik/Konversationskurs",
+                "7":"Samstagskurs"
             },
             "cards":{
                 "1":{

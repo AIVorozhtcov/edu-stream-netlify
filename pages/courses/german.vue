@@ -11,8 +11,8 @@
         <img class="w-full h-3/4" :src="germanCoursesWelcome">            
       </div>  
       
-      <b-tabs active-nav-item-class="text-orange-400" class="border-b-2 w-full" fill content-class="mt-3">
-        <b-tab :title="$t('courses.german.tabs.1')" active>
+      <b-tabs active-nav-item-class="active-course-tab" :small="true"  class="border-b-2 w-full pt-7" fill content-class="mt-3">
+        <b-tab style="" :title="$t('courses.german.tabs.1')" active title-item-class="course-tabs">
           <div class="flex flex-row mx-auto items-start justify-between w-full" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:7%; background-color: rgba(255, 255, 255, 1);">
             <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 3%;">
               <div class="flex flex-row items-center">
@@ -29,7 +29,7 @@
                 <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.6')"></li>
               </ul>
             </div>
-            <div class="flex flex-column h-full border-l-2" style="padding-top: 8%; padding-bottom: 3%; padding-left: 5%; padding-right:2%;">
+            <div class="flex flex-column h-full border-l-2 card-right-column">
               <p>4 {{$t('courses.weeks')}}</p>
               <div class="flex flex-row items-end">
                 <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.1.price_1')}}</p>
@@ -41,7 +41,7 @@
                 <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.1.price_2')}}</p>
                 
               </div>
-              <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+              <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
                 <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
               </button>
             </div>
@@ -74,13 +74,13 @@
                 <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_2')}}</p>
                 
               </div>
-              <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+              <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
                 <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
               </button>
             </div>
           </div>
         </b-tab>
-        <b-tab :title="$t('courses.german.tabs.2')">
+        <b-tab :title="$t('courses.german.tabs.2')" title-item-class="course-tabs">
           <div class="flex flex-row mx-auto items-start justify-between w-full" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:5%; background-color: rgba(255, 255, 255, 1);">
             <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
               <div class="flex flex-row items-center">
@@ -97,7 +97,7 @@
                 <li class="pl-5 py-1" v-html="$t('courses.english.cards.2.6')"></li>
               </ul>
             </div>
-            <div class="flex flex-column h-full border-l-2" style="padding-top: 8%; padding-bottom: 3%; padding-left: 5%; padding-right:2%;">
+            <div class="flex flex-column h-full border-l-2 card-right-column">
               <p>4 {{$t('courses.weeks')}}</p>
               <div class="flex flex-row items-end">
                 <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_1')}}</p>
@@ -109,13 +109,13 @@
                 <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_2')}}</p>
                 
               </div>
-              <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+              <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
                 <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
               </button>
             </div>
           </div>          
         </b-tab>
-        <b-tab :title="$t('courses.german.tabs.3')">
+        <b-tab :title="$t('courses.german.tabs.3')" title-item-class="course-tabs">
           <div class="flex flex-row mx-auto items-start justify-between w-full" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:5%; background-color: rgba(255, 255, 255, 1);">
             <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
               <div class="flex flex-row items-center">
@@ -132,7 +132,7 @@
                 <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.6')"></li>
               </ul>
             </div>
-            <div class="flex flex-column h-full border-l-2" style="padding-top: 8%; padding-bottom: 3%; padding-left: 5%; padding-right:2%;">
+            <div class="flex flex-column h-full border-l-2 card-right-column">
               <p>4 {{$t('courses.weeks')}}</p>
               <div class="flex flex-row items-end">
                 <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.3.price_1')}}</p>
@@ -144,13 +144,13 @@
                 <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_2')}}</p>
                 
               </div>
-              <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+              <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
                 <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
               </button>
             </div>
           </div>
         </b-tab>
-        <b-tab :title="$t('courses.german.tabs.4')">
+        <b-tab :title="$t('courses.german.tabs.4')" title-item-class="course-tabs">
           <div class="flex flex-row mx-auto items-start justify-between w-full" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:5%; background-color: rgba(255, 255, 255, 1);">
             <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
               <div class="flex flex-row items-center">
@@ -167,7 +167,7 @@
                 <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.6')"></li>
               </ul>
             </div>
-            <div class="flex flex-column h-full border-l-2" style="padding-top: 8%; padding-bottom: 3%; padding-left: 5%; padding-right:2%;">
+            <div class="flex flex-column h-full border-l-2 card-right-column">
               <p>4 {{$t('courses.weeks')}}</p>
               <div class="flex flex-row items-end">
                 <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.3.price_1')}}</p>
@@ -179,7 +179,7 @@
                 <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_2')}}</p>
                 
               </div>
-              <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+              <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
                 <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
               </button>
             </div>
@@ -200,7 +200,7 @@
                 <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.6')"></li>
               </ul>
             </div>
-            <div class="flex flex-column h-full border-l-2" style="padding-top: 8%; padding-bottom: 3%; padding-left: 5%; padding-right:2%;">
+            <div class="flex flex-column h-full border-l-2 card-right-column">
               <p>4 {{$t('courses.weeks')}}</p>
               <div class="flex flex-row items-end">
                 <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.3.price_1')}}</p>
@@ -212,17 +212,18 @@
                 <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_2')}}</p>
                 
               </div>
-              <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+              <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
                 <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
               </button>
             </div>
           </div>
         </b-tab>
-        <b-tab :title="$t('courses.german.tabs.5')">
+        <b-tab :title="$t('courses.german.tabs.5')" title-item-class="course-tabs">
           no courses
         </b-tab>
-        <b-tab :title="$t('courses.german.tabs.6')">
-          <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
+        <b-tab :title="$t('courses.german.tabs.6')" title-item-class="course-tabs">
+          <div class="flex flex-row mx-auto items-start justify-between w-full" style="box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);margin-top:5%; background-color: rgba(255, 255, 255, 1);">
+            <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
               <div class="flex flex-row items-center">
                 <h1 class="text-2xl font-bold pl-5">{{$t('courses.english.cards.3.title')}}</h1>
                 <div class="offline-tag" v-if="$t('courses.english.cards.3.is_offline')=='true'">Offline</div>
@@ -237,6 +238,26 @@
                 <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.6')"></li>
               </ul>
             </div>
+            <div class="flex flex-column h-full border-l-2 card-right-column">
+              <p>4 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.3.price_1')}}</p>
+                <p class=" text-xs" style="color:rgba(155, 155, 155, 1);">{{$t('courses.english.cards.3.comment_price_1')}}</p>
+                
+              </div>
+              <p  style="padding-top:10%">8 {{$t('courses.weeks')}}</p>
+              <div class="flex flex-row items-end">
+                <p class="text-blue-600 font-extrabold text-4xl">{{$t('courses.english.cards.2.price_2')}}</p>
+                
+              </div>
+              <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+                <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
+              </button>
+            </div>
+          </div>
+        </b-tab>
+        
+        <b-tab :title="$t('courses.german.tabs.7')" title-item-class="course-tabs">
         </b-tab>
       </b-tabs>      
       <div>
@@ -292,36 +313,14 @@
 .bg-slate-200{
     background-color: rgba(244, 244, 244, 1);
   }
-  .offline-tag{
-    margin-left:1%;
-    border-radius: 0.25rem;
-    background-color:#DEEFFF;
-    color:#5F98F5;
-    padding-left:2%;
-    padding-right:2%;
-    padding-top:1%;
-    padding-bottom:1%;
-  }
-  .online-tag{
-    margin-left:1%;
-    border-radius: 0.25rem;
-    background-color:#E2FFD9;
-    color:#4EE120;
-    padding-left:2%;
-    padding-right:2%;
-    padding-top:1%;
-    padding-bottom:1%;
-  }
-  .active-tab{
-    border-color: rgba(255, 124, 51, 1);
-    color:rgba(255, 124, 51, 1)
-  }
+  
+  
   ul {
     list-style: none;
   }
 
   ul li:before {
-    content: '✓';
+    content: '✓ ';
   }
   .nav-link.active.tab-active-class {
   background-color: red;

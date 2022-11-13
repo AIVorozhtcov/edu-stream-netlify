@@ -1,5 +1,5 @@
 <template>
-  <div class="m-20">
+  <div class="">
     <div
       v-for="(question, index) in Questions"
       :key="question.questionTitle"
@@ -12,7 +12,7 @@
             <b-icon icon="plus" />
 
     </div>
-      <div :data-question-id="index" class="bg-gray-100 p-6 hidden">
+      <div :data-question-id="index" class="p-6 hidden"  style="background-color:rgba(248, 248, 248, 1);">
         <div class="pt-3 text-base" v-html="question.questionAnswer"></div>
       </div>
     </div>

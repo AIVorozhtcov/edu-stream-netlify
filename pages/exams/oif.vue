@@ -2,7 +2,7 @@
   <div class="flex flex-column">
     <div class="relative flex h-fit ignore-global-margins">   
         <div class="absolute flex flex-column" style="width:35%; margin-left:21%; margin-top:23%">           
-          <div class="h-fit text-white font-bold" style="font-size: calc(2px + 1.150625vw); margin-bottom: 6%;" v-html="$t('exams.oif.image-text')"></div>
+          <div class="h-fit text-white font-bold" style="font-size: calc(3px + 1.150625vw); margin-bottom: 6%;" v-html="$t('exams.oif.image-text')"></div>
           <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
             <div class="text-white" style="font-size: calc(3px + 1.10625vw); padding-top:0.5vw; padding-right: 4vw; padding-left: 4vw" v-html="$t('exams.oif.register')"></div>
           </button>
@@ -43,25 +43,27 @@
         </div>          
       </div>
     </div>
-    <div class="flex flex-column bg-slate-100 pl-3 pt-5">
-      <div class="pb-3" v-html="$t('exams.oif.FAQ-preview')"></div>
-      <FAQAccordion />
-      <!-- <b-button v-b-toggle="'collapse-2'" class="m-1">Toggle Collapse</b-button>
-      <p v-b-toggle="'collapse-2'"> also open</p>        
-      <b-collapse class="container bg-slate-800" id="collapse-2">
-        <p>wow</p>
-      </b-collapse>
-    <div class="h-fit flex relative flex-column">
-      <div class="h-fit bg-slate-100"></div>
-        <img class="h-1/12 w-1/12 hidden" :src="overlappingStudent" /> 
-      <div class=" h-fitbg-blue-400">
-        <img class="h-4/12 w-4/12 hidden" :src="overlappingStudent" /> 
-        <img class="absolute left-2/4 top-0 h-4/12 w-4/12 z-40" :src="overlappingStudent" />               
+    <div class="flex ignore-global-margins" style="background-color:rgba(248, 248, 248, 1); padding-top:5vh">
+      <div class="flex flex-column global-margins">
+        <div class="pb-3" v-html="$t('exams.oif.FAQ-preview')"></div>
+        <FAQAccordion />
+        <!-- <b-button v-b-toggle="'collapse-2'" class="m-1">Toggle Collapse</b-button>
+        <p v-b-toggle="'collapse-2'"> also open</p>        
+        <b-collapse class="container bg-slate-800" id="collapse-2">
+          <p>wow</p>
+        </b-collapse>
+      <div class="h-fit flex relative flex-column">
+        <div class="h-fit bg-slate-100"></div>
+          <img class="h-1/12 w-1/12 hidden" :src="overlappingStudent" /> 
+        <div class=" h-fitbg-blue-400">
+          <img class="h-4/12 w-4/12 hidden" :src="overlappingStudent" /> 
+          <img class="absolute left-2/4 top-0 h-4/12 w-4/12 z-40" :src="overlappingStudent" />               
+        </div>
+        
+      </div>-->
       </div>
-      
-    </div>-->
     </div>
-    <div class="h-fit flex relative flex-column bg-slate-100">
+    <div class="h-fit flex relative flex-column ignore-global-margins" style="background-color:rgba(248, 248, 248, 1);">
       <div class="h-fit bg-slate-100"></div>
         <img class="h-1/12 w-1/12 invisible" :src="overlappingStudent" /> 
       <div class=" h-fit bg-blue-400">

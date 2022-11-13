@@ -92,7 +92,7 @@
     "about_us":{
         "contacts":{
             "contacts":"Kontakt:",
-            "info":"<br />+43 1 890 89 48<br />info@edu-stream.at<br />Rennweg 9/6, 1030 Wien<br /><br />Montag – Donnerstag: 09:00 - 17:00<br />Freitag: 09:00 - 15:00<br />Samstag & Sonntag: geschlossen"
+            "info":"+43 1 890 89 48<br />info@edu-stream.at<br />Rennweg 9/6, 1030 Wien<br /><br />Montag – Donnerstag: 09:00 - 17:00<br />Freitag: 09:00 - 15:00<br />Samstag & Sonntag: geschlossen"
         },
         "title":"Über uns",
         "text":"EDUStream GmbH ist eine Sprachschule, die vor allem Deutsch- und Englischkurse für Anfänger und Fortgeschrittene (Sprachniveaus A1, A2, B1, B2, C1, C2) anbietet. EDUStream ist auch ein anerkanntes und zertifiziertes Prüfzentrum für das Österreichische Sprachdiplom (ÖSD) und für den Österreichischen Integrationsfonds (ÖIF). <br /> <br /> Auch mit dem Wiener ArbeitnehmerInnen Förderungsfonds (WAFF) und dem Arbeitsmarkt Service (AMS) werden beste Beziehungen gepflegt. <br /> <br /> EDUStream genießt seit langem einen ausgezeichneten Ruf und wird von den verschiedensten Organisationen und Personen aus Politik, Wirtschaft und Kultur anerkannt und genutzt. Partnerschaften mit internationalen Universitäten verbinden EDUStream mit der akademischen Welt. Wir kooperieren mit der Stadt Wien (MA 17 – Diversität und Integration), wodurch TeilnehmerInnen ihren Bildungspass sowie den Blauen Bundesgutschein (MA 35) für Integrationskurse einlösen können. Das Angebot an Kursen ist vielfältig und zeitlich flexibel gestaltet. So gibt es neben den Intensiv- und Integrationskursen auch Standardkurse. Darüber hinaus wird eine gezielte Prüfungsvorbereitung aber auch Einzelunterricht angeboten. <br /> <br /> Die Atmosphäre in unserer Sprachschule ist familiär. Zwischen LehrerInnen, KundInnen und der Geschäftsführung herrscht eine offene, wertschätzende und freundliche Gesprächskultur.<br />Unterrichtet wird ausschließlich von sehr qualifizierten und erfahrenen LehrerInnen, die sich ständig weiterbilden, um die Lernenden bei ihrem Spracherwerb bestmöglich zu unterstützen.<br />Die kulturellen Unterschiede der Lernenden aus verschiedenen Ländern sind eine große Bereicherung und werden ganz selbstverständlich in den Unterricht integriert. Kleine Kursgruppen ermöglichen einen intensiveren Austausch und eine individuellere Betreuung unserer KundInnen. Wir erachten die Vermittlung von Sprachkompetenz als wichtigen gesellschaftlichen und kulturellen Beitrag. Im Mittelpunkt stehen Themen des Alltags und Berufslebens, die für die TeilnehmerInnen in ihrer aktuellen Lebenssituation sehr hilfreich sind. <br /> <br /> Wien, 10.06.2022"
@@ -114,7 +114,7 @@
                     "price_1":"€ 360",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 680",
-                    "is_offline":"true",
+                    "is_offline":"false",
                     "is_online":"false"
                 },
                 "2":{
@@ -128,7 +128,7 @@
                     "price_1":"€ 360",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 680",
-                    "is_offline":"true",
+                    "is_offline":"false",
                     "is_online":"false"
                 },
                 "3":{
@@ -142,8 +142,8 @@
                     "price_1":"€ 199",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 499",
-                    "is_offline":"true",
-                    "is_online":"true"
+                    "is_offline":"false",
+                    "is_online":"false"
                 }
             }
         },
@@ -162,7 +162,7 @@
                     "price_1":"€ 360",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 680",
-                    "is_offline":"true",
+                    "is_offline":"false",
                     "is_online":"false"
                 },
                 "2":{
@@ -176,7 +176,7 @@
                     "price_1":"€ 360",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 680",
-                    "is_offline":"true",
+                    "is_offline":"false",
                     "is_online":"false"
                 },
                 "3":{
@@ -190,8 +190,8 @@
                     "price_1":"€ 199",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 499",
-                    "is_offline":"true",
-                    "is_online":"true"
+                    "is_offline":"false",
+                    "is_online":"false"
                 }            
             }
         },
@@ -201,10 +201,11 @@
             "tabs":{
                 "1":"Intensiv",
                 "2":"Standard",
-                "3":"ÖIF, ÖSD",
-                "4":"EPD",
-                "5":"Grammatik/Konversationskurs",
-                "6":"Samstagskurs"
+                "3":"Individual courses",
+                "4":"ÖIF, ÖSD",
+                "5":"EPD",
+                "6":"Grammatik/Konversationskurs",
+                "7":"Samstagskurs"
             },
             "cards":{
                 "1":{
@@ -218,7 +219,7 @@
                     "price_1":"€ 360",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 680",
-                    "is_offline":"true",
+                    "is_offline":"false",
                     "is_online":"false"
                 },
                 "2":{
@@ -232,7 +233,7 @@
                     "price_1":"€ 360",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 680",
-                    "is_offline":"true",
+                    "is_offline":"false",
                     "is_online":"false"
                 },
                 "3":{
@@ -246,8 +247,8 @@
                     "price_1":"€ 199",
                     "comment_price_1":" per Monat",
                     "price_2":"€ 499",
-                    "is_offline":"true",
-                    "is_online":"true"
+                    "is_offline":"false",
+                    "is_online":"false"
                 }            
             }
         }
