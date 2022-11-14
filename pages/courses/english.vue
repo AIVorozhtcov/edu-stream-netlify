@@ -5,7 +5,7 @@
           <div class="h-fit text-white mb-4 font-extrabold" style="font-size: calc(6px + 2.450625vw);" v-html="$t('courses.english.image_title')"></div>
           <div class="h-fit text-white mb-4 font-bold" style="font-size: calc(2px + 1.150625vw);" v-html="$t('courses.english.image_subtitle')"></div>
           <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
-            <div class="text-white submit-button" v-html="$t('exams.oif.register')"></div>
+            <div class="text-white button-text" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
         <img class="w-full h-3/4" :src="englishCoursesWelcome">            
@@ -39,7 +39,7 @@
             
           </div>
           <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
-            <div class="submit-button text-white" v-html="$t('exams.oif.register')"></div>
+            <div class="button-text text-white" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
       </div>
@@ -72,7 +72,7 @@
             
           </div>
           <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
-            <div class="submit-button text-white" v-html="$t('exams.oif.register')"></div>
+            <div class="button-text text-white" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
       </div>
@@ -105,7 +105,7 @@
             
           </div>
           <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
-            <div class="submit-button text-white" v-html="$t('exams.oif.register')"></div>
+            <div class="button-text text-white" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
       </div>

@@ -4,7 +4,7 @@
         <div class="absolute flex flex-column" style=" margin-left:21%; margin-top:23%">       
           <div class="h-fit text-white font-extrabold" style="font-size: calc(6px + 2.450625vw); margin-bottom: 6%;" v-html="$t('main.image_text')"></div>
           <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 255, 255, 1)" @click="$bvModal.show('modal-1')" >
-            <div class="text-black" style="font-size: calc(3px + 1.10625vw); padding-top:0.5vw; padding-right: 4vw; padding-left: 4vw" v-html="$t('exams.oif.register')"></div>
+            <div class="text-black button-text" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
         <img class="w-full h-3/4" :src="frontpageWelcome">            
@@ -28,7 +28,7 @@
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon4" />
         <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_4')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-base text-whitpadding-top:5%; padding-bottom:5%;e" style="background-color:#253984;width:15%"></div>
+      <div class="flex w-full flex-column items-start text-base text-white" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:2%; width:15%"></div>
       
 
     </div>
@@ -49,30 +49,42 @@
     <div class="border-y py-16 flex flex-column items-start justify-between w-full h-full">
       <h1 class="text-2xl font-bold">{{$t('main.courses_and_exams.self')}}</h1>
       <div class="flex flex-row w-full justify-between h-full items-start pt-8 ">
-        <nuxt-link class="w-fit flex  w-5/12" :to="localePath('/courses/german')">  
+        <nuxt-link class="w-fit flex" :to="localePath('/courses/german')">  
           <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1)">
             <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
             <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
           </div>
          </nuxt-link> 
-         <nuxt-link class="w-fit flex  w-5/12" :to="localePath('/courses/english')">  
-          <div class="cursor-pointer rounded-sm flexflex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1)">
+         <nuxt-link class="w-fit flex" :to="localePath('/courses/english')">  
+          <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1); margin-left:3vw">
             <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
             <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
           </div>
-        </nuxt-link>  
+        </nuxt-link>
+        <nuxt-link class="w-fit flex" :to="localePath('/courses/online')">  
+          <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1); margin-left:3vw">
+            <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.courses.titles.t_3')}}</h1>
+            <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_3')}}</p>
+          </div>
+        </nuxt-link>    
       </div>
-      <div class="flex flex-row w-full justify-between h-2/4 items-start pt-8">
-        <nuxt-link class="w-fit flex  w-5/12" :to="localePath('/exams/osd')">  
+      <div class="flex flex-row w-full justify-between items-start pt-8">
+        <nuxt-link class="w-fit flex" :to="localePath('/exams/osd')">  
           <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1)">
             <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
             <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
           </div>
         </nuxt-link>
-        <nuxt-link class="w-fit flex  w-5/12" :to="localePath('/exams/oif')">
-          <div class="cursor-pointer rounded-sm flex flex-column h-2/4 items-start justify-between" style="background-color:rgba(239, 239, 239, 1)">
+        <nuxt-link class="w-fit flex" :to="localePath('/exams/oif')">
+          <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1); margin-left:3vw">
             <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
             <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
+          </div>
+        </nuxt-link>
+        <nuxt-link class="w-fit flex" :to="localePath('/exams/new')">
+          <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1); margin-left:3vw">
+            <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.exams.titles.t_3')}}</h1>
+            <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_3')}}</p>
           </div>
         </nuxt-link>
       </div>
@@ -94,14 +106,14 @@
           </div>
           <carousel class=" w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :scrollPerPage="false" :spacePadding="40" >
             
-            <slide class="w-1/2 pr-15">
-              <img :src="promoBanner1" />
+            <slide class="w-1/2 mr-2 rounded">
+              <img class="rounded" :src="promoBanner1" />
             </slide>
-            <slide class="w-1/2">
-              <img :src="promoBanner1" />
+            <slide class="w-1/2 mr-2 rounded">
+              <img class="rounded" :src="promoBanner1" />
             </slide>
-            <slide class="w-1/2">
-              <img :src="promoBanner1" />
+            <slide class="w-1/2 rounded">
+              <img class="rounded" :src="promoBanner1" />
             </slide>
             
           
@@ -116,25 +128,25 @@
     
     
     <div class="flex flex-column items-start w-full">
-      <h1 class=" text-2xl font-extrabold"> {{$t('main.about.our_school')}}</h1>
-      <p class="pt-6 pb-16">{{$t('main.about.our_school_expanded')}}</p>
-      <client-only class=" pl-30 justify-center h-1/12 w-full ignore-r-global-margin">
+      <h1 class=" text-xl-responsive font-bold"> {{$t('main.about.our_school')}}</h1>
+      <p class="pt-6 pb-16 text-base-responsive">{{$t('main.about.our_school_expanded')}}</p>
+      <client-only class="justify-center h-1/12 w-full ignore-r-global-margin">
         
         <carousel ref="gallery" class="w-11/12 justify-between" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="3" :scrollPerPage="false" :spacePadding="40" >
-          <slide class="w-1/2 pr-15">
-            <img :src="promoBanner1" />
+          <slide class="w-1/2 mr-2 rounded">
+            <img class="rounded" :src="promoBanner1" />
           </slide>
-          <slide class="w-1/2">
-            <img :src="promoBanner1" />
+          <slide class="w-1/2 mr-2 rounded">
+            <img class="rounded" :src="promoBanner1" />
           </slide>
-          <slide class="w-1/2">
-            <img :src="promoBanner1" />
+          <slide class="w-1/2 mr-2 rounded">
+            <img class="rounded" :src="promoBanner1" />
           </slide>
-          <slide class="w-1/2">
-            <img :src="promoBanner1" />
+          <slide class="w-1/2 mr-2 rounded">
+            <img class="rounded" :src="promoBanner1" />
           </slide>
-          <slide class="w-1/2">
-            <img :src="promoBanner1" />
+          <slide class="w-1/2 rounded">
+            <img class="rounded" :src="promoBanner1" />
           </slide>
           
           
@@ -142,10 +154,10 @@
       </client-only>
     
     
-      <div class=" py-3  pl-5 flex flex-row justify-between items-center w-full">
+      <div class=" py-3 flex flex-row justify-between items-center w-full">
         <nuxt-link :to="localePath('/about/info')">
           <button class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(32, 88, 182, 1)">
-            <div class="px-5 py-1 text-white" v-html="$t('menu.about_us.self')"></div>
+            <div class="button-text text-white" v-html="$t('menu.about_us.self')"></div>
           </button>
         </nuxt-link>
         <button @click.prevent="nextGalleryImage" class="p-5 py-2">
@@ -153,36 +165,37 @@
         </button>
       </div>
       <div class="flex py-16 flex-row justify-between">
-        <div class="mx-5 flex flex-column w-5/12">              
-          <h1 class=""><div class="" v-html="$t('main.about.location')"> </div></h1>
-          <div class="pt-6 pb-16" v-html="$t('main.about.location_expanded')"></div>
+        <div class="flex flex-column w-5/12">              
+          
+          <h1 class=""><div class="font-bold text-xl-responsive" v-html="$t('main.about.location')"> </div></h1>
+          <div class="pt-6 pb-16 text-base-responsive" v-html="$t('main.about.location_expanded')"></div>
         </div>
-        <img class="mx-5 w-5/12" :src="locationPhoto" />
+        <img class="w-5/12 h-auto" :src="locationPhoto" />
 
       </div>
-      <div class="flex flex-column w-full py-5 items-center justify-around rounded-md" style="background-color:rgba(37, 57, 132, 1)">
-        <h1 class="w-3/4"><div class=" text-3xl text-white" v-html="$t('main.form_text')"> </div></h1>
-        <div class="flex flex-row justify-end items-start w-full">
-          <div class="flex flex-column items-center justify-center w-1/4 py-4 mx-1">
-            <input @focusout="checkName" class="rounded-md w-full h-full rounded-sm" style="background-color:rgba(255, 255, 255, 0.42);  aspect-ratio:19/5; font-size: x-large;" type="text" v-model="response_name" :placeholder="$t('modals.name')" required>
+      <div class="flex flex-column w-full py-5 items-center justify-between rounded-3xl" style="background-color:rgba(37, 57, 132, 1)">
+        <h1 class="w-10/12"><div class="text-2xl-responsive font-bold text-white text-center" v-html="$t('main.form_text')"> </div></h1>
+        <div class="flex flex-row justify-around items-start w-9/12" style="margin-top:3vh">
+          <div class="flex flex-column items-center justify-center w-1/4 mr-1">
+            <input @focusout="checkName" class="rounded-md w-full rounded-md text-white text-base-responsive py-2 pl-2" style="background-color:rgba(255, 255, 255, 0.42);  " type="text" v-model="response_name" :placeholder="$t('modals.name')" required>
             <div class="pt-3 font-bold text-red-600 text-xs" v-if="isNameWrong" v-html="$t('modals.required')"></div>
             <div class="pt-3 font-bold text-red-600 text-xs invisible" v-else v-html="$t('modals.required')"></div>
           </div>
-          <div class="flex flex-column items-center justify-center w-1/4 h-full py-4 mx-1">
-            <input @focusout="checkEmail" type="email" class="rounded-md w-full rounded-sm py-1" style="background-color:rgba(255, 255, 255, 0.42); aspect-ratio:19/5; font-size: x-large;" v-model="response_email" :placeholder="$t('modals.email')" required>
+          <div class="flex flex-column items-center justify-center w-1/4 mr-1">
+            <input @focusout="checkEmail" type="email" class="rounded-md w-full rounded-md text-base-responsive py-2 pl-2" style="background-color:rgba(255, 255, 255, 0.42); " v-model="response_email" :placeholder="$t('modals.email')" required>
             <div class="pt-3 font-bold text-red-600 text-xs" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
             <div class="pt-3 font-bold text-red-600 text-xs invisible" v-else v-html="$t('modals.required')"></div>
           </div>
-          <div class="flex flex-column items-center justify-center w-1/4 py-4 mx-1">
-            <input @focusout="checkPhone" type="tel" class="rounded-md w-full h-full text-xl rounded-sm py-1" style="background-color:rgba(255, 255, 255, 0.42);  aspect-ratio:19/5; font-size: x-large;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
+          <div class="flex flex-column items-center justify-center w-1/4 mr-1">
+            <input @focusout="checkPhone" type="tel" class="rounded-md w-full rounded-md text-base-responsive py-2 pl-2" style="background-color:rgba(255, 255, 255, 0.42); " v-model="response_phone" :placeholder="$t('modals.phone_title')" required>
             <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
             <div class="pt-3 font-bold text-red-600 text-xs invisible" v-else v-html="$t('modals.required')"></div>
           </div>
-          <button @click="checkAllNoTimes" class="rounded-md h-fit my-4 w-1/6 mr-3" style="background-color:rgba(255, 124, 51, 1);  aspect-ratio:10/4; font-size: x-large;">
-            <div class="mx-auto text-white py-2" v-html="$t('modals.send')"></div>
-          </button>
+          <div @click="checkAllNoTimes" class="rounded-md flex text-base-responsive w-1/4" style="background-color:rgba(255, 124, 51, 1);">
+            <div class="mx-auto my-auto text-white text-base-responsive py-2" v-html="$t('modals.send')"></div>
+          </div>
         </div>
-        <h1 class="mx-center"><div class="text-base text-white" v-html="$t('main.form_subtext')"> </div></h1>
+        <div class="mx-center"><div class="text-xs-responsive text-center font-normal text-white" v-html="$t('main.form_subtext')"> </div></div>
       </div>
       <div class="my-16 h-full w-full flex flex-column items-start ignore-r-global-margin">
         <client-only class=" w-full h-full pl-30 justify-center ignore-r-global-margin">        
@@ -332,7 +345,7 @@ import colorTabsIcon1 from "~/assets/color_tabs_icon_1.svg"
 import colorTabsIcon2 from "~/assets/color_tabs_icon_2.svg"
 import colorTabsIcon3 from "~/assets/color_tabs_icon_3.svg"
 import colorTabsIcon4 from "~/assets/color_tabs_icon_4.svg"
-import promoBanner1 from "~/assets/promo_banner_1.png"
+import promoBanner1 from "~/assets/promo_banner_1_group.png"
 import promoBanner2 from "~/assets/promo_banner_2.png"
 import oeifLogo from "~/assets/oeif-logo.png"
 import galleryArrow from "~/assets/gallery_arrow.svg"
@@ -487,6 +500,13 @@ export default {
 .bg-slate-200{
     background-color: rgba(244, 244, 244, 1);
   }
+  input::placeholder {
+    opacity: 1;
+    color: white;
+}
+.text-2xl-responsive{
+  font-size: calc(4px + 1.50625vw);
+}
 .VueCarousel-navigation-button {
                 position: relative;
 }

@@ -5,7 +5,7 @@
           <div class="h-fit text-black mb-4 font-extrabold" style="font-size: calc(6px + 2.450625vw);" v-html="$t('courses.german.image_title')"></div>
           <div class="h-fit text-black mb-4 font-bold" style="font-size: calc(2px + 1.150625vw);" v-html="$t('courses.german.image_subtitle')"></div>
           <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
-            <div class="text-white" style="font-size: calc(3px + 1.10625vw); padding-top:0.5vw; padding-right: 4vw; padding-left: 4vw" v-html="$t('exams.oif.register')"></div>
+            <div class="text-white button-text" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
         <img class="w-full h-3/4" :src="germanCoursesWelcome">            

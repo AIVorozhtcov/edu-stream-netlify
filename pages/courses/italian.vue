@@ -40,7 +40,7 @@
             
           </div>
           <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
-            <div class="submit-button text-white" v-html="$t('exams.oif.register')"></div>
+            <div class="button-text text-white" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
       </div>
@@ -73,7 +73,7 @@
             
           </div>
           <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
-            <div class="submit-button text-white" v-html="$t('exams.oif.register')"></div>
+            <div class="button-text text-white" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
       </div>
@@ -106,7 +106,7 @@
             
           </div>
           <button type="button" class="btn rounded-lg h-fit w-fit" style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
-            <div class="submit-button text-white" v-html="$t('exams.oif.register')"></div>
+            <div class="button-text text-white" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
       </div>

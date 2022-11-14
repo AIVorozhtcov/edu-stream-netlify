@@ -33,21 +33,25 @@
             "courses":{
                 "titles":{
                     "t_1":"Deutsch lernen",
-                    "t_2":"Englisch lernen"
+                    "t_2":"Englisch lernen",
+                    "t_3":"Online courses"
                 },
                 "bodies":{
                     "b_1":"Es gibt für Anfänger und Fortgeschrittene 13 Kursstufen (Sprachlevel A1, A2, B1, B2, C1, C2). Mach jetzt den kostenlosen Einstufungstest, um dein Sprachniveau in Deutsch zu testen.",
-                    "b_2":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen."
+                    "b_2":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen.",
+                    "b_3": "IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen."
                 }
             },
             "exams":{
                 "titles":{
                     "t_1":"ÖSD",
-                    "t_2":"ÖIF"
+                    "t_2":"ÖIF",
+                    "t_3":"New exam"
                 },
                 "bodies":{
                     "b_1":"Es gibt für Anfänger und Fortgeschrittene 13 Kursstufen (Sprachlevel A1, A2, B1, B2, C1, C2). Mach jetzt den kostenlosen Einstufungstest, um dein Sprachniveau in Deutsch zu testen.",
-                    "b_2":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen."
+                    "b_2":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen.",
+                    "b_3":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen."
                 }
             }
         }

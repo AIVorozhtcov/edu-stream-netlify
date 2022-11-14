@@ -63,6 +63,20 @@
     "_name": "_1a9cbb9c"
   },
   {
+    "name": "courses-online___de",
+    "path": "/courses/online",
+    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\online.vue",
+    "chunkName": "pages/courses/online",
+    "_name": "_49994891"
+  },
+  {
+    "name": "exams-new___de",
+    "path": "/exams/new",
+    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\new.vue",
+    "chunkName": "pages/exams/new",
+    "_name": "_1c92fc56"
+  },
+  {
     "name": "exams-oif___de",
     "path": "/exams/oif",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\oif.vue",
@@ -126,6 +140,20 @@
     "_name": "_1a9cbb9c"
   },
   {
+    "name": "courses-online___en",
+    "path": "/en/courses/online",
+    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\online.vue",
+    "chunkName": "pages/courses/online",
+    "_name": "_49994891"
+  },
+  {
+    "name": "exams-new___en",
+    "path": "/en/exams/new",
+    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\new.vue",
+    "chunkName": "pages/exams/new",
+    "_name": "_1c92fc56"
+  },
+  {
     "name": "exams-oif___en",
     "path": "/en/exams/oif",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\oif.vue",
@@ -187,6 +215,20 @@
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\italian.vue",
     "chunkName": "pages/courses/italian",
     "_name": "_1a9cbb9c"
+  },
+  {
+    "name": "courses-online___ru",
+    "path": "/ru/courses/online",
+    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\online.vue",
+    "chunkName": "pages/courses/online",
+    "_name": "_49994891"
+  },
+  {
+    "name": "exams-new___ru",
+    "path": "/ru/exams/new",
+    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\new.vue",
+    "chunkName": "pages/exams/new",
+    "_name": "_1c92fc56"
   },
   {
     "name": "exams-oif___ru",

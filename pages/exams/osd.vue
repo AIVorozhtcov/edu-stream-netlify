@@ -4,7 +4,7 @@
         <div class="absolute flex flex-column" style="width:35%; margin-left:21%; margin-top:23%">           
           <div class="h-fit text-white font-bold" style="font-size: calc(3px + 1.150625vw); margin-bottom: 6%;" v-html="$t('exams.oif.image-text')"></div>
           <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
-            <div class="text-white" style="font-size: calc(3px + 1.10625vw); padding-top:0.5vw; padding-right: 4vw; padding-left: 4vw" v-html="$t('exams.oif.register')"></div>
+            <div class="text-white button-text" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
         <img class="w-full h-3/4" :src="osdWelcome">            

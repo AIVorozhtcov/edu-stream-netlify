@@ -12,6 +12,8 @@ const _4848df94 = () => interopDefault(import('..\\pages\\about\\photos.vue' /* 
 const _7d6378a2 = () => interopDefault(import('..\\pages\\courses\\english.vue' /* webpackChunkName: "pages/courses/english" */))
 const _c3d4b378 = () => interopDefault(import('..\\pages\\courses\\german.vue' /* webpackChunkName: "pages/courses/german" */))
 const _1a9cbb9c = () => interopDefault(import('..\\pages\\courses\\italian.vue' /* webpackChunkName: "pages/courses/italian" */))
+const _49994891 = () => interopDefault(import('..\\pages\\courses\\online.vue' /* webpackChunkName: "pages/courses/online" */))
+const _1c92fc56 = () => interopDefault(import('..\\pages\\exams\\new.vue' /* webpackChunkName: "pages/exams/new" */))
 const _575d0a82 = () => interopDefault(import('..\\pages\\exams\\oif.vue' /* webpackChunkName: "pages/exams/oif" */))
 const _685151b6 = () => interopDefault(import('..\\pages\\exams\\osd.vue' /* webpackChunkName: "pages/exams/osd" */))
 
@@ -63,6 +65,14 @@ export const routerOptions = {
     component: _1a9cbb9c,
     name: "courses-italian___de"
   }, {
+    path: "/courses/online",
+    component: _49994891,
+    name: "courses-online___de"
+  }, {
+    path: "/exams/new",
+    component: _1c92fc56,
+    name: "exams-new___de"
+  }, {
     path: "/exams/oif",
     component: _575d0a82,
     name: "exams-oif___de"
@@ -99,6 +109,14 @@ export const routerOptions = {
     component: _1a9cbb9c,
     name: "courses-italian___en"
   }, {
+    path: "/en/courses/online",
+    component: _49994891,
+    name: "courses-online___en"
+  }, {
+    path: "/en/exams/new",
+    component: _1c92fc56,
+    name: "exams-new___en"
+  }, {
     path: "/en/exams/oif",
     component: _575d0a82,
     name: "exams-oif___en"
@@ -134,6 +152,14 @@ export const routerOptions = {
     path: "/ru/courses/italian",
     component: _1a9cbb9c,
     name: "courses-italian___ru"
+  }, {
+    path: "/ru/courses/online",
+    component: _49994891,
+    name: "courses-online___ru"
+  }, {
+    path: "/ru/exams/new",
+    component: _1c92fc56,
+    name: "exams-new___ru"
   }, {
     path: "/ru/exams/oif",
     component: _575d0a82,

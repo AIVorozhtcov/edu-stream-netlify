@@ -1,26 +1,26 @@
 
 <template>
   <div>
-    <div class="edu-color h-20 flex flex-row items-center" style="padding-left: 15%; padding-right: 15%;">
+    <div class="edu-color h-20 flex flex-row items-center" style="padding-left: 20%; padding-right: 20%;">
       <div class="w-22 h-22" style="">
         <nuxt-link :to="localePath('/')">  
           <img :src="logo" />
         </nuxt-link>
       </div>
-      <div class="flex flex-row items-center" style="margin-left: 20%">
+      <div class="flex flex-row items-center global-l-margin">
           <div class="flex items-center flex-row">
-              <a class="text-white" href="tel:+43 1 890 89 48">+43 1 890 89 48</a> <p class="text-white pl-1"> | Rennweg 9/6, 1030 Wien |</p>
+              <a class="text-white" style="font-size:calc(1px + 1.230625vw);" href="tel:+43 1 890 89 48">+43 1 890 89 48</a> <p class="text-white" style="font-size:calc(1px + 1.230625vw); padding-left: 1vw;" > | Rennweg 9/6, 1030 Wien |</p>
           </div>
-          <div class="flex items-center flex-row ml-1.5 space-x-1.5">
+          <div class="flex items-center flex-row" style="margin-left:0.5vw">
               <a href="https://www.facebook.com" target="_blank">
                 <img style="width: calc(15px + 1.090625vw); height: auto" :src="facebookLogo" />
               </a>
-              <a href="https://www.instagram.com" target="_blank">
+              <a href="https://www.instagram.com" style="margin-left:0.5vw" target="_blank">
                 <img style="width: calc(15px + 1.090625vw); height: auto" :src="instagramLogo" />
               </a>
           </div>
       </div>
-      <div class="flex flex-column items-end justify-center bg-white self-start rounded-b-md ml-2" style="height:75%">
+      <div class="flex flex-column items-end justify-center bg-white self-start rounded-b-md" style="height:75%; margin-left:1vw">
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <country-flag :country="$t('flag')" size='small'/> {{this.$i18n.locale.toUpperCase()}}
