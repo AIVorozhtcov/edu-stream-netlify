@@ -9,7 +9,7 @@
       </div>
       <div class="flex flex-row items-center global-l-margin">
           <div class="flex items-center flex-row">
-              <a class="text-white" style="font-size:calc(1px + 1.230625vw);" href="tel:+43 1 890 89 48">+43 1 890 89 48</a> <p class="text-white" style="font-size:calc(1px + 1.230625vw); padding-left: 1vw;" > | Rennweg 9/6, 1030 Wien |</p>
+              <a class="text-white" style="font-size:calc(1px + 0.730625vw);" href="tel:+43 1 890 89 48">+43 1 890 89 48</a> <p class="text-white" style="font-size:calc(1px + 0.730625vw); padding-left: 1vw;" > | Rennweg 9/6, 1030 Wien |</p>
           </div>
           <div class="flex items-center flex-row" style="margin-left:0.5vw">
               <a href="https://www.facebook.com" target="_blank">

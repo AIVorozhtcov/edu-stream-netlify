@@ -62,13 +62,11 @@
       </div>-->
       </div>
     </div>
-    <div class="h-fit flex relative flex-column ignore-global-margins" style="background-color:rgba(248, 248, 248, 1);">
-      <div class="h-fit bg-slate-100"></div>
-        <img class="h-1/12 w-1/12 invisible" :src="overlappingStudent" /> 
-      <div class=" h-fit bg-blue-400">
-        <img class="h-3/12  /12 w-3/12 invisible" :src="overlappingStudent" /> 
-        <img class="absolute left-2/4 top-0 h-4/12 w-4/12 z-40" :src="overlappingStudent" />               
-      </div>
+    <div class="h-fit relative ignore-global-margins">
+      <button class="z-40 btn absolute rounded-lg h-fit w-fit" style="margin-top:30vh; margin-left:21.75vw; background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
+        <div class="text-white my-auto" style="font-size: calc(2px + 0.70625vw); padding-top:0.25vw; padding-right: 1.6vw; padding-left: 1.6vw" v-html="$t('exams.oif.register')"></div>
+      </button>
+      <img class="w-full relative" :src="overlappingStudentGroup" /> 
       
     </div>
     <div>
@@ -135,16 +133,16 @@
 <script>
 import osdWelcome from "~/assets/osd_welcome.png"
 import oeifLogo from "~/assets/oeif-logo.png"
-import overlappingStudent from "~/assets/overlapping_student.png"
-import ModalResponse from '/components/ModalResponse.vue'
+import overlappingStudentGroup from "~/assets/overlapping_student_group.png"
+import ModalForm from '/components/ModalForm.vue'
 
 export default {
   data: function () {
     return {
       osdWelcome: osdWelcome,
       oeifLogo: oeifLogo,
-      overlappingStudent: overlappingStudent,
-      ModalResponse:ModalResponse,
+      overlappingStudentGroup: overlappingStudentGroup,
+      ModalForm:ModalForm,
       showModal: false,
       isNameWrong: false,
       isPhoneWrong: false,

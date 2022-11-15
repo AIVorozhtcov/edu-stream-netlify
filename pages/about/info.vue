@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-5 flex flex-column items-start">
+    <div class="pt-5 pb-5 flex flex-column items-start">
       <h1 class="text-3xl-responsive font-bold" style="padding-bottom:4%">{{$t('about_us.title')}}</h1>
       <div class="text-base-responsive" v-html="$t('about_us.text')"></div>
   
