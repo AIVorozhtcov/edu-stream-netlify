@@ -1,20 +1,20 @@
 {
     "flag":"gb",
     "main":{
-        "image_text":"Sprachschule<br />im Zentrum von Wien",
-        "form_text": "Schicken Sie uns eine Anfrage und wir werden für Sie den bestmöglichen Kurs auswählen",
-        "form_subtext": "Durch Klicken auf die Schaltfläche stimmen Sie der Verarbeitung personenbezogener Daten zu",
+        "image_text":"Language school<br />in the center of Vienna",
+        "form_text": "Send us request and we will select the best possible course for you",
+        "form_subtext": "By clicking the button, you consent to the processing of personal data",
         "color_tabs":{
-            "t_1":"Learn with qualified and experienced native speakers who have 20 years of experience and speaks in 5 languages",
-            "t_2":"ÖIF – zetifizierter Kursträger<br /><br />ÖIF – zetifiziertes Prüfungszentrum",
-            "t_3":"ÖIF – zetifizierter Kursträger<br /><br />ÖIF – zetifiziertes Prüfungszentrum",
-            "t_4":"Preparation Centre<br />Prepare for IELTS, TOEFL, Cambridge ESOL exams for 14 days with Edustream"
+            "t_1":"Learn with qualified and experienced native speakers",
+            "t_2":"ÖIF certified",
+            "t_3":"ÖSD certified",
+            "t_4":"We are a preparation centre for IELTS, TOEFL and, Cambridge ESOL exams"
         },
         "about":{
-            "our_school":"Unsere Schule",
-            "our_school_expanded":"Wir kümmern uns um jeden! EduStream Sprachschule ist eine große Familie!",
+            "our_school":"Our School",
+            "our_school_expanded":"We care about each of you! The EduStream Language School is one big family :)",
             "location":"Located in central Vienna",
-            "location_expanded":"Центральное расположение офиса в дипломатическом районе города Вены, напротив Дворца Бельведера.<br />2 мин от нас Концертный зал, где Бетховен учился, памятник Бетховену, посольство Франции - те места, которые ассоциативны. Городской парк красивый. Лайф Пикчерс."
+            "location_expanded":"The central location of the office is in the diplomatic district of the city of Vienna, opposite the Belvedere Palace.<br />2 min from us is The Concert Hall, where Beethoven studied, the monument to Beethoven, the French Embassy - those places that are associative with Vienna. The city park is beautiful. Life Pictures."
         },
         "info_columns":{
             "titles":{
@@ -32,14 +32,14 @@
             "self":"Kurse und Prüfungen",
             "courses":{
                 "titles":{
-                    "t_1":"Deutsch lernen",
-                    "t_2":"Englisch lernen",
-                    "t_3":"Online courses"
+                    "t_1":"German Language Courses",
+                    "t_2":"English Language Courses",
+                    "t_3":"Online-Language Courses"
                 },
                 "bodies":{
-                    "b_1":"Es gibt für Anfänger und Fortgeschrittene 13 Kursstufen (Sprachlevel A1, A2, B1, B2, C1, C2). Mach jetzt den kostenlosen Einstufungstest, um dein Sprachniveau in Deutsch zu testen.",
-                    "b_2":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen.",
-                    "b_3": "IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen."
+                    "b_1":"There are 13 course levels for beginners and advanced learners (language levels A1, A2, B1, B2, C1, C2). Take the free placement test now to test your German language level.",
+                    "b_2":"IKI offers year-round German courses for adults and young people from the age of 16 in a central location in Vienna. Beginners and advanced students can choose between group courses and individual lessons.",
+                    "b_3": "IKI offers year-round German courses for adults and young people from the age of 16 in a central location in Vienna. Beginners and advanced students can choose between group courses and individual lessons."
                 }
             },
             "exams":{
@@ -49,9 +49,9 @@
                     "t_3":"New exam"
                 },
                 "bodies":{
-                    "b_1":"Es gibt für Anfänger und Fortgeschrittene 13 Kursstufen (Sprachlevel A1, A2, B1, B2, C1, C2). Mach jetzt den kostenlosen Einstufungstest, um dein Sprachniveau in Deutsch zu testen.",
-                    "b_2":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen.",
-                    "b_3":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen."
+                    "b_1":"There are 13 course levels for beginners and advanced learners (language levels A1, A2, B1, B2, C1, C2). Take the free placement test now to test your German language level.",
+                    "b_2":"IKI offers year-round German courses for adults and young people from the age of 16 in a central location in Vienna. Beginners and advanced students can choose between group courses and individual lessons.",
+                    "b_3":"IKI offers year-round German courses for adults and young people from the age of 16 in a central location in Vienna. Beginners and advanced students can choose between group courses and individual lessons."
                 }
             }
         }
@@ -67,11 +67,11 @@
         "phone": "+43 949 437 32567",
         "address_title": "Your address",
         "address": "Address",
-        "mon_wed": "Montag/Mittwoch",
-        "tue_thu": "Dienstag/Donnerstag",
-        "any_day": "Мне удобно в любой день",
-        "send": "Senden",
-        "agreement": "Durch Klicken auf die Schaltfläche stimmen Sie den Datenschutzbestimmungen zu"
+        "mon_wed": "Monday/Wednesday",
+        "tue_thu": "Tuesday/Thursday",
+        "any_day": "Any day works for me",
+        "send": "Send",
+        "agreement": "By clicking the button, you consent to the processing of personal data"
 
     },
     "FAQ":{
@@ -85,12 +85,12 @@
             
         },
         "answers":{
-            "a_1":"<br />+43 1 890 89 48<br />info@edu-stream.at<br />Rennweg 9/6, 1030 Wien<br /><br />Montag – Donnerstag: 09:00 - 17:00<br />Freitag: 09:00 - 15:00<br />Samstag & Sonntag: geschlossen",
-            "a_2":" checking ssr",
-            "a_3":"",
-            "a_4":"",
-            "a_5":"",
-            "a_6":""
+            "a_1":"There are no answers here yet <br /> This is just a sample",
+            "a_2":"<br />+43 1 890 89 48<br />info@edu-stream.at<br />Rennweg 9/6, 1030 Vienna<br /><br />Monday – Thursday: 09:00 - 17:00 00<br />Friday: 09:00 - 15:00<br />Saturday & Sunday: closed",
+            "a_3":"There are no answers here yet <br /> This is just a sample",
+            "a_4":"There are no answers here yet <br /> This is just a sample",
+            "a_5":"There are no answers here yet <br /> This is just a sample",
+            "a_6":"There are no answers here yet <br /> This is just a sample"
         }
     },
     "about_us":{
@@ -356,12 +356,12 @@
     },
     "exams":{
         "oif":{
-            "image-text":"Unsere Sprachschule ist ein international anerkanntes Prüfungszentrum für die Integrationsprüfung des Österreichischen Integrationsfonds (ÖIF)",
-            "subtitle":"ÖIF-Prüfung A2, B1 in Wien – Prüfungstermine",
-            "exam-1":"ÖIF-Integrationsprüfung A2",
-            "exam-2":"ÖIF-Integrationsprüfung B1",
-            "register":"Anmelden",
-            "FAQ-preview":"Diese Prüfungen halten wir monatlich auf den Niveaustufen A2 (Modul 1) und B1 (Modul 2) ab. ÖIF-Integrationsprüfungen auf den Niveaustufen A2 und B1 sind in unserem Prüfungszentrum in Wien sehr gefragt. Daher können wir nur bei rechtzeitiger Buchung einen Fixplatz garantieren.<br /><br />Wenn Sie ein ÖIF-Zertifikat benötigen, dann ist die Edustream die richtig Wahl für Sie. Egal, ob Sie eine A2-, B1-Prüfung benötigen, im Rahmen unserer ÖIF-Zertifizierung bieten wir ihnen die für Sie passende Prüfung an.<br /><br />Das Mindestalter für alle Prüfungen beträgt 14 Jahre."
+            "image-text":"Our language school is an internationally recognized examination center for the integration examination of the Austrian Integration Fund (ÖIF)",
+            "subtitle":"ÖIF exam A2, B1 in Vienna – exam dates",
+            "exam-1":"ÖIF A2",
+            "exam-2":"ÖIF B1",
+            "register":"Register",
+            "FAQ-preview":"We hold these exams monthly at levels A2 (module 1) and B1 (module 2). ÖIF integration exams at levels A2 and B1 are in high demand at our exam center in Vienna. Therefore, we can only guarantee a place if you book in good time.<br /><br />If you need an ÖIF certificate, then the Edustream is the right choice for you. Regardless of whether you need an A2 or B1 exam, we can offer you the right exam for you as part of our ÖIF certification.<br /><br />The minimum age for all exams is 14 years."
         
         }
     },
