@@ -1,13 +1,13 @@
 <template>
-    <div style="background-color: #253984">
-        <div class="flex flex-column items-start justify-between text-sm global-margins" style="">
+    <div style="background-color: #253984; padding-top:5vh; padding-bottom:5vh">
+        <div class="flex flex-column font-normal items-start justify-between text-sm global-margins">
             <div class="flex w-full flex-row items-start pt-2 justify-between text-xs-responsive">
                 <div class="w-1/6">
                     <nuxt-link to="/">  
                         <img :src="logo" />
                     </nuxt-link>
                 </div>
-                <div class="w-1/6" style="margin-left:2%">
+                <div class="w-1/12">
                     <div class="flex flex-column items-start">
                         <h1 class="text-xs-header-responsive font-bold">{{$t('menu.courses.self')}}</h1>
                         <nuxt-link class="text-white" :to="localePath('/courses/german')">{{$t('menu.courses.de_short')}}</nuxt-link>
@@ -15,37 +15,38 @@
                         <nuxt-link class="text-white" :to="localePath('/courses/italian')">{{$t('menu.courses.it_short')}}</nuxt-link>
                     </div>
                 </div>
-                <div class="w-1/6" style="margin-left:2%">
+                <div class="w-1/12">
                     <div class="flex flex-column items-start">
                         <h1 class="text-xs-header-responsive font-bold">{{$t('menu.exams.self')}}</h1>
                         <nuxt-link class="text-white" :to="localePath('/exams/oif')">OIF</nuxt-link>
                         <nuxt-link class="text-white" :to="localePath('/exams/osd')">OSD</nuxt-link>
                     </div>
                 </div>
-                <div class="flex flex-column w-1/6" style="margin-left:2%">
+                <div class="flex flex-column w-1/12">
                     <h1 class="text-xs-header-responsive font-bold">{{$t('menu.about_us.self')}}</h1>
                     <nuxt-link class="text-white" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
                     <nuxt-link class="text-white" :to="localePath('/about/contacts')">{{$t('menu.about_us.contacts')}}</nuxt-link>
                 </div>
-                <div class="w-1/6"></div>
-                <div class="flex flex-column items-start" >
+                <div class="w-1/12"></div>
+                <div class="flex w-3/12 flex-column items-start" >
                     <h1 class=" text-xs-header-responsive font-bold">Address</h1>
                     <p>Rennweg 9/6, 1030 Wien</p>
-                    <p>Öffnungszeiten</p>
-                    <p>Montag – Donnerstag: 09:00–17:00 Freitag 9:00-15:00</p>
-                    <p>Samstag & Sonntag: geschlossen</p>
+                    <p>{{$t('footer.opening_hours')}}</p>
+                    <p>{{$t('footer.mon_thu')}}</p>
+                    <p>{{$t('footer.friday')}}</p>
+                    <p>{{$t('footer.sat_sun')}}</p>
                 </div>
             </div>
-            <div class="flex w-full flex-row items-start justify-between mt-3 pt-1 text-2xs-responsive" style="border-top-width: 1px;	border-bottom-width: 1px;">
-                <p>
-                  Aus Gründen der besseren Lesbarkeit wird auf die gleichzeitige Verwendung der Sprachformen männlich, weiblich und divers (m/w/d) verzichtet. Sämtliche Personenbezeichnungen gelten gleichermaßen für alle Geschlechter.
+            <div class="flex w-full flex-row items-center justify-between mt-3 mb-1 pt-1 text-2xs-responsive" style="border-top-width: 1px;	border-bottom-width: 1px;">
+                <p class="w-7/12 leading-4">
+                    {{$t('footer.m/w/d')}}
                 </p>
                 <div id="last-column" class="flex flex-row" >
                     <a href="https://www.facebook.com" style="margin-right:10%" target="_blank">
-                        <img style="width: 4vw; height: auto" :src="facebookLogo" />
+                        <img style="width: 2.75vw; height: auto" :src="facebookLogo" />
                     </a>
                     <a href="https://www.instagram.com" target="_blank">
-                        <img style="width: 4vw; height: auto" :src="instagramLogo" />
+                        <img style="width: 2.75vw; height: auto" :src="instagramLogo" />
                     </a>
                 </div>
             </div>

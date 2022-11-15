@@ -5,27 +5,27 @@
         "form_text": "Schicken Sie uns eine Anfrage und wir werden für Sie den bestmöglichen Kurs auswählen",
         "form_subtext": "Durch Klicken auf die Schaltfläche stimmen Sie der Verarbeitung personenbezogener Daten zu",
         "color_tabs":{
-            "t_1":"Learn with qualified and experienced native speakers who have 20 years of experience and speaks in 5 languages",
+            "t_1":"Sie lernen mit ausgebildeten und erfahrenen Muttersprachlern",
             "t_2":"ÖIF – zetifizierter Kursträger<br /><br />ÖIF – zetifiziertes Prüfungszentrum",
             "t_3":"ÖIF – zetifizierter Kursträger<br /><br />ÖIF – zetifiziertes Prüfungszentrum",
-            "t_4":"Preparation Centre<br />Prepare for IELTS, TOEFL, Cambridge ESOL exams for 14 days with Edustream"
+            "t_4":"Vorbereitungskurs für IELTS, TOEFL und Cambridge Prüfungen (PET/B1; FCE/B2; CAE/C1"
         },
         "about":{
             "our_school":"Unsere Schule",
             "our_school_expanded":"Wir kümmern uns um jeden! EduStream Sprachschule ist eine große Familie!",
-            "location":"Located in central Vienna",
-            "location_expanded":"Центральное расположение офиса в дипломатическом районе города Вены, напротив Дворца Бельведера.<br />2 мин от нас Концертный зал, где Бетховен учился, памятник Бетховену, посольство Франции - те места, которые ассоциативны. Городской парк красивый. Лайф Пикчерс."
+            "location":"Im Zentrum von Wien gelegen",
+            "location_expanded":"Die zentrale Lage des Büros im Diplomatenviertel der Stadt Wien, gegenüber dem Schloss Belvedere.<br />2 min von uns entfernt Das Konzerthaus, in dem Beethoven studiert hat, das Beethovendenkmal, die französische Botschaft - all diese Orte assoziativ. Der Stadtpark ist wunderschön. Lebensbilder."
         },
         "info_columns":{
             "titles":{
-                "t_1":"Learn German at the highest standard",
-                "t_2":"Certified by the City of Vienna",
-                "t_3":"International Language School"
+                "t_1":"Lernen Sie Deutsch auf höchstem Niveau",
+                "t_2":"Zertifiziert durch die Stadt Wien",
+                "t_3":"Internationale Sprachschule"
             },
             "bodies":{
-                "b_1":"Our teaching staff is native-language german and specialised in teaching german as foreign language. All of our teachers have a university degree and years of experience in teaching.",
-                "b_2":" IKI is an accredited examination centre for the ÖSD Austrian German Diploma in accordance with the level placement of the Council of Europe as well as for the ÖIF Integration Exam of the Austrian Integration Fund.",
-                "b_3":"Every month 450-500 students from all around the world attend our German courses. IKI is a partner institute of the University of Washington, the NC State University and the University of Kansas."
+                "b_1":"Unser Lehrpersonal ist muttersprachlich Deutsch und auf das Unterrichten von Deutsch als Fremdsprache spezialisiert. Alle unsere Lehrer haben einen Universitätsabschluss und jahrelange Erfahrung im Unterrichten.",
+                "b_2":"IKI ist akkreditiertes Prüfungszentrum für das Österreichische Deutschdiplom ÖSD gemäß der Stufeneinstufung des Europarats sowie für die ÖIF-Integrationsprüfung des Österreichischen Integrationsfonds.",
+                "b_3":"Jeden Monat besuchen 450-500 Studenten aus der ganzen Welt unsere Deutschkurse. Das IKI ist Partnerinstitut der University of Washington, der NC State University und der University of Kansas."
             }
         },
         "courses_and_exams":{
@@ -46,7 +46,7 @@
                 "titles":{
                     "t_1":"ÖSD",
                     "t_2":"ÖIF",
-                    "t_3":"New exam"
+                    "t_3":"Neue Prüfung"
                 },
                 "bodies":{
                     "b_1":"Es gibt für Anfänger und Fortgeschrittene 13 Kursstufen (Sprachlevel A1, A2, B1, B2, C1, C2). Mach jetzt den kostenlosen Einstufungstest, um dein Sprachniveau in Deutsch zu testen.",
@@ -57,31 +57,31 @@
         }
     },
     "modals":{
-        "title":"Please fill the form",
-        "required": "Required field",
-        "name_title": "Your name",
+        "title":"Bitte füllen sie das Formular aus",
+        "required": "Pflichtfeld",
+        "name_title": "Ihren Namen",
         "name": "Name",
-        "email_title": "Your email",
-        "email": "Email",
-        "phone_title": "Phone",
+        "email_title": "Deine E-Mail",
+        "email": "E-mail",
+        "phone_title": "Telefonnummer",
         "phone": "+43 949 437 32567",
-        "address_title": "Your address",
+        "address_title": "Deine Adresse",
         "address": "Address",
         "mon_wed": "Montag/Mittwoch",
         "tue_thu": "Dienstag/Donnerstag",
-        "any_day": "Мне удобно в любой день",
+        "any_day": "Ich fühle mich jeden Tag wohl",
         "send": "Senden",
         "agreement": "Durch Klicken auf die Schaltfläche stimmen Sie den Datenschutzbestimmungen zu"
 
     },
     "FAQ":{
         "titles":{
-            "t_1":"What does ÖIF mean?",
-            "t_2":"Why do I need to take an integration exam A1?",
-            "t_3":"Why do I need to take an integration exam A2?",
-            "t_4":"Why do I need to take an integration exam B1?",
-            "t_5":"How do I determine which level is right for me? ",
-            "t_6":"Where can I register for the ÖIF exam?"
+            "t_1":"Was bedeutet ÖIF?",
+            "t_2":"Warum muss ich eine Integrationsprüfung A1 ablegen?",
+            "t_3":"Warum muss ich eine Integrationsprüfung A2 ablegen?",
+            "t_4":"Warum muss ich eine Integrationsprüfung B1 ablegen?",
+            "t_5":"Wie finde ich heraus, welches Level das richtige für mich ist?",
+            "t_6":"Wo kann ich mich zur ÖIF-Prüfung anmelden?"
             
         },
         "answers":{
@@ -363,6 +363,15 @@
             "exam-2":"ÖIF-Integrationsprüfung B1",
             "register":"Anmelden",
             "FAQ-preview":"Diese Prüfungen halten wir monatlich auf den Niveaustufen A2 (Modul 1) und B1 (Modul 2) ab. ÖIF-Integrationsprüfungen auf den Niveaustufen A2 und B1 sind in unserem Prüfungszentrum in Wien sehr gefragt. Daher können wir nur bei rechtzeitiger Buchung einen Fixplatz garantieren.<br /><br />Wenn Sie ein ÖIF-Zertifikat benötigen, dann ist die Edustream die richtig Wahl für Sie. Egal, ob Sie eine A2-, B1-Prüfung benötigen, im Rahmen unserer ÖIF-Zertifizierung bieten wir ihnen die für Sie passende Prüfung an.<br /><br />Das Mindestalter für alle Prüfungen beträgt 14 Jahre."
+        },
+        "osd":{
+            "image-text":"International anerkannte ÖSD-Prüfungen an der Sprachschule EduStream im Herzen von Wien",
+            "subtitle":"ÖSD-Prüfung A2, B1 in Wien – Prüfungstermine",
+            "exam-1":"ÖSD-Integrationsprüfung A1",
+            "exam-2":"ÖSD-Integrationsprüfung A2",
+            "register":"Register",
+            "FAQ-preview":"Diese Prüfungen halten wir monatlich auf den Niveaustufen A2 (Modul 1) und B1 (Modul 2) ab. ÖIF-Integrationsprüfungen auf den Niveaustufen A2 und B1 sind in unserem Prüfungszentrum in Wien sehr gefragt. Daher können wir nur bei rechtzeitiger Buchung einen Fixplatz garantieren.<br /><br />Wenn Sie ein ÖIF-Zertifikat benötigen, dann ist die Edustream die richtig Wahl für Sie. Egal, ob Sie eine A2-, B1-Prüfung benötigen, im Rahmen unserer ÖIF-Zertifizierung bieten wir ihnen die für Sie passende Prüfung an.<br /><br />Das Mindestalter für alle Prüfungen beträgt 14 Jahre."
+        
         }
     },
     "menu":{
@@ -385,5 +394,14 @@
             "self":"Prüfungen"
         }
 
+    },
+    "footer":{
+        "opening_hours":"Öffnungszeiten",
+        "mon_thu":"Montag – Donnerstag: 09:00–17:00",
+        "friday":"Freitag 9:00-15:00",
+        "sat_sun":"Samstag & Sonntag: geschlossen",
+        "m/w/d":"Aus Gründen der besseren Lesbarkeit wird auf die gleichzeitige Verwendung der Sprachformen männlich, weiblich und divers (m/w/d) verzichtet. Sämtliche Personenbezeichnungen gelten gleichermaßen für alle Geschlechter.",
+        "impressum":"Impressum ",
+        "datenschutz":"Datenschutz"
     }
 }

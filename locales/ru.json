@@ -362,6 +362,15 @@
             "exam-2":"ÖIF-Integrationsprüfung B1",
             "register":"Anmelden",
             "FAQ-preview":"Diese Prüfungen halten wir monatlich auf den Niveaustufen A2 (Modul 1) und B1 (Modul 2) ab. ÖIF-Integrationsprüfungen auf den Niveaustufen A2 und B1 sind in unserem Prüfungszentrum in Wien sehr gefragt. Daher können wir nur bei rechtzeitiger Buchung einen Fixplatz garantieren.<br /><br />Wenn Sie ein ÖIF-Zertifikat benötigen, dann ist die Edustream die richtig Wahl für Sie. Egal, ob Sie eine A2-, B1-Prüfung benötigen, im Rahmen unserer ÖIF-Zertifizierung bieten wir ihnen die für Sie passende Prüfung an.<br /><br />Das Mindestalter für alle Prüfungen beträgt 14 Jahre."
+        },
+        "osd":{
+            "image-text":"Take the ÖSD International Exam at EduStream Language School in the center of Vienna",
+            "subtitle":"ÖSD exam A2, B1 in Vienna – exam dates",
+            "exam-1":"ÖSD A1",
+            "exam-2":"ÖSD A2",
+            "register":"Register",
+            "FAQ-preview":"We hold these exams monthly at levels A2 (module 1) and B1 (module 2). ÖIF integration exams at levels A2 and B1 are in high demand at our exam center in Vienna. Therefore, we can only guarantee a place if you book in good time.<br /><br />If you need an ÖIF certificate, then the Edustream is the right choice for you. Regardless of whether you need an A2 or B1 exam, we can offer you the right exam for you as part of our ÖIF certification.<br /><br />The minimum age for all exams is 14 years."
+        
         }
     },
     "menu":{
@@ -383,5 +392,14 @@
         "exams":{
             "self":"Экзамены"
         }
+    },
+    "footer":{
+        "opening_hours":"Öffnungszeiten",
+        "mon_thu":"Montag – Donnerstag: 09:00–17:00",
+        "friday":"Freitag 9:00-15:00",
+        "sat_sun":"Samstag & Sonntag: geschlossen",
+        "m/w/d":"Aus Gründen der besseren Lesbarkeit wird auf die gleichzeitige Verwendung der Sprachformen männlich, weiblich und divers (m/w/d) verzichtet. Sämtliche Personenbezeichnungen gelten gleichermaßen für alle Geschlechter.",
+        "impressum":"Impressum ",
+        "datenschutz":"Datenschutz"
     }
 }

@@ -2,41 +2,67 @@
   <div class="flex flex-column">
     <div class="relative flex h-fit ignore-global-margins">   
         <div class="absolute flex flex-column" style="width:35%; margin-left:21%; margin-top:23%">           
-          <div class="h-fit text-white font-bold" style="font-size: calc(3px + 1.150625vw); margin-bottom: 6%;" v-html="$t('exams.oif.image-text')"></div>
+          <div class="h-fit text-white font-bold" style="font-size: calc(3px + 1.150625vw); margin-bottom: 6%;" v-html="$t('exams.osd.image-text')"></div>
           <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
-            <div class="text-white button-text" v-html="$t('exams.oif.register')"></div>
+            <div class="text-white button-text" v-html="$t('exams.osd.register')"></div>
           </button>
         </div>
         <img class="w-full h-3/4" :src="osdWelcome">            
     </div>
     
     <div class="flex flex-column w-full bg-white py-10">
-      <div class="w-5/12 text-3xl py-5 font-bold" v-html="$t('exams.oif.subtitle')"></div>
-      <div class="flex flex-row items-center">
+      <div class="w-5/12 text-3xl py-5 font-bold" v-html="$t('exams.osd.subtitle')"></div>
+      <div class="flex flex-row items-start">
         <div class="bg-slate-100 rounded h-fit w-fit flex flex-column">
-          <div class="px-4 font-bold pb-3 pt-3" v-html="$t('exams.oif.exam-1')"></div>
-          <p class="px-4 py-1">03.11.2022; 13:00</p>
+          <div class="px-4 font-bold pb-3 pt-3" v-html="$t('exams.osd.exam-1')"></div>
+          <div class="flex flex-row items-center">
+            <input type="radio" id="13/12/2022" name="A2_time" value="13/12/2022">
+            <label for="html">13.12.2022; 13:00</label><br>
+          </div>
+          <div class="flex flex-row">
+            <input type="radio" id="14/12/2022" name="A2_time" value="14/12/2022">
+            <label for="html">14.12.2022; 13:00</label><br>
+          </div>
+          <div class="flex flex-row">
+            <input type="radio" id="15/12/2022" name="A2_time" value="15/12/2022">
+            <label for="html">15.12.2022; 13:00</label><br>
+          </div>
           <p class="px-4 font-bold py-1">160€</p>
           <a 
           class="px-4 pt-3 pb-3"
           href="https://checkout.stripe.com/c/pay/cs_live_a18PAktLRCExf4QbCUahRYb2YzgjJYrWSZhmctnue81qkIPRJWEwkivg4y#fidkdWxOYHwnPyd1blppbHNgWjA0TnZVUn1AV19LRjZhVUtWf0JsbTBiV2g9VWxuZmo1MjRqXHNsd2pOalVCN0Rhan1mVzZ2VjVfREFjQ1Z3V20wQT1GfTZUcjdTNjJSajZ1XXFpT2xuQVFANTVGa3ZjbXB1aicpJ2hsYXYnP34nYnBsYSc%2FJ0tEJyknaHBsYSc%2FJ0tEJykndmxhJz8nS0QneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%2FJ21xcXV2PyoqYGFwKHZxd2BkaCtkcSd4JSUl"
           target="_blank">
-            <div class="bg-orange-500 rounded-2xl h-fit w-fit">
-              <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
+            <div class="rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)">
+              <div class="px-5 py-1 text-white" v-html="$t('exams.osd.register')"></div>
             </div>
           </a>
         </div>
         <div class="px-5 bg-white"></div>
         <div class="bg-slate-100 rounded h-fit w-fit flex flex-column">
-          <div class="px-4 font-bold pb-3 pt-3" v-html="$t('exams.oif.exam-2')"></div>
-          <p class="px-4 py-1">21.11.2022; 13:00</p>
+          <div class="px-4 font-bold pb-3 pt-3" v-html="$t('exams.osd.exam-2')"></div>
+          <div class="flex flex-row items-center">
+            <input type="radio" id="21/11/2022" name="B1_time" value="21/11/2022">
+            <label for="html">21.11.2022; 13:00</label><br>
+          </div>
+          <div class="flex flex-row items-center">
+            <input type="radio" id="05/12/2022" name="B1_time" value="05/12/2022">
+            <label for="html">05.12.2022; 13:00</label><br>
+          </div>
+          <div class="flex flex-row">
+            <input type="radio" id="06/12/2022" name="B1_time" value="06/12/2022">
+            <label for="html">06.12.2022; 13:00</label><br>
+          </div>
+          <div class="flex flex-row">
+            <input type="radio" id="07/12/2022" name="B1_time" value="07/12/2022">
+            <label for="html">07.12.2022; 13:00</label><br>
+          </div>
           <p class="px-4 font-bold py-1">160€</p>
           <a 
           class="px-4 pt-3 pb-3"
           href="https://checkout.stripe.com/c/pay/cs_live_a18PAktLRCExf4QbCUahRYb2YzgjJYrWSZhmctnue81qkIPRJWEwkivg4y#fidkdWxOYHwnPyd1blppbHNgWjA0TnZVUn1AV19LRjZhVUtWf0JsbTBiV2g9VWxuZmo1MjRqXHNsd2pOalVCN0Rhan1mVzZ2VjVfREFjQ1Z3V20wQT1GfTZUcjdTNjJSajZ1XXFpT2xuQVFANTVGa3ZjbXB1aicpJ2hsYXYnP34nYnBsYSc%2FJ0tEJyknaHBsYSc%2FJ0tEJykndmxhJz8nS0QneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%2FJ21xcXV2PyoqYGFwKHZxd2BkaCtkcSd4JSUl"
           target="_blank">
-            <div class="bg-orange-500 rounded-2xl h-fit w-fit">
-              <div class="px-5 py-1 text-white" v-html="$t('exams.oif.register')"></div>
+            <div class="rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)">
+              <div class="px-5 py-1 text-white" v-html="$t('exams.osd.register')"></div>
             </div>
           </a>
         </div>          
@@ -44,7 +70,7 @@
     </div>
     <div class="flex ignore-global-margins" style="background-color:rgba(248, 248, 248, 1); padding-top:5vh">
       <div class="flex flex-column global-margins">
-        <div class="pb-3" v-html="$t('exams.oif.FAQ-preview')"></div>
+        <div class="pb-3" v-html="$t('exams.osd.FAQ-preview')"></div>
         <FAQAccordion />
         <!-- <b-button v-b-toggle="'collapse-2'" class="m-1">Toggle Collapse</b-button>
         <p v-b-toggle="'collapse-2'"> also open</p>        
@@ -64,7 +90,7 @@
     </div>
     <div class="h-fit relative ignore-global-margins">
       <button class="z-40 btn absolute rounded-lg h-fit w-fit" style="margin-top:30vh; margin-left:21.75vw; background-color:rgba(255, 124, 51, 1)" @click="$bvModal.show('modal-1')" >
-        <div class="text-white my-auto" style="font-size: calc(2px + 0.70625vw); padding-top:0.25vw; padding-right: 1.6vw; padding-left: 1.6vw" v-html="$t('exams.oif.register')"></div>
+        <div class="text-white my-auto" style="font-size: calc(2px + 0.70625vw); padding-top:0.25vw; padding-right: 1.6vw; padding-left: 1.6vw" v-html="$t('exams.osd.register')"></div>
       </button>
       <img class="w-full relative" :src="overlappingStudentGroup" /> 
       
@@ -126,6 +152,13 @@
   b-modal footer{
     visibility: hidden;
   }
+  
+  input[type="radio"] {
+  margin-left: 1vw;
+  margin-right: 0.7vw;
+  margin-top: -5px;
+  vertical-align: middle;
+}
   .bg-slate-200{
     background-color: rgba(244, 244, 244, 1);
   }

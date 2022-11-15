@@ -346,8 +346,8 @@
         </div>
       </div>
         </b-tab>
-         no courses yet
         <b-tab :title="$t('courses.german.tabs.7')" title-item-class="course-tabs">
+          no courses yet
         </b-tab>
       </b-tabs>      
       <div>

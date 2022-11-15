@@ -11,24 +11,24 @@
     </div>
     
     <div class="flex flex-row justify-evenly h-3/4 ignore-global-margins">
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:15%"></div>
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:calc(70%/4)">
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:20%"></div>
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:calc(60%/4)">
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon1">
         <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_1')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#96BDFF; padding-left:2%; width:calc(70%/4)">
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#96BDFF; padding-left:2%; width:calc(60%/4)">
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon2">
         <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_2')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#4385F5; padding-left:2%; width:calc(70%/4)">
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#4385F5; padding-left:2%; width:calc(60%/4)">
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon3">
         <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_3')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:2%; width:calc(70%/4)">
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:2%; width:calc(60%/4)">
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon4" />
         <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_4')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-base text-white" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:2%; width:15%"></div>
+      <div class="flex w-full flex-column items-start text-base text-white" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:2%; width:20%"></div>
       
 
     </div>
@@ -496,7 +496,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .bg-slate-200{
     background-color: rgba(244, 244, 244, 1);
   }
@@ -504,6 +504,7 @@ export default {
     opacity: 1;
     color: white;
 }
+
 .text-2xl-responsive{
   font-size: calc(4px + 1.50625vw);
 }
