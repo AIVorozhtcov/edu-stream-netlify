@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-column">
+  <div class="flex flex-column pb-5">
       <div class="relative flex h-fit ignore-global-margins">   
         <div class="absolute flex flex-column" style=" margin-left:21%; margin-top:20%">         
           <div class="h-fit text-white mb-4 font-extrabold" style="font-size: calc(6px + 2.450625vw);" v-html="$t('courses.english.image_title')"></div>
@@ -110,7 +110,7 @@
         </div>
       </div>
       <div>
-      <b-modal centered :busy="true" id="modal-1" :hide-header='true' :hide-footer='true' style="width:30%;">
+        <b-modal centered :busy="true" id="modal-1" :hide-header='true' :hide-footer='true' style="width:30%;">
         <template #modal-header class="">
           <header class=""></header>
           
@@ -132,16 +132,16 @@
           <input @focusout="checkPhone" type="tel" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
           <div class="pt-3 flex flex-row">
-              <input @animationend="checkTimes" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
-            <div class="pl-3" v-html="$t('modals.mon_wed')"></div>
+              <input @animationend="checkTimes" id="mon_wed" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
+            <label for="mon_wed"><div class="pl-3" v-html="$t('modals.mon_wed')"></div></label>
           </div>
           <div class="pt-1 flex flex-row">
-            <input @animationend="checkTimes" type="checkbox" :value="$t('modals.tue_thu')" v-model="checkedTimes">
-            <div class="pl-3" v-html="$t('modals.tue_thu')"></div>
+            <input @animationend="checkTimes" id="tue_thu" type="checkbox" :value="$t('modals.tue_thu')" v-model="checkedTimes">
+            <label for="tue_thu"><div class="pl-3" v-html="$t('modals.tue_thu')"></div></label>
           </div>
           <div class="pt-1 flex flex-row">
-            <input @animationend="checkTimes" type="checkbox" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
-            <div class="pl-3" v-html="$t('modals.any_day')"></div>
+            <input @animationend="checkTimes" id="any_day" type="checkbox" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
+            <label for="any_day"><div class="pl-3" v-html="$t('modals.any_day')"></div></label>
           </div>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
           <div

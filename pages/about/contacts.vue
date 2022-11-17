@@ -13,10 +13,10 @@
         <div class="w-full" style="font-size: calc(1px + 1.05625vw); padding-top: 5vh;" v-html="$t('about_us.contacts.info')"></div>
         <div id="last-column" style="padding-top: 5vh;" class="flex flex-row" >
             <a href="https://www.facebook.com" style="margin-right:10%" target="_blank">
-                <img style="width: 4vw; color: rgba(255, 0, 1, 1); height: auto" :src="facebookLogoBlack" />
+                <img style="width: 3vw; color: rgba(255, 0, 1, 1); height: auto" :src="facebookLogoBlack" />
             </a>
             <a href="https://www.instagram.com" target="_blank">
-                <img style="width: 4vw; height: auto" :src="instagramLogoBlack" />
+                <img style="width: 3vw; height: auto" :src="instagramLogoBlack" />
             </a>
         </div>
       </div>

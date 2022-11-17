@@ -1,11 +1,12 @@
 <template style="background-color:#E7E7E7">
   <div>
     <NavBar />
+    <SideNavBar class="sidenavbar-color w-full z-40" />
 
     <main>
       <div class="relative" style="overflow: auto">
         
-        <SideNavBar class="sidenavbar absolute w-full top-0 z-40" />
+        
         <nuxt class="global-margins"/>
       </div>
       
@@ -29,7 +30,7 @@ export default {
 
 
 <style>
-  .sidenavbar{
+  .sidenavbar-color{
     background-color: rgba(128, 128, 128, 0.58);
   }
 

@@ -68,8 +68,8 @@
               </li> -->
               <div class="nav-item dropdown">
                 <div  @mouseenter="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false" :class="[aboutIsSelected ? 'menu-selected' : '', 'flex flex-row items-center w-fit']">
-                  <p style="font-size: calc(7px + 1.010625vw);">{{$t('menu.about_us.self')}}</p>
-                  <b-icon style="width:2.0vw; height:auto" :icon="this.aboutHoverHandler()"/>
+                  <p class="menu-text-sm">{{$t('menu.about_us.self')}}</p>
+                  <b-icon class="menu-arrow-icon" :icon="this.aboutHoverHandler()"/>
                 </div>
                 <!--<a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{$t('menu.about_us.self')}}
@@ -81,8 +81,8 @@
               </div>
               <div class="margin-5-for-rows">
                 <div @mouseenter="examsIsSelected = true; coursesIsSelected = false; aboutIsSelected = false" :class="[examsIsSelected ? 'menu-selected' : '', 'flex flex-row items-center']">
-                  <p style="font-size: calc(7px + 1.010625vw);">{{$t('menu.exams.self')}}</p>
-                  <b-icon style="width:2.0vw; height:auto" :icon="this.examsHoverHandler()" />
+                  <p class="menu-text-sm">{{$t('menu.exams.self')}}</p>
+                  <b-icon class="menu-arrow-icon" :icon="this.examsHoverHandler()" />
                 </div>
                 <!--<a @mouseenter="openSidebar" class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{$t('menu.exams.self')}}
@@ -94,8 +94,8 @@
               </div>
               <div class="margin-5-for-rows">
                 <div @mouseenter="coursesIsSelected = true; examsIsSelected = false; aboutIsSelected = false" :class="[coursesIsSelected ? 'menu-selected' : '', 'flex flex-row items-center']">
-                  <p style="font-size: calc(7px + 1.010625vw);">{{$t('menu.courses.self')}}</p>
-                  <b-icon style="width:2.0vw; height:auto" :icon="this.coursesHoverHandler()" />
+                  <p class="menu-text-sm">{{$t('menu.courses.self')}}</p>
+                  <b-icon class="menu-arrow-icon" :icon="this.coursesHoverHandler()" />
                 </div>
                 <!-- <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{$t('menu.courses.self')}}
@@ -110,29 +110,23 @@
             
           </div>
           <div>
-                <b-sidebar width="60%" class="flex" v-model="isSidebarOpen" id="sidebar-1" :backdrop-variant="whiteBackdrop"  :backdrop="true" no-header>                  
-                  <div class="h-full flex" @mouseleave="closeSidebar"  style="background-color:rgba(255, 255, 255, 1)">
+                <b-sidebar width="60%" class="flex mt-10 sidebar-color" v-model="isSidebarOpen" id="sidebar-1" :backdrop-variant="whiteBackdrop" style=""  :backdrop="true" no-header>                  
+                  <div class="h-full flex" @mouseleave="closeSidebar">
                     <div class="flex-column w-full" style="height:90%" >
-                      <div class="w-full edu-color h-20 flex flex-row items-center">  
-                        <div class="w-22 h-22" style="margin-left: 32%;">
-                          <nuxt-link :to="localePath('/')">  
-                            <img :src="logo" />
-                          </nuxt-link>
-                        </div>
-                      </div>
+                      
                       <div class="flex pt-2 flex-row items-center" style="padding-left:32% ">
                         <div style=" background-color:rgba(255, 255, 255, 1)"></div> 
                         <div @mouseenter="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false"  :class="[aboutIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']">
-                          <p style="font-size: calc(15px + 0.390625vw);">{{$t('menu.about_us.self')}}</p>
-                          <b-icon style="width:2.0vw; height:auto" :icon="this.aboutHoverHandler()"/>
+                          <p class="menu-text-sm">{{$t('menu.about_us.self')}}</p>
+                          <b-icon class="menu-arrow-icon" :icon="this.aboutHoverHandler()"/>
                         </div>
                         <div @mouseenter="examsIsSelected = true; coursesIsSelected = false; aboutIsSelected = false" :class="[examsIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl margin-9-for-rows']">
-                          <p style="font-size: calc(15px + 0.390625vw);">{{$t('menu.exams.self')}}</p>
-                          <b-icon style="width:2.0vw; height:auto" :icon="this.examsHoverHandler()" />
+                          <p class="menu-text-sm">{{$t('menu.exams.self')}}</p>
+                          <b-icon class="menu-arrow-icon" :icon="this.examsHoverHandler()" />
                         </div>
                         <div @mouseenter="coursesIsSelected = true; examsIsSelected = false; aboutIsSelected = false" :class="[coursesIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl margin-9-for-rows']">
-                          <p style="font-size: calc(15px + 0.390625vw);">{{$t('menu.courses.self')}}</p>
-                          <b-icon style="width:2.0vw; height:auto" :icon="this.coursesHoverHandler()" />
+                          <p class="menu-text-sm">{{$t('menu.courses.self')}}</p>
+                          <b-icon class="menu-arrow-icon" :icon="this.coursesHoverHandler()" />
                         </div>
                       </div>
                       <div  :class="[aboutIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 items-start justify-end font-bold text-5xl']" style="padding-left:33%;">
@@ -162,7 +156,7 @@
 </template>
 
 
-<style scoped>
+<style >
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0; 
@@ -174,8 +168,17 @@
 .margin-5-for-rows{
   margin-left:5%
 }
+.b-sidebar{
+  top:5rem;
+}
+.b-sidebar-backdrop{
+  top:5rem;
+}
 .margin-9-for-rows{
   margin-left:5%
+}
+.sidebar-color >>> .b-sidebar {
+  background-color: #253984;
 }
 .menu-selected p{
   color:rgba(67, 133, 245, 1);
@@ -186,6 +189,15 @@
  .bg-blue{
   background-color: rgba(59, 39, 239, 0.763);
  }
+ .menu-text-sm{
+  font-size: calc(7px + 1.010625vw);
+ }
+ .menu-arrow-icon{
+  width:1.0vw;
+  height:auto;
+ }
+
+ 
  .topnavbar-list li{
   list-style-type:'';
   display:inline;

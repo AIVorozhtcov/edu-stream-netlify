@@ -17,15 +17,15 @@
           <div class="px-4 font-bold pb-3 pt-3" v-html="$t('exams.osd.exam-1')"></div>
           <div class="flex flex-row items-center">
             <input type="radio" id="13/12/2022" name="A2_time" value="13/12/2022">
-            <label for="html">13.12.2022; 13:00</label><br>
+            <label for="13/12/2022">13.12.2022; 13:00</label><br>
           </div>
           <div class="flex flex-row">
             <input type="radio" id="14/12/2022" name="A2_time" value="14/12/2022">
-            <label for="html">14.12.2022; 13:00</label><br>
+            <label for="14/12/2022">14.12.2022; 13:00</label><br>
           </div>
           <div class="flex flex-row">
             <input type="radio" id="15/12/2022" name="A2_time" value="15/12/2022">
-            <label for="html">15.12.2022; 13:00</label><br>
+            <label for="15/12/2022">15.12.2022; 13:00</label><br>
           </div>
           <p class="px-4 font-bold py-1">160€</p>
           <a 
@@ -42,19 +42,19 @@
           <div class="px-4 font-bold pb-3 pt-3" v-html="$t('exams.osd.exam-2')"></div>
           <div class="flex flex-row items-center">
             <input type="radio" id="21/11/2022" name="B1_time" value="21/11/2022">
-            <label for="html">21.11.2022; 13:00</label><br>
+            <label for="21/11/2022">21.11.2022; 13:00</label><br>
           </div>
           <div class="flex flex-row items-center">
             <input type="radio" id="05/12/2022" name="B1_time" value="05/12/2022">
-            <label for="html">05.12.2022; 13:00</label><br>
+            <label for="05/12/2022">05.12.2022; 13:00</label><br>
           </div>
           <div class="flex flex-row">
             <input type="radio" id="06/12/2022" name="B1_time" value="06/12/2022">
-            <label for="html">06.12.2022; 13:00</label><br>
+            <label for="06/12/2022">06.12.2022; 13:00</label><br>
           </div>
           <div class="flex flex-row">
             <input type="radio" id="07/12/2022" name="B1_time" value="07/12/2022">
-            <label for="html">07.12.2022; 13:00</label><br>
+            <label for="07/12/2022">07.12.2022; 13:00</label><br>
           </div>
           <p class="px-4 font-bold py-1">160€</p>
           <a 
@@ -119,16 +119,16 @@
           <input @focusout="checkPhone" type="tel" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
           <div class="pt-3 flex flex-row">
-              <input @animationend="checkTimes" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
-            <div class="pl-3" v-html="$t('modals.mon_wed')"></div>
+              <input @animationend="checkTimes" id="mon_wed" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
+            <label for="mon_wed"><div class="pl-3" v-html="$t('modals.mon_wed')"></div></label>
           </div>
           <div class="pt-1 flex flex-row">
-            <input @animationend="checkTimes" type="checkbox" :value="$t('modals.tue_thu')" v-model="checkedTimes">
-            <div class="pl-3" v-html="$t('modals.tue_thu')"></div>
+            <input @animationend="checkTimes" id="tue_thu" type="checkbox" :value="$t('modals.tue_thu')" v-model="checkedTimes">
+            <label for="tue_thu"><div class="pl-3" v-html="$t('modals.tue_thu')"></div></label>
           </div>
           <div class="pt-1 flex flex-row">
-            <input @animationend="checkTimes" type="checkbox" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
-            <div class="pl-3" v-html="$t('modals.any_day')"></div>
+            <input @animationend="checkTimes" id="any_day" type="checkbox" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
+            <label for="any_day"><div class="pl-3" v-html="$t('modals.any_day')"></div></label>
           </div>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
           <div

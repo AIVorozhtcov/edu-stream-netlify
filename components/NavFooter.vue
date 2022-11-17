@@ -35,6 +35,14 @@
                     <p>{{$t('footer.mon_thu')}}</p>
                     <p>{{$t('footer.friday')}}</p>
                     <p>{{$t('footer.sat_sun')}}</p>
+                    <div class="flex flex-row">
+                        <img style="width: 1.2vw; height: auto" :src="phoneIcon" />
+                        <div class="text-white pl-1" v-html="$t('footer.phone_number')"></div>
+                    </div>
+                    <div class="flex flex-row">
+                        <img style="width: 1.2vw; height: auto" :src="emailIcon" />
+                        <div class="text-white pl-1" v-html="$t('footer.email_address')"></div>
+                    </div>
                 </div>
             </div>
             <div class="flex w-full flex-row items-center justify-between mt-3 mb-1 pt-1 text-2xs-responsive" style="border-top-width: 1px;	border-bottom-width: 1px;">
@@ -42,11 +50,11 @@
                     {{$t('footer.m/w/d')}}
                 </p>
                 <div id="last-column" class="flex flex-row" >
-                    <a href="https://www.facebook.com" style="margin-right:10%" target="_blank">
-                        <img style="width: 2.75vw; height: auto" :src="facebookLogo" />
+                    <a href="https://www.facebook.com" style="margin-right:15%" target="_blank">
+                        <img style="width: 2vw; height: auto" :src="facebookLogo" />
                     </a>
                     <a href="https://www.instagram.com" target="_blank">
-                        <img style="width: 2.75vw; height: auto" :src="instagramLogo" />
+                        <img style="width: 2vw; height: auto" :src="instagramLogo" />
                     </a>
                 </div>
             </div>
@@ -118,6 +126,8 @@
 import logo from "~/assets/edu-stream_logo.png"
 import facebookLogo from "~/assets/facebook_logo.svg"
 import instagramLogo from "~/assets/instagram_logo.svg"
+import phoneIcon from "~/assets/phone_icon.svg"
+import emailIcon from "~/assets/email_icon.svg"
 
 
 export default {
@@ -125,7 +135,9 @@ export default {
     return {
       logo: logo,
       facebookLogo:facebookLogo,
-      instagramLogo: instagramLogo
+      instagramLogo: instagramLogo,
+      phoneIcon: phoneIcon,
+      emailIcon: emailIcon
     }
   }
 }

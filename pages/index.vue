@@ -14,21 +14,21 @@
       <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:20%"></div>
       <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:calc(60%/4)">
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon1">
-        <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_1')"></div>
+        <div class="pr-6 pb-6 color-tab-text"  v-html="$t('main.color_tabs.t_1')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#96BDFF; padding-left:2%; width:calc(60%/4)">
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#96BDFF; padding-left:1%; width:calc(60%/4)">
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon2">
-        <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_2')"></div>
+        <div class="pr-6 pb-6 color-tab-text"  v-html="$t('main.color_tabs.t_2')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#4385F5; padding-left:2%; width:calc(60%/4)">
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#4385F5; padding-left:1%; width:calc(60%/4)">
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon3">
-        <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_3')"></div>
+        <div class="pr-6 pb-6 color-tab-text"  v-html="$t('main.color_tabs.t_3')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:2%; width:calc(60%/4)">
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:1%; width:calc(60%/4)">
         <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon4" />
-        <div class="pr-6 pb-6" style="font-size: calc(3px + 0.890625vw);" v-html="$t('main.color_tabs.t_4')"></div>
+        <div class="pr-6 pb-6 color-tab-text"  v-html="$t('main.color_tabs.t_4')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-base text-white" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:2%; width:20%"></div>
+      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:1%; width:20%"></div>
       
 
     </div>
@@ -47,44 +47,54 @@
         </div>
     </div>
     <div class="border-y py-16 flex flex-column items-start justify-between w-full h-full">
-      <h1 class="text-2xl font-bold">{{$t('main.courses_and_exams.self')}}</h1>
-      <div class="flex flex-row w-full justify-between h-full items-start pt-8 ">
+      <h1 class="section-title-text font-bold">{{$t('main.courses_and_exams.self')}}</h1>
+      <div class="flex flex-row w-full justify-between items-start pt-8 overflow-hidden">
         <nuxt-link class="w-fit flex" :to="localePath('/courses/german')">  
-          <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1)">
-            <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
-            <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
+          <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns courses-tab-color" >
+            <h1 class="font-bold courses-exams-h1 courses-title-color">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
+            <div class="courses-exams-tab-margin"></div>
+            <p class="courses-exams-text courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
           </div>
          </nuxt-link> 
-         <nuxt-link class="w-fit flex" :to="localePath('/courses/english')">  
-          <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1); margin-left:3vw">
-            <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
-            <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
+         <div class="courses-exams-margin"></div>  
+         <nuxt-link class="w-fit flex" :to="localePath('/courses/english')">          
+          <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns courses-tab-color" >
+            <h1 class="font-bold courses-exams-h1 courses-title-color">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
+            <div class="courses-exams-tab-margin"></div>
+            <p class="courses-exams-text courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
           </div>
         </nuxt-link>
+          <div class="courses-exams-margin"></div>
         <nuxt-link class="w-fit flex" :to="localePath('/courses/online')">  
-          <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 248, 255, 1); margin-left:3vw">
-            <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.courses.titles.t_3')}}</h1>
-            <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_3')}}</p>
+          <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns courses-tab-color">
+            <h1 class="font-bold courses-exams-h1 courses-title-color">{{$t('main.courses_and_exams.courses.titles.t_3')}}</h1>
+            <div class="courses-exams-tab-margin"></div>
+            <p class="courses-exams-text courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_3')}}</p>
           </div>
         </nuxt-link>    
       </div>
-      <div class="flex flex-row w-full justify-between items-start pt-8">
+      <div class="flex flex-row w-full justify-between items-start pt-8 overflow-hidden">
         <nuxt-link class="w-fit flex" :to="localePath('/exams/osd')">  
-          <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1)">
-            <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
-            <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
+          <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns exams-tab-color" >
+            <h1 class="font-bold courses-exams-h1">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
+            <div class="courses-exams-tab-margin"></div>
+            <p class="courses-exams-text courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
           </div>
         </nuxt-link>
+          <div class="courses-exams-margin"></div>
         <nuxt-link class="w-fit flex" :to="localePath('/exams/oif')">
-          <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1); margin-left:3vw">
-            <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
-            <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
+          <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns exams-tab-color">
+            <h1 class="font-bold courses-exams-h1">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
+            <div class="courses-exams-tab-margin"></div>
+            <p class="courses-exams-text courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
           </div>
         </nuxt-link>
+          <div class="courses-exams-margin"></div>
         <nuxt-link class="w-fit flex" :to="localePath('/exams/new')">
-          <div class="cursor-pointer rounded-sm flex flex-column items-start justify-between" style="background-color:rgba(239, 239, 239, 1); margin-left:3vw">
-            <h1 class="text-xl-responsive font-bold courses-exams-h1-padding">{{$t('main.courses_and_exams.exams.titles.t_3')}}</h1>
-            <p class="text-base-responsive courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_3')}}</p>
+          <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns exams-tab-color">
+            <h1 class="font-bold courses-exams-h1">{{$t('main.courses_and_exams.exams.titles.t_3')}}</h1>
+            <div class="courses-exams-tab-margin"></div>
+            <p class="courses-exams-text courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_3')}}</p>
           </div>
         </nuxt-link>
       </div>
@@ -312,16 +322,16 @@
           <input @focusout="checkPhone" type="tel" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
           <div class="pt-3 flex flex-row">
-              <input @animationend="checkTimes" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
-            <div class="pl-3" v-html="$t('modals.mon_wed')"></div>
+              <input @animationend="checkTimes" id="mon_wed" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
+            <label for="mon_wed"><div class="pl-3" v-html="$t('modals.mon_wed')"></div></label>
           </div>
           <div class="pt-1 flex flex-row">
-            <input @animationend="checkTimes" type="checkbox" :value="$t('modals.tue_thu')" v-model="checkedTimes">
-            <div class="pl-3" v-html="$t('modals.tue_thu')"></div>
+            <input @animationend="checkTimes" id="tue_thu" type="checkbox" :value="$t('modals.tue_thu')" v-model="checkedTimes">
+            <label for="tue_thu"><div class="pl-3" v-html="$t('modals.tue_thu')"></div></label>
           </div>
           <div class="pt-1 flex flex-row">
-            <input @animationend="checkTimes" type="checkbox" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
-            <div class="pl-3" v-html="$t('modals.any_day')"></div>
+            <input @animationend="checkTimes" id="any_day" type="checkbox" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
+            <label for="any_day"><div class="pl-3" v-html="$t('modals.any_day')"></div></label>
           </div>
           <div class="pt-3 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
           <div
@@ -504,6 +514,32 @@ export default {
     opacity: 1;
     color: white;
 }
+.color-tab-text{
+  font-size: calc(3px + 0.890625vw);
+}
+.courses-exams-text{
+  font-size: calc(1px + 0.690625vw);
+}
+.courses-exams-margin{ 
+  width: 6vw;
+}
+.courses-exams-tab-margin{
+  height: 10vh;
+}
+
+.courses-tab-color{
+  background-color:rgba(239, 248, 255, 1); 
+}
+.courses-title-color{
+  color:rgba(67, 133, 245, 1)
+}
+.exams-tab-color{
+  background-color:rgba(239, 239, 239, 1);
+}
+.same-size-columns{
+  padding-bottom: 100%;
+  margin-bottom: -100%;
+}
 
 .text-2xl-responsive{
   font-size: calc(4px + 1.50625vw);
@@ -514,15 +550,22 @@ export default {
 .VueCarousel-navigation-next {
                 position: relative;
 }
-.courses-exams-h1-padding{
+.courses-exams-h1{
   padding-top:7%;
-  padding-left:3%;
+  padding-left:7%;  
+  padding-right:3%;
+  font-size: calc(3px + 1.26625vw);
 }
 .courses-exams-p-padding{
-  padding-bottom:7%;
-  padding-left:3%;
+  padding-bottom:5%;
+  padding-left:7%;
+  padding-right:3%;
 }
 .text-block {
     white-space: pre-line;
+}
+.section-title-text{
+  
+  font-size: calc(5px + 2.01625vw);
 }
 </style>
