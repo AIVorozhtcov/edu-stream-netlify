@@ -13,10 +13,10 @@
                 <a class="text-white text-navbar-sm" href="tel:+43 1 890 89 48">+43 1 890 89 48</a> <p class="text-white text-navbar-sm" style="padding-left: 1vw;" > | Rennweg 9/6, 1030 Wien |</p>
             </div>
             <div class="flex items-center flex-row" style="margin-left:0.5vw">
-                <a href="https://www.facebook.com" target="_blank">
+                <a href="https://www.facebook.com/edustream.vienna" target="_blank">
                   <img style="width: calc(12px + 0.990625vw); height: auto" :src="facebookLogo" />
                 </a>
-                <a href="https://www.instagram.com" style="margin-left:0.5vw" target="_blank">
+                <a href="https://www.instagram.com/edustream.at" style="margin-left:0.5vw" target="_blank">
                   <img style="width: calc(12px + 0.990625vw); height: auto" :src="instagramLogo" />
                 </a>
             </div>

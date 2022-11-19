@@ -30,12 +30,6 @@
     "chunkName": "pages/about/info"
   },
   {
-    "name": "about-photos___de",
-    "path": "/about/photos",
-    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\photos.vue",
-    "chunkName": "pages/about/photos"
-  },
-  {
     "name": "courses-english___de",
     "path": "/courses/english",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\english.vue",
@@ -96,12 +90,6 @@
     "chunkName": "pages/about/info"
   },
   {
-    "name": "about-photos___en",
-    "path": "/en/about/photos",
-    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\photos.vue",
-    "chunkName": "pages/about/photos"
-  },
-  {
     "name": "courses-english___en",
     "path": "/en/courses/english",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\english.vue",
@@ -160,12 +148,6 @@
     "path": "/ru/about/info",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\info.vue",
     "chunkName": "pages/about/info"
-  },
-  {
-    "name": "about-photos___ru",
-    "path": "/ru/about/photos",
-    "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\photos.vue",
-    "chunkName": "pages/about/photos"
   },
   {
     "name": "courses-english___ru",

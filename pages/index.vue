@@ -49,7 +49,7 @@
     <div class="border-y py-16 flex flex-column items-start justify-between w-full h-full">
       <h1 class="section-title-text font-bold">{{$t('main.courses_and_exams.self')}}</h1>
       <div class="flex flex-row w-full justify-between items-start pt-8 overflow-hidden">
-        <nuxt-link class="w-fit flex" :to="localePath('/courses/german')">  
+        <nuxt-link class="w-fit flex" style="text-decoration: none; color: inherit;" :to="localePath('/courses/german')">  
           <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns courses-tab-color" >
             <h1 class="font-bold courses-exams-h1 courses-title-color">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
             <div class="courses-exams-tab-margin"></div>
@@ -57,7 +57,7 @@
           </div>
          </nuxt-link> 
          <div class="courses-exams-margin"></div>  
-         <nuxt-link class="w-fit flex" :to="localePath('/courses/english')">          
+         <nuxt-link class="w-fit flex" style="text-decoration: none; color: inherit;" :to="localePath('/courses/english')">          
           <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns courses-tab-color" >
             <h1 class="font-bold courses-exams-h1 courses-title-color">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
             <div class="courses-exams-tab-margin"></div>
@@ -65,7 +65,7 @@
           </div>
         </nuxt-link>
           <div class="courses-exams-margin"></div>
-        <nuxt-link class="w-fit flex" :to="localePath('/courses/online')">  
+        <nuxt-link class="w-fit flex" style="text-decoration: none; color: inherit;" :to="localePath('/courses/online')">  
           <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns courses-tab-color">
             <h1 class="font-bold courses-exams-h1 courses-title-color">{{$t('main.courses_and_exams.courses.titles.t_3')}}</h1>
             <div class="courses-exams-tab-margin"></div>
@@ -74,7 +74,7 @@
         </nuxt-link>    
       </div>
       <div class="flex flex-row w-full justify-between items-start pt-8 overflow-hidden">
-        <nuxt-link class="w-fit flex" :to="localePath('/exams/osd')">  
+        <nuxt-link class="w-fit flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/osd')">  
           <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns exams-tab-color" >
             <h1 class="font-bold courses-exams-h1">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
             <div class="courses-exams-tab-margin"></div>
@@ -82,7 +82,7 @@
           </div>
         </nuxt-link>
           <div class="courses-exams-margin"></div>
-        <nuxt-link class="w-fit flex" :to="localePath('/exams/oif')">
+        <nuxt-link  class="w-fit flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/oif')">
           <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns exams-tab-color">
             <h1 class="font-bold courses-exams-h1">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
             <div class="courses-exams-tab-margin"></div>
@@ -90,7 +90,7 @@
           </div>
         </nuxt-link>
           <div class="courses-exams-margin"></div>
-        <nuxt-link class="w-fit flex" :to="localePath('/exams/new')">
+        <nuxt-link class="w-fit flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/new')">
           <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns exams-tab-color">
             <h1 class="font-bold courses-exams-h1">{{$t('main.courses_and_exams.exams.titles.t_3')}}</h1>
             <div class="courses-exams-tab-margin"></div>

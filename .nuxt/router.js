@@ -8,7 +8,6 @@ const _67fd4c50 = () => interopDefault(import('..\\pages\\index.vue' /* webpackC
 const _e413a8b4 = () => interopDefault(import('..\\pages\\about\\contacts.vue' /* webpackChunkName: "pages/about/contacts" */))
 const _bd93a7a8 = () => interopDefault(import('..\\pages\\about\\events.vue' /* webpackChunkName: "pages/about/events" */))
 const _3e0ee001 = () => interopDefault(import('..\\pages\\about\\info.vue' /* webpackChunkName: "pages/about/info" */))
-const _4848df94 = () => interopDefault(import('..\\pages\\about\\photos.vue' /* webpackChunkName: "pages/about/photos" */))
 const _7d6378a2 = () => interopDefault(import('..\\pages\\courses\\english.vue' /* webpackChunkName: "pages/courses/english" */))
 const _c3d4b378 = () => interopDefault(import('..\\pages\\courses\\german.vue' /* webpackChunkName: "pages/courses/german" */))
 const _1a9cbb9c = () => interopDefault(import('..\\pages\\courses\\italian.vue' /* webpackChunkName: "pages/courses/italian" */))
@@ -48,10 +47,6 @@ export const routerOptions = {
     path: "/about/info",
     component: _3e0ee001,
     name: "about-info___de"
-  }, {
-    path: "/about/photos",
-    component: _4848df94,
-    name: "about-photos___de"
   }, {
     path: "/courses/english",
     component: _7d6378a2,
@@ -93,10 +88,6 @@ export const routerOptions = {
     component: _3e0ee001,
     name: "about-info___en"
   }, {
-    path: "/en/about/photos",
-    component: _4848df94,
-    name: "about-photos___en"
-  }, {
     path: "/en/courses/english",
     component: _7d6378a2,
     name: "courses-english___en"
@@ -136,10 +127,6 @@ export const routerOptions = {
     path: "/ru/about/info",
     component: _3e0ee001,
     name: "about-info___ru"
-  }, {
-    path: "/ru/about/photos",
-    component: _4848df94,
-    name: "about-photos___ru"
   }, {
     path: "/ru/courses/english",
     component: _7d6378a2,

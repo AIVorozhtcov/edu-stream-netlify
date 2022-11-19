@@ -10,32 +10,32 @@
                 <div class="w-1/12">
                     <div class="flex flex-column items-start">
                         <h1 class="text-xs-header-responsive font-bold">{{$t('menu.courses.self')}}</h1>
-                        <nuxt-link class="text-white" :to="localePath('/courses/german')">{{$t('menu.courses.de_short')}}</nuxt-link>
-                        <nuxt-link class="text-white" :to="localePath('/courses/english')">{{$t('menu.courses.en_short')}}</nuxt-link>
-                        <nuxt-link class="text-white" :to="localePath('/courses/italian')">{{$t('menu.courses.it_short')}}</nuxt-link>
+                        <nuxt-link class="hover:no-underline text-white" :to="localePath('/courses/german')">{{$t('menu.courses.de_short')}}</nuxt-link>
+                        <nuxt-link class="hover:no-underline text-white" :to="localePath('/courses/english')">{{$t('menu.courses.en_short')}}</nuxt-link>
+                        <nuxt-link class="hover:no-underline text-white" :to="localePath('/courses/italian')">{{$t('menu.courses.it_short')}}</nuxt-link>
                     </div>
                 </div>
                 <div class="w-1/12">
                     <div class="flex flex-column items-start">
                         <h1 class="text-xs-header-responsive font-bold">{{$t('menu.exams.self')}}</h1>
-                        <nuxt-link class="text-white" :to="localePath('/exams/oif')">OIF</nuxt-link>
-                        <nuxt-link class="text-white" :to="localePath('/exams/osd')">OSD</nuxt-link>
+                        <nuxt-link class="hover:no-underline text-white" :to="localePath('/exams/oif')">OIF</nuxt-link>
+                        <nuxt-link class="hover:no-underline text-white" :to="localePath('/exams/osd')">OSD</nuxt-link>
                     </div>
                 </div>
                 <div class="flex flex-column w-1/12">
                     <h1 class="text-xs-header-responsive font-bold">{{$t('menu.about_us.self')}}</h1>
-                    <nuxt-link class="text-white" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
-                    <nuxt-link class="text-white" :to="localePath('/about/contacts')">{{$t('menu.about_us.contacts')}}</nuxt-link>
+                    <nuxt-link class="hover:no-underline text-white" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
+                    <nuxt-link class="hover:no-underline text-white" :to="localePath('/about/contacts')">{{$t('menu.about_us.contacts')}}</nuxt-link>
                 </div>
                 <div class="w-1/12"></div>
                 <div class="flex w-3/12 flex-column items-start" >
                     <h1 class=" text-xs-header-responsive font-bold">Address</h1>
-                    <p>Rennweg 9/6, 1030 Wien</p>
+                    <p class="mb-1">Rennweg 9/6, 1030 Wien</p>
                     <p>{{$t('footer.opening_hours')}}</p>
                     <p>{{$t('footer.mon_thu')}}</p>
                     <p>{{$t('footer.friday')}}</p>
-                    <p>{{$t('footer.sat_sun')}}</p>
-                    <div class="flex flex-row">
+                    <p class="mb-2.5">{{$t('footer.sat_sun')}}</p>
+                    <div class="mb-0.5 flex flex-row">
                         <img style="width: 1.2vw; height: auto" :src="phoneIcon" />
                         <div class="text-white pl-1" v-html="$t('footer.phone_number')"></div>
                     </div>
@@ -50,10 +50,10 @@
                     {{$t('footer.m/w/d')}}
                 </p>
                 <div id="last-column" class="flex flex-row" >
-                    <a href="https://www.facebook.com" style="margin-right:15%" target="_blank">
+                    <a href="https://www.facebook.com/edustream.vienna" style="margin-right:15%" target="_blank">
                         <img style="width: 2vw; height: auto" :src="facebookLogo" />
                     </a>
-                    <a href="https://www.instagram.com" target="_blank">
+                    <a href="https://www.instagram.com/edustream.at" target="_blank">
                         <img style="width: 2vw; height: auto" :src="instagramLogo" />
                     </a>
                 </div>

@@ -130,18 +130,18 @@
                         </div>
                       </div>
                       <div  :class="[aboutIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 items-start justify-end font-bold text-5xl']" style="padding-left:33%;">
-                        <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
-                        <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/events')">{{$t('menu.about_us.events')}}</nuxt-link>
-                        <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/contacts')">{{$t('menu.about_us.contacts')}}</nuxt-link>
+                        <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
+                        <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/events')">{{$t('menu.about_us.events')}}</nuxt-link>
+                        <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/contacts')">{{$t('menu.about_us.contacts')}}</nuxt-link>
                       </div>
                       <div :class="[coursesIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 items-start justify-end font-bold text-5xl']" style="padding-left:33%; ">
-                        <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
-                        <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/courses/english')">{{$t('menu.courses.en')}}</nuxt-link>
-                        <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
+                        <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
+                        <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/courses/english')">{{$t('menu.courses.en')}}</nuxt-link>
+                        <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
                       </div>
                       <div :class="[examsIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 items-start justify-end font-bold text-5xl']" style="padding-left:33%; ">
-                        <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/exams/oif')">OIF</nuxt-link>
-                        <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/exams/osd')">OSD</nuxt-link>
+                        <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/exams/oif')">OIF</nuxt-link>
+                        <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/exams/osd')">OSD</nuxt-link>
                       </div>
                     </div>
                   </div>    
