@@ -1,13 +1,15 @@
 <template style="background-color:#E7E7E7">
   <div>
-    <NavBar />
-    <SideNavBar class="sidenavbar-color w-full z-40" />
-
+    <MobileNavBar v-show="this.$store.getters['getIsMobile']" />
+    <div v-show="!this.$store.getters['getIsMobile']">
+      <NavBar />
+      <SideNavBar class="sidenavbar-color w-full z-40" />
+    </div>
     <main>
       <div class="relative" style="overflow: auto">
         
         
-        <nuxt class="global-margins"/>
+        <nuxt :class="this.$store.getters['getIsMobile'] ? 'mobile-global-margins' : 'global-margins'"/>
       </div>
       
       <NavFooter class="w-full" style="bottom:0;"></NavFooter>
@@ -19,12 +21,30 @@
 import NavBar from '/components/NavBar.vue'
 import NavFooter from '/components/NavFooter.vue'
 import SideNavBar from '/components/SideNavBar.vue'
+import MobileNavBar from '/components/MobileNavBar.vue'
 export default {
   components: {
     NavBar: NavBar,
     NavFooter: NavFooter,
     SideNavBar:SideNavBar,
-  }
+    MobileNavBar:MobileNavBar
+  },
+  methods: {  
+    isMobile() {
+      if (process.client){
+        if (screen.width <= 760) {
+          this.$store.commit("setIsMobile", true)
+        } else {
+          this.$store.commit("setIsMobile", false)
+        }
+      }
+      
+  },
+  },
+  created(){
+    this.isMobile()
+  } 
+  
 }
 </script>
 

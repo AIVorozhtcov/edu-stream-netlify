@@ -1,6 +1,6 @@
 <template>
     <div style="background-color: #253984; padding-top:5vh; padding-bottom:5vh">
-        <div class="flex flex-column font-normal items-start justify-between text-sm global-margins">
+        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-global-margins' : 'global-margins', 'flex flex-column font-normal items-start justify-between text-sm']">
             <div class="flex w-full flex-row items-start pt-2 justify-between text-xs-responsive">
                 <div class="w-1/6">
                     <nuxt-link to="/">  
@@ -71,6 +71,7 @@
                 </button>
             </div>
         </div>
+        <p class="hidden">Made by Artem Vorozhtsov, aivorozhtcov@gmail.com</p>
         <b-modal centered :busy="true" id="modal-2" :hide-header='true' :hide-footer='true' style="width:30%;">
         
         <div class="flex flex-column" style="margin-left:7%; margin-right:7%">
@@ -139,7 +140,25 @@ export default {
       phoneIcon: phoneIcon,
       emailIcon: emailIcon
     }
-  }
+  },
+  methods: {  
+    isMobile() {
+      if (process.client){
+        if (screen.width <= 760) {
+            console.log(screen.width)
+          return true
+        } else {
+            
+            console.log(screen.width)
+          return false
+        }
+      }
+      
+  },
+  },
+  created(){
+    this.isMobile()
+  } 
 }
 
 

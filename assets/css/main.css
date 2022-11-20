@@ -42,6 +42,26 @@ body
 .ignore-l-global-margin{
     margin-left:calc(20/60 * -100%);
   }
+  .mobile-global-margins{
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  .mobile-global-l-margin{
+    margin-left: 4%;
+  }
+  .mobile-global-r-margin{
+    margin-right: 4%;
+  }
+  .mobile-ignore-global-margins{
+    margin-left:calc(4/92 * -100%); 
+    margin-right:calc(4/92 * -100%);
+    }
+  .mobile-ignore-r-global-margin{
+      margin-right:calc(4/92 * -100%);
+    }
+  .mobile-ignore-l-global-margin{
+      margin-left:calc(4/92 * -100%);
+    }
   .offline-tag{
     margin-left:1%;
     border-radius: 0.25rem;

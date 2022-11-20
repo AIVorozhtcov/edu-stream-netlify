@@ -2,6 +2,9 @@
   "FAQAccordion": {
     "description": "Auto imported from components/FAQAccordion.vue"
   },
+  "MobileNavBar": {
+    "description": "Auto imported from components/MobileNavBar.vue"
+  },
   "ModalForm": {
     "description": "Auto imported from components/ModalForm.vue"
   },

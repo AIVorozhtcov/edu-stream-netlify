@@ -235,6 +235,12 @@ export default {
       coursesIsSelected: false
     }
   },
+  created () {
+    if (process.browser){
+      window.addEventListener('scroll', this.handleScroll);
+    }
+    
+  },
   methods: {
     openSidebar() {
       this.isSidebarOpen = true
@@ -244,6 +250,9 @@ export default {
       this.aboutIsSelected = false;
       this.examsIsSelected = false;
       this.coursesIsSelected = false;
+    },
+    handleScroll (event) {
+      this.closeSidebar();
     },
     aboutHoverHandler(){
       if (this.aboutIsSelected){
