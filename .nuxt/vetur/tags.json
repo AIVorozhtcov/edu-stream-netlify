@@ -5,6 +5,9 @@
   "MobileNavBar": {
     "description": "Auto imported from components/MobileNavBar.vue"
   },
+  "MobileNavFooter": {
+    "description": "Auto imported from components/MobileNavFooter.vue"
+  },
   "ModalForm": {
     "description": "Auto imported from components/ModalForm.vue"
   },

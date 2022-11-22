@@ -11,8 +11,8 @@
         
         <nuxt :class="this.$store.getters['getIsMobile'] ? 'mobile-global-margins' : 'global-margins'"/>
       </div>
-      
-      <NavFooter class="w-full" style="bottom:0;"></NavFooter>
+      <MobileNavFooter v-show="this.$store.getters['getIsMobile']" class="w-full" style="bottom:0;" />
+      <NavFooter v-show="!this.$store.getters['getIsMobile']" class="w-full" style="bottom:0;" />
     </main>
   </div>
 </template>
@@ -22,16 +22,18 @@ import NavBar from '/components/NavBar.vue'
 import NavFooter from '/components/NavFooter.vue'
 import SideNavBar from '/components/SideNavBar.vue'
 import MobileNavBar from '/components/MobileNavBar.vue'
+import MobileNavFooter from '/components/MobileNavFooter.vue'
 export default {
   components: {
     NavBar: NavBar,
     NavFooter: NavFooter,
     SideNavBar:SideNavBar,
-    MobileNavBar:MobileNavBar
+    MobileNavBar:MobileNavBar,
+    MobileNavFooter: MobileNavFooter
   },
   methods: {  
     isMobile() {
-      if (process.client){
+      if (process.browser){
         if (screen.width <= 760) {
           this.$store.commit("setIsMobile", true)
         } else {
@@ -41,7 +43,7 @@ export default {
       
   },
   },
-  created(){
+  mounted(){
     this.isMobile()
   } 
   

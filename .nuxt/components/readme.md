@@ -8,6 +8,7 @@ You can directly use them in pages and other components without the need to impo
 
 - `<FAQAccordion>` | `<f-a-q-accordion>` (components/FAQAccordion.vue)
 - `<MobileNavBar>` | `<mobile-nav-bar>` (components/MobileNavBar.vue)
+- `<MobileNavFooter>` | `<mobile-nav-footer>` (components/MobileNavFooter.vue)
 - `<ModalForm>` | `<modal-form>` (components/ModalForm.vue)
 - `<NavBar>` | `<nav-bar>` (components/NavBar.vue)
 - `<NavFooter>` | `<nav-footer>` (components/NavFooter.vue)

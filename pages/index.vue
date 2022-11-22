@@ -1,34 +1,35 @@
 <template>
   <div class="flex flex-column">
-    <div class="relative flex h-fit ignore-global-margins">   
-        <div class="absolute flex flex-column" style=" margin-left:21%; margin-top:23%">       
-          <div class="h-fit text-white font-extrabold" style="font-size: calc(6px + 2.450625vw); margin-bottom: 6%;" v-html="$t('main.image_text')"></div>
-          <button type="button" class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(255, 255, 255, 1)" @click="$bvModal.show('modal-1')" >
-            <div class="text-black button-text" v-html="$t('exams.oif.register')"></div>
+    <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-global-margins' : 'ignore-global-margins', 'relative flex h-fit']">   
+        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-welcome-content mobile-welcome-content-background w-full pl-5' : 'welcome-content', 'absolute flex flex-column']">       
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive w-full ml-5 font-bold' : 'welcome-text font-extrabold', 'h-fit text-white']" v-html="$t('main.image_text')"></div>
+          <button type="button" :class="[this.$store.getters['getIsMobile'] ? 'mobile-button mobile-welcome-button-margin' : '', 'btn rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 255, 255, 1);" @click="$bvModal.show('modal-1')" >
+            <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-button-text' : 'button-text', 'text-black']" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
-        <img class="w-full h-3/4" :src="frontpageWelcome">            
+        <img :class="[this.$store.getters['getIsMobile'] ? 'h-1/2 w-full' : 'w-full h-3/4']"  :src="[this.$store.getters['getIsMobile'] ? mobileFrontpageWelcome : frontpageWelcome]">            
     </div>
+    <!---->
     
-    <div class="flex flex-row justify-evenly h-3/4 ignore-global-margins">
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:20%"></div>
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:calc(60%/4)">
-        <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon1">
-        <div class="pr-6 pb-6 color-tab-text"  v-html="$t('main.color_tabs.t_1')"></div>
+    <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-global-margins flex flex-column' : 'ignore-global-margins flex flex-row', 'relative flex h-fit justify-evenly h-3/4 ']">
+      <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex w-full flex-column items-start text-white']"   style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:20%"></div>
+      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#FF7C33;">
+        <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']" :src="colorTabsIcon1">
+        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_1')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#96BDFF; padding-left:1%; width:calc(60%/4)">
-        <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon2">
-        <div class="pr-6 pb-6 color-tab-text"  v-html="$t('main.color_tabs.t_2')"></div>
+      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#96BDFF;">
+        <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon' : 'w-auto h-3/12 pb-2']" :src="colorTabsIcon2">
+        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_2')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#4385F5; padding-left:1%; width:calc(60%/4)">
-        <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon3">
-        <div class="pr-6 pb-6 color-tab-text"  v-html="$t('main.color_tabs.t_3')"></div>
+      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#4385F5;">
+        <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon' : 'w-auto h-3/12 pb-2']" :src="colorTabsIcon3">
+        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_3')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:1%; width:calc(60%/4)">
-        <img class=" w-auto h-3/12 pb-2" :src="colorTabsIcon4" />
-        <div class="pr-6 pb-6 color-tab-text"  v-html="$t('main.color_tabs.t_4')"></div>
+      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#253984;">
+        <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-2' : 'w-auto h-3/12 pb-2']" :src="colorTabsIcon4">
+        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_4')"></div>
       </div>
-      <div class="flex w-full flex-column items-start text-white" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:1%; width:20%"></div>
+      <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex w-full flex-column items-start text-white']" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:1%; width:20%"></div>
       
 
     </div>
@@ -47,60 +48,60 @@
         </div>
     </div>
     <div class="border-y py-16 flex flex-column items-start justify-between w-full h-full">
-      <h1 class="section-title-text font-bold">{{$t('main.courses_and_exams.self')}}</h1>
-      <div class="flex flex-row w-full justify-between items-start pt-8 overflow-hidden">
-        <nuxt-link class="w-fit flex" style="text-decoration: none; color: inherit;" :to="localePath('/courses/german')">  
-          <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns courses-tab-color" >
-            <h1 class="font-bold courses-exams-h1 courses-title-color">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
-            <div class="courses-exams-tab-margin"></div>
-            <p class="courses-exams-text courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
+      <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-section-title-text' : 'section-title-text', 'font-bold']">{{$t('main.courses_and_exams.self')}}</h1>
+      <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column justify-start items-center' : 'flex flex-row justify-between items-start', 'w-full pt-8 overflow-hidden']">
+        <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/courses/german')">  
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start courses-tab-color']" >
+            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1 courses-title-color', 'font-bold']">{{$t('main.courses_and_exams.courses.titles.t_1')}}</h1>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-tab-margin']" ></div>
+            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-text pt-2' : 'courses-exams-text', 'courses-exams-p-padding']">{{$t('main.courses_and_exams.courses.bodies.b_1')}}</p>
+          </div>
+         </nuxt-link>
+         <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-margin']"></div>  
+         <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/courses/english')">  
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start courses-tab-color']" >
+            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1 courses-title-color', 'font-bold']">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-tab-margin']" ></div>
+            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-text pt-2' : 'courses-exams-text', 'courses-exams-p-padding']">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
           </div>
          </nuxt-link> 
-         <div class="courses-exams-margin"></div>  
-         <nuxt-link class="w-fit flex" style="text-decoration: none; color: inherit;" :to="localePath('/courses/english')">          
-          <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns courses-tab-color" >
-            <h1 class="font-bold courses-exams-h1 courses-title-color">{{$t('main.courses_and_exams.courses.titles.t_2')}}</h1>
-            <div class="courses-exams-tab-margin"></div>
-            <p class="courses-exams-text courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_2')}}</p>
+         <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-margin']"></div>  
+         <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/courses/online')">  
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start courses-tab-color']" >
+            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1 courses-title-color', 'font-bold']">{{$t('main.courses_and_exams.courses.titles.t_3')}}</h1>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-tab-margin']" ></div>
+            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-text pt-2' : 'courses-exams-text', 'courses-exams-p-padding']">{{$t('main.courses_and_exams.courses.bodies.b_3')}}</p>
           </div>
-        </nuxt-link>
-          <div class="courses-exams-margin"></div>
-        <nuxt-link class="w-fit flex" style="text-decoration: none; color: inherit;" :to="localePath('/courses/online')">  
-          <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns courses-tab-color">
-            <h1 class="font-bold courses-exams-h1 courses-title-color">{{$t('main.courses_and_exams.courses.titles.t_3')}}</h1>
-            <div class="courses-exams-tab-margin"></div>
-            <p class="courses-exams-text courses-exams-p-padding">{{$t('main.courses_and_exams.courses.bodies.b_3')}}</p>
-          </div>
-        </nuxt-link>    
+         </nuxt-link>   
       </div>
-      <div class="flex flex-row w-full justify-between items-start pt-8 overflow-hidden">
-        <nuxt-link class="w-fit flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/osd')">  
-          <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns exams-tab-color" >
-            <h1 class="font-bold courses-exams-h1">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
-            <div class="courses-exams-tab-margin"></div>
-            <p class="courses-exams-text courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
+      <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column justify-start items-center' : 'flex flex-row justify-between items-start', 'w-full pt-8 overflow-hidden']">
+        <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/oif')">  
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start exams-tab-color']" >
+            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1', 'font-bold']">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-tab-margin']" ></div>
+            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-text pt-2' : 'courses-exams-text', 'courses-exams-p-padding']">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
           </div>
-        </nuxt-link>
-          <div class="courses-exams-margin"></div>
-        <nuxt-link  class="w-fit flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/oif')">
-          <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns exams-tab-color">
-            <h1 class="font-bold courses-exams-h1">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
-            <div class="courses-exams-tab-margin"></div>
-            <p class="courses-exams-text courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
+         </nuxt-link>
+         <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-margin']"></div>  
+         <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/osd')">  
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start exams-tab-color']" >
+            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1', 'font-bold']">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-tab-margin']" ></div>
+            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-text pt-2' : 'courses-exams-text', 'courses-exams-p-padding']">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
           </div>
-        </nuxt-link>
-          <div class="courses-exams-margin"></div>
-        <nuxt-link class="w-fit flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/new')">
-          <div class="cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start same-size-columns exams-tab-color">
-            <h1 class="font-bold courses-exams-h1">{{$t('main.courses_and_exams.exams.titles.t_3')}}</h1>
-            <div class="courses-exams-tab-margin"></div>
-            <p class="courses-exams-text courses-exams-p-padding">{{$t('main.courses_and_exams.exams.bodies.b_3')}}</p>
+         </nuxt-link> 
+         <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-margin']"></div>  
+         <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/new')">  
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start exams-tab-color']" >
+            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1', 'font-bold']">{{$t('main.courses_and_exams.exams.titles.t_3')}}</h1>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-tab-margin']" ></div>
+            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-text pt-2' : 'courses-exams-text', 'courses-exams-p-padding']">{{$t('main.courses_and_exams.exams.bodies.b_3')}}</p>
           </div>
-        </nuxt-link>
+         </nuxt-link>   
       </div>
       
     </div>
-    <div class="border-b py-16 flex flex-row justify-around">
+    <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-banners-border' : 'border-b', 'py-16 flex flex-row justify-around']">
       <img class="h-auto w-1/5" :src="bannerRow1" />
       <img class="h-auto w-1/5" :src="bannerRow2" />
       <img class="h-auto w-1/5" :src="bannerRow3" />
@@ -108,29 +109,29 @@
       <img class="h-auto w-1/5" :src="bannerRow5" />
     </div>
       <client-only>
-        <div class="relative py-16 flex flex-row items-center h-1/12  ignore-r-global-margin">
+        <div :class="[this.$store.getters['getIsMobile'] ? 'pb-32' : 'ignore-r-global-margin', 'relative py-16 flex flex-row items-center h-1/12']" >
           <div class="absolute z-40">
             <button @click.prevent="prevBanner" class="">
-              <img :src="bannerArrowLeft" class="w-2/12" style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)" />
+              <img :src="bannerArrowLeft" :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'w-2/12']"  style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)" />
             </button>
           </div>
-          <carousel class=" w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :scrollPerPage="false" :spacePadding="40" >
+          <carousel class="w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :scrollPerPage="false" :spacePadding="40" >
             
             <slide class="w-1/2 mr-2 rounded">
-              <img class="rounded" :src="promoBanner1" />
+              <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']" :src="[this.$store.getters['getIsMobile'] ? mobilePromoBanner1 : promoBanner1]" />
             </slide>
             <slide class="w-1/2 mr-2 rounded">
-              <img class="rounded" :src="promoBanner1" />
+              <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']" :src="[this.$store.getters['getIsMobile'] ? mobilePromoBanner1 : promoBanner1]" />
             </slide>
             <slide class="w-1/2 rounded">
-              <img class="rounded" :src="promoBanner1" />
+              <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']" :src="[this.$store.getters['getIsMobile'] ? mobilePromoBanner1 : promoBanner1]" />
             </slide>
             
           
           </carousel>
           <div class="absolute right-14 z-40">
             <button @click.prevent="nextBanner" class="">
-              <img :src="bannerArrowRight" class="w-4/12" style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)" />
+              <img :src="bannerArrowRight" :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'w-4/12']" style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)" />
             </button>
           </div>
         </div>
@@ -138,25 +139,25 @@
     
     
     <div class="flex flex-column items-start w-full">
-      <h1 class=" text-xl-responsive font-bold"> {{$t('main.about.our_school')}}</h1>
-      <p class="pt-6 pb-16 text-base-responsive">{{$t('main.about.our_school_expanded')}}</p>
-      <client-only class="justify-center h-1/12 w-full ignore-r-global-margin">
+      <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : 'text-xl-responsive', 'font-bold']" > {{$t('main.about.our_school')}}</h1>
+      <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'pt-6 pb-16']">{{$t('main.about.our_school_expanded')}}</p>
+      <client-only :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'justify-center h-1/12 w-full']">
         
-        <carousel ref="gallery" class="w-11/12 justify-between" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="3" :scrollPerPage="false" :spacePadding="40" >
+        <carousel ref="gallery" class="w-11/12 justify-between" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="[this.$store.getters['getIsMobile'] ? 1 : 3]" :scrollPerPage="false" :spacePadding="40" >
           <slide class="w-1/2 mr-2 rounded">
-            <img class="rounded" :src="promoBanner1" />
+            <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']" :src="promoBanner1" />
           </slide>
           <slide class="w-1/2 mr-2 rounded">
-            <img class="rounded" :src="promoBanner1" />
+            <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']" :src="promoBanner1" />
           </slide>
           <slide class="w-1/2 mr-2 rounded">
-            <img class="rounded" :src="promoBanner1" />
+            <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']" :src="promoBanner1" />
           </slide>
           <slide class="w-1/2 mr-2 rounded">
-            <img class="rounded" :src="promoBanner1" />
+            <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']" :src="promoBanner1" />
           </slide>
           <slide class="w-1/2 rounded">
-            <img class="rounded" :src="promoBanner1" />
+            <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']" :src="promoBanner1" />
           </slide>
           
           
@@ -164,52 +165,52 @@
       </client-only>
     
     
-      <div class=" py-3 flex flex-row justify-between items-center w-full">
+      <div :class="[this.$store.getters['getIsMobile'] ? 'justify-center' : 'justify-between', 'py-3 flex flex-row  items-center w-full mx-auto']">
         <nuxt-link :to="localePath('/about/info')">
-          <button class="btn rounded-2xl h-fit w-fit" style="background-color:rgba(32, 88, 182, 1)">
-            <div class="button-text text-white" v-html="$t('menu.about_us.self')"></div>
+          <button :class="[this.$store.getters['getIsMobile'] ? 'mx-auto w-full mobile-button py-2' : 'h-fit w-fit rounded-2xl', 'btn']"  style="background-color:rgba(32, 88, 182, 1);">
+            <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-button-text' : 'button-text', 'text-white']" v-html="$t('menu.about_us.self')"></div>
           </button>
         </nuxt-link>
-        <button @click.prevent="nextGalleryImage" class="p-5 py-2">
+        <button :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" @click.prevent="nextGalleryImage" class="p-5 py-2">
           <img :src="galleryArrow" />
         </button>
       </div>
-      <div class="flex py-16 flex-row justify-between">
-        <div class="flex flex-column w-5/12">              
+      <div :class="[this.$store.getters['getIsMobile'] ? 'flex-column items-center' : 'flex-row', 'flex py-16 justify-between']">
+        <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mr-8 ml-4' : 'w-5/12', 'flex flex-column']">              
           
-          <h1 class=""><div class="font-bold text-xl-responsive" v-html="$t('main.about.location')"> </div></h1>
-          <div class="pt-6 pb-16 text-base-responsive" v-html="$t('main.about.location_expanded')"></div>
+          <h1 class=""><div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : 'text-xl-responsive', 'font-bold']" v-html="$t('main.about.location')"> </div></h1>
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'pt-6 pb-16']" v-html="$t('main.about.location_expanded')"></div>
         </div>
-        <img class="w-5/12 h-auto" :src="locationPhoto" />
+        <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : 'w-5/12 h-auto']" :src="locationPhoto" />
 
       </div>
       <div class="flex flex-column w-full py-5 items-center justify-between rounded-3xl" style="background-color:rgba(37, 57, 132, 1)">
-        <h1 class="w-10/12"><div class="text-2xl-responsive font-bold text-white text-center" v-html="$t('main.form_text')"> </div></h1>
-        <div class="flex flex-row justify-around items-start w-9/12" style="margin-top:3vh">
-          <div class="flex flex-column items-center justify-center w-1/4 mr-1">
-            <input @focusout="checkName" class="rounded-md w-full rounded-md text-white text-base-responsive py-2 pl-2" style="background-color:rgba(255, 255, 255, 0.42);  " type="text" v-model="response_name" :placeholder="$t('modals.name')" required>
-            <div class="pt-3 font-bold text-red-600 text-xs" v-if="isNameWrong" v-html="$t('modals.required')"></div>
-            <div class="pt-3 font-bold text-red-600 text-xs invisible" v-else v-html="$t('modals.required')"></div>
+        <h1 :class="[this.$store.getters['getIsMobile'] ? 'w-11/12 pb-6' : 'w-10/12']"><div :class="[this.$store.getters['getIsMobile'] ? 'mobile-form-text-responsive' : 'text-2xl-responsive', 'font-bold text-white text-center']" v-html="$t('main.form_text')"> </div></h1>
+        <div :class="[this.$store.getters['getIsMobile'] ? 'flex-column items-start w-11/12' : 'flex-row items-start w-9/12', 'flex justify-around']" style="margin-top:3vh">
+          <div :class="[this.$store.getters['getIsMobile'] ? 'w-full items-start' : 'w-1/4 items-center', 'flex flex-column justify-center mr-1']">
+            <input @focusout="checkName" :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive mobile-modal-field py-4 rounded-xl' : 'text-base-responsive py-2 rounded-md', 'w-full text-white pl-2']" style="background-color:rgba(255, 255, 255, 0.42);  " type="text" v-model="response_name" :placeholder="$t('modals.name')" required>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1' : 'pt-3 font-bold', 'text-red-600 text-s']"  v-if="isNameWrong" v-html="$t('modals.required')"></div>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1' : 'pt-3', 'font-bold text-red-600 text-xs invisible']" v-else v-html="$t('modals.required')"></div>
           </div>
-          <div class="flex flex-column items-center justify-center w-1/4 mr-1">
-            <input @focusout="checkEmail" type="email" class="rounded-md w-full rounded-md text-base-responsive py-2 pl-2" style="background-color:rgba(255, 255, 255, 0.42); " v-model="response_email" :placeholder="$t('modals.email')" required>
-            <div class="pt-3 font-bold text-red-600 text-xs" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
-            <div class="pt-3 font-bold text-red-600 text-xs invisible" v-else v-html="$t('modals.required')"></div>
+          <div :class="[this.$store.getters['getIsMobile'] ? 'w-full items-start' : 'w-1/4 items-center', 'flex flex-column justify-center mr-1']">
+            <input @focusout="checkEmail" :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive mobile-modal-field py-4 rounded-xl' : 'text-base-responsive py-2 rounded-md', 'w-full text-white pl-2']" style="background-color:rgba(255, 255, 255, 0.42);  " type="email" v-model="response_email" :placeholder="$t('modals.email')" required>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1' : 'pt-3 font-bold', 'text-red-600 text-s']"  v-if="isEmailWrong" v-html="$t('modals.required')"></div>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1' : 'pt-3', 'font-bold text-red-600 text-xs invisible']" v-else v-html="$t('modals.required')"></div>
           </div>
-          <div class="flex flex-column items-center justify-center w-1/4 mr-1">
-            <input @focusout="checkPhone" type="tel" class="rounded-md w-full rounded-md text-base-responsive py-2 pl-2" style="background-color:rgba(255, 255, 255, 0.42); " v-model="response_phone" :placeholder="$t('modals.phone_title')" required>
-            <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
-            <div class="pt-3 font-bold text-red-600 text-xs invisible" v-else v-html="$t('modals.required')"></div>
+          <div :class="[this.$store.getters['getIsMobile'] ? 'w-full items-start' : 'w-1/4 items-center', 'flex flex-column justify-center mr-1']">
+            <input @focusout="checkPhone" :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive mobile-modal-field py-4 rounded-xl' : 'text-base-responsive py-2 rounded-md', 'w-full text-white pl-2']" style="background-color:rgba(255, 255, 255, 0.42);  " type="tel" v-model="response_phone" :placeholder="$t('modals.phone_title')" required>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1' : 'pt-3 font-bold', 'text-red-600 text-s']"  v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1' : 'pt-3', 'font-bold text-red-600 text-xs invisible']" v-else v-html="$t('modals.required')"></div>
           </div>
-          <div @click="checkAllNoTimes" class="rounded-md flex text-base-responsive w-1/4" style="background-color:rgba(255, 124, 51, 1);">
-            <div class="mx-auto my-auto text-white text-base-responsive py-2" v-html="$t('modals.send')"></div>
+          <div @click="checkAllNoTimes" :class="[this.$store.getters['getIsMobile'] ? 'mobile-modal-field py-4 w-full rounded-xl' : 'rounded-md text-base-responsive w-1/4', 'flex']"  style="background-color:rgba(255, 124, 51, 1);">
+            <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'mx-auto my-auto text-white py-2']" v-html="$t('modals.send')"></div>
           </div>
         </div>
-        <div class="mx-center"><div class="text-xs-responsive text-center font-normal text-white" v-html="$t('main.form_subtext')"> </div></div>
+        <div class="mx-center"><div :class="[this.$store.getters['getIsMobile'] ? 'modal-info-text-responsive' : 'text-xs-responsive', 'text-center font-normal text-white']" v-html="$t('main.form_subtext')"> </div></div>
       </div>
       <div class="my-16 h-full w-full flex flex-column items-start ignore-r-global-margin">
-        <client-only class=" w-full h-full pl-30 justify-center ignore-r-global-margin">        
-          <carousel ref="logoGallery" class="w-full h-full justify-between ignore-r-global-margin" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="true" :adjustableHeight="false" :perPage="3" :scrollPerPage="true" :spacePadding="40" >
+        <client-only :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full pl-30 justify-center']">        
+          <carousel ref="logoGallery" :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full justify-between']" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="true" :adjustableHeight="false" :perPage="3" :scrollPerPage="true" :spacePadding="40" >
             <slide class="w-full pr-15">
               <img :src="logoGallery1" />
             </slide>
@@ -351,11 +352,13 @@
 <script>
 
 import frontpageWelcome from "~/assets/frontpage_welcome.png"
+import mobileFrontpageWelcome from "~/assets/mobile_frontpage_welcome.png"
 import colorTabsIcon1 from "~/assets/color_tabs_icon_1.svg"
 import colorTabsIcon2 from "~/assets/color_tabs_icon_2.svg"
 import colorTabsIcon3 from "~/assets/color_tabs_icon_3.svg"
 import colorTabsIcon4 from "~/assets/color_tabs_icon_4.svg"
 import promoBanner1 from "~/assets/promo_banner_1_group.png"
+import mobilePromoBanner1 from "~/assets/mobile_promo_banner_1_group.png"
 import promoBanner2 from "~/assets/promo_banner_2.png"
 import oeifLogo from "~/assets/oeif-logo.png"
 import galleryArrow from "~/assets/gallery_arrow.svg"
@@ -386,12 +389,14 @@ export default {
   data: function () {
     return {
       frontpageWelcome: frontpageWelcome,
+      mobileFrontpageWelcome: mobileFrontpageWelcome,
       oeifLogo: oeifLogo,
       colorTabsIcon1:colorTabsIcon1,
       colorTabsIcon2: colorTabsIcon2,
       colorTabsIcon3: colorTabsIcon3,      
       colorTabsIcon4: colorTabsIcon4,
       promoBanner1: promoBanner1,
+      mobilePromoBanner1: mobilePromoBanner1,
       promoBanner2:promoBanner2,
       galleryArrow:galleryArrow,
       bannerArrowLeft: bannerArrowLeft,
@@ -517,8 +522,50 @@ export default {
 .color-tab-text{
   font-size: calc(3px + 0.890625vw);
 }
+.mobile-color-tab-text{
+  font-size: calc(8px + 2.890625vw);
+  margin-left:10%;
+  margin-right:10%;
+}
+.mobile-color-tab-icon{
+  width: 10vw;
+  height: auto;
+}
+.mobile-color-tab-icon-faulty-figma-1{
+  width: 18vw;
+  height: auto;
+}
+.mobile-color-tab-icon-faulty-figma-2{
+  width: 23vw;
+  height: auto;
+}
+.welcome-content{
+  margin-left:21%;
+  margin-top:23%
+}
+.welcome-text{
+  font-size: calc(6px + 2.450625vw);
+  margin-bottom: 6%;
+}
+
+.color-tab{
+  padding-top:5%;
+  padding-bottom:5%;
+  width:calc(60%/4);
+}
+.mobile-color-tab{
+  padding-top:6%;
+  padding-bottom:6%;
+  padding-left:5%;
+  padding-right:5%;
+  width:100%;
+  height:15vh;
+}
 .courses-exams-text{
   font-size: calc(1px + 0.690625vw);
+}
+.mobile-courses-exams-text{
+  font-size: calc(4px + 3.090625vw);
 }
 .courses-exams-margin{ 
   width: 6vw;
@@ -556,6 +603,10 @@ export default {
   padding-right:3%;
   font-size: calc(3px + 1.26625vw);
 }
+.mobile-courses-exams-h1{
+  padding-top:7%;
+  font-size: calc(12px + 7.01625vw);
+}
 .courses-exams-p-padding{
   padding-bottom:5%;
   padding-left:7%;
@@ -567,5 +618,23 @@ export default {
 .section-title-text{
   
   font-size: calc(5px + 2.01625vw);
+}
+.mobile-section-title-text{
+  
+  font-size: calc(14px + 8.01625vw);
+}
+.mobile-banners-border{
+  border-top: 1px solid #ABABAB;
+}
+.mobile-banner-size{
+  width:90vw;
+  height:auto
+}
+.mobile-gallery-image-size{
+  width:80vw;
+  height:auto
+}
+.mobile-form-text-responsive{
+  font-size: calc(9px + 6.49625vw);
 }
 </style>

@@ -156,7 +156,7 @@
 </template>
 
 
-<style >
+<style>
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0; 
@@ -168,7 +168,7 @@
 .margin-5-for-rows{
   margin-left:5%
 }
-.b-sidebar{
+#sidebar-1{
   top:5rem;
 }
 .b-sidebar-backdrop{

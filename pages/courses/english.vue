@@ -13,11 +13,11 @@
       <div class="flex flex-row mx-auto items-start justify-between w-full course-card">
         <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 3%;">
           <div class="flex flex-row items-center">          
-            <h1 class="font-bold pl-5">{{$t('courses.english.cards.1.title')}}</h1>
+            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : '', 'font-bold pl-5']">{{$t('courses.english.cards.1.title')}}</h1>
             <div class="offline-tag" v-if="$t('courses.english.cards.1.is_offline')=='true'">Offline</div>
             <div class="online-tag" v-if="$t('courses.english.cards.1.is_online')=='true'">Online</div>
           </div>
-          <ul>
+          <ul :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '', 'font-bold pl-5']">
             <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.1')"></li>
             <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.2')"></li>
             <li class="pl-5 py-1" v-html="$t('courses.english.cards.1.3')"></li>
@@ -46,11 +46,11 @@
       <div class="flex flex-row mx-auto items-start justify-between w-full course-card">
         <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
           <div class="flex flex-row items-center">
-            <h1 class="text-2xl font-bold pl-5">{{$t('courses.english.cards.2.title')}}</h1>
+            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : '', 'font-bold pl-5']">{{$t('courses.english.cards.2.title')}}</h1>
             <div class="offline-tag" v-if="$t('courses.english.cards.2.is_offline')=='true'">Offline</div>
             <div class="online-tag" v-if="$t('courses.english.cards.2.is_online')=='true'">Online</div>
           </div>
-          <ul>
+          <ul :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '', 'font-bold pl-5']">
             <li class="pl-5 py-1" v-html="$t('courses.english.cards.2.1')"></li>
             <li class="pl-5 py-1" v-html="$t('courses.english.cards.2.2')"></li>
             <li class="pl-5 py-1" v-html="$t('courses.english.cards.2.3')"></li>
@@ -79,11 +79,11 @@
       <div class="flex flex-row mx-auto items-start justify-between w-full course-card">
         <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 5%;">
           <div class="flex flex-row items-center">
-            <h1 class="font-bold pl-5">{{$t('courses.english.cards.3.title')}}</h1>
+            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : '', 'font-bold pl-5']">{{$t('courses.english.cards.3.title')}}</h1>
             <div class="offline-tag" v-if="$t('courses.english.cards.3.is_offline')=='true'">Offline</div>
             <div class="online-tag" v-if="$t('courses.english.cards.3.is_online')=='true'">Online</div>
           </div>
-          <ul>
+          <ul :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '', 'font-bold pl-5']">
             <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.1')"></li>
             <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.2')"></li>
             <li class="pl-5 py-1" v-html="$t('courses.english.cards.3.3')"></li>
@@ -236,6 +236,21 @@ export default {
       }
       
     },
-  }
+      
+    isMobile() {
+      if (process.browser){
+        if (screen.width <= 760) {
+          this.$store.commit("setIsMobile", true)
+        } else {
+          this.$store.commit("setIsMobile", false)
+        }
+      }
+      
+  },
+  },
+  
+  created(){
+    this.isMobile()
+  } 
 }
 </script>

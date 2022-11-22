@@ -1,38 +1,34 @@
 
 <template>
     <div>
-      <div class="edu-color h-20 flex flex-row justify-between items-center" style="padding-left: 20%; padding-right: 20%;">
-        <div class="w-22 h-22 mb-3" style="">
-          <nuxt-link :to="localePath('/')">  
-            <img :src="logo" />
-          </nuxt-link>
-        </div>
-        <div class=" flex flex-row items-center justify-start">
-          <div class="flex flex-row items-center">
-              <div class="flex items-center flex-row">
-                  <a class="text-white text-navbar-sm" href="tel:+43 1 890 89 48">+43 1 890 89 48</a> <p class="text-white text-navbar-sm" style="padding-left: 1vw;" > | Rennweg 9/6, 1030 Wien |</p>
-              </div>
-              <div class="flex items-center flex-row" style="margin-left:0.5vw">
-                  <a href="https://www.facebook.com/edustream.vienna" target="_blank">
-                    <img style="width: calc(12px + 0.990625vw); height: auto" :src="facebookLogo" />
-                  </a>
-                  <a href="https://www.instagram.com/edustream.at" style="margin-left:0.5vw" target="_blank">
-                    <img style="width: calc(12px + 0.990625vw); height: auto" :src="instagramLogo" />
-                  </a>
-              </div>
+      <div class="edu-color h-20 w-full flex flex-row justify-start items-center" style="padding-bottom:4vh; padding-top:4vh">
+        <b-button class="pl-5" v-b-toggle.sidebar-2><img style="height:3vh; width:auto;" :src="hamburgerIcon" /></b-button>
+        <b-sidebar class="mobile-text-base-responsive" id="sidebar-2" width="60%" title="Sidebar" shadow>
+          <a class="nav-link dropdown-toggle font-semibold f" style="margin-left:-1vw"  role="button" data-toggle="dropdown" v-b-toggle.submenu-1>
+            <p class="mobile-text-xl-responsive">{{$t('menu.about_us.self')}}</p>
+          </a>
+          <div class="dropdown-menu" id="submenu-1"  aria-labelledby="navbarAnchor">
+            <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
+            <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/events')">{{$t('menu.about_us.events')}}</nuxt-link>
+            <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/about/contacts')">{{$t('menu.about_us.contacts')}}</nuxt-link>
           </div>
           <div class="flex flex-column items-start w-16 h-16 justify-center pt-4 ml-2 bg-white self-start rounded-b-md text-navbar-sm" style="margin-bottom:3vh;">
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle font-semibold flex flex-row items-center justify-start" style="margin-left:-1vw"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <country-flag :country="$t('flag')" size='small' /> {{this.$i18n.locale.toUpperCase()}}
+                <country-flag :country="$t('flag')" size='big' /> {{this.$i18n.locale.toUpperCase()}}
               </a>
               <div class="dropdown-menu"  aria-labelledby="navbarAnchor">
-                <nuxt-link class="dropdown-item text-navbar-sm flex flex-row items-center"  :to="switchLocalePath('en')"><country-flag size="small" country="gb" />EN</nuxt-link>
-                <nuxt-link class="dropdown-item text-navbar-sm flex flex-row items-center"  :to="switchLocalePath('de')"><country-flag size="small" country="de" />DE</nuxt-link>
-                <nuxt-link class="dropdown-item text-navbar-sm flex flex-row items-center"  :to="switchLocalePath('ru')"><country-flag size="small" country="ru" />RU</nuxt-link>
+                <nuxt-link class="dropdown-item flex flex-row items-center"  :to="switchLocalePath('en')"><country-flag size="big" country="gb" />EN</nuxt-link>
+                <nuxt-link class="dropdown-item flex flex-row items-center"  :to="switchLocalePath('de')"><country-flag size="big" country="de" />DE</nuxt-link>
+                <nuxt-link class="dropdown-item flex flex-row items-center"  :to="switchLocalePath('ru')"><country-flag size="big" country="ru" />RU</nuxt-link>
               </div>
             </div>
           </div>
+        </b-sidebar>
+        <div class="mx-auto">
+          <nuxt-link :to="localePath('/')">  
+            <img style="height:4vh; width:auto;" :src="logo" />
+          </nuxt-link>
         </div>
     </div>
     </div>
@@ -41,12 +37,6 @@
   </template>
   
   <style scoped>
-  .dropdown:hover .dropdown-menu {
-      display: flex;
-      flex-direction: column;
-      width:1vw;
-      margin-top: 0; 
-   }
    .isHidden {
     display: none;
   }
@@ -88,11 +78,11 @@
   
   <script>
   
-  import logo from "~/assets/edu-stream_logo.png"
-  import frontpageWelcome from "~/assets/frontpage_welcome.png"
+  import logo from "~/assets/edu-stream_logo_mobile.png"
   import facebookLogo from "~/assets/facebook_logo.svg"
   import instagramLogo from "~/assets/instagram_logo.svg"
   import countryFlag from 'vue-country-flag'
+  import hamburgerIcon from '~/assets/hamburger_icon.png'
   
   
   export default {
@@ -102,9 +92,9 @@
     data: function () {
       return {
         logo: logo,      
-        frontpageWelcome: frontpageWelcome,
         facebookLogo:facebookLogo,
         instagramLogo: instagramLogo,
+        hamburgerIcon: hamburgerIcon,
         isSidebarOpen: false,
         examsIsSelected: false,
         aboutIsSelected: false,

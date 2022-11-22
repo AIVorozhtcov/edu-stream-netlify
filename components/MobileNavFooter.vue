@@ -1,6 +1,6 @@
 <template>
     <div style="background-color: #253984; padding-top:5vh; padding-bottom:5vh">
-        <div class="flex flex-column font-normal items-start justify-between text-sm global-margins">
+        <div class="flex flex-column font-normal items-start justify-between text-sm mobile-global-margins">
             <div class="flex w-full flex-row items-start pt-2 justify-between text-xs-responsive">
                 <div class="w-1/6">
                     <nuxt-link to="/">  

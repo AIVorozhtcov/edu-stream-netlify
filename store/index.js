@@ -10,7 +10,7 @@ export const state = () => ({
 
 export const getters = {
     getIsMobile(state) {
-    console.log(state.is_mobile);
+    //console.log(state.is_mobile);
       return state.is_mobile
     }
   }

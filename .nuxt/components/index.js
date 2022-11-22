@@ -1,5 +1,6 @@
 export { default as FAQAccordion } from '../..\\components\\FAQAccordion.vue'
 export { default as MobileNavBar } from '../..\\components\\MobileNavBar.vue'
+export { default as MobileNavFooter } from '../..\\components\\MobileNavFooter.vue'
 export { default as ModalForm } from '../..\\components\\ModalForm.vue'
 export { default as NavBar } from '../..\\components\\NavBar.vue'
 export { default as NavFooter } from '../..\\components\\NavFooter.vue'
