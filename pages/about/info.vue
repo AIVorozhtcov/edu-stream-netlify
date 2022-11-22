@@ -1,7 +1,7 @@
 <template>
     <div class="pt-5 pb-5 flex flex-column items-start">
-      <h1 class="text-3xl-responsive font-bold" style="padding-bottom:4%">{{$t('about_us.title')}}</h1>
-      <div class="text-base-responsive" v-html="$t('about_us.text')"></div>
+      <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : 'text-3xl-responsive', 'font-bold']" style="padding-bottom:4%">{{$t('about_us.title')}}</h1>
+      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive']" v-html="$t('about_us.text')"></div>
   
     </div>
 </template>

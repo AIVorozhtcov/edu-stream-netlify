@@ -1,22 +1,22 @@
 <template>
   <div>
-    <div class="flex flex-row items-center ignore-l-global-margin" style="margin-bottom:5%; margin-top:5%">
+    <div :class="[this.$store.getters['getIsMobile'] ? 'flex-column' : 'flex-row ignore-l-global-margin', 'flex items-center']" style="margin-bottom:5%; margin-top:5%">
       <iframe 
         
-        style="border:0; margin-left:3%; width:55vw; height:100vh"
+      :class="[this.$store.getters['getIsMobile'] ? 'mobile-map-style' : 'map-style']"
         loading="lazy"
         allowfullscreen
         src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJM3oBv8sHbUcR1eSwnYIfPGs&key=AIzaSyCT6NQDoiw-1qHVzogFs3VVhy0HKu4SHjY">
       </iframe>
-      <div class="flex flex-column" style="margin-left:7%">
-        <h1 class="font-bold" style="font-size: calc(2px + 1.460625vw)">{{$t('about_us.contacts.contacts')}}</h1>
-        <div class="w-full" style="font-size: calc(1px + 1.05625vw); padding-top: 5vh;" v-html="$t('about_us.contacts.info')"></div>
+      <div :class="[this.$store.getters['getIsMobile'] ? 'items-center' : '', 'flex flex-column']" style="margin-left:7%">
+        <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-contacts-font' : 'contacts-font', 'font-bold']" >{{$t('about_us.contacts.contacts')}}</h1>
+        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-info-font' : 'info-font', 'w-full']" style=" padding-top: 5vh;" v-html="$t('about_us.contacts.info')"></div>
         <div id="last-column" style="padding-top: 5vh;" class="flex flex-row" >
             <a href="https://www.facebook.com/edustream.vienna" style="margin-right:10%" target="_blank">
-                <img style="width: 3vw; color: rgba(255, 0, 1, 1); height: auto" :src="facebookLogoBlack" />
+                <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-social-icon' : 'social-icon']" style="color: rgba(255, 0, 1, 1);" :src="facebookLogoBlack" />
             </a>
             <a href="https://www.instagram.com/edustream.at" target="_blank">
-                <img style="width: 3vw; height: auto" :src="instagramLogoBlack" />
+                <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-social-icon' : 'social-icon']" :src="instagramLogoBlack" />
             </a>
         </div>
       </div>
@@ -39,7 +39,38 @@
 .text-block {
     white-space: pre-line;
 }
+.contacts-font{
+  font-size: calc(2px + 1.460625vw)
+}
+.mobile-contacts-font{
+  font-size: calc(4px + 6.1234vw)
+}
+.info-font{
+  font-size: calc(1px + 1.05625vw);
+}
+.mobile-info-font{
+  font-size: calc(3px + 5.1234vw)
+}
+.map-style{
+  border:0;
+  margin-left:3%; 
+  width:55vw;
+  height:100vh
+}
+.mobile-map-style{
+  border:0;
+  margin-left:3%; 
+  width:90vw;
+  height:60vh
+}
+.social-icon{
+  width: 3vw; height: auto
+}
+.mobile-social-icon{
+  width: 10vw; height: auto
+}
 </style>
+
 
 
 <script>

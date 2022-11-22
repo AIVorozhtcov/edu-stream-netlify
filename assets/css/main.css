@@ -48,6 +48,9 @@ body
 .mobile-text-base-responsive{
   font-size: calc(5px + 3.20625vw);
 }
+.mobile-text-sm-responsive{
+  font-size: calc(3px + 2.20625vw);
+}
 .mobile-text-xl-responsive{
   font-size: calc(12px + 7.61625vw);
 }
@@ -127,32 +130,53 @@ body
     padding-left: 5%;
     padding-right:2%;
   }
+  .mobile-card-right-column{
+    margin-top:3%;
+    padding-top:4%;
+    margin-bottom:2%; 
+    padding-bottom:10%;
+    padding-left: 3%;
+    padding-right:2%;
+  }
   
   .course-card{
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.04);
     margin-top:7%;
     background-color: rgba(255, 255, 255, 1);
   }
-   .course-card h1{
+   .course-card-h1{
     font-size: calc(2px + 1.300625vw);
   }
 
-    .course-card li{
+    .course-card-li{
       font-size: calc(1px + 0.800625vw);
+      font-weight: 400;
     }
 
     .week-number{
       font-size: calc(1px + 1.050625vw);
     }
+    .mobile-week-number{
+      font-size: calc(2px + 2.750625vw);
+    }
+  
   
 
     .price-tag{
       font-size: calc(3px + 1.40625vw);
     }
 
+    .mobile-price-tag{
+      font-size: calc(4px + 3.40625vw);
+    }
+
     .price-tag-comment{
       color:rgba(155, 155, 155, 1);
       font-size: calc(0.7px + 0.60625vw);
+    }
+    .mobile-price-tag-comment{
+      color:rgba(155, 155, 155, 1);
+      font-size: calc(3px + 2.20625vw);
     }
     .course-tabs{
       font-size: calc(0.7px + 0.99625vw);
