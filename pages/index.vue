@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-column">
+  <div class="flex flex-column" style="">
     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-global-margins' : 'ignore-global-margins', 'relative flex h-fit']">   
         <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-welcome-content mobile-welcome-content-background w-full pl-5' : 'welcome-content', 'absolute flex flex-column']">       
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive w-full ml-5 font-bold' : 'welcome-text font-extrabold', 'h-fit text-white']" v-html="$t('main.image_text')"></div>
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive ml-5 font-bold' : 'welcome-text font-extrabold', 'h-fit text-white']" v-html="$t('main.image_text')"></div>
           <button type="button" :class="[this.$store.getters['getIsMobile'] ? 'mobile-button mobile-welcome-button-margin' : '', 'btn rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 255, 255, 1);" @click="$bvModal.show('modal-1')" >
             <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-button-text' : 'button-text', 'text-black']" v-html="$t('exams.oif.register')"></div>
           </button>
@@ -211,7 +211,7 @@
       <div class="my-16 h-full w-full flex flex-column items-start ignore-r-global-margin">
         <client-only :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full pl-30 justify-center']">        
           <carousel ref="logoGallery" :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full justify-between']" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="true" :adjustableHeight="false" :perPage="3" :scrollPerPage="true" :spacePadding="40" >
-            <slide class="w-full pr-15">
+            <slide class="w-full">
               <img :src="logoGallery1" />
             </slide>
             <slide class="w-full">
