@@ -1,77 +1,77 @@
 {
     "flag":"ru",
     "main":{
-        "image_text":"Sprachschule<br />im Zentrum von Wien",
-        "form_text": "Schicken Sie uns eine Anfrage und wir werden für Sie den bestmöglichen Kurs auswählen",
-        "form_subtext": "Durch Klicken auf die Schaltfläche stimmen Sie der Verarbeitung personenbezogener Daten zu",
+        "image_text":"Языковая школа<br />в центре Вены",
+        "form_text": "Отправьте нам запрос и мы подберем для вас наилучший курс",
+        "form_subtext": "Нажимая кнопку вы соглашаетесь на обработку персональных данных",
         "color_tabs":{
-            "t_1":"Learn with qualified and experienced native speakers who have 20 years of experience and speaks in 5 languages",
-            "t_2":"ÖIF – zetifizierter Kursträger<br /><br />ÖIF – zetifiziertes Prüfungszentrum",
-            "t_3":"ÖIF – zetifizierter Kursträger<br /><br />ÖIF – zetifiziertes Prüfungszentrum",
-            "t_4":"Preparation Centre<br />Prepare for IELTS, TOEFL, Cambridge ESOL exams for 14 days with Edustream"
+            "t_1":"Обучайтесь у квалифицированных и опытных носителей языка, которые имеют 20-летний опыт работы и говорят на 5 языках",
+            "t_2":"ÖIF - сертифицированный поставщик курсов<br /><br />ÖIF - сертифицированный экзаменационный центр",
+            "t_3":"ÖIF - сертифицированный поставщик курсов<br /><br />ÖIF - сертифицированный экзаменационный центр",
+            "t_4":"Подготовительный центр<br />Подготовьтесь к экзаменам IELTS, TOEFL, Cambridge ESOL за 14 дней с Edustream"
         },
         "about":{
-            "our_school":"Unsere Schule",
-            "our_school_expanded":"Wir kümmern uns um jeden! EduStream Sprachschule ist eine große Familie!",
-            "location":"Located in central Vienna",
+            "our_school":"Наша школа",
+            "our_school_expanded":"Мы заботимся о каждом! Языковая школа EduStream — это одна большая семья!",
+            "location":"РасположенS в центре Вены",
             "location_expanded":"Центральное расположение офиса в дипломатическом районе города Вены, напротив Дворца Бельведера.<br />2 мин от нас Концертный зал, где Бетховен учился, памятник Бетховену, посольство Франции - те места, которые ассоциативны. Городской парк красивый. Лайф Пикчерс."
         },
         "info_columns":{
             "titles":{
-                "t_1":"Learn German at the highest standard",
-                "t_2":"Certified by the City of Vienna",
-                "t_3":"International Language School"
+                "t_1":"Изучите немецкий язык на самом высоком уровне",
+                "t_2":"Сертифицировано городом Вена",
+                "t_3":"Международная языковая школа"
             },
             "bodies":{
-                "b_1":"Our teaching staff is native-language german and specialised in teaching german as foreign language. All of our teachers have a university degree and years of experience in teaching.",
-                "b_2":" IKI is an accredited examination centre for the ÖSD Austrian German Diploma in accordance with the level placement of the Council of Europe as well as for the ÖIF Integration Exam of the Austrian Integration Fund.",
-                "b_3":"Every month 450-500 students from all around the world attend our German courses. IKI is a partner institute of the University of Washington, the NC State University and the University of Kansas."
+                "b_1":"Наш преподавательский состав является родным языком немецкого языка и специализируется на преподавании немецкого языка как иностранного. Все наши преподаватели имеют высшее образование и многолетний опыт преподавания.",
+                "b_2":" IKI является аккредитованным экзаменационным центром для получения австрийского немецкого диплома ÖSD в соответствии с рейтингом Совета Европы, а также для сдачи интеграционного экзамена ÖIF Австрийского интеграционного фонда.",
+                "b_3":"Ежемесячно 450-500 студентов со всего мира посещают наши курсы немецкого языка. IKI является институтом-партнером Вашингтонского университета, Университета штата Северная Каролина и Канзасского университета."
             }
         },
         "courses_and_exams":{
-            "self":"Kurse und Prüfungen",
+            "self":"Курсы и экзамены",
             "courses":{
                 "titles":{
-                    "t_1":"Deutsch lernen",
-                    "t_2":"Englisch lernen",
-                    "t_3":"Online courses"
+                    "t_1":"Курсы немецкого",
+                    "t_2":"Курсы английского",
+                    "t_3":"Курсы онлайн"
                 },
                 "bodies":{
-                    "b_1":"Es gibt für Anfänger und Fortgeschrittene 13 Kursstufen (Sprachlevel A1, A2, B1, B2, C1, C2). Mach jetzt den kostenlosen Einstufungstest, um dein Sprachniveau in Deutsch zu testen.",
-                    "b_2":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen.",
-                    "b_3": "IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen."
+                    "b_1":"Существует 13 уровней курса для начинающих и продвинутых учащихся (языковые уровни A1, A2, B1, B2, C1, C2). Пройдите бесплатный вступительный тест прямо сейчас, чтобы проверить свой уровень владения немецким языком.",
+                    "b_2":"IKI предлагает круглогодичные курсы немецкого языка для взрослых и молодежи от 16 лет в центре Вены. Начинающие и продвинутые студенты могут выбирать между групповыми курсами и индивидуальными занятиями.",
+                    "b_3": "IKI предлагает круглогодичные курсы немецкого языка для взрослых и молодежи от 16 лет в центре Вены. Начинающие и продвинутые студенты могут выбирать между групповыми курсами и индивидуальными занятиями."
                 }
             },
             "exams":{
                 "titles":{
                     "t_1":"ÖSD",
                     "t_2":"ÖIF",
-                    "t_3":"New exam"
+                    "t_3":"Новый экзамен"
                 },
                 "bodies":{
-                    "b_1":"Es gibt für Anfänger und Fortgeschrittene 13 Kursstufen (Sprachlevel A1, A2, B1, B2, C1, C2). Mach jetzt den kostenlosen Einstufungstest, um dein Sprachniveau in Deutsch zu testen.",
-                    "b_2":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen.",
-                    "b_3":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen."
+                    "b_1":"Существует 13 уровней курса для начинающих и продвинутых учащихся (языковые уровни A1, A2, B1, B2, C1, C2). Пройдите бесплатный вступительный тест прямо сейчас, чтобы проверить свой уровень владения немецким языком.",
+                    "b_2":"IKI предлагает круглогодичные курсы немецкого языка для взрослых и молодежи от 16 лет в центре Вены. Начинающие и продвинутые студенты могут выбирать между групповыми курсами и индивидуальными занятиями.",
+                    "b_3":"IKI предлагает круглогодичные курсы немецкого языка для взрослых и молодежи от 16 лет в центре Вены. Начинающие и продвинутые студенты могут выбирать между групповыми курсами и индивидуальными занятиями."
                 }
             }
         }
     },
     "modals":{
-        "title":"Please fill the form",
-        "required": "Required field",
-        "name_title": "Your name",
-        "name": "Name",
-        "email_title": "Your email",
+        "title":"Заполните форму",
+        "required": "Обязательно для заполнения",
+        "name_title": "Ваше имя",
+        "name": "Имя",
+        "email_title": "Ваш email",
         "email": "Email",
-        "phone_title": "Phone",
+        "phone_title": "Телефон",
         "phone": "+43 949 437 32567",
-        "address_title": "Your address",
-        "address": "Address",
-        "mon_wed": "Montag/Mittwoch",
-        "tue_thu": "Dienstag/Donnerstag",
+        "address_title": "Ваш адрес",
+        "address": "Адрес",
+        "mon_wed": "Понедельник Среда",
+        "tue_thu": "Вторник четверг",
         "any_day": "Мне удобно в любой день",
-        "send": "Senden",
-        "agreement": "Durch Klicken auf die Schaltfläche stimmen Sie den Datenschutzbestimmungen zu"
+        "send": "Отправить",
+        "agreement": "Нажимая кнопку вы соглашаетесь с политикой конфиденциальности"
 
     },
     "FAQ":{
@@ -95,8 +95,8 @@
     },
     "about_us":{
         "contacts":{
-            "contacts":"Contacts:",
-            "info":"<a class='hover:no-underline' href='tel:+43 1 890 89 48'>+43 1 890 89 48</a><br /><a class='hover:no-underline' href='mailto:info@edu-stream.at'>info@edu-stream.at</a><br />Rennweg 9/6, 1030 Wien<br /><br />Monday – Thursday: 09:00 - 17:00<br />Friday: 09:00 - 15:00<br />Saturday & Sunday: closed"
+            "contacts":"Контакты:",
+            "info":"<a class='hover:no-underline' href='tel:+43 1 890 89 48'>+43 1 890 89 48</a><br /><a class='hover:no-underline' href='mailto:info@edu-stream.at'>info@edu-stream.at</a><br />Rennweg 9/6, 1030 Wien<br /><br />Понедельник – Четверг: 09:00 - 17:00<br />Пятница: 09:00 - 15:00<br />Суббота и воскресенье: закрыто"
         },
         "title":"О нас",
         "text":"EDUStream GmbH — это языковая школа, которая в основном предлагает курсы немецкого и английского языков для начинающих и продвинутых учащихся (уровни A1, A2, B1, B2, C1, C2). EDUStream также является признанным и сертифицированным экзаменационным центром для получения диплома об австрийском языке (ÖSD) и Австрийского фонда интеграции (ÖIF).<br /><br />Наилучшие отношения также поддерживаются с Венским фондом продвижения сотрудников (WAFF) и Государственной службой занятости (AMS).<br /> <br />EDUStream пользуется отличной репутацией в течение долгого времени, признан и используется широким кругом организаций и людей из политики, бизнеса и культуры. Партнерство с международными университетами связывает EDUStream с академическим миром. Мы сотрудничаем с городскими властями Вены (MA 17 — Разнообразие и интеграция), чтобы участники могли использовать свой образовательный пропуск и синий федеральный ваучер (MA 35) для прохождения интеграционных курсов. Диапазон курсов разнообразен и гибок с точки зрения времени. В дополнение к интенсивным и интеграционным курсам существуют также регулярные курсы. Кроме того, предлагается целенаправленная подготовка к экзаменам и индивидуальные занятия.<br /><br />Обстановка в нашей языковой школе неформальная. Существует открытая, благодарная и дружеская культура обсуждения между учителями, клиентами и руководством. Уроки проводятся исключительно очень квалифицированными и опытными учителями, которые постоянно самообучаются, чтобы наилучшим образом поддерживать учащихся.<br />Культурные различия между учащимися из разных стран являются большим преимуществом и, конечно же, учитываются на уроках. . Небольшие группы курсов обеспечивают более интенсивный обмен и более индивидуальную поддержку наших клиентов. Мы считаем обучение языковым навыкам важным социальным и культурным вкладом. Основное внимание уделяется темам из повседневной жизни и работы, которые очень помогают участникам в их текущей жизненной ситуации.<br /><br />Вена, 10 июня 2022 г."
@@ -356,20 +356,20 @@
     },
     "exams":{
         "oif":{
-            "image-text":"Unsere Sprachschule ist ein international anerkanntes Prüfungszentrum für die Integrationsprüfung des Österreichischen Integrationsfonds (ÖIF)",
-            "subtitle":"ÖIF-Prüfung A2, B1 in Wien – Prüfungstermine",
+            "image-text":"Наша языковая школа является международно-признанным экзаменационным центром Австрийского интеграционного фонда (ÖIF).",
+            "subtitle":"Экзамен ÖIF A2, B1 в Вене – даты экзаменов",
             "exam-1":"ÖIF-Integrationsprüfung A2",
             "exam-2":"ÖIF-Integrationsprüfung B1",
-            "register":"Anmelden",
-            "FAQ-preview":"Diese Prüfungen halten wir monatlich auf den Niveaustufen A2 (Modul 1) und B1 (Modul 2) ab. ÖIF-Integrationsprüfungen auf den Niveaustufen A2 und B1 sind in unserem Prüfungszentrum in Wien sehr gefragt. Daher können wir nur bei rechtzeitiger Buchung einen Fixplatz garantieren.<br /><br />Wenn Sie ein ÖIF-Zertifikat benötigen, dann ist die Edustream die richtig Wahl für Sie. Egal, ob Sie eine A2-, B1-Prüfung benötigen, im Rahmen unserer ÖIF-Zertifizierung bieten wir ihnen die für Sie passende Prüfung an.<br /><br />Das Mindestalter für alle Prüfungen beträgt 14 Jahre."
+            "register":"Регистрация",
+            "FAQ-preview":"Мы проводим эти экзамены ежемесячно на уровнях А2 (модуль 1) и В1 (модуль 2). Интеграционные экзамены ÖIF уровней A2 и B1 пользуются большим спросом в нашем экзаменационном центре в Вене. Поэтому мы можем гарантировать место только в том случае, если вы забронируете его заблаговременно.<br /><br />Если вам нужен сертификат ÖIF, то Edustream — правильный выбор для вас. Независимо от того, нужен ли вам экзамен A2 или B1, мы можем предложить вам подходящий экзамен в рамках нашей сертификации ÖIF.<br /><br />Минимальный возраст для сдачи всех экзаменов – 14 лет."
         },
         "osd":{
-            "image-text":"Take the ÖSD International Exam at EduStream Language School in the center of Vienna",
-            "subtitle":"ÖSD exam A2, B1 in Vienna – exam dates",
+            "image-text":"Сдайте международный экзамен ÖSD в языковой школе EduStream в центре Вены.",
+            "subtitle":"Экзамен ÖSD A2, B1 в Вене – даты экзаменов",
             "exam-1":"ÖSD A1",
             "exam-2":"ÖSD A2",
-            "register":"Register",
-            "FAQ-preview":"We hold these exams monthly at levels A2 (module 1) and B1 (module 2). ÖIF integration exams at levels A2 and B1 are in high demand at our exam center in Vienna. Therefore, we can only guarantee a place if you book in good time.<br /><br />If you need an ÖIF certificate, then the Edustream is the right choice for you. Regardless of whether you need an A2 or B1 exam, we can offer you the right exam for you as part of our ÖIF certification.<br /><br />The minimum age for all exams is 14 years."
+            "register":"Регистрация",
+            "FAQ-preview":"Мы проводим эти экзамены ежемесячно на уровнях А2 (модуль 1) и В1 (модуль 2). Интеграционные экзамены ÖIF уровней A2 и B1 пользуются большим спросом в нашем экзаменационном центре в Вене. Поэтому мы можем гарантировать место только в том случае, если вы забронируете его заблаговременно.<br /><br />Если вам нужен сертификат ÖIF, то Edustream — правильный выбор для вас. Независимо от того, нужен ли вам экзамен A2 или B1, мы можем предложить вам подходящий экзамен в рамках нашей сертификации ÖIF.<br /><br />Минимальный возраст для сдачи всех экзаменов – 14 лет."
         
         }
     },
@@ -394,13 +394,13 @@
         }
     },
     "footer":{
-        "opening_hours":"Öffnungszeiten",
-        "mon_thu":"Montag – Donnerstag: 09:00–17:00",
-        "friday":"Freitag 9:00-15:00",
-        "sat_sun":"Samstag & Sonntag: geschlossen",
+        "opening_hours":"Часы работы",
+        "mon_thu":"Понедельник – Четверг: 09:00–17:00",
+        "friday":"Пятница 9:00-15:00",
+        "sat_sun":"Суббота и воскресенье: закрыто",
         "phone_number":"<a style='text-decoration: none; color: inherit;' href='tel:+43 1 890 89 48'>+43 1 890 89 48</a>",
         "email_address":"<a style='text-decoration: none; color: inherit;' href='mailto:info@edu-stream.at'>info@edu-stream.at</a>",
-        "m/w/d":"Aus Gründen der besseren Lesbarkeit wird auf die gleichzeitige Verwendung der Sprachformen männlich, weiblich und divers (m/w/d) verzichtet. Sämtliche Personenbezeichnungen gelten gleichermaßen für alle Geschlechter.",
+        "m/w/d":"Из соображений лучшей читабельности избегают одновременного использования языковых форм мужского, женского и разнообразного (м/ж/д). Все личные обозначения в равной степени относятся ко всем полам.",
         "impressum":"Impressum ",
         "datenschutz":"Datenschutz"
     }

@@ -3,7 +3,10 @@
   <div>
     <div class="edu-color h-20 w-full flex flex-row justify-start items-center" style="padding-bottom:4vh; padding-top:4vh">
       <b-button class="pl-5" v-b-toggle.sidebar-2><img style="height:3vh; width:auto;" :src="hamburgerIcon" /></b-button>
-      <b-sidebar v-model="isMobileSidebarOpen" class="mobile-text-base-responsive flex flex-column justify-around items-start" @focusout="closeMobileSidebar" id="sidebar-2" width="80%" title="Sidebar" no-header shadow>
+      <b-sidebar v-model="isMobileSidebarOpen" class="mobile-text-base-responsive flex flex-column justify-around items-start" @focusout="closeMobileSidebar" id="sidebar-2" width="80%" title="Edu-stream" no-header shadow>
+        <div @click="closeMobileSidebar" class="absolute" style="top:0%; right:0%">
+          <img style="width:7vw; height:auto; margin:5vw; color:black" :src="mobileSidebarCloseButton" />
+        </div>
         <div class="flex flex-column justify-between w-full" @mouseleave="closeMobileSidebar">
         <p class="mobile-text-xl-responsive font-bold">{{$t('menu.about_us.self')}}</p>
         <div class="flex flex-row justify-between">
@@ -53,7 +56,7 @@
           </div>
         </div>-->
       </b-sidebar>
-      <div class="" style="right:50vw">
+      <div class="mx-auto" style="right:50vw">
         <nuxt-link :to="localePath('/')">  
           <img style="height:8vh; width:auto; max-width:100vw" :src="logo" />
         </nuxt-link>
@@ -73,6 +76,10 @@
   font-size:calc(1px + 0.730625vw);  
 }
 
+.bi-x{
+  width:25vw;
+  height:auto;
+}
 .menu-selected p{
   color:rgb(67, 44, 243);
   text-decoration: underline
@@ -112,6 +119,7 @@ import facebookLogo from "~/assets/facebook_logo.svg"
 import instagramLogo from "~/assets/instagram_logo.svg"
 import countryFlag from 'vue-country-flag'
 import hamburgerIcon from '~/assets/hamburger_icon.png'
+import mobileSidebarCloseButton from '~/assets/mobile_sidebar_close_button.svg'
 
 
 export default {
@@ -124,6 +132,7 @@ export default {
       facebookLogo:facebookLogo,
       instagramLogo: instagramLogo,
       hamburgerIcon: hamburgerIcon,
+      mobileSidebarCloseButton: mobileSidebarCloseButton,
       isMobileSidebarOpen: false,
       examsIsSelected: false,
       aboutIsSelected: false,
@@ -134,8 +143,9 @@ export default {
     closeMobileSidebar() {
       this.isMobileSidebarOpen = false;
     }
-  }
+  },
 }
+
 
 </script>
 
