@@ -1,6 +1,9 @@
 {
   "name": "austrian_language_school",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.x"
+  },
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -9,7 +12,8 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
-    "lintfix": "yarn lint:js --fix"
+    "lintfix": "yarn lint:js --fix",
+    "heroku-postbuild":"npm run build"
   },
   "dependencies": {
     "@nuxt/content": "^1.0.0",
