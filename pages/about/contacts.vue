@@ -11,7 +11,7 @@
       <div :class="[this.$store.getters['getIsMobile'] ? 'items-center' : '', 'flex flex-column']" style="margin-left:7%">
         <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-contacts-font' : 'contacts-font', 'font-bold']" >{{$t('about_us.contacts.contacts')}}</h1>
         <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-info-font' : 'info-font', 'w-full']" style=" padding-top: 5vh;" v-html="$t('about_us.contacts.info')"></div>
-        <div id="last-column" style="padding-top: 5vh;" class="flex flex-row" >
+        <div id="last-column" style="padding-top: 5vh;" :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-l-global-margin' : '', 'flex flex-row']" >
             <a href="https://www.facebook.com/edustream.vienna" style="margin-right:10%" target="_blank">
                 <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-social-icon' : 'social-icon']" style="color: rgba(255, 0, 1, 1);" :src="facebookLogoBlack" />
             </a>

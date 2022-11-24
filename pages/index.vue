@@ -14,7 +14,7 @@
     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-global-margins flex flex-column' : 'ignore-global-margins flex flex-row', 'relative flex h-fit justify-evenly h-3/4 ']">
       <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex w-full flex-column items-start text-white']"   style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:20%"></div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#FF7C33;">
-        <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-2' : 'w-auto h-3/12 pb-2']" :src="colorTabsIcon1">
+        <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']" :src="colorTabsIcon1">
         <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_1')"></div>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#96BDFF;">
