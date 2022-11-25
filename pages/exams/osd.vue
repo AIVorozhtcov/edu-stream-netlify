@@ -15,9 +15,9 @@
    
     <div class="flex flex-column w-full bg-white py-10">
       <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mobile-text-xl-responsive' : 'w-5/12 text-3xl', 'py-5 font-bold']" v-html="$t('exams.osd.subtitle')"></div>
-      <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column mobile-text-base-responsive' : 'flex flex-row', 'items-start']">
+      <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column mobile-label-text-responsive' : 'flex flex-row', 'items-start']">
         <div :class="[this.$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit', 'bg-slate-100 rounded flex flex-column']" >
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.osd.exam-1')"></div>
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-label-text-responsive' : 'flex flex-row ', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.osd.exam-1')"></div>
           <div class="flex flex-row items-center">
             <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="13/12/2022" name="A2_time" value="13/12/2022">
             <label for="13/12/2022">13.12.2022; 13:00</label><br>
@@ -36,13 +36,13 @@
           href="https://checkout.stripe.com/c/pay/cs_live_a18PAktLRCExf4QbCUahRYb2YzgjJYrWSZhmctnue81qkIPRJWEwkivg4y#fidkdWxOYHwnPyd1blppbHNgWjA0TnZVUn1AV19LRjZhVUtWf0JsbTBiV2g9VWxuZmo1MjRqXHNsd2pOalVCN0Rhan1mVzZ2VjVfREFjQ1Z3V20wQT1GfTZUcjdTNjJSajZ1XXFpT2xuQVFANTVGa3ZjbXB1aicpJ2hsYXYnP34nYnBsYSc%2FJ0tEJyknaHBsYSc%2FJ0tEJykndmxhJz8nS0QneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%2FJ21xcXV2PyoqYGFwKHZxd2BkaCtkcSd4JSUl"
           target="_blank">
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 124, 51, 1)">
-              <div class="px-5 py-1 text-white" v-html="$t('exams.osd.register')"></div>
+              <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
             </div>
           </a>
         </div>
         <div class="px-5 bg-white"></div>
         <div :class="[this.$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit', 'bg-slate-100 rounded flex flex-column']">
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.osd.exam-2')"></div>
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-label-text-responsive' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.osd.exam-2')"></div>
           <div class="flex flex-row items-center">
             <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="21/11/2022" name="B1_time" value="21/11/2022">
             <label class="w-full" for="21/11/2022">21.11.2022; 13:00</label><br>
@@ -65,7 +65,7 @@
           href="https://checkout.stripe.com/c/pay/cs_live_a18PAktLRCExf4QbCUahRYb2YzgjJYrWSZhmctnue81qkIPRJWEwkivg4y#fidkdWxOYHwnPyd1blppbHNgWjA0TnZVUn1AV19LRjZhVUtWf0JsbTBiV2g9VWxuZmo1MjRqXHNsd2pOalVCN0Rhan1mVzZ2VjVfREFjQ1Z3V20wQT1GfTZUcjdTNjJSajZ1XXFpT2xuQVFANTVGa3ZjbXB1aicpJ2hsYXYnP34nYnBsYSc%2FJ0tEJyknaHBsYSc%2FJ0tEJykndmxhJz8nS0QneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%2FJ21xcXV2PyoqYGFwKHZxd2BkaCtkcSd4JSUl"
           target="_blank">
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" class="rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)">
-              <div class="px-5 py-1 text-white" v-html="$t('exams.osd.register')"></div>
+              <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
             </div>
           </a>
         </div>          
@@ -202,6 +202,9 @@
   border: 0px;
   width: 5%;
   height: 4vh;
+}
+.mobile-label-text-responsive{
+  font-size: calc(6px + 3.40625vw);
 }
   .bg-slate-100{
     background-color: rgba(246, 246, 246, 1);

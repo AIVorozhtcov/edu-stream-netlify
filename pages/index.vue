@@ -143,7 +143,7 @@
       <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'pt-6 pb-16']">{{$t('main.about.our_school_expanded')}}</p>
       <client-only :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'justify-center h-1/12 w-full']">
         
-        <carousel ref="gallery" class="w-11/12 justify-between" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="[this.$store.getters['getIsMobile'] ? 1 : 3]" :scrollPerPage="false" :spacePadding="40" >
+        <carousel ref="gallery" :class="[this.$store.getters['getIsMobile'] ? 'w-full' : 'w-11/12', 'justify-between']" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="[this.$store.getters['getIsMobile'] ? 1 : 3]" :scrollPerPage="false" :spacePadding="40" >
           <slide class="w-1/2 mr-2 rounded">
             <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']" :src="promoBanner1" />
           </slide>
@@ -206,7 +206,7 @@
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'mx-auto my-auto text-white py-2']" v-html="$t('modals.send')"></div>
           </div>
         </div>
-        <div class="mx-center"><div :class="[this.$store.getters['getIsMobile'] ? 'modal-info-text-responsive' : 'text-xs-responsive', 'text-center font-normal text-white']" v-html="$t('main.form_subtext')"> </div></div>
+        <div class="mx-center"><div :class="[this.$store.getters['getIsMobile'] ? 'modal-info-text-responsive w-11/12' : 'text-xs-responsive', 'text-center font-normal text-white']" v-html="$t('main.form_subtext')"> </div></div>
       </div>
       <div class="my-16 h-full w-full flex flex-column items-start ignore-r-global-margin">
         <client-only :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full pl-30 justify-center']">        

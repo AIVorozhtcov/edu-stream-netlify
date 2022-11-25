@@ -3,198 +3,231 @@
     "name": "index___en",
     "path": "/en",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_67fd4c50"
   },
   {
     "name": "index___ru",
     "path": "/ru",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_67fd4c50"
   },
   {
     "name": "about-contacts___de",
     "path": "/about/contacts",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\contacts.vue",
-    "chunkName": "pages/about/contacts"
+    "chunkName": "pages/about/contacts",
+    "_name": "_e413a8b4"
   },
   {
     "name": "about-events___de",
     "path": "/about/events",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\events.vue",
-    "chunkName": "pages/about/events"
+    "chunkName": "pages/about/events",
+    "_name": "_bd93a7a8"
   },
   {
     "name": "about-info___de",
     "path": "/about/info",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\info.vue",
-    "chunkName": "pages/about/info"
+    "chunkName": "pages/about/info",
+    "_name": "_3e0ee001"
   },
   {
     "name": "courses-english___de",
     "path": "/courses/english",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\english.vue",
-    "chunkName": "pages/courses/english"
+    "chunkName": "pages/courses/english",
+    "_name": "_7d6378a2"
   },
   {
     "name": "courses-german___de",
     "path": "/courses/german",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\german.vue",
-    "chunkName": "pages/courses/german"
+    "chunkName": "pages/courses/german",
+    "_name": "_c3d4b378"
   },
   {
     "name": "courses-italian___de",
     "path": "/courses/italian",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\italian.vue",
-    "chunkName": "pages/courses/italian"
+    "chunkName": "pages/courses/italian",
+    "_name": "_1a9cbb9c"
   },
   {
     "name": "courses-online___de",
     "path": "/courses/online",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\online.vue",
-    "chunkName": "pages/courses/online"
+    "chunkName": "pages/courses/online",
+    "_name": "_49994891"
   },
   {
     "name": "exams-new___de",
     "path": "/exams/new",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\new.vue",
-    "chunkName": "pages/exams/new"
+    "chunkName": "pages/exams/new",
+    "_name": "_1c92fc56"
   },
   {
     "name": "exams-oif___de",
     "path": "/exams/oif",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\oif.vue",
-    "chunkName": "pages/exams/oif"
+    "chunkName": "pages/exams/oif",
+    "_name": "_575d0a82"
   },
   {
     "name": "exams-osd___de",
     "path": "/exams/osd",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\osd.vue",
-    "chunkName": "pages/exams/osd"
+    "chunkName": "pages/exams/osd",
+    "_name": "_685151b6"
   },
   {
     "name": "about-contacts___en",
     "path": "/en/about/contacts",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\contacts.vue",
-    "chunkName": "pages/about/contacts"
+    "chunkName": "pages/about/contacts",
+    "_name": "_e413a8b4"
   },
   {
     "name": "about-events___en",
     "path": "/en/about/events",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\events.vue",
-    "chunkName": "pages/about/events"
+    "chunkName": "pages/about/events",
+    "_name": "_bd93a7a8"
   },
   {
     "name": "about-info___en",
     "path": "/en/about/info",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\info.vue",
-    "chunkName": "pages/about/info"
+    "chunkName": "pages/about/info",
+    "_name": "_3e0ee001"
   },
   {
     "name": "courses-english___en",
     "path": "/en/courses/english",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\english.vue",
-    "chunkName": "pages/courses/english"
+    "chunkName": "pages/courses/english",
+    "_name": "_7d6378a2"
   },
   {
     "name": "courses-german___en",
     "path": "/en/courses/german",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\german.vue",
-    "chunkName": "pages/courses/german"
+    "chunkName": "pages/courses/german",
+    "_name": "_c3d4b378"
   },
   {
     "name": "courses-italian___en",
     "path": "/en/courses/italian",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\italian.vue",
-    "chunkName": "pages/courses/italian"
+    "chunkName": "pages/courses/italian",
+    "_name": "_1a9cbb9c"
   },
   {
     "name": "courses-online___en",
     "path": "/en/courses/online",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\online.vue",
-    "chunkName": "pages/courses/online"
+    "chunkName": "pages/courses/online",
+    "_name": "_49994891"
   },
   {
     "name": "exams-new___en",
     "path": "/en/exams/new",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\new.vue",
-    "chunkName": "pages/exams/new"
+    "chunkName": "pages/exams/new",
+    "_name": "_1c92fc56"
   },
   {
     "name": "exams-oif___en",
     "path": "/en/exams/oif",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\oif.vue",
-    "chunkName": "pages/exams/oif"
+    "chunkName": "pages/exams/oif",
+    "_name": "_575d0a82"
   },
   {
     "name": "exams-osd___en",
     "path": "/en/exams/osd",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\osd.vue",
-    "chunkName": "pages/exams/osd"
+    "chunkName": "pages/exams/osd",
+    "_name": "_685151b6"
   },
   {
     "name": "about-contacts___ru",
     "path": "/ru/about/contacts",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\contacts.vue",
-    "chunkName": "pages/about/contacts"
+    "chunkName": "pages/about/contacts",
+    "_name": "_e413a8b4"
   },
   {
     "name": "about-events___ru",
     "path": "/ru/about/events",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\events.vue",
-    "chunkName": "pages/about/events"
+    "chunkName": "pages/about/events",
+    "_name": "_bd93a7a8"
   },
   {
     "name": "about-info___ru",
     "path": "/ru/about/info",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\about\\\\info.vue",
-    "chunkName": "pages/about/info"
+    "chunkName": "pages/about/info",
+    "_name": "_3e0ee001"
   },
   {
     "name": "courses-english___ru",
     "path": "/ru/courses/english",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\english.vue",
-    "chunkName": "pages/courses/english"
+    "chunkName": "pages/courses/english",
+    "_name": "_7d6378a2"
   },
   {
     "name": "courses-german___ru",
     "path": "/ru/courses/german",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\german.vue",
-    "chunkName": "pages/courses/german"
+    "chunkName": "pages/courses/german",
+    "_name": "_c3d4b378"
   },
   {
     "name": "courses-italian___ru",
     "path": "/ru/courses/italian",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\italian.vue",
-    "chunkName": "pages/courses/italian"
+    "chunkName": "pages/courses/italian",
+    "_name": "_1a9cbb9c"
   },
   {
     "name": "courses-online___ru",
     "path": "/ru/courses/online",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\courses\\\\online.vue",
-    "chunkName": "pages/courses/online"
+    "chunkName": "pages/courses/online",
+    "_name": "_49994891"
   },
   {
     "name": "exams-new___ru",
     "path": "/ru/exams/new",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\new.vue",
-    "chunkName": "pages/exams/new"
+    "chunkName": "pages/exams/new",
+    "_name": "_1c92fc56"
   },
   {
     "name": "exams-oif___ru",
     "path": "/ru/exams/oif",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\oif.vue",
-    "chunkName": "pages/exams/oif"
+    "chunkName": "pages/exams/oif",
+    "_name": "_575d0a82"
   },
   {
     "name": "exams-osd___ru",
     "path": "/ru/exams/osd",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\exams\\\\osd.vue",
-    "chunkName": "pages/exams/osd"
+    "chunkName": "pages/exams/osd",
+    "_name": "_685151b6"
   },
   {
     "name": "index___de",
     "path": "/",
     "component": "C:\\\\src\\\\austrian_school_project\\\\austrian_language_school\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_67fd4c50"
   }
 ]

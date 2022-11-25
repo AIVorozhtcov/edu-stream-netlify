@@ -5,8 +5,10 @@ body
 {
   font-family: 'Montserrat', sans-serif;
   
-}
-
+}/*
+.nav-tabs, .nav-link.active {
+  background-color: rgb(231, 231, 231) !important;
+}*/
 .button-text{
   font-size: calc(2px + 1.00625vw);
   font-weight: 700;
@@ -24,6 +26,10 @@ body
 .mobile-button{
   border-radius: 63px;
   width:90vw;
+}
+
+#sidebar-2{
+  top:8vh;
 }
 .mobile-welcome-button-margin{
   margin-bottom:3vh
