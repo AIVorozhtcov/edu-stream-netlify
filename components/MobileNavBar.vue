@@ -235,9 +235,20 @@ export default {
       coursesIsSelected: false
     }
   },
+  
+  created () {
+    if (process.browser){
+      window.addEventListener('scroll', this.handleScroll);
+    }
+    
+  },
   methods: {
     closeMobileSidebar() {
       this.isMobileSidebarOpen = false;
+    },
+    
+    handleScroll (event) {
+      this.closeMobileSidebar();
     },
     
     aboutHoverHandler(){

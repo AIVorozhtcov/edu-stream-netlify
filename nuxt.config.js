@@ -1,6 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'server',
+  target: 'static',
+  
   //server: {     
     //port: 8000, // default: 3000     
    // host: '0.0.0.0', // default: localhost   
@@ -49,8 +50,9 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     'nuxt-compress',
-    //'@nuxt/image',
+    '@nuxt/image',
     '@nuxt/postcss8',
+    
     /*'@nuxtjs/google-fonts',
     {
       families: {
@@ -62,6 +64,11 @@ export default {
     },*/
     //'@nuxtjs/eslint-module',
   ],
+  '@nuxt/image':{
+    image: {
+      dir: '/_ipx'
+    },
+  },
   'nuxt-compress': {
     brotli: {
       threshold: 8192,
@@ -74,9 +81,9 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    '@nuxt/image',
     '@nuxtjs/i18n',
     //'nuxt-compress',
+    //'@nuxt/image'
     
   ],
   /*'nuxt-compress': {
