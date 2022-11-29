@@ -76,7 +76,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/i18n',
     //'nuxt-compress',
-    '@nuxt/image'
+    //'@nuxt/image'
     
   ],
   /*'nuxt-compress': {
