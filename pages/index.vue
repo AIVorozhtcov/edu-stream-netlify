@@ -302,7 +302,7 @@
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
-/>       ]
+/>       
         </button>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'flex-column items-center' : 'flex-row', 'flex py-16 justify-between']">
