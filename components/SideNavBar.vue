@@ -221,14 +221,14 @@
 
 <script>
 
-import logo from "~/assets/edu-stream_logo.png"
+//import logo from "/edu-stream_logo.png"
 
 
 export default {
   data: function () {
     return {
       whiteBackdrop: 'white',
-      logo: logo,      
+      //logo: logo,      
       isSidebarOpen: false,
       examsIsSelected: false,
       aboutIsSelected: false,

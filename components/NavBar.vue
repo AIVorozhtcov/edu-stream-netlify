@@ -4,7 +4,12 @@
     <div class="edu-color h-20 flex flex-row justify-between items-center" style="padding-left: 20%; padding-right: 20%;">
       <div class="w-22 h-22 mb-3" style="">
         <nuxt-link :to="localePath('/')">  
-          <img :src="logo" />
+          <nuxt-img
+          src="/edu-stream_logo.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
         </nuxt-link>
       </div>
       <div class=" flex flex-row items-center justify-start">
@@ -14,22 +19,34 @@
             </div>
             <div class="flex items-center flex-row" style="margin-left:0.5vw">
                 <a href="https://www.facebook.com/edustream.vienna" target="_blank">
-                  <img style="width: calc(12px + 0.990625vw); height: auto" :src="facebookLogo" />
+                  <nuxt-img
+                  style="width: calc(12px + 0.990625vw); height: auto"
+                        src="/facebook_logo.svg"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
                 </a>
                 <a href="https://www.instagram.com/edustream.at" style="margin-left:0.5vw" target="_blank">
-                  <img style="width: calc(12px + 0.990625vw); height: auto" :src="instagramLogo" />
+                  <nuxt-img
+                  style="width: calc(12px + 0.990625vw); height: auto"
+                  src="/instagram_logo.svg"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
                 </a>
             </div>
         </div>
-        <div class="flex flex-column items-start w-16 h-16 justify-center pt-4 ml-2 bg-white self-start rounded-b-md text-navbar-sm" style="margin-bottom:3vh;">
+        <div class="flex flex-column items-start h-16 justify-center pt-4 ml-2 bg-white self-start rounded-b-md text-navbar-sm" style="margin-bottom:3vh; width:7vw">
           <div class="nav-item dropdown">
             <a class="nav-link dropdown-toggle font-semibold flex flex-row items-center justify-start" style="margin-left:-1vw"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <country-flag :country="$t('flag')" size='small' /> {{this.$i18n.locale.toUpperCase()}}
             </a>
-            <div class="dropdown-menu"  aria-labelledby="navbarAnchor">
-              <nuxt-link class="dropdown-item text-navbar-sm flex flex-row items-center"  :to="switchLocalePath('en')"><country-flag size="small" country="gb" />EN</nuxt-link>
-              <nuxt-link class="dropdown-item text-navbar-sm flex flex-row items-center"  :to="switchLocalePath('de')"><country-flag size="small" country="de" />DE</nuxt-link>
-              <nuxt-link class="dropdown-item text-navbar-sm flex flex-row items-center"  :to="switchLocalePath('ru')"><country-flag size="small" country="ru" />RU</nuxt-link>
+            <div class="dropdown-menu"  aria-labelledby="navbarAnchor" style="min-width: 5vw; width:7vw">
+              <nuxt-link class="text-navbar-sm flex flex-row items-center"  :to="switchLocalePath('en')"><country-flag size="small" country="gb" />EN</nuxt-link>
+              <nuxt-link class="text-navbar-sm flex flex-row items-center"  :to="switchLocalePath('de')"><country-flag size="small" country="de" />DE</nuxt-link>
+              <nuxt-link class="text-navbar-sm flex flex-row items-center"  :to="switchLocalePath('ru')"><country-flag size="small" country="ru" />RU</nuxt-link>
             </div>
           </div>
         </div>
@@ -88,10 +105,10 @@
 
 <script>
 
-import logo from "~/assets/edu-stream_logo.png"
-import frontpageWelcome from "~/assets/frontpage_welcome.png"
-import facebookLogo from "~/assets/facebook_logo.svg"
-import instagramLogo from "~/assets/instagram_logo.svg"
+/*import logo from "/edu-stream_logo.png"
+import frontpageWelcome from "/frontpage_welcome.png"
+import facebookLogo from "/facebook_logo.svg"
+import instagramLogo from "/instagram_logo.svg"*/
 import countryFlag from 'vue-country-flag'
 
 
@@ -101,10 +118,10 @@ export default {
   },
   data: function () {
     return {
-      logo: logo,      
+      /*logo: logo,      
       frontpageWelcome: frontpageWelcome,
       facebookLogo:facebookLogo,
-      instagramLogo: instagramLogo,
+      instagramLogo: instagramLogo,*/
       isSidebarOpen: false,
       examsIsSelected: false,
       aboutIsSelected: false,

@@ -7,27 +7,56 @@
             <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-button-text' : 'button-text', 'text-black']" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
-        <img :class="[this.$store.getters['getIsMobile'] ? 'h-1/2 w-full' : 'w-full h-3/4']"  :src="[this.$store.getters['getIsMobile'] ? mobileFrontpageWelcome : frontpageWelcome]">            
+        <nuxt-img
+        :class="[this.$store.getters['getIsMobile'] ? 'h-1/2 w-full' : 'w-full h-3/4']"
+        :src="this.$store.getters['getIsMobile'] ? '/mobile_frontpage_welcome.png' : '/frontpage_welcome.png'"
+        format="webp"
+  alt="Welcome to Edu-stream!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
     </div>
     <!---->
     
     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-global-margins flex flex-column' : 'ignore-global-margins flex flex-row', 'relative flex h-fit justify-evenly h-3/4 ']">
       <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex w-full flex-column items-start text-white']"   style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:20%"></div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#FF7C33;">
-        <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']" :src="colorTabsIcon1">
+        <nuxt-img
+        :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
+        src="/color_tabs_icon_1.svg"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
         <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_1')"></div>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#96BDFF;">
-        <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon' : 'w-auto h-3/12 pb-2']" :src="colorTabsIcon2">
-        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_2')"></div>
+        <nuxt-img
+        :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
+        src="/color_tabs_icon_2.svg"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_2')"></div>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#4385F5;">
-        <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon' : 'w-auto h-3/12 pb-2']" :src="colorTabsIcon3">
-        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_3')"></div>
+        <nuxt-img
+        :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
+        src="/color_tabs_icon_3.svg"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
+       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_3')"></div>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#253984;">
-        <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-2' : 'w-auto h-3/12 pb-2']" :src="colorTabsIcon4">
-        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_4')"></div>
+        <nuxt-img
+        :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
+        src="/color_tabs_icon_4.svg"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
+<div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_4')"></div>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex w-full flex-column items-start text-white']" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:1%; width:20%"></div>
       
@@ -102,36 +131,101 @@
       
     </div>
     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-banners-border' : 'border-b', 'py-16 flex flex-row justify-around']">
-      <img class="h-auto w-1/5" :src="bannerRow1" />
-      <img class="h-auto w-1/5" :src="bannerRow2" />
-      <img class="h-auto w-1/5" :src="bannerRow3" />
-      <img class="h-auto w-1/5" :src="bannerRow4" />
-      <img class="h-auto w-1/5" :src="bannerRow5" />
+      <nuxt-img
+      class="h-auto w-1/5"
+      src="/banner_row_1.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
+<nuxt-img
+      class="h-auto w-1/5"
+      src="/banner_row_2.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
+<nuxt-img
+      class="h-auto w-1/5"
+      src="/banner_row_3.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
+<nuxt-img
+      class="h-auto w-1/5"
+      src="/banner_row_4.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
+<nuxt-img
+      class="h-auto w-1/5"
+      src="/banner_row_5.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
     </div>
       <client-only>
         <div :class="[this.$store.getters['getIsMobile'] ? 'pb-32' : 'ignore-r-global-margin', 'relative py-16 flex flex-row items-center h-1/12']" >
           <div class="absolute z-40">
             <button @click.prevent="prevBanner" class="">
-              <img :src="bannerArrowLeft" :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'w-2/12']"  style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)" />
+              <nuxt-img
+              :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'w-2/12']"
+      src="/banner_arrow_left.png"
+      style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </button>
           </div>
           <carousel class="w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :scrollPerPage="false" :spacePadding="40" >
             
             <slide class="w-1/2 mr-2 rounded">
-              <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']" :src="[this.$store.getters['getIsMobile'] ? mobilePromoBanner1 : promoBanner1]" />
+              <nuxt-img
+              :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']"
+              :src="this.$store.getters['getIsMobile'] ? '/mobile_promo_banner_1_group.png' : '/promo_banner_1_group.png'"
+      style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2 mr-2 rounded">
-              <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']" :src="[this.$store.getters['getIsMobile'] ? mobilePromoBanner1 : promoBanner1]" />
+              <nuxt-img
+              :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']"
+              :src="this.$store.getters['getIsMobile'] ? '/mobile_promo_banner_1_group.png' : '/promo_banner_1_group.png'"
+      style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2 rounded">
-              <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']" :src="[this.$store.getters['getIsMobile'] ? mobilePromoBanner1 : promoBanner1]" />
+              <nuxt-img
+              :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']"
+              :src="this.$store.getters['getIsMobile'] ? '/mobile_promo_banner_1_group.png' : '/promo_banner_1_group.png'"
+      style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             
           
           </carousel>
           <div class="absolute right-14 z-40">
             <button @click.prevent="nextBanner" class="">
-              <img :src="bannerArrowRight" :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'w-4/12']" style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)" />
+              <nuxt-img
+              :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'w-4/12']"
+              style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
+              src="/banner_arrow_right.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </button>
           </div>
         </div>
@@ -143,21 +237,51 @@
       <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'pt-6 pb-16']">{{$t('main.about.our_school_expanded')}}</p>
       <client-only :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'justify-center h-1/12 w-full']">
         
-        <carousel ref="gallery" :class="[this.$store.getters['getIsMobile'] ? 'w-full' : 'w-11/12', 'justify-between']" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="[this.$store.getters['getIsMobile'] ? 1 : 3]" :scrollPerPage="false" :spacePadding="40" >
+        <carousel ref="gallery" :class="[this.$store.getters['getIsMobile'] ? 'w-full' : 'w-11/12', 'justify-between']" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="this.$store.getters['getIsMobile'] ? 1 : 3" :scrollPerPage="false" :spacePadding="40" >
           <slide class="w-1/2 mr-2 rounded">
-            <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']" :src="promoBanner1" />
+            <nuxt-img
+            :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
+              src="/promo_banner_1_group.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
           </slide>
           <slide class="w-1/2 mr-2 rounded">
-            <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']" :src="promoBanner1" />
+            <nuxt-img
+            :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
+              src="/promo_banner_1_group.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
           </slide>
           <slide class="w-1/2 mr-2 rounded">
-            <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']" :src="promoBanner1" />
+            <nuxt-img
+            :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
+              src="/promo_banner_1_group.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
           </slide>
           <slide class="w-1/2 mr-2 rounded">
-            <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']" :src="promoBanner1" />
+            <nuxt-img
+            :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
+              src="/promo_banner_1_group.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
           </slide>
           <slide class="w-1/2 rounded">
-            <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']" :src="promoBanner1" />
+            <nuxt-img
+            :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
+              src="/promo_banner_1_group.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
           </slide>
           
           
@@ -172,7 +296,13 @@
           </button>
         </nuxt-link>
         <button :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" @click.prevent="nextGalleryImage" class="p-5 py-2">
-          <img :src="galleryArrow" />
+          <nuxt-img
+            
+            src="/gallery_arrow.svg"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       ]
         </button>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'flex-column items-center' : 'flex-row', 'flex py-16 justify-between']">
@@ -181,7 +311,14 @@
           <h1 class=""><div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : 'text-xl-responsive', 'font-bold']" v-html="$t('main.about.location')"> </div></h1>
           <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'pt-6 pb-16']" v-html="$t('main.about.location_expanded')"></div>
         </div>
-        <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : 'w-5/12 h-auto']" :src="locationPhoto" />
+        <nuxt-img
+        :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : 'w-5/12 h-auto']"
+        src="/location_photo.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
+        
 
       </div>
       <div class="flex flex-column w-full py-5 items-center justify-between rounded-3xl" style="background-color:rgba(37, 57, 132, 1)">
@@ -212,53 +349,128 @@
         <client-only :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full pl-30 justify-center']">        
           <carousel ref="logoGallery" :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full justify-between']" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="true" :adjustableHeight="false" :perPage="3" :scrollPerPage="true" :spacePadding="40" >
             <slide class="w-full">
-              <img :src="logoGallery1" />
+              <nuxt-img
+              src="/logo_gallery/1.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-full">
-              <img :src="logoGallery2" />
+            <nuxt-img
+              src="/logo_gallery/2.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery3" />
+            <nuxt-img
+              src="/logo_gallery/3.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery4" />
+            <nuxt-img
+              src="/logo_gallery/4.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery5" />
+            <nuxt-img
+              src="/logo_gallery/5.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery6" />
+            <nuxt-img
+              src="/logo_gallery/6.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery7" />
+            <nuxt-img
+              src="/logo_gallery/7.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery8" />
+            <nuxt-img
+              src="/logo_gallery/8.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery9" />
+            <nuxt-img
+              src="/logo_gallery/9.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery10" />
+              <nuxt-img
+              src="/logo_gallery/10.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery11" />
+              <nuxt-img
+              src="/logo_gallery/11.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery12" />
+              <nuxt-img
+              src="/logo_gallery/12.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery13" />
+              <nuxt-img
+              src="/logo_gallery/13.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             <slide class="w-1/2">
-              <img :src="logoGallery14" />
+              <nuxt-img
+              src="/logo_gallery/14.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
             </slide>
             
             
           </carousel>
         </client-only> 
         <button @click.prevent="nextLogoGalleryImage" class="hidden py-2">
-          <img :src="galleryArrow" />
+          <nuxt-img
+          src="/gallery_arrow.svg"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>       
         </button>
       </div>
     </div>
@@ -301,127 +513,54 @@
       
     </b-carousel> -->
     <div>
-      <b-modal  centered :busy="true" id="modal-1" :hide-header='true' :hide-footer='true' style="width:30%;">
-        <template #modal-header class="">
-          <header class=""></header>
-          
-        </template>
-        <template #modal-footer>
-          <div class="mx-auto w-full" style="margin-left:7%; margin-right:7%">
-            
-          </div>
-        </template> 
-        <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%">
-          <div class="mx-auto font-bold text-xl" style="color:rgba(90, 90, 90, 1); margin-top:3vh; margin-bottom:3vh" v-html="$t('modals.title')"></div>
-          <div class="pt-3 font-bold" v-html="$t('modals.name_title')"></div>
-          <input @focusout="checkName" class="pl-3 bg-slate-200 w-full rounded-sm" type="text" style="height:9vh;" v-model="response_name" :placeholder="$t('modals.name')" required>
-          <div class="pt-3 font-bold text-red-600 text-xs" v-if="isNameWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-3 font-bold" style="margin-top:2vh" v-html="$t('modals.email_title')"></div>
-          <input @focusout="checkEmail" type="email" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_email" :placeholder="$t('modals.email')" required>
-          <div class="pt-3 font-bold text-red-600 text-xs" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-3 font-bold" style="margin-top:2vh" v-html="$t('modals.phone_title')"></div>
-          <input @focusout="checkPhone" type="tel" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
-          <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-3 flex flex-row">
-              <input @animationend="checkTimes" id="mon_wed" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
-            <label for="mon_wed"><div class="pl-3" v-html="$t('modals.mon_wed')"></div></label>
-          </div>
-          <div class="pt-1 flex flex-row">
-            <input @animationend="checkTimes" id="tue_thu" type="checkbox" :value="$t('modals.tue_thu')" v-model="checkedTimes">
-            <label for="tue_thu"><div class="pl-3" v-html="$t('modals.tue_thu')"></div></label>
-          </div>
-          <div class="pt-1 flex flex-row">
-            <input @animationend="checkTimes" id="any_day" type="checkbox" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
-            <label for="any_day"><div class="pl-3" v-html="$t('modals.any_day')"></div></label>
-          </div>
-          <div class="pt-3 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
-          <div
-            @click="checkAll" class="w-full flex">
-              <div class="rounded-md mx-auto flex flex-column items-center h-fit w-full" style="background-color:rgba(67, 133, 245, 1); margin-top:3vh">
-                <div class="mx-auto text-white py-2" v-html="$t('modals.send')"></div>
-              </div>
-          </div>
-          <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
-
-        </div>
-        <div :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%">
-          <div class="mx-auto font-bold mobile-text-base-responsive" style="color:rgba(90, 90, 90, 1); margin-top:1vh; margin-bottom:1vh" v-html="$t('modals.title')"></div>
-          <div class="pt-3 mobile-text-base-responsive font-bold" v-html="$t('modals.name_title')"></div>
-          <input @focusout="checkName" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" type="text" style="height:3vh;" v-model="response_name" :placeholder="$t('modals.name')" required>
-          <div class="pt-3 font-bold text-red-600 mobile-text-sm-responsive" v-if="isNameWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-3 mobile-text-base-responsive font-bold" style="margin-top:2vh" v-html="$t('modals.email_title')"></div>
-          <input @focusout="checkEmail" type="email" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" style="height:3vh;" v-model="response_email" :placeholder="$t('modals.email')" required>
-          <div class="pt-3 font-bold text-red-600 mobile-text-sm-responsive" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-3 mobile-text-base-responsive font-bold" style="margin-top:2vh" v-html="$t('modals.phone_title')"></div>
-          <input @focusout="checkPhone" type="tel" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" style="height:3vh;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
-          <div class="pt-3 font-bold text-red-600 mobile-text-sm-responsive" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
-          <div class="pt-3 flex flex-row">
-              <input @animationend="checkTimes" id="mon_wed" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
-            <label for="mon_wed"><div class="pl-3 mobile-text-base-responsive" v-html="$t('modals.mon_wed')"></div></label>
-          </div>
-          <div class="pt-1 flex flex-row">
-            <input @animationend="checkTimes" id="tue_thu" type="checkbox" :value="$t('modals.tue_thu')" v-model="checkedTimes">
-            <label for="tue_thu"><div class="pl-3 mobile-text-base-responsive" v-html="$t('modals.tue_thu')"></div></label>
-          </div>
-          <div class="pt-1 flex flex-row">
-            <input @animationend="checkTimes" id="any_day" type="checkbox" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
-            <label for="any_day"><div class="pl-3 mobile-text-base-responsive" v-html="$t('modals.any_day')"></div></label>
-          </div>
-          <div class="pt-3 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
-          <div
-            @click="checkAll" class="w-full flex">
-              <div class="rounded-md mx-auto flex flex-column items-center h-fit w-full" style="background-color:rgba(67, 133, 245, 1); margin-top:3vh">
-                <div class="mx-auto text-white py-2 mobile-text-base-responsive" v-html="$t('modals.send')"></div>
-              </div>
-          </div>
-          <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
-
-        </div>
-      </b-modal>
+      <ModalForm index="modal-1" />
       
     </div>
   </div>
 </template>
 
 <script>
-
-import frontpageWelcome from "~/assets/frontpage_welcome.png"
-import mobileFrontpageWelcome from "~/assets/mobile_frontpage_welcome.png"
-import colorTabsIcon1 from "~/assets/color_tabs_icon_1.svg"
-import colorTabsIcon2 from "~/assets/color_tabs_icon_2.svg"
-import colorTabsIcon3 from "~/assets/color_tabs_icon_3.svg"
-import colorTabsIcon4 from "~/assets/color_tabs_icon_4.svg"
-import promoBanner1 from "~/assets/promo_banner_1_group.png"
-import mobilePromoBanner1 from "~/assets/mobile_promo_banner_1_group.png"
-import promoBanner2 from "~/assets/promo_banner_2.png"
-import oeifLogo from "~/assets/oeif-logo.png"
-import galleryArrow from "~/assets/gallery_arrow.svg"
-import bannerArrowLeft from "~/assets/banner_arrow_left.png"
-import bannerArrowRight from "~/assets/banner_arrow_right.png"
-import bannerRow1 from "~/assets/banner_row_1.png"
-import bannerRow2 from "~/assets/banner_row_2.png"
-import bannerRow3 from "~/assets/banner_row_3.png"
-import bannerRow4 from "~/assets/banner_row_4.png"
-import bannerRow5 from "~/assets/banner_row_5.png"
-import logoGallery1 from "~/assets/logo_gallery/1.png"
-import logoGallery2 from "~/assets/logo_gallery/2.png"
-import logoGallery3 from "~/assets/logo_gallery/3.png"
-import logoGallery4 from "~/assets/logo_gallery/4.png"
-import logoGallery5 from "~/assets/logo_gallery/5.png"
-import logoGallery6 from "~/assets/logo_gallery/6.png"
-import logoGallery7 from "~/assets/logo_gallery/7.png"
-import logoGallery8 from "~/assets/logo_gallery/8.png"
-import logoGallery9 from "~/assets/logo_gallery/9.png"
-import logoGallery10 from "~/assets/logo_gallery/10.png"
-import logoGallery11 from "~/assets/logo_gallery/11.png"
-import logoGallery12 from "~/assets/logo_gallery/12.png"
-import logoGallery13 from "~/assets/logo_gallery/13.png"
-import logoGallery14 from "~/assets/logo_gallery/14.png"
-import locationPhoto from "~/assets/location_photo.png"
+/*
+import frontpageWelcome from "/frontpage_welcome.png"
+import mobileFrontpageWelcome from "/mobile_frontpage_welcome.png"
+import colorTabsIcon1 from "/color_tabs_icon_1.svg"
+import colorTabsIcon2 from "/color_tabs_icon_2.svg"
+import colorTabsIcon3 from "/color_tabs_icon_3.svg"
+import colorTabsIcon4 from "/color_tabs_icon_4.svg"
+import promoBanner1 from "/promo_banner_1_group.png"
+import mobilePromoBanner1 from "/mobile_promo_banner_1_group.png"
+import promoBanner2 from "/promo_banner_2.png"
+import oeifLogo from "/oeif-logo.png"
+import galleryArrow from "/gallery_arrow.svg"
+import bannerArrowLeft from "/banner_arrow_left.png"
+import bannerArrowRight from "/banner_arrow_right.png"
+import bannerRow1 from "/banner_row_1.png"
+import bannerRow2 from "/banner_row_2.png"
+import bannerRow3 from "/banner_row_3.png"
+import bannerRow4 from "/banner_row_4.png"
+import bannerRow5 from "/banner_row_5.png"
+import logoGallery1 from "/logo_gallery/1.png"
+import logoGallery2 from "/logo_gallery/2.png"
+import logoGallery3 from "/logo_gallery/3.png"
+import logoGallery4 from "/logo_gallery/4.png"
+import logoGallery5 from "/logo_gallery/5.png"
+import logoGallery6 from "/logo_gallery/6.png"
+import logoGallery7 from "/logo_gallery/7.png"
+import logoGallery8 from "/logo_gallery/8.png"
+import logoGallery9 from "/logo_gallery/9.png"
+import logoGallery10 from "/logo_gallery/10.png"
+import logoGallery11 from "/logo_gallery/11.png"
+import logoGallery12 from "/logo_gallery/12.png"
+import logoGallery13 from "/logo_gallery/13.png"
+import logoGallery14 from "/logo_gallery/14.png"
+import locationPhoto from "/location_photo.png"
+*/
+import ModalForm from '/components/ModalForm.vue'
 
 export default {
   data: function () {
     return {
+      /*
       frontpageWelcome: frontpageWelcome,
       mobileFrontpageWelcome: mobileFrontpageWelcome,
       oeifLogo: oeifLogo,
@@ -455,6 +594,8 @@ export default {
       logoGallery13: logoGallery13,
       logoGallery14: logoGallery14,
       locationPhoto: locationPhoto,
+      */
+      ModalForm: ModalForm,
       showModal: false,
       isNameWrong: false,
       isPhoneWrong: false,

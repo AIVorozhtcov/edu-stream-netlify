@@ -4,7 +4,12 @@
             <div class="flex w-full flex-row items-start pt-2 justify-between text-xs-responsive">
                 <div class="w-1/6">
                     <nuxt-link to="/">  
-                        <img :src="logo" />
+                        <nuxt-img
+                        src="/edu-stream_logo.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
                     </nuxt-link>
                 </div>
                 <div class="w-1/12">
@@ -36,11 +41,23 @@
                     <p>{{$t('footer.friday')}}</p>
                     <p class="mb-2.5">{{$t('footer.sat_sun')}}</p>
                     <div class="mb-0.5 flex flex-row">
-                        <img style="width: 1.2vw; height: auto" :src="phoneIcon" />
+                        <nuxt-img
+                        style="width: 1.2vw; height: auto"
+                        src="/phone_icon.svg"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
                         <div class="text-white pl-1" v-html="$t('footer.phone_number')"></div>
                     </div>
                     <div class="flex flex-row">
-                        <img style="width: 1.2vw; height: auto" :src="emailIcon" />
+                        <nuxt-img
+                        style="width: 1.2vw; height: auto"
+                        src="/email_icon.svg" 
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
                         <div class="text-white pl-1" v-html="$t('footer.email_address')"></div>
                     </div>
                 </div>
@@ -51,10 +68,22 @@
                 </p>
                 <div id="last-column" class="flex flex-row" >
                     <a href="https://www.facebook.com/edustream.vienna" style="margin-right:15%" target="_blank">
-                        <img style="width: 2vw; height: auto" :src="facebookLogo" />
+                        <nuxt-img
+                        style="width: 2vw; height: auto"
+                        src="/facebook_logo.svg"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
                     </a>
                     <a href="https://www.instagram.com/edustream.at" target="_blank">
-                        <img style="width: 2vw; height: auto" :src="instagramLogo" />
+                        <nuxt-img
+                        style="width: 2vw; height: auto"
+                        src="/instagram_logo.svg" 
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
                     </a>
                 </div>
             </div>
@@ -124,21 +153,21 @@
 
 <script>
 
-import logo from "~/assets/edu-stream_logo.png"
-import facebookLogo from "~/assets/facebook_logo.svg"
-import instagramLogo from "~/assets/instagram_logo.svg"
-import phoneIcon from "~/assets/phone_icon.svg"
-import emailIcon from "~/assets/email_icon.svg"
+/*import logo from "/edu-stream_logo.png"
+import facebookLogo from "/facebook_logo.svg"
+import instagramLogo from "/instagram_logo.svg"
+import phoneIcon from "/phone_icon.svg"
+import emailIcon from "/email_icon.svg"*/
 
 
 export default {
   data: function () {
     return {
-      logo: logo,
+      /*logo: logo,
       facebookLogo:facebookLogo,
       instagramLogo: instagramLogo,
       phoneIcon: phoneIcon,
-      emailIcon: emailIcon
+      emailIcon: emailIcon*/
     }
   }
 }

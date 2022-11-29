@@ -2,7 +2,15 @@
 <template>
   <div>
     <div class="edu-color h-20 w-full flex flex-row justify-start items-center" style="padding-bottom:4vh; padding-top:4vh">
-      <b-button class="pl-5" v-b-toggle.sidebar-2><img style="height:3vh; width:auto;" :src="[isMobileSidebarOpen ? mobileCloseNavbarIcon : hamburgerIcon]" /></b-button>
+      <b-button class="pl-5" v-b-toggle.sidebar-2>
+        <nuxt-img
+        style="height:3vh; width:auto;"
+        :src="isMobileSidebarOpen ? '/mobile_close_navbar_icon.png' : '/hamburger_icon.png'"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
+      </b-button>
       <b-sidebar v-model="isMobileSidebarOpen" class="mobile-text-base-responsive flex flex-column justify-around items-start" @focusout="closeMobileSidebar" id="sidebar-2" width="63%" no-header>
         
         <div class="flex flex-column justify-between w-full" @mouseleave="closeMobileSidebar">
@@ -40,29 +48,53 @@
               <country-flag :country="$t('flag')" size='big' /> {{this.$i18n.locale.toUpperCase()}}
             </a>
             <div class="dropdown-menu"  aria-labelledby="navbarAnchor">
-              <nuxt-link class="dropdown-item flex flex-row items-center"  :to="switchLocalePath('en')"><country-flag size="big" country="gb" />EN</nuxt-link>
-              <nuxt-link class="dropdown-item flex flex-row items-center"  :to="switchLocalePath('de')"><country-flag size="big" country="de" />DE</nuxt-link>
-              <nuxt-link class="dropdown-item flex flex-row items-center"  :to="switchLocalePath('ru')"><country-flag size="big" country="ru" />RU</nuxt-link>
+              <nuxt-link class="dropdown-item flex flex-row items-center"  :to="switchLocalePath('en')"><country-flag size="big" country="gb" /></nuxt-link>
+              <nuxt-link class="dropdown-item flex flex-row items-center"  :to="switchLocalePath('de')"><country-flag size="big" country="de" /></nuxt-link>
+              <nuxt-link class="dropdown-item flex flex-row items-center"  :to="switchLocalePath('ru')"><country-flag size="big" country="ru" /></nuxt-link>
             </div>
           </div>
         </div>
         <div class="flex flex-row" style="margin-top:28vh; margin-left:5vw; padding-bottom:2vh; margin-bottom:2vh; border-bottom: 1px solid #CCCACA;;">
           <a href="https://www.facebook.com/edustream.vienna" target="_blank">
-                  <img style="width: 8vw; height: auto" :src="facebookColorLogo" />
+            <nuxt-img
+            style="width: 8vw; height: auto" 
+            src="/facebook_color_logo.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
                 </a>
                 <a href="https://www.instagram.com/edustream.at" style="margin-left:0.5vw" target="_blank">
-                  <img style="width: 8vw; height: auto; margin-left:4vw" :src="instagramColorLogo" />
+                  <nuxt-img
+                  style="width: 8vw; height: auto; margin-left:4vw" 
+                  src="/instagram_color_logo.png" 
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
                 </a>
 
         </div>
         <div class="flex flex-column justify-between h-full font-normal mobile-navbar-footer-text-responsive" style="margin-left:5vw">
           <p > Rennweg 9/6, 1030 Wien</p>
           <div class="flex flex-row" style="margin-top:2vh">
-            <img style="width: 6vw; height: auto; color:black" :src="phoneBlackIcon" />
+            <nuxt-img
+            style="width: 6vw; height: auto"
+            src="/phone_black_icon.svg" 
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
             <div style="margin-left:2vw" v-html="$t('footer.phone_number')"></div>
           </div>
           <div class="flex flex-row" style="margin-top:2vh">
-            <img style="width: 6vw; height: auto" :src="emailBlackIcon" />
+            <nuxt-img
+            style="width: 6vw; height: auto"
+            src="/email_black_icon.svg"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
             <div style="margin-left:2vw" v-html="$t('footer.email_address')"></div>
           </div>
         </div>
@@ -87,7 +119,13 @@
       </b-sidebar>
       <div class=" absolute mx-auto" style="left: 50%; transform: translate(-50%); ">
         <nuxt-link :to="localePath('/')">  
-          <img style="height:8vh; width:auto; max-width:100vw" :src="logo" />
+          <nuxt-img
+          style="height:8vh; width:auto; max-width:100vw"
+          src="/edu-stream_logo_mobile.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>        
         </nuxt-link>
       </div>
   </div>
@@ -163,16 +201,18 @@
 
 
 <script>
+/*
+import logo from "/edu-stream_logo_mobile.png"
+import facebookColorLogo from "/facebook_color_logo.png"
+import instagramColorLogo from "/instagram_color_logo.png"
+import hamburgerIcon from '/hamburger_icon.png'
+import mobileSidebarCloseButton from '/mobile_sidebar_close_button.svg'
+import phoneBlackIcon from "/phone_black_icon.svg"
+import emailBlackIcon from "/email_black_icon.svg"
+import mobileCloseNavbarIcon from "/mobile_close_navbar_icon.png"
+*/
 
-import logo from "~/assets/edu-stream_logo_mobile.png"
-import facebookColorLogo from "~/assets/facebook_color_logo.png"
-import instagramColorLogo from "~/assets/instagram_color_logo.png"
 import countryFlag from 'vue-country-flag'
-import hamburgerIcon from '~/assets/hamburger_icon.png'
-import mobileSidebarCloseButton from '~/assets/mobile_sidebar_close_button.svg'
-import phoneBlackIcon from "~/assets/phone_black_icon.svg"
-import emailBlackIcon from "~/assets/email_black_icon.svg"
-import mobileCloseNavbarIcon from "~/assets/mobile_close_navbar_icon.png"
 
 
 export default {
@@ -181,14 +221,14 @@ export default {
   },
   data: function () {
     return {
-      logo: logo,      
+      /*logo: logo,      
       facebookColorLogo:facebookColorLogo,
       instagramColorLogo: instagramColorLogo,
       hamburgerIcon: hamburgerIcon,
       mobileSidebarCloseButton: mobileSidebarCloseButton,
       phoneBlackIcon: phoneBlackIcon,
       emailBlackIcon: emailBlackIcon,
-      mobileCloseNavbarIcon: mobileCloseNavbarIcon,
+      mobileCloseNavbarIcon: mobileCloseNavbarIcon,*/
       isMobileSidebarOpen: false,
       examsIsSelected: false,
       aboutIsSelected: false,

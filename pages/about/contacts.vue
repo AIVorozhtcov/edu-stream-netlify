@@ -13,10 +13,24 @@
         <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-info-font' : 'info-font', 'w-full']" style=" padding-top: 5vh;" v-html="$t('about_us.contacts.info')"></div>
         <div id="last-column" style="padding-top: 5vh;" :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-l-global-margin' : '', 'flex flex-row']" >
             <a href="https://www.facebook.com/edustream.vienna" style="margin-right:10%" target="_blank">
-                <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-social-icon' : 'social-icon']" style="color: rgba(255, 0, 1, 1);" :src="facebookLogoBlack" />
+              <nuxt-img
+              :class="[this.$store.getters['getIsMobile'] ? 'mobile-social-icon' : 'social-icon']"
+              style="color: rgba(255, 0, 1, 1);"
+              src="/facebook_logo_black.png" 
+        format="webp"
+  alt="Edu-stream language school facebook"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>  
             </a>
             <a href="https://www.instagram.com/edustream.at" target="_blank">
-                <img :class="[this.$store.getters['getIsMobile'] ? 'mobile-social-icon' : 'social-icon']" :src="instagramLogoBlack" />
+              <nuxt-img
+              :class="[this.$store.getters['getIsMobile'] ? 'mobile-social-icon' : 'social-icon']"
+              src="/instagram_logo_black.png" 
+        format="webp"
+  alt="Edu-stream language school instagram"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+/>  
+                
             </a>
         </div>
       </div>
@@ -74,15 +88,18 @@
 
 
 <script>
-import facebookLogoBlack from "~/assets/facebook_logo_black.png"
-import instagramLogoBlack from "~/assets/instagram_logo_black.png"
-
+/*
+import facebookLogoBlack from "/facebook_logo_black.png"
+import instagramLogoBlack from "/instagram_logo_black.png"
+*/
 
 export default {
   data: function () {
     return {
+      /*
       facebookLogoBlack:facebookLogoBlack,
       instagramLogoBlack: instagramLogoBlack,
+      */
     }
   }
 }

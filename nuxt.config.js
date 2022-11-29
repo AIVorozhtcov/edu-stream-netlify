@@ -2,11 +2,20 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: 'server',
   server: {     
-    //port: 8000, // default: 3000     
+    port: 8000, // default: 3000     
     host: '0.0.0.0', // default: localhost   
   },  
   head: {
-    title: 'austrian_language_school',
+    title: 'Edu-Stream',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=-100vw' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'my website description'
+      }
+    ],
     htmlAttrs: {
       lang: 'en'
     },
@@ -39,6 +48,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
+    'nuxt-compress',
+    '@nuxt/image',
     '@nuxt/postcss8',
     /*'@nuxtjs/google-fonts',
     {
@@ -59,7 +70,15 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/i18n',
+    'nuxt-compress',
+    '@nuxt/image'
+    
   ],
+  'nuxt-compress': {
+    brotli: {
+      threshold: 8192,
+    },
+  },
   bootstrapVue: {
     icons: true
   },

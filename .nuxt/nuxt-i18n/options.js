@@ -22,7 +22,7 @@ export const options = {
   sortRoutes: true,
   strategy: "prefix_except_default",
   lazy: false,
-  langDir: "C:\\src\\austrian_school_project\\austrian_language_school\\locales\\",
+  langDir: "C:\\src\\austrian_school_project_heroku_copy\\edu-stream\\locales\\",
   rootRedirect: null,
   detectBrowserLanguage: {"alwaysRedirect":false,"cookieAge":365,"cookieCrossOrigin":false,"cookieDomain":null,"cookieKey":"i18n_redirected","cookieSecure":false,"fallbackLocale":"","redirectOn":"root","useCookie":true},
   differentDomains: false,

@@ -13,13 +13,14 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_9953b0be from 'nuxt_plugin_plugin_9953b0be' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_bootstrapvue_54e6c11a from 'nuxt_plugin_bootstrapvue_54e6c11a' // Source: .\\bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_pluginutils_6fa1d9aa from 'nuxt_plugin_pluginutils_6fa1d9aa' // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
-import nuxt_plugin_pluginrouting_76dab716 from 'nuxt_plugin_pluginrouting_76dab716' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
-import nuxt_plugin_pluginmain_c1d6b9cc from 'nuxt_plugin_pluginmain_c1d6b9cc' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
-import nuxt_plugin_pluginclient_63ae6052 from 'nuxt_plugin_pluginclient_63ae6052' // Source: .\\content\\plugin.client.js (mode: 'client')
-import nuxt_plugin_pluginserver_33e2415f from 'nuxt_plugin_pluginserver_33e2415f' // Source: .\\content\\plugin.server.js (mode: 'server')
+import nuxt_plugin_plugin_4b35fe50 from 'nuxt_plugin_plugin_4b35fe50' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_2eedb4bc from 'nuxt_plugin_bootstrapvue_2eedb4bc' // Source: .\\bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_pluginutils_42d7d85b from 'nuxt_plugin_pluginutils_42d7d85b' // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
+import nuxt_plugin_pluginrouting_bb788a34 from 'nuxt_plugin_pluginrouting_bb788a34' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
+import nuxt_plugin_pluginmain_00bb8a49 from 'nuxt_plugin_pluginmain_00bb8a49' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
+import nuxt_plugin_pluginclient_2fcfb706 from 'nuxt_plugin_pluginclient_2fcfb706' // Source: .\\content\\plugin.client.js (mode: 'client')
+import nuxt_plugin_pluginserver_d4edaee4 from 'nuxt_plugin_pluginserver_d4edaee4' // Source: .\\content\\plugin.server.js (mode: 'server')
+import nuxt_plugin_image_91793124 from 'nuxt_plugin_image_91793124' // Source: .\\image.js (mode: 'all')
 import nuxt_plugin_vuecarousel_0d4d0f1e from 'nuxt_plugin_vuecarousel_0d4d0f1e' // Source: ..\\plugins\\vue-carousel (mode: 'client')
 
 // Component: <ClientOnly>
@@ -88,7 +89,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"austrian_language_school","htmlAttrs":{"lang":"en"},"menpm":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Montserrat:300,400,500,600,700,800,900"}],"meta":[],"style":[],"script":[]},
+    head: {"title":"Edu-Stream","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=-100vw"},{"hid":"description","name":"description","content":"my website description"}],"htmlAttrs":{"lang":"en"},"menpm":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Montserrat:300,400,500,600,700,800,900"}],"style":[],"script":[]},
 
     store,
     router,
@@ -217,32 +218,36 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_9953b0be === 'function') {
-    await nuxt_plugin_plugin_9953b0be(app.context, inject)
+  if (typeof nuxt_plugin_plugin_4b35fe50 === 'function') {
+    await nuxt_plugin_plugin_4b35fe50(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_bootstrapvue_54e6c11a === 'function') {
-    await nuxt_plugin_bootstrapvue_54e6c11a(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_2eedb4bc === 'function') {
+    await nuxt_plugin_bootstrapvue_2eedb4bc(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginutils_6fa1d9aa === 'function') {
-    await nuxt_plugin_pluginutils_6fa1d9aa(app.context, inject)
+  if (typeof nuxt_plugin_pluginutils_42d7d85b === 'function') {
+    await nuxt_plugin_pluginutils_42d7d85b(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginrouting_76dab716 === 'function') {
-    await nuxt_plugin_pluginrouting_76dab716(app.context, inject)
+  if (typeof nuxt_plugin_pluginrouting_bb788a34 === 'function') {
+    await nuxt_plugin_pluginrouting_bb788a34(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginmain_c1d6b9cc === 'function') {
-    await nuxt_plugin_pluginmain_c1d6b9cc(app.context, inject)
+  if (typeof nuxt_plugin_pluginmain_00bb8a49 === 'function') {
+    await nuxt_plugin_pluginmain_00bb8a49(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_pluginclient_63ae6052 === 'function') {
-    await nuxt_plugin_pluginclient_63ae6052(app.context, inject)
+  if (process.client && typeof nuxt_plugin_pluginclient_2fcfb706 === 'function') {
+    await nuxt_plugin_pluginclient_2fcfb706(app.context, inject)
   }
 
-  if (process.server && typeof nuxt_plugin_pluginserver_33e2415f === 'function') {
-    await nuxt_plugin_pluginserver_33e2415f(app.context, inject)
+  if (process.server && typeof nuxt_plugin_pluginserver_d4edaee4 === 'function') {
+    await nuxt_plugin_pluginserver_d4edaee4(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_image_91793124 === 'function') {
+    await nuxt_plugin_image_91793124(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_vuecarousel_0d4d0f1e === 'function') {
