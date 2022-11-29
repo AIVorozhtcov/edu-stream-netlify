@@ -62,6 +62,11 @@ export default {
     },*/
     //'@nuxtjs/eslint-module',
   ],
+  'nuxt-compress': {
+    brotli: {
+      threshold: 8192,
+    },
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -70,15 +75,15 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/i18n',
-    'nuxt-compress',
+    //'nuxt-compress',
     '@nuxt/image'
     
   ],
-  'nuxt-compress': {
+  /*'nuxt-compress': {
     brotli: {
       threshold: 8192,
     },
-  },
+  },*/
   bootstrapVue: {
     icons: true
   },
