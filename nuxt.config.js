@@ -74,9 +74,9 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxt/image',
     '@nuxtjs/i18n',
     //'nuxt-compress',
-    '@nuxt/image'
     
   ],
   /*'nuxt-compress': {
