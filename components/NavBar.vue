@@ -38,12 +38,12 @@
                 </a>
             </div>
         </div>
-        <div class="flex flex-column items-start h-16 justify-center pt-4 ml-2 bg-white self-start rounded-b-md text-navbar-sm" style="margin-bottom:3vh; width:7vw">
+        <div class="flex flex-column items-start h-16 justify-center pt-4 ml-2 bg-white self-start rounded-b-md text-navbar-sm" style="margin-bottom:3vh; width:5vw">
           <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle font-semibold flex flex-row items-center justify-start" style="margin-left:-1vw"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="dropdown-toggle font-semibold flex flex-row items-center justify-start" style="pdding-left:2vw"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <country-flag :country="$t('flag')" size='small' /> {{this.$i18n.locale.toUpperCase()}}
             </a>
-            <div class="dropdown-menu"  aria-labelledby="navbarAnchor" style="min-width: 5vw; width:7vw">
+            <div class="dropdown-menu"  aria-labelledby="navbarAnchor" style="min-width: 5vw; width:5vw">
               <nuxt-link class="text-navbar-sm flex flex-row items-center"  :to="switchLocalePath('en')"><country-flag size="small" country="gb" />EN</nuxt-link>
               <nuxt-link class="text-navbar-sm flex flex-row items-center"  :to="switchLocalePath('de')"><country-flag size="small" country="de" />DE</nuxt-link>
               <nuxt-link class="text-navbar-sm flex flex-row items-center"  :to="switchLocalePath('ru')"><country-flag size="small" country="ru" />RU</nuxt-link>

@@ -60,7 +60,7 @@
         "title":"Bitte füllen sie das Formular aus",
         "required": "Pflichtfeld",
         "name_title": "Ihren Namen",
-        "name": "Name",
+        "name": "Namen",
         "email_title": "Deine E-Mail",
         "email": "E-mail",
         "phone_title": "Telefonnummer",
@@ -74,23 +74,55 @@
         "agreement": "Durch Klicken auf die Schaltfläche stimmen Sie den Datenschutzbestimmungen zu"
 
     },
-    "FAQ":{
+    "FAQ_OIF":{
         "titles":{
-            "t_1":"Was bedeutet ÖIF?",
-            "t_2":"Warum muss ich eine Integrationsprüfung A1 ablegen?",
-            "t_3":"Warum muss ich eine Integrationsprüfung A2 ablegen?",
-            "t_4":"Warum muss ich eine Integrationsprüfung B1 ablegen?",
-            "t_5":"Wie finde ich heraus, welches Level das richtige für mich ist?",
-            "t_6":"Wo kann ich mich zur ÖIF-Prüfung anmelden?"
+            "t_1":"Was ist eine ÖIF-Prüfung?",
+            "t_2":"Was kosten mich die ÖIF-Prüfungen?",
+            "t_3":"Wie oft dürfen die Prüfungen des ÖIF wiederholt werden?",
+            "t_4":"Soll ich einen Prüfungsvorbereitungskurs machen?",
+            "t_5":"Wann habe ich Anspruch auf eine Kostenrefundierung?",
+            "t_6":"Ich habe die Prüfung nicht bestanden. Was kann ich jetzt tun?"
             
         },
         "answers":{
-            "a_1":"<br />+43 1 890 89 48<br />info@edu-stream.at<br />Rennweg 9/6, 1030 Wien<br /><br />Montag – Donnerstag: 09:00 - 17:00<br />Freitag: 09:00 - 15:00<br />Samstag & Sonntag: geschlossen",
-            "a_2":"",
-            "a_3":"",
-            "a_4":"",
-            "a_5":"",
-            "a_6":""
+            "a_1":"Die ÖIF-Prüfungen sind als offizieller Sprachkenntnisnachweis das geeignete Prüfungsformat zur beruflichen und gesellschaftlichen Integration in Österreich.",
+            "a_2":"Wenn Sie die Prüfungen bei einem zertifizierten Kursinstitut ablegen möchten, erkunden Sie sich direkt beim jeweiligen Institut nach den Preisen.",
+            "a_3":"Die Prüfungen des ÖIF können beliebig oft wiederholt werden. Die Wiederholung von einzelnen Prüfungsteilen (z.B. nur Schreiben oder nur Sprechen oder nur Werteinhalte) ist nicht zulässig. Sie dürfen allerdings sofort zu einer weiteren Prüfung antreten; es gibt keinen zeitlichen Mindestabstand zwischen den Prüfungsterminen. Bitte beachten Sie aber, dass Ihr Institut möglicherweise für jede Prüfungswiederholung eine Gebühr von Ihnen verlangt. Wenn Sie eine Prüfung direkt beim ÖIF ablegen, ist jedenfalls die Prüfungsgebühr zu entrichten.",
+            "a_4":"Wir empfehlen Ihnen, vor der Prüfung Integrations- oder Vorbereitungskurse zu machen. In den Vorbereitungskursen für die ÖIF-Prüfungen bekommen Sie wichtige Informationen über die Prüfungen, Tipps und Tricks zu den Aufgaben, Vorbereitungsmaterialien und Mustertexte.",
+            "a_5":"Wenn Sie einen zertifizierten Integrationskurs zu mindestens 75% besucht und innerhalb von 18 Monaten nach der Gutschein-Ausstellung  erfolgreich auf A2-Niveau mittels ÖIF-Prüfung (Integrationsprüfung A2 oder B1) abgeschlossen haben, erhalten Sie eine Förderung im Ausmaß von maximal 300 Unterrichtseinheiten bzw. 50 Prozent der Kurskosten, höchstens jedoch EUR 750,--.",
+            "a_6":"Sie müssen die komplette Prüfung wiederholen."
+        }
+    },
+    "FAQ_OSD":{
+        "titles":{
+            "t_1":"Was ist ein ÖSD-Zertifikat?",
+            "t_2":"Wo und wann kann ich mich zu einer Prüfung anmelden?",
+            "t_3":"Was brauche ich, um mich anzumelden?",
+            "t_4":"Wie viel muss ich für die Prüfung bezahlen?",
+            "t_5":"Wie kann ich mich vorbereiten?",
+            "t_6":"Darf ich während der Prüfung ein Wörterbuch benutzen?",
+            "t_7":"Wann erhalte ich ein Gesamtzertifikat und wann ein Modulzertifikat?",
+            "t_8":"Wie oft darf ich zu einer Prüfung antreten bzw. diese wiederholen?",
+            "t_9":"Wann und wo erhalte ich mein ÖSD-Zertifikat?",
+            "t_10":"Wie lange ist mein Zertifikat gültig?",
+            "t_11":"Mit welchem ÖSD-Zertifikat kann ich in Österreich studieren?",
+            "t_12":"Was ist der Unterschied zwischen einem ÖSD-Zertifikat und einem Goethe-Zertifikat?",
+            "t_13":"Ich habe die Prüfung nicht bestanden. Was kann ich jetzt tun?"
+        },
+        "answers":{
+            "a_1":"Das ÖSD ist ein staatlich anerkanntes Prüfungssystem für Deutsch als Fremd- und Zweitsprache. ÖSD-Zertifikate sind als anerkannter Nachweis von Deutschkenntnissen z.B. für den Erhalt der österreichischen Staatsbürgerschaft oder für den Zugang zu österreichischen Universitäten von Bedeutung.",
+            "a_2":"Die Anmeldung erfolgt direkt an dem ÖSD-Prüfungszentrum, an welchem Sie die Prüfung ablegen möchten. Dieses informiert Sie auch über die jeweilige Anmeldefrist.",
+            "a_3":"Bitte bringen Sie zur Anmeldung einen gültigen amtlichen Lichtbildausweis (z. B. Reisepass, Personalausweis etc.) mit. Detaillierte Informationen erhalten Sie am jeweiligen ÖSD-Prüfungszentrum.",
+            "a_4":"Die Prüfungsgebühr ist abhängig von der Niveaustufe, dem Land sowie dem durchführenden ÖSD-Prüfungszentrum. Für konkrete Preisangaben kontaktieren Sie bitte das ÖSD-Prüfungszentrum Ihrer Wahl.",
+            "a_5":"ÖSD-Prüfungen sind kursunabhängig, das heißt, Sie können auch zu einer Prüfung antreten, wenn Sie vorher keinen Kurs besucht haben. Auf der ÖSD-Internetseite finden Sie kostenlose Modellprüfungen, um sich mit dem Prüfungsformat vertraut zu machen. Viele ÖSD-Prüfungszentren bieten gezielte Vorbereitungskurse zu einzelnen Prüfungen an.",
+            "a_6":"SPrüfungen auf den Niveaustufen A1, A2 und B1 müssen ohne Wörterbuch abgelegt werden. Auf allen anderen Niveaustufen darf sowohl während der schriftlichen als auch während der mündlichen Prüfung ein Wörterbuch (B2: ein- oder zweisprachig, C1/C2: ausschließlich einsprachig) verwendet werden. Elektronische Wörterbücher, Sprachcomputer und Ähnliches sind hingegen bei allen Prüfungen strengstens verboten.",
+            "a_7":"Sie erhalten ein Gesamtzertifikat, wenn Sie alle Module einer Prüfung an einem Prüfungstermin ablegen und bestehen. Ein Gesamtzertifikat wird auch dann ausgestellt, wenn Sie alle Module einer Prüfung innerhalb eines Jahres an demselben Prüfungszentrum bestanden haben. Bei Bestehen einzelner Module wird pro Modul ein Modulzertifikat ausgestellt. Für nicht bestandene Prüfungen bzw. Prüfungsmodule erhalten Sie kein Zertifikat.",
+            "a_8":"Sie können jede Prüfung bzw. jedes Prüfungsmodul beliebig oft ablegen. Bei Prüfungen mit zwei Modulen kann das Modul Schriftliche Prüfung (Lesen, Hören, Schreiben) nur als Ganzes wiederholt werden. Sollten Sie eine Prüfung nicht bestehen, empfiehlt das ÖSD, frühestens vier Wochen nach dem jeweiligen Prüfungstermin wieder zur Prüfung anzutreten.",
+            "a_9":"Ihr Prüfungszentrum gibt Ihnen Auskunft darüber, wann und wo Sie Ihr ÖSD-Zertifikat erhalten.",
+            "a_10":"Grundsätzlich sind ÖSD-Zertifikate unbefristet gültig. Behörden verlangen jedoch gelegentlich die Vorlage von Zertifikaten, die z. B. nicht älter als zwei Jahre sind.",
+            "a_11":"ÖSD-Zertifikate werden als Nachweis Ihrer Sprachkenntnisse von allen österreichischen und vielen deutschen Universitäten akzeptiert. Das geforderte Sprachniveau (B2, C1, C2) hängt von der jeweiligen Universität sowie vom gewählten Studienfach ab. Welches Zertifikat Sie für Ihr Wunschstudium benötigen, erfahren Sie bei der Zulassungsstelle Ihrer Universität.",
+            "a_12":"Mit einem ÖSD-Zertifikat hat man die gleiche Qualifikation wie mit dem Goethe-Zertifikat. Die Prüfungen können an den Prüfungszentren des Vereins Österreichisches Sprachdiplom Deutsch abgelegt werden.",
+            "a_13":"Wenn Sie nur einen Teil der Prüfung (schriftlich oder mündlich) nicht bestanden haben, müssen Sie nur diesen Teil wiederholen (schriftlicher Teil: Lesen, Hören, Schreiben, mündlicher Teil: Sprechen). Wenn Sie beide Teile der Prüfung nicht bestanden haben, müssen Sie die komplette Prüfung wiederholen."
         }
     },
     "about_us":{

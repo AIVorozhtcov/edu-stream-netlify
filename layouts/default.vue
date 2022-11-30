@@ -33,7 +33,7 @@ export default {
   },
   methods: {  
     isMobile() {
-      if (process.browser){
+      if (process.client){
         if (screen.width <= 760) {
           this.$store.commit("setIsMobile", true)
         } else {

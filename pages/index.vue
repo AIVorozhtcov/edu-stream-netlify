@@ -1,5 +1,5 @@
-<template>
-  <div class="flex flex-column" style="">
+<template >
+  <div class="flex flex-column"  style="">
     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-global-margins' : 'ignore-global-margins', 'relative flex h-fit']">   
         <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-welcome-content mobile-welcome-content-background w-full pl-5' : 'welcome-content', 'absolute flex flex-column']">       
           <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive ml-5 font-bold' : 'welcome-text font-extrabold', 'h-fit text-white']" v-html="$t('main.image_text')"></div>
@@ -19,7 +19,7 @@
     
     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-global-margins flex flex-column' : 'ignore-global-margins flex flex-row', 'relative flex h-fit justify-evenly h-3/4 ']">
       <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex w-full flex-column items-start text-white']"   style="padding-top:5%; padding-bottom:5%;background-color:#FF7C33; width:20%"></div>
-      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#FF7C33;">
+      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-2', ' text-white']"  style="background-color:#FF7C33;">
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
         src="/color_tabs_icon_1.svg"
@@ -29,7 +29,7 @@
 />       
         <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_1')"></div>
       </div>
-      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#96BDFF;">
+      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-2', ' text-white']"  style="background-color:#96BDFF;">
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
         src="/color_tabs_icon_2.svg"
@@ -38,7 +38,7 @@
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_2')"></div>
       </div>
-      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#4385F5;">
+      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-2', ' text-white']"  style="background-color:#4385F5;">
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
         src="/color_tabs_icon_3.svg"
@@ -48,7 +48,7 @@
 />       
        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_3')"></div>
       </div>
-      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-1', ' text-white']"  style="background-color:#253984;">
+      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-2', ' text-white']"  style="background-color:#253984;">
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
         src="/color_tabs_icon_4.svg"

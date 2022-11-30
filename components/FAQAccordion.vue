@@ -30,28 +30,28 @@ export default {
       rpthis: this.$store,
       Questions: [
         {
-          questionTitle: this.$t('FAQ.titles.t_1'),
-          questionAnswer: this.$t('FAQ.answers.a_1')
+          questionTitle: this.$t('FAQ_OIF.titles.t_1'),
+          questionAnswer: this.$t('FAQ_OIF.answers.a_1')
         },
         {
-          questionTitle: this.$t('FAQ.titles.t_2'),
-          questionAnswer: this.$t('FAQ.answers.a_2')
+          questionTitle: this.$t('FAQ_OIF.titles.t_2'),
+          questionAnswer: this.$t('FAQ_OIF.answers.a_2')
         },
         {
-          questionTitle: this.$t('FAQ.titles.t_3'),
-          questionAnswer: this.$t('FAQ.answers.a_3')
+          questionTitle: this.$t('FAQ_OIF.titles.t_3'),
+          questionAnswer: this.$t('FAQ_OIF.answers.a_3')
         },
         {
-          questionTitle: this.$t('FAQ.titles.t_4'),
-          questionAnswer: this.$t('FAQ.answers.a_4')
+          questionTitle: this.$t('FAQ_OIF.titles.t_4'),
+          questionAnswer: this.$t('FAQ_OIF.answers.a_4')
         },
         {
-          questionTitle: this.$t('FAQ.titles.t_5'),
-          questionAnswer: this.$t('FAQ.answers.a_5')
+          questionTitle: this.$t('FAQ_OIF.titles.t_5'),
+          questionAnswer: this.$t('FAQ_OIF.answers.a_5')
         },
         {
-          questionTitle: this.$t('FAQ.titles.t_6'),
-          questionAnswer: this.$t('FAQ.answers.a_6')
+          questionTitle: this.$t('FAQ_OIF.titles.t_6'),
+          questionAnswer: this.$t('FAQ_OIF.answers.a_6')
         }
       ]
     }

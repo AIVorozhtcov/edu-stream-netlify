@@ -74,23 +74,56 @@
         "agreement": "By clicking the button, you consent to the processing of personal data"
 
     },
-    "FAQ":{
+    "FAQ_OIF":{
         "titles":{
-            "t_1":"What does ÖIF mean?",
-            "t_2":"Why do I need to take an integration exam A1?",
-            "t_3":"Why do I need to take an integration exam A2?",
-            "t_4":"Why do I need to take an integration exam B1?",
-            "t_5":"How do I determine which level is right for me? ",
-            "t_6":"Where can I register for the ÖIF exam?"
+            "t_1":"What is an ÖIF exam?",
+            "t_2":"How much does it cost to take the ÖIF exams?",
+            "t_3":"How often may the ÖIF exams be repeated?",
+            "t_4":"Should I take an exam preparation course?",
+            "t_5":"When am I entitled to a cost refund?",
+            "t_6":"I did not pass the exam. What can I do now?"
             
         },
         "answers":{
-            "a_1":"There are no answers here yet <br /> This is just a sample",
-            "a_2":"<br />+43 1 890 89 48<br />info@edu-stream.at<br />Rennweg 9/6, 1030 Vienna<br /><br />Monday – Thursday: 09:00 - 17:00 00<br />Friday: 09:00 - 15:00<br />Saturday & Sunday: closed",
-            "a_3":"There are no answers here yet <br /> This is just a sample",
-            "a_4":"There are no answers here yet <br /> This is just a sample",
-            "a_5":"There are no answers here yet <br /> This is just a sample",
-            "a_6":"There are no answers here yet <br /> This is just a sample"
+            "a_1":"As an official proof of language proficiency, the ÖIF exams are the appropriate exam format for professional and social integration in Austria. ",
+            "a_2":"If you would like to take the exams at a certified course institute, inquire directly with the respective institute about prices.",
+            "a_3":"The ÖIF exams can be repeated as often as you wish. It is not permitted to repeat single parts of the exam (e.g. only writing or only speaking or only values content). However, you may take another exam immediately; there is no minimum interval between exam dates. Please note, however, that your institute may charge you a fee for each exam retake. If you take an exam directly at the ÖIF, you will have to pay the exam fee in any case.",
+            "a_4":"We recommend you to take integration or preparation courses before the exam. In the preparation courses for the ÖIF exams you will receive important information about the exams, tips and tricks for the tasks, preparation materials and sample texts.",
+            "a_5":"If you have attended at least 75% of a certified integration course and have successfully completed the course at the A2 level within 18 months of the voucher being issued by passing the ÖIF exam (integration exam A2 or B1), you will receive funding for a maximum of 300 teaching units or 50 percent of the course costs, up to a maximum of EUR 750.  ",
+            "a_6":"You have to repeat the entire exam."
+        }
+    },
+    "FAQ_OSD":{
+        "titles":{
+            "t_1":"What is an ÖSD certificate?",
+            "t_2":"Where and when can I register for an exam?",
+            "t_3":"What do I need to register for an exam?",
+            "t_4":"How much does the exam cost?",
+            "t_5":"How can I prepare for the exam?",
+            "t_6":"Am I allowed to use a dictionary during the exam?",
+            "t_7":"When do I receive my module completion certificates?",
+            "t_8":"How often can I take or repeat an exam?",
+            "t_9":"Where and when do I get my ÖSD certificate?",
+            "t_10":"How long is my certificate valid for?",
+            "t_11":"Which ÖSD certificate do I need to study in Austria?",
+            "t_12":"What is the difference between the ÖSD certificate and the Goethe certificate?",
+            "t_13":"I did not pass the exam. What can I do now?"
+        }, 
+        
+        "answers":{
+            "a_1":"The ÖSD is a state-recognised examination system for German as a foreign and second language. ÖSD certificates are important as recognised proof of German language skills, e.g. for obtaining Austrian citizenship or for access to Austrian universities.",
+            "a_2":"Simply choose an exam centre and register with them directly to receive all information pertaining to the exam and registration period.",
+            "a_3":"A valid identity document (passport, identity card, etc.) is required for registration. For further information, please contact your respective ÖSD exam centre.",
+            "a_4":"Exam fees vary, depending upon the level of the exam, the country where you wish to take the exam and the exam centre. Please contact your exam centre directly to find out about individual fees.",
+            "a_5":"Free sample tests are available on the ÖSD internet site to familiarise yourself with the exam format, before taking the actual exam. Many of ÖSD exam centres also offer exam preparation courses. However, candidates do not need to attend a preparation course in order to take an ÖSD exam. For further information regarding preparation courses, please contact your exam centre directly.",
+            "a_6":"Dictionaries are not allowed for the A1, A2 and B1 exam levels. A monolingual or bilingual dictionary is allowed for the B2 exam. For the C1 and C2 exams, a monolingual dictionary (to prepare for both the written and oral parts of the exam) is allowed. Electronic dictionaries, computers with voice synthesizers or similar devices are strictly forbidden.",
+            "a_7":"A full completion certificate is issued once all modules of an exam are passed, whether it is done on the same date or over the course of one year (if taken at the same exam centre). When only an individual module is passed, a certificate for each successfully completed module is issued. There are no certificates for failed exams and modules.",
+            "a_8":"You can take each exam or module any number of times. For exams with two modules, the written component (reading, listening, writing) must be repeated as a whole. In the case of a failed exam, we recommend a minimum of four weeks before retaking the exam.",
+            "a_9":"Your exam centre will provide all information regarding your ÖSD certificate.",
+            "a_10":"In principle, ÖSD certificates are valid for an unlimited period of time. However, authorities sometimes demand certificates that are no more than two years old.",
+            "a_11":"ÖSD certificates are recognized as proof of German language competence by all Austrian and many German universities. The level required (B2, C1, C2) depends on the respective university, as well as the study program you choose. Your university admissions office is the best point of contact for the level of certification required.",
+            "a_12":"With an ÖSD certificate you have the same qualification as with the Goethe certificate. The exams can be taken at the examination centres of the Verein Österreichisches Sprachdiplom Deutsch.",
+            "a_13":"If you only failed one part of the exam (written or oral), you only have to repeat this part (written part: reading, listening, writing, oral part: speaking). If you have failed both parts of the exam, you have to repeat the entire exam."
         }
     },
     "about_us":{
