@@ -47,7 +47,7 @@
           <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">160€</p>
           <a 
           class="px-4 pt-3 pb-3"
-          href="https://buy.stripe.com/14keXO9WJ25pgzCeUU"
+          href="https://buy.stripe.com/cN2dTKd8V9xR0AEfZ0"
           target="_blank" style="text-decoration:none">
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 124, 51, 1)">
               <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
@@ -88,7 +88,7 @@
           <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">160€</p>
           <a 
           class="px-4 pt-3 pb-3"
-          href="https://buy.stripe.com/14keXO9WJ25pgzCeUU"
+          href="https://buy.stripe.com/cN2dTKd8V9xR0AEfZ0"
           target="_blank" style="text-decoration:none">
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" class="rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)">
               <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
