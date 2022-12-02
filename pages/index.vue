@@ -9,7 +9,7 @@
         </div>
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'h-1/2 w-full' : 'w-full h-3/4']"
-        :src="this.$store.getters['getIsMobile'] ? '/mobile_frontpage_welcome.webp' : '/frontpage_welcome.webp'"
+        :src="this.$store.getters['getIsMobile'] ? '/mobile_frontpage_welcome.png' : '/frontpage_welcome.png'"
         format="webp"
   alt="Welcome to Edu-stream!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -133,35 +133,35 @@
     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-banners-border' : 'border-b', 'py-16 flex flex-row justify-around']">
       <nuxt-img
       class="h-auto w-1/5"
-      src="/banner_row_1.webp"
+      src="/banner_row_1.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       
 <nuxt-img
       class="h-auto w-1/5"
-      src="/banner_row_2.webp"
+      src="/banner_row_2.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       
 <nuxt-img
       class="h-auto w-1/5"
-      src="/banner_row_3.webp"
+      src="/banner_row_3.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       
 <nuxt-img
       class="h-auto w-1/5"
-      src="/banner_row_4.webp"
+      src="/banner_row_4.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       
 <nuxt-img
       class="h-auto w-1/5"
-      src="/banner_row_5.webp"
+      src="/banner_row_5.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -173,7 +173,7 @@
             <button @click.prevent="prevBanner" class="">
               <nuxt-img
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'w-2/12']"
-      src="/banner_arrow_left.webp"
+      src="/banner_arrow_left.png"
       style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
         format="webp"
   alt="Welcome to german courses!"
@@ -186,7 +186,7 @@
             <slide class="w-1/2 mr-2 rounded">
               <nuxt-img
               :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']"
-              :src="this.$store.getters['getIsMobile'] ? '/mobile_promo_banner_1_group.webp' : '/promo_banner_1_group.webp'"
+              :src="this.$store.getters['getIsMobile'] ? '/mobile_promo_banner_1_group.png' : '/promo_banner_1_group.png'"
       style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
         format="webp"
   alt="Welcome to german courses!"
@@ -196,7 +196,7 @@
             <slide class="w-1/2 mr-2 rounded">
               <nuxt-img
               :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']"
-              :src="this.$store.getters['getIsMobile'] ? '/mobile_promo_banner_1_group.webp' : '/promo_banner_1_group.webp'"
+              :src="this.$store.getters['getIsMobile'] ? '/mobile_promo_banner_1_group.png' : '/promo_banner_1_group.png'"
       style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
         format="webp"
   alt="Welcome to german courses!"
@@ -206,7 +206,7 @@
             <slide class="w-1/2 rounded">
               <nuxt-img
               :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']"
-              :src="this.$store.getters['getIsMobile'] ? '/mobile_promo_banner_1_group.webp' : '/promo_banner_1_group.webp'"
+              :src="this.$store.getters['getIsMobile'] ? '/mobile_promo_banner_1_group.png' : '/promo_banner_1_group.png'"
       style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
         format="webp"
   alt="Welcome to german courses!"
@@ -221,7 +221,7 @@
               <nuxt-img
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'w-4/12']"
               style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
-              src="/banner_arrow_right.webp"
+              src="/banner_arrow_right.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -241,7 +241,7 @@
           <slide class="w-1/2 mr-2 rounded">
             <nuxt-img
             :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
-              src="/promo_banner_1_group.webp"
+              src="/promo_banner_1_group.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -250,7 +250,7 @@
           <slide class="w-1/2 mr-2 rounded">
             <nuxt-img
             :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
-              src="/promo_banner_1_group.webp"
+              src="/promo_banner_1_group.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -259,7 +259,7 @@
           <slide class="w-1/2 mr-2 rounded">
             <nuxt-img
             :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
-              src="/promo_banner_1_group.webp"
+              src="/promo_banner_1_group.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -268,7 +268,7 @@
           <slide class="w-1/2 mr-2 rounded">
             <nuxt-img
             :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
-              src="/promo_banner_1_group.webp"
+              src="/promo_banner_1_group.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -277,7 +277,7 @@
           <slide class="w-1/2 rounded">
             <nuxt-img
             :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
-              src="/promo_banner_1_group.webp"
+              src="/promo_banner_1_group.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -313,7 +313,7 @@
         </div>
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : 'w-5/12 h-auto']"
-        src="/location_photo.webp"
+        src="/location_photo.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -350,7 +350,7 @@
           <carousel ref="logoGallery" :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full justify-between']" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="true" :adjustableHeight="false" :perPage="3" :scrollPerPage="true" :spacePadding="40" >
             <slide class="w-full">
               <nuxt-img
-              src="/logo_gallery/1.webp"
+              src="/logo_gallery/1.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -358,7 +358,7 @@
             </slide>
             <slide class="w-full">
             <nuxt-img
-              src="/logo_gallery/2.webp"
+              src="/logo_gallery/2.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -366,7 +366,7 @@
             </slide>
             <slide class="w-1/2">
             <nuxt-img
-              src="/logo_gallery/3.webp"
+              src="/logo_gallery/3.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -374,7 +374,7 @@
             </slide>
             <slide class="w-1/2">
             <nuxt-img
-              src="/logo_gallery/4.webp"
+              src="/logo_gallery/4.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -382,7 +382,7 @@
             </slide>
             <slide class="w-1/2">
             <nuxt-img
-              src="/logo_gallery/5.webp"
+              src="/logo_gallery/5.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -390,7 +390,7 @@
             </slide>
             <slide class="w-1/2">
             <nuxt-img
-              src="/logo_gallery/6.webp"
+              src="/logo_gallery/6.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -398,7 +398,7 @@
             </slide>
             <slide class="w-1/2">
             <nuxt-img
-              src="/logo_gallery/7.webp"
+              src="/logo_gallery/7.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -406,7 +406,7 @@
             </slide>
             <slide class="w-1/2">
             <nuxt-img
-              src="/logo_gallery/8.webp"
+              src="/logo_gallery/8.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -414,7 +414,7 @@
             </slide>
             <slide class="w-1/2">
             <nuxt-img
-              src="/logo_gallery/9.webp"
+              src="/logo_gallery/9.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -422,7 +422,7 @@
             </slide>
             <slide class="w-1/2">
               <nuxt-img
-              src="/logo_gallery/10.webp"
+              src="/logo_gallery/10.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -430,7 +430,7 @@
             </slide>
             <slide class="w-1/2">
               <nuxt-img
-              src="/logo_gallery/11.webp"
+              src="/logo_gallery/11.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -438,7 +438,7 @@
             </slide>
             <slide class="w-1/2">
               <nuxt-img
-              src="/logo_gallery/12.webp"
+              src="/logo_gallery/12.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -446,7 +446,7 @@
             </slide>
             <slide class="w-1/2">
               <nuxt-img
-              src="/logo_gallery/13.webp"
+              src="/logo_gallery/13.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -454,7 +454,7 @@
             </slide>
             <slide class="w-1/2">
               <nuxt-img
-              src="/logo_gallery/14.webp"
+              src="/logo_gallery/14.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"

@@ -11,7 +11,7 @@
         </div>
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-welcome-image' : 'w-full h-3/4']" 
-        :src="this.$store.getters['getIsMobile'] ? '/osd_welcome.webp' : '/osd_welcome.webp'"
+        :src="this.$store.getters['getIsMobile'] ? '/osd_welcome.png' : '/osd_welcome.png'"
         format="webp"
   alt="Welcome to OSD exam!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -106,7 +106,7 @@
       
       <nuxt-img
         class="w-full relative"
-        src="/overlapping_student_group.webp"
+        src="/overlapping_student_group.png"
         format="webp"
   alt="A happy student of our language school!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"

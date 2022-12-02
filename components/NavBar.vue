@@ -5,7 +5,7 @@
       <div class="w-22 h-22 mb-3" style="">
         <nuxt-link :to="localePath('/')">  
           <nuxt-img
-          src="/edu-stream_logo.webp"
+          src="/edu-stream_logo.png"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"

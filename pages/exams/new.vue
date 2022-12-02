@@ -7,7 +7,7 @@
         </div>
         <nuxt-img
         class="w-full h-3/4"
-        src="/italian_courses_welcome.webp"
+        src="/italian_courses_welcome.png"
         format="webp"
   alt="Welcome to italian courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
