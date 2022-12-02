@@ -91,7 +91,7 @@
           </div>
          </nuxt-link> 
          <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-margin']"></div>  
-         <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('#')">  
+         <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/courses/italian')">  
           <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start courses-tab-color']" >
             <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1 courses-title-color', 'font-bold']">{{$t('main.courses_and_exams.courses.titles.t_3')}}</h1>
             <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-tab-margin']" ></div>
@@ -100,27 +100,27 @@
          </nuxt-link>   
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column justify-start items-center' : 'flex flex-row justify-between items-start', 'w-full pt-8 overflow-hidden']">
-        <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/oif')">  
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start exams-tab-color']" >
-            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1', 'font-bold']">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
+        <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/')">  
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start courses-tab-color']" >
+            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1', 'font-bold']">{{$t('main.courses_and_exams.courses.titles.t_4')}}</h1>
             <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-tab-margin']" ></div>
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-text pt-2' : 'courses-exams-text', 'courses-exams-p-padding']">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
+            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-text pt-2' : 'courses-exams-text', 'courses-exams-p-padding']">{{$t('main.courses_and_exams.courses.bodies.b_4')}}</p>
           </div>
          </nuxt-link>
          <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-margin']"></div>  
          <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/osd')">  
           <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start exams-tab-color']" >
-            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1', 'font-bold']">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
+            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1', 'font-bold']">{{$t('main.courses_and_exams.exams.titles.t_1')}}</h1>
             <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-tab-margin']" ></div>
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-text pt-2' : 'courses-exams-text', 'courses-exams-p-padding']">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
+            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-text pt-2' : 'courses-exams-text', 'courses-exams-p-padding']">{{$t('main.courses_and_exams.exams.bodies.b_1')}}</p>
           </div>
          </nuxt-link> 
          <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-margin']"></div>  
-         <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('#')">  
+         <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/oif')">  
           <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start exams-tab-color']" >
-            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1', 'font-bold']">{{$t('main.courses_and_exams.exams.titles.t_3')}}</h1>
+            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1', 'font-bold']">{{$t('main.courses_and_exams.exams.titles.t_2')}}</h1>
             <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-tab-margin']" ></div>
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-text pt-2' : 'courses-exams-text', 'courses-exams-p-padding']">{{$t('main.courses_and_exams.exams.bodies.b_3')}}</p>
+            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-text pt-2' : 'courses-exams-text', 'courses-exams-p-padding']">{{$t('main.courses_and_exams.exams.bodies.b_2')}}</p>
           </div>
          </nuxt-link>   
       </div>

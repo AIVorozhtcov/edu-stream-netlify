@@ -2,11 +2,12 @@
 <template>
   <div>
     <div class="edu-color h-20 flex flex-row justify-between items-center" style="padding-left: 20%; padding-right: 20%;">
-      <div class="w-22 h-22 mb-3" style="">
+      <div class="w-22 h-22 mb-3" >
         <nuxt-link :to="localePath('/')">  
           <nuxt-img
           src="/edu-stream_logo.png"
         format="webp"
+        style="height:5rem; width:auto"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />        
