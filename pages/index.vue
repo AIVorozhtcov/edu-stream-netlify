@@ -753,6 +753,7 @@ export default {
   background-color:rgba(239, 239, 239, 1);
 }
 .same-size-columns{
+  width:18vw;
   padding-bottom: 100%;
   margin-bottom: -100%;
 }
@@ -770,7 +771,7 @@ export default {
   padding-top:7%;
   padding-left:7%;  
   padding-right:3%;
-  font-size: calc(3px + 1.26625vw);
+  font-size: calc(3px + 1.06625vw);
 }
 .mobile-courses-exams-h1{
   padding-top:7%;
