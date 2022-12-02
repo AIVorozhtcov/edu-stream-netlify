@@ -7,7 +7,7 @@
             <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-button-text' : 'button-text', 'text-black']" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
-        <nuxt-img
+        <nuxt-picture
         :class="[this.$store.getters['getIsMobile'] ? 'h-1/2 w-full' : 'w-full h-3/4']"
         :src="this.$store.getters['getIsMobile'] ? '/mobile_frontpage_welcome.png' : '/frontpage_welcome.png'"
         format="webp"

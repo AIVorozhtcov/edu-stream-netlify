@@ -50,7 +50,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     'nuxt-compress',
-    //'@nuxt/image',
+    '@nuxt/image',
     '@nuxt/postcss8',
     
     /*'@nuxtjs/google-fonts',
