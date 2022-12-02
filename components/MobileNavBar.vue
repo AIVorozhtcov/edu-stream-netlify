@@ -5,7 +5,7 @@
       <b-button class="pl-5" v-b-toggle.sidebar-2>
         <nuxt-img
         style="height:3vh; width:auto;"
-        :src="isMobileSidebarOpen ? '/mobile_close_navbar_icon.png' : '/hamburger_icon.png'"
+        :src="isMobileSidebarOpen ? '/mobile_close_navbar_icon.webp' : '/hamburger_icon.webp'"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -58,7 +58,7 @@
           <a href="https://www.facebook.com/edustream.vienna" target="_blank">
             <nuxt-img
             style="width: 8vw; height: auto" 
-            src="/facebook_color_logo.png"
+            src="/facebook_color_logo.webp"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -67,7 +67,7 @@
                 <a href="https://www.instagram.com/edustream.at" style="margin-left:0.5vw" target="_blank">
                   <nuxt-img
                   style="width: 8vw; height: auto; margin-left:4vw" 
-                  src="/instagram_color_logo.png" 
+                  src="/instagram_color_logo.webp" 
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -121,7 +121,7 @@
         <nuxt-link :to="localePath('/')">  
           <nuxt-img
           style="height:8vh; width:auto; max-width:100vw"
-          src="/edu-stream_logo_mobile.png"
+          src="/edu-stream_logo_mobile.webp"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"

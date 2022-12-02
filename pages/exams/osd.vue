@@ -11,7 +11,7 @@
         </div>
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-welcome-image' : 'w-full h-3/4']" 
-        :src="this.$store.getters['getIsMobile'] ? '/osd_welcome.png' : '/osd_welcome.png'"
+        :src="this.$store.getters['getIsMobile'] ? '/osd_welcome.webp' : '/osd_welcome.webp'"
         format="webp"
   alt="Welcome to OSD exam!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -39,7 +39,7 @@
           <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : '', 'px-4 font-bold py-1']">160€</p>
           <a 
           class="px-4 pt-3 pb-3"
-          href="https://checkout.stripe.com/c/pay/cs_live_a18PAktLRCExf4QbCUahRYb2YzgjJYrWSZhmctnue81qkIPRJWEwkivg4y#fidkdWxOYHwnPyd1blppbHNgWjA0TnZVUn1AV19LRjZhVUtWf0JsbTBiV2g9VWxuZmo1MjRqXHNsd2pOalVCN0Rhan1mVzZ2VjVfREFjQ1Z3V20wQT1GfTZUcjdTNjJSajZ1XXFpT2xuQVFANTVGa3ZjbXB1aicpJ2hsYXYnP34nYnBsYSc%2FJ0tEJyknaHBsYSc%2FJ0tEJykndmxhJz8nS0QneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%2FJ21xcXV2PyoqYGFwKHZxd2BkaCtkcSd4JSUl"
+          href="https://buy.stripe.com/14keXO9WJ25pgzCeUU"
           target="_blank" style="text-decoration:none">
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 124, 51, 1)">
               <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
@@ -68,7 +68,7 @@
           <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : '', 'px-4 font-bold py-1']">160€</p>
           <a 
           class="px-4 pt-3 pb-3"
-          href="https://checkout.stripe.com/c/pay/cs_live_a18PAktLRCExf4QbCUahRYb2YzgjJYrWSZhmctnue81qkIPRJWEwkivg4y#fidkdWxOYHwnPyd1blppbHNgWjA0TnZVUn1AV19LRjZhVUtWf0JsbTBiV2g9VWxuZmo1MjRqXHNsd2pOalVCN0Rhan1mVzZ2VjVfREFjQ1Z3V20wQT1GfTZUcjdTNjJSajZ1XXFpT2xuQVFANTVGa3ZjbXB1aicpJ2hsYXYnP34nYnBsYSc%2FJ0tEJyknaHBsYSc%2FJ0tEJykndmxhJz8nS0QneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%2FJ21xcXV2PyoqYGFwKHZxd2BkaCtkcSd4JSUl"
+          href="https://buy.stripe.com/14keXO9WJ25pgzCeUU"
           target="_blank" style="text-decoration:none">
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" class="rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)">
               <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
@@ -106,7 +106,7 @@
       
       <nuxt-img
         class="w-full relative"
-        src="/overlapping_student_group.png"
+        src="/overlapping_student_group.webp"
         format="webp"
   alt="A happy student of our language school!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"

@@ -11,7 +11,7 @@
         </div>
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-welcome-image' : 'w-full h-3/4']" 
-        :src="this.$store.getters['getIsMobile'] ? '/english_courses_welcome.png' : '/english_courses_welcome.png'"
+        :src="this.$store.getters['getIsMobile'] ? '/english_courses_welcome.webp' : '/english_courses_welcome.webp'"
         format="webp"
   alt="Welcome to english courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"

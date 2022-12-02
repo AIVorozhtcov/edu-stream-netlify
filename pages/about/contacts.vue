@@ -16,7 +16,7 @@
               <nuxt-img
               :class="[this.$store.getters['getIsMobile'] ? 'mobile-social-icon' : 'social-icon']"
               style="color: rgba(255, 0, 1, 1);"
-              src="/facebook_logo_black.png" 
+              src="/facebook_logo_black.webp" 
         format="webp"
   alt="Edu-stream language school facebook"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
@@ -25,7 +25,7 @@
             <a href="https://www.instagram.com/edustream.at" target="_blank">
               <nuxt-img
               :class="[this.$store.getters['getIsMobile'] ? 'mobile-social-icon' : 'social-icon']"
-              src="/instagram_logo_black.png" 
+              src="/instagram_logo_black.webp" 
         format="webp"
   alt="Edu-stream language school instagram"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"

@@ -5,7 +5,7 @@
                 <div class="w-1/6">
                     <nuxt-link to="/">  
                         <nuxt-img
-                        src="/edu-stream_logo.png"
+                        src="/edu-stream_logo.webp"
         format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
