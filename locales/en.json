@@ -32,27 +32,27 @@
             "self":"Courses and exams",
             "courses":{
                 "titles":{
-                    "t_1":"German Language Courses",
-                    "t_2":"English Language Courses",
+                    "t_1":"German courses",
+                    "t_2":"English courses",
                     "t_3":"Italian courses",
-                    "t_4":"Online-Language Courses"
+                    "t_4":"Online courses"
                 },
                 "bodies":{
-                    "b_1":"There are 13 course levels for beginners and advanced learners (language levels A1, A2, B1, B2, C1, C2). Take the free placement test now to test your German language level.",
-                    "b_2":"IKI offers year-round German courses for adults and young people from the age of 16 in a central location in Vienna. Beginners and advanced students can choose between group courses and individual lessons.",
+                    "b_1":"We support you in learning German from level A1 to C1. Intensive and evening courses, flexible schedules. Preparation courses for ÖIF, ÖSD and EPD exams.",
+                    "b_2":"Learn English with us and achieve your goals! Exam preparation for IELTS, TOEFL and Cambridge ESOL exams. ",
                     "b_3":"We have launched Italian courses. Our teachers are native speakers and they will support you in learning Italian.",
                     "b_4": "Learn English or German wherever and whenever you want. Effective learning methods for all levels!"
                 }
             },
             "exams":{
                 "titles":{
-                    "t_1":"ÖSD",
-                    "t_2":"ÖIF",
+                    "t_1":"ÖSD exams",
+                    "t_2":"ÖIF exams",
                     "t_3":"New exam"
                 },
                 "bodies":{
-                    "b_1":"There are 13 course levels for beginners and advanced learners (language levels A1, A2, B1, B2, C1, C2). Take the free placement test now to test your German language level.",
-                    "b_2":"IKI offers year-round German courses for adults and young people from the age of 16 in a central location in Vienna. Beginners and advanced students can choose between group courses and individual lessons.",
+                    "b_1":"Take the international ÖSD exam at EduStream in the centre of Vienna. The ÖSD is an internationally recognised exam to confirm your knowledge of German.",
+                    "b_2":"Take the ÖIF integration exam at EduStream in the centre of Vienna. The exam is required to obtain a residence permit in Austria, apply for citizenship, apply to universities or jobs.",
                     "b_3":"IKI offers year-round German courses for adults and young people from the age of 16 in a central location in Vienna. Beginners and advanced students can choose between group courses and individual lessons."
                 }
             }

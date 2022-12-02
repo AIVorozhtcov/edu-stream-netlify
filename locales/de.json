@@ -32,27 +32,27 @@
             "self":"Kurse und Prüfungen",
             "courses":{
                 "titles":{
-                    "t_1":"Deutsch lernen",
-                    "t_2":"Englisch lernen",
+                    "t_1":"Deutschkurse",
+                    "t_2":"Englischkurse",
                     "t_3":"Italienischkurse",
-                    "t_4":"Online courses"
+                    "t_4":"Online-Kurse"
                 },
                 "bodies":{
-                    "b_1":"Es gibt für Anfänger und Fortgeschrittene 13 Kursstufen (Sprachlevel A1, A2, B1, B2, C1, C2). Mach jetzt den kostenlosen Einstufungstest, um dein Sprachniveau in Deutsch zu testen.",
-                    "b_2":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen.",
+                    "b_1":"Wir unterstützen Sie beim Deutschlernen vom Niveau A1 bis C1. Intensiv- und Abendkurse, flexible Unterrichtszeiten. Vorbereitungskurse für ÖIF-, ÖSD- und EPD-Prüfungen.",
+                    "b_2":"Lernen Sie Englisch mit uns und erreichen Sie Ihre Ziele! Prüfungsvorbereitung für IELTS, TOEFL und Cambridge ESOL Prüfungen.",
                     "b_3":"Wir haben Italienischkurse eingeführt. Unsere erfahrene Lehrende sind MuttersprachlerInnen und sie unterstützen Sie beim Italienischlernen.",
                     "b_4": "Lernen Sie Englisch oder Deutsch, wo und wann immer Sie möchten. Effektive Lernmethoden für alle Niveaus!"
                 }
             },
             "exams":{
                 "titles":{
-                    "t_1":"ÖSD",
-                    "t_2":"ÖIF",
+                    "t_1":"ÖSD-Prüfungen",
+                    "t_2":"ÖIF-Prüfungen",
                     "t_3":"Neue Prüfung"
                 },
                 "bodies":{
-                    "b_1":"Es gibt für Anfänger und Fortgeschrittene 13 Kursstufen (Sprachlevel A1, A2, B1, B2, C1, C2). Mach jetzt den kostenlosen Einstufungstest, um dein Sprachniveau in Deutsch zu testen.",
-                    "b_2":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen.",
+                    "b_1":"Legen Sie die internationale ÖSD-Prüfung bei EduStream im Zentrum von Wien ab. Das ÖSD ist eine international anerkannte Prüfung zur Bestätigung Ihrer Deutschkenntnisse.",
+                    "b_2":"Legen Sie die ÖIF-Integrationsprüfung bei EduStream im Zentrum von Wien ab. Die Prüfung ist erforderlich, um eine Aufenthaltsgenehmigung in Österreich zu erhalten, die Staatsbürgerschaft zu beantragen, sich an Universitäten oder Arbeitsstellen zu bewerben.",
                     "b_3":"IKI bietet ganzjährig Deutschkurse für Erwachsene und Jugendliche ab 16 Jahren in zentraler Lage in Wien. Anfänger und Fortgeschrittene können zwischen Gruppenkursen und Einzelunterricht wählen."
                 }
             }
