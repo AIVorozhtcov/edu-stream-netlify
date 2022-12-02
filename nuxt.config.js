@@ -1,6 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'server',
+  target: 'static',
   
   //server: {     
     //port: 8000, // default: 3000     
@@ -64,11 +64,11 @@ export default {
     },*/
     //'@nuxtjs/eslint-module',
   ],
-  /*'@nuxt/image':{
+  '@nuxt/image':{
     image: {
       dir: '/_ipx'
     },
-  },*/
+  },
   'nuxt-compress': {
     brotli: {
       threshold: 8192,
@@ -83,7 +83,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/i18n',
     //'nuxt-compress',
-    '@nuxt/image'
+    //'@nuxt/image'
     
   ],
   /*'nuxt-compress': {
