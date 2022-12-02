@@ -81,7 +81,6 @@
             <nuxt-img
             style="width: 6vw; height: auto"
             src="/phone_black_icon.svg" 
-        format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />        
@@ -91,7 +90,6 @@
             <nuxt-img
             style="width: 6vw; height: auto"
             src="/email_black_icon.svg"
-        format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />        

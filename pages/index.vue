@@ -23,7 +23,6 @@
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
         src="/color_tabs_icon_1.svg"
-        format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       
@@ -33,7 +32,6 @@
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
         src="/color_tabs_icon_2.svg"
-        format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_2')"></div>
@@ -42,7 +40,6 @@
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
         src="/color_tabs_icon_3.svg"
-        format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       
@@ -52,7 +49,6 @@
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
         src="/color_tabs_icon_4.svg"
-        format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       
@@ -299,7 +295,6 @@
           <nuxt-img
             
             src="/gallery_arrow.svg"
-        format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       
@@ -467,7 +462,6 @@
         <button @click.prevent="nextLogoGalleryImage" class="hidden py-2">
           <nuxt-img
           src="/gallery_arrow.svg"
-        format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       

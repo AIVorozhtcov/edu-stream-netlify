@@ -22,7 +22,6 @@
                   <nuxt-img
                   style="width: calc(12px + 0.990625vw); height: auto"
                         src="/facebook_logo.svg"
-        format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />        
@@ -31,7 +30,6 @@
                   <nuxt-img
                   style="width: calc(12px + 0.990625vw); height: auto"
                   src="/instagram_logo.svg"
-        format="webp"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />        
