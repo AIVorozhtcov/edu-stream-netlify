@@ -4,7 +4,7 @@
     <div class="edu-color h-20 w-full flex flex-row justify-start items-center" style="padding-bottom:4vh; padding-top:4vh">
       <b-button class="pl-5" v-b-toggle.sidebar-2>
         <nuxt-img
-        style="height:3vh; width:auto;"
+        style="height:3vh; width:auto; color:white"
         :src="isMobileSidebarOpen ? '/mobile_close_navbar_icon.png' : '/hamburger_icon.png'"
         format="webp"
   alt="Welcome to german courses!"
@@ -42,10 +42,10 @@
         </div>
         
         
-        <div class="flex flex-column items-start w-16 h-16 justify-center pt-4 ml-2 bg-white self-start rounded-b-md text-navbar-sm" style="margin-bottom:3vh;">
+        <div class="flex flex-column items-start w-16 h-16 justify-center pt-4 bg-white self-start rounded-b-md text-navbar-sm" style="margin-bottom:3vh; margin-left:5vw">
           <div class="nav-item dropdown">
             <a class="nav-link dropdown-toggle font-semibold flex flex-row items-center justify-start" style="margin-left:-1vw"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <country-flag :country="$t('flag')" size='big' /> {{this.$i18n.locale.toUpperCase()}}
+              <country-flag :country="$t('flag')" size='big' /> 
             </a>
             <div class="dropdown-menu"  aria-labelledby="navbarAnchor">
               <nuxt-link class="dropdown-item flex flex-row items-center"  :to="switchLocalePath('en')"><country-flag size="big" country="gb" /></nuxt-link>

@@ -85,7 +85,7 @@
                     {{$t('footer.m/w/d')}}
                 </p>                
             </div>
-            <div class="font-normal flex w-full flex-row items-center justify-center pb-1 pt-3 mobile-bottom-links-text-responsive" style="border-top-width: 1px;">
+            <div class="font-normal flex w-full flex-row items-center justify-center pb-1 pt-3 mobile-bottom-links-text-responsive" style="border-top-width: 1px; height:3vh">
                 
                 <button type="button" class="" @click="$bvModal.show('modal-m-2')" >
                     <p class="mobile-bottom-links-text-responsive">AGB |</p>

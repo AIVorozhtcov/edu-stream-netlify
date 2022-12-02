@@ -67,7 +67,7 @@
               
               </li> -->
               <div class="nav-item dropdown">
-                <div  @mouseenter="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false" :class="[aboutIsSelected ? 'menu-selected' : '', 'flex flex-row items-center w-fit']">
+                <div  @mouseenter="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false" :class="[aboutIsSelected ? 'menu-selected' : '', 'flex flex-row items-center w-fit']" >
                   <p class="menu-text-sm">{{$t('menu.about_us.self')}}</p>
                   <b-icon class="menu-arrow-icon" :icon="this.aboutHoverHandler()"/>
                 </div>
@@ -93,7 +93,7 @@
                 </div> -->
               </div>
               <div class="margin-5-for-rows">
-                <div @mouseenter="coursesIsSelected = true; examsIsSelected = false; aboutIsSelected = false" :class="[coursesIsSelected ? 'menu-selected' : '', 'flex flex-row items-center']">
+                <div @mouseenter="coursesIsSelected = true; examsIsSelected = false; aboutIsSelected = false" :class="[coursesIsSelected ? 'menu-selected' : '', 'flex flex-row items-center']" >
                   <p class="menu-text-sm">{{$t('menu.courses.self')}}</p>
                   <b-icon class="menu-arrow-icon" :icon="this.coursesHoverHandler()" />
                 </div>
@@ -116,15 +116,15 @@
                       
                       <div class="flex pt-2 flex-row items-center" style="padding-left:32% ">
                         <div style=" background-color:rgba(255, 255, 255, 1)"></div> 
-                        <div @mouseenter="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false"  :class="[aboutIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']">
+                        <div @mouseenter="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false"  :class="[aboutIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl']" style="cursor: pointer;">
                           <p class="menu-text-sm">{{$t('menu.about_us.self')}}</p>
                           <b-icon class="menu-arrow-icon" :icon="this.aboutHoverHandler()"/>
                         </div>
-                        <div @mouseenter="examsIsSelected = true; coursesIsSelected = false; aboutIsSelected = false" :class="[examsIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl margin-9-for-rows']">
+                        <div @mouseenter="examsIsSelected = true; coursesIsSelected = false; aboutIsSelected = false" :class="[examsIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl margin-9-for-rows']" style="cursor: pointer;">
                           <p class="menu-text-sm">{{$t('menu.exams.self')}}</p>
                           <b-icon class="menu-arrow-icon" :icon="this.examsHoverHandler()" />
                         </div>
-                        <div @mouseenter="coursesIsSelected = true; examsIsSelected = false; aboutIsSelected = false" :class="[coursesIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl margin-9-for-rows']">
+                        <div @mouseenter="coursesIsSelected = true; examsIsSelected = false; aboutIsSelected = false" :class="[coursesIsSelected ? 'menu-selected' : '', 'flex flex-row items-center text-xl margin-9-for-rows']" style="cursor: pointer;">
                           <p class="menu-text-sm">{{$t('menu.courses.self')}}</p>
                           <b-icon class="menu-arrow-icon" :icon="this.coursesHoverHandler()" />
                         </div>

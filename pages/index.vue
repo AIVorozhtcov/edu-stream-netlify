@@ -22,7 +22,7 @@
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-2', ' text-white']"  style="background-color:#FF7C33;">
         <nuxt-img
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
-        src="/color_tabs_icon_1.svg"
+        src="/color_tabs_icon_1_mobile.png"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       
@@ -30,16 +30,16 @@
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-2', ' text-white']"  style="background-color:#96BDFF;">
         <nuxt-img
-        :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
-        src="/color_tabs_icon_2.svg"
+        :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon' : 'w-auto h-3/12 pb-2']"
+        src="/color_tabs_icon_2_mobile.png"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_2')"></div>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-2', ' text-white']"  style="background-color:#4385F5;">
         <nuxt-img
-        :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
-        src="/color_tabs_icon_3.svg"
+        :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon' : 'w-auto h-3/12 pb-2']"
+        src="/color_tabs_icon_3_mobile.svg"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       
@@ -47,8 +47,8 @@
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-2', ' text-white']"  style="background-color:#253984;">
         <nuxt-img
-        :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
-        src="/color_tabs_icon_4.svg"
+        :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-2' : 'w-auto h-3/12 pb-2']"
+        src="/color_tabs_icon_4_mobile.svg"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />       
@@ -91,7 +91,7 @@
           </div>
          </nuxt-link> 
          <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-margin']"></div>  
-         <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/courses/online')">  
+         <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('#')">  
           <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start courses-tab-color']" >
             <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1 courses-title-color', 'font-bold']">{{$t('main.courses_and_exams.courses.titles.t_3')}}</h1>
             <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-tab-margin']" ></div>
@@ -116,7 +116,7 @@
           </div>
          </nuxt-link> 
          <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-margin']"></div>  
-         <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('/exams/new')">  
+         <nuxt-link class="flex" style="text-decoration: none; color: inherit;" :to="localePath('#')">  
           <div :class="[this.$store.getters['getIsMobile'] ? 'mb-5' : 'same-size-columns', 'cursor-pointer hover:drop-shadow-xl rounded-sm flex flex-column items-start justify-start exams-tab-color']" >
             <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-courses-exams-h1 courses-exams-p-padding' : 'courses-exams-h1', 'font-bold']">{{$t('main.courses_and_exams.exams.titles.t_3')}}</h1>
             <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'courses-exams-tab-margin']" ></div>
@@ -338,7 +338,7 @@
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'mx-auto my-auto text-white py-2']" v-html="$t('modals.send')"></div>
           </div>
         </div>
-        <div class="mx-center"><div :class="[this.$store.getters['getIsMobile'] ? 'modal-info-text-responsive w-11/12' : 'text-xs-responsive', 'text-center font-normal text-white']" v-html="$t('main.form_subtext')"> </div></div>
+        <div class="mx-center"><div :class="[this.$store.getters['getIsMobile'] ? 'modal-info-text-responsive w-11/12 mx-auto' : 'text-xs-responsive', 'text-center font-normal text-white']" v-html="$t('main.form_subtext')"> </div></div>
       </div>
       <div class="my-16 h-full w-full flex flex-column items-start ignore-r-global-margin">
         <client-only :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full pl-30 justify-center']">        

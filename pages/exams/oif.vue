@@ -22,20 +22,29 @@
       <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mobile-text-xl-responsive' : 'w-5/12 text-3xl', 'py-5 font-bold']" v-html="$t('exams.oif.subtitle')"></div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column mobile-label-text-responsive' : 'flex flex-row', 'items-start']">
         <div :class="[this.$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit', 'bg-slate-100 rounded flex flex-column']" >
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-label-text-responsive' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.oif.exam-1')"></div>
-          <div class="flex flex-row items-center">
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.oif.exam-1')"></div>
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
             <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="13/12/2022" name="A2_time" value="13/12/2022">
-            <label for="13/12/2022">13.12.2022; 13:00</label><br>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="13/12/2022">13.12.2022; 13:00</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="13/12/2022">December 13 2022</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="13/12/2022">13:00</label>
+            <br>
           </div>
-          <div class="flex flex-row">
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
             <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="14/12/2022" name="A2_time" value="14/12/2022">
-            <label for="14/12/2022">14.12.2022; 13:00</label><br>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="14/12/2022">14.12.2022; 13:00</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="14/12/2022">December 14 2022</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="13/12/2022">14:00</label>
+            <br>
           </div>
-          <div class="flex flex-row">
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4 ' : '', 'flex flex-row items-around w-full']" >
             <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="15/12/2022" name="A2_time" value="15/12/2022">
-            <label for="15/12/2022">15.12.2022; 13:00</label><br>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="15/12/2022">15.12.2022; 13:00</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="15/12/2022">December 15 2022</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="15/12/2022">13:00</label>
+            <br>
           </div>
-          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : '', 'px-4 font-bold py-1']">160€</p>
+          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">160€</p>
           <a 
           class="px-4 pt-3 pb-3"
           href="https://buy.stripe.com/14keXO9WJ25pgzCeUU"
@@ -47,24 +56,36 @@
         </div>
         <div class="px-5 bg-white"></div>
         <div :class="[this.$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit', 'bg-slate-100 rounded flex flex-column']">
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-label-text-responsive' : 'flex flex-row ', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.oif.exam-2')"></div>
-          <div class="flex flex-row items-center">
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.oif.exam-2')"></div>
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
             <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="21/11/2022" name="B1_time" value="21/11/2022">
-            <label class="w-full" for="21/11/2022">21.11.2022; 13:00</label><br>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="21/11/2022">21.11.2022; 13:00</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="21/11/2022">November 21 2022</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="21/11/2022">13:00</label>
+            <br>
           </div>
-          <div class="flex flex-row items-center">
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
             <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="05/12/2022" name="B1_time" value="05/12/2022">
-            <label for="05/12/2022">05.12.2022; 13:00</label><br>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="05/12/2022">05.12.2022; 13:00</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="05/12/2022">December 5 2022</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="05/12/2022">13:00</label>
+            <br>
           </div>
-          <div class="flex flex-row">
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
             <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="06/12/2022" name="B1_time" value="06/12/2022">
-            <label for="06/12/2022">06.12.2022; 13:00</label><br>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="05/12/2022">06.12.2022; 13:00</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="06/12/2022">December 5 2022</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="05/12/2022">13:00</label>
+            <br>
           </div>
-          <div class="flex flex-row">
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
             <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="07/12/2022" name="B1_time" value="07/12/2022">
-            <label for="07/12/2022">07.12.2022; 13:00</label><br>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="07/12/2022">07.12.2022; 13:00</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="07/12/2022">December 7 2022</label>
+            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="07/12/2022">13:00</label>
+            <br>
           </div>
-          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : '', 'px-4 font-bold py-1']">160€</p>
+          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">160€</p>
           <a 
           class="px-4 pt-3 pb-3"
           href="https://buy.stripe.com/14keXO9WJ25pgzCeUU"
@@ -138,13 +159,20 @@
   height: 4vh;
 }
 .mobile-label-text-responsive{
-  font-size: calc(6px + 3.40625vw);
+  font-size: calc(6px + 4.20625vw);
+}
+.mobile-text-xlabel-responsive{
+  font-size: calc(6px + 4.90625vw);
 }
   .bg-slate-100{
     background-color: rgba(246, 246, 246, 1);
   }
   .bg-slate-200{
     background-color: rgba(244, 244, 244, 1);
+  }
+  .radio-padding{
+    margin-left:7vw;
+    margin-right:7vw;
   }
   .mobile-welcome-text-responsive{
     font-size: calc(3px + 2.60625vw);
