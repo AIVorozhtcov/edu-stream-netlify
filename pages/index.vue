@@ -12,7 +12,7 @@
         :src="this.$store.getters['getIsMobile'] ? '/mobile_frontpage_welcome.png' : '/frontpage_welcome.png'"
         format="webp"
   alt="Welcome to Edu-stream!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:100vw lg:100vw md:100vw sm:20vw xs:20vw"
 />       
     </div>
     <!---->
