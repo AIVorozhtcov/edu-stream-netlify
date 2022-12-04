@@ -10,12 +10,7 @@
               
             </div>
           </template> 
-          <form netlify name="contact"
-              method="POST"
-              action="/"
-              data-netlify-honeypot="bot-field"
-              :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
-              >
+          <form name="contact" method="POST" data-netlify="true">
               <input type="hidden" name="form-name" value="contact">
             
             <div class="mx-auto font-bold text-xl" style="color:rgba(90, 90, 90, 1); margin-top:3vh; margin-bottom:3vh" v-html="$t('modals.title')"></div>
