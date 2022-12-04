@@ -15,6 +15,7 @@
               data-netlify="true"
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
               >
+              <input type="hidden" name="form-name" value="contact">
             
             <div class="mx-auto font-bold text-xl" style="color:rgba(90, 90, 90, 1); margin-top:3vh; margin-bottom:3vh" v-html="$t('modals.title')"></div>
             <div class="pt-3 font-bold" v-html="$t('modals.name_title')"></div>
