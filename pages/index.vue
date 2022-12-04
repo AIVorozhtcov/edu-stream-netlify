@@ -15,6 +15,84 @@
   sizes="xl:100vw lg:100vw md:100vw sm:20vw xs:20vw"
 />       
     </div>
+    <b-modal  centered :busy="true" id="modal-1" :hide-header='true' :hide-footer='true' style="width:30%;">
+          <template #modal-header class="">
+            <header class=""></header>
+            
+          </template>
+          <template #modal-footer>
+            <div class="mx-auto w-full" style="margin-left:7%; margin-right:7%">
+              
+            </div>
+          </template> 
+          <form name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact">
+            
+            <div class="mx-auto font-bold text-xl" style="color:rgba(90, 90, 90, 1); margin-top:3vh; margin-bottom:3vh" v-html="$t('modals.title')"></div>
+            <div class="pt-3 font-bold" v-html="$t('modals.name_title')"></div>
+            <input @focusout="checkName" class="pl-3 bg-slate-200 w-full rounded-sm" type="text" style="height:9vh;" v-model="response_name" :placeholder="$t('modals.name')" required>
+            <div class="pt-3 font-bold text-red-600 text-xs" v-if="isNameWrong" v-html="$t('modals.required')"></div>
+            <div class="pt-3 font-bold" style="margin-top:2vh" v-html="$t('modals.email_title')"></div>
+            <input @focusout="checkEmail" type="email" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_email" :placeholder="$t('modals.email')" required>
+            <div class="pt-3 font-bold text-red-600 text-xs" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
+            <div class="pt-3 font-bold" style="margin-top:2vh" v-html="$t('modals.phone_title')"></div>
+            <input @focusout="checkPhone" type="tel" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
+            <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
+            <div class="pt-3 flex flex-row">
+                <input @animationend="checkTimes" id="mon_wed" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
+              <label for="mon_wed"><div class="pl-3" v-html="$t('modals.mon_wed')"></div></label>
+            </div>
+            <div class="pt-1 flex flex-row">
+              <input @animationend="checkTimes" id="tue_thu" type="checkbox" :value="$t('modals.tue_thu')" v-model="checkedTimes">
+              <label for="tue_thu"><div class="pl-3" v-html="$t('modals.tue_thu')"></div></label>
+            </div>
+            <div class="pt-1 flex flex-row">
+              <input @animationend="checkTimes" id="any_day" type="checkbox" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
+              <label for="any_day"><div class="pl-3" v-html="$t('modals.any_day')"></div></label>
+            </div>
+            <div class="pt-3 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
+            <div
+              @click="checkAll" class="w-full flex cursor-pointer">
+                <button type="submit" class="rounded-md mx-auto flex flex-column items-center h-fit w-full" style="background-color:rgba(67, 133, 245, 1); margin-top:3vh">
+                  <div class="mx-auto text-white py-2" v-html="$t('modals.send')"></div>
+                </button>
+            </div>
+            <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
+          </form>
+          <div :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%">
+            <div class="mx-auto font-bold mobile-text-base-responsive" style="color:rgba(90, 90, 90, 1); margin-top:1vh; margin-bottom:1vh" v-html="$t('modals.title')"></div>
+            <div class="pt-3 mobile-text-base-responsive font-bold" v-html="$t('modals.name_title')"></div>
+            <input @focusout="checkName" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" type="text" style="height:3vh;" v-model="response_name" :placeholder="$t('modals.name')" required>
+            <div class="pt-3 font-bold text-red-600 mobile-text-sm-responsive" v-if="isNameWrong" v-html="$t('modals.required')"></div>
+            <div class="pt-3 mobile-text-base-responsive font-bold" style="margin-top:2vh" v-html="$t('modals.email_title')"></div>
+            <input @focusout="checkEmail" type="email" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" style="height:3vh;" v-model="response_email" :placeholder="$t('modals.email')" required>
+            <div class="pt-3 font-bold text-red-600 mobile-text-sm-responsive" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
+            <div class="pt-3 mobile-text-base-responsive font-bold" style="margin-top:2vh" v-html="$t('modals.phone_title')"></div>
+            <input @focusout="checkPhone" type="tel" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" style="height:3vh;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
+            <div class="pt-3 font-bold text-red-600 mobile-text-sm-responsive" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
+            <div class="pt-3 flex flex-row">
+                <input @animationend="checkTimes" id="mon_wed" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
+              <label for="mon_wed"><div class="pl-3 mobile-text-base-responsive" v-html="$t('modals.mon_wed')"></div></label>
+            </div>
+            <div class="pt-1 flex flex-row">
+              <input @animationend="checkTimes" id="tue_thu" type="checkbox" :value="$t('modals.tue_thu')" v-model="checkedTimes">
+              <label for="tue_thu"><div class="pl-3 mobile-text-base-responsive" v-html="$t('modals.tue_thu')"></div></label>
+            </div>
+            <div class="pt-1 flex flex-row">
+              <input @animationend="checkTimes" id="any_day" type="checkbox" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
+              <label for="any_day"><div class="pl-3 mobile-text-base-responsive" v-html="$t('modals.any_day')"></div></label>
+            </div>
+            <div class="pt-3 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
+            <div
+              @click="checkAll" class="w-full flex cursor-pointer">
+                <div class="rounded-md mx-auto flex flex-column items-center h-fit w-full " style="background-color:rgba(67, 133, 245, 1); margin-top:3vh">
+                  <div class="mx-auto text-white py-2 mobile-text-base-responsive " v-html="$t('modals.send')"></div>
+                </div>
+            </div>
+            <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
+  
+          </div>
+        </b-modal>
     <!---->
     
     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-global-margins flex flex-column' : 'ignore-global-margins flex flex-row', 'relative flex h-fit justify-evenly h-3/4 ']">
