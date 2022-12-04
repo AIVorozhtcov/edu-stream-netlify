@@ -13,6 +13,7 @@
           <form name="contact"
               method="POST"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
               >
               <input type="hidden" name="form-name" value="contact">
