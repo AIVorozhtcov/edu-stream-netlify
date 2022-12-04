@@ -10,7 +10,7 @@
               
             </div>
           </template> 
-          <form name="contact"
+          <form netlify name="contact"
               method="POST"
               action="/"
               data-netlify="true"
