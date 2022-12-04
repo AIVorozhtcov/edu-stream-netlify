@@ -29,6 +29,7 @@
             <div class="pt-3 font-bold" style="margin-top:2vh" v-html="$t('modals.phone_title')"></div>
             <input @focusout="checkPhone" type="tel" name="phone" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
             <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
+            <input type="hidden" name="checkedTimes" :value="checkedTimes" />
             <div class="pt-3 flex flex-row">
                 <input @animationend="checkTimes" type="checkbox" name="mon_wed" id="mon_wed" :value="$t('modals.mon_wed')" v-model="checkedTimes">
               <label for="mon_wed"><div class="pl-3" v-html="$t('modals.mon_wed')"></div></label>
