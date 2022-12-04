@@ -1,4 +1,10 @@
-<form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+<form name="modalContacts"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
+              hidden
+              >
     <input @focusout="checkName" type="text" name="name">
     <input @focusout="checkEmail" type="email" name="email">
     <input @focusout="checkPhone" type="tel" name="phone">

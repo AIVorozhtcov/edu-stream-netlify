@@ -12,7 +12,6 @@
           </template> 
           <form name="modalContacts"
               method="POST"
-              action="/"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
