@@ -24,7 +24,7 @@
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-1' : 'w-auto h-3/12 pb-2']"
         src="/color_tabs_icon_1_mobile.png"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:5vw lg:5vw md:5vw sm:5vw xs:5vw"
 />       
         <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_1')"></div>
       </div>
@@ -33,7 +33,7 @@
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon' : 'w-auto h-3/12 pb-2']"
         src="/color_tabs_icon_2_mobile.png"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:5vw lg:5vw md:5vw sm:5vw xs:5vw"
 />       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_2')"></div>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-2', ' text-white']"  style="background-color:#4385F5;">
@@ -41,7 +41,7 @@
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon' : 'w-auto h-3/12 pb-2']"
         src="/color_tabs_icon_3_mobile.svg"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:5vw lg:5vw md:5vw sm:5vw xs:5vw"
 />       
        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_3')"></div>
       </div>
@@ -50,7 +50,7 @@
         :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-icon-faulty-figma-2' : 'w-auto h-3/12 pb-2']"
         src="/color_tabs_icon_4_mobile.svg"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:5vw lg:5vw md:5vw sm:5vw xs:5vw"
 />       
 <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_4')"></div>
       </div>
@@ -132,35 +132,35 @@
       src="/banner_row_1.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:15vw lg:15vw md:15vw sm:15vw xs:15vw"
 />       
 <nuxt-img
       class="h-auto w-1/5"
       src="/banner_row_2.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:15vw lg:15vw md:15vw sm:15vw xs:15vw"
 />       
 <nuxt-img
       class="h-auto w-1/5"
       src="/banner_row_3.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:15vw lg:15vw md:15vw sm:15vw xs:15vw"
 />       
 <nuxt-img
       class="h-auto w-1/5"
       src="/banner_row_4.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:15vw lg:15vw md:15vw sm:15vw xs:15vw"
 />       
 <nuxt-img
       class="h-auto w-1/5"
       src="/banner_row_5.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:15vw lg:15vw md:15vw sm:15vw xs:15vw"
 />       
     </div>
       <client-only>
@@ -173,7 +173,7 @@
       style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:20vw lg:20vw md:20vw sm:20vw xs:20vw"
 />       
             </button>
           </div>
@@ -186,7 +186,7 @@
       style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:65vw lg:65vw md:65vw sm:65vw xs:65vw"
 />       
             </slide>
             <slide class="w-1/2 mr-2 rounded">
@@ -196,7 +196,7 @@
       style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:65vw lg:65vw md:65vw sm:65vw xs:65vw"
 />       
             </slide>
             <slide class="w-1/2 rounded">
@@ -206,7 +206,7 @@
       style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:65vw lg:65vw md:65vw sm:65vw xs:65vw"
 />       
             </slide>
             
@@ -220,7 +220,7 @@
               src="/banner_arrow_right.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:20vw lg:20vw md:20vw sm:20vw xs:20vw"
 />       
             </button>
           </div>
@@ -240,7 +240,7 @@
               src="/promo_banner_1_group.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:25vw lg:25vw md:25vw sm:25vw xs:25vw"
 />       
           </slide>
           <slide class="w-1/2 mr-2 rounded">
@@ -249,7 +249,7 @@
               src="/promo_banner_1_group.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:25vw lg:25vw md:25vw sm:25vw xs:25vw"
 />       
           </slide>
           <slide class="w-1/2 mr-2 rounded">
@@ -258,7 +258,7 @@
               src="/promo_banner_1_group.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:25vw lg:25vw md:25vw sm:25vw xs:25vw"
 />       
           </slide>
           <slide class="w-1/2 mr-2 rounded">
@@ -267,7 +267,7 @@
               src="/promo_banner_1_group.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:25vw lg:25vw md:25vw sm:25vw xs:25vw"
 />       
           </slide>
           <slide class="w-1/2 rounded">
@@ -276,7 +276,7 @@
               src="/promo_banner_1_group.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:25vw lg:25vw md:25vw sm:25vw xs:25vw"
 />       
           </slide>
           
@@ -296,7 +296,7 @@
             
             src="/gallery_arrow.svg"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:20vw lg:20vw md:20vw sm:20vw xs:20vw"
 />       
         </button>
       </div>
@@ -311,7 +311,7 @@
         src="/location_photo.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:40vw lg:40vw md:40vw sm:40vw xs:40vw"
 />       
         
 
@@ -348,7 +348,7 @@
               src="/logo_gallery/1.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-full">
@@ -356,7 +356,7 @@
               src="/logo_gallery/2.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-1/2">
@@ -364,7 +364,7 @@
               src="/logo_gallery/3.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-1/2">
@@ -372,7 +372,7 @@
               src="/logo_gallery/4.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-1/2">
@@ -380,7 +380,7 @@
               src="/logo_gallery/5.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-1/2">
@@ -388,7 +388,7 @@
               src="/logo_gallery/6.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-1/2">
@@ -396,7 +396,7 @@
               src="/logo_gallery/7.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-1/2">
@@ -404,7 +404,7 @@
               src="/logo_gallery/8.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-1/2">
@@ -412,7 +412,7 @@
               src="/logo_gallery/9.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-1/2">
@@ -420,7 +420,7 @@
               src="/logo_gallery/10.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-1/2">
@@ -428,7 +428,7 @@
               src="/logo_gallery/11.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-1/2">
@@ -436,7 +436,7 @@
               src="/logo_gallery/12.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-1/2">
@@ -444,7 +444,7 @@
               src="/logo_gallery/13.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             <slide class="w-1/2">
@@ -452,7 +452,7 @@
               src="/logo_gallery/14.png"
         format="webp"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
             </slide>
             
@@ -463,7 +463,7 @@
           <nuxt-img
           src="/gallery_arrow.svg"
   alt="Welcome to german courses!"
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
 />       
         </button>
       </div>
