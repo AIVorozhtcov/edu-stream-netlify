@@ -1,0 +1,9 @@
+<form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+    <input @focusout="checkName" type="text" name="name">
+    <input @focusout="checkEmail" type="email" name="email">
+    <input @focusout="checkPhone" type="tel" name="phone">
+    <input @animationend="checkTimes" type="checkbox" name="mon_wed" id="mon_wed">
+    <input @animationend="checkTimes" type="checkbox" name="tue_thu" id="tue_thu">
+    <input @animationend="checkTimes" type="checkbox" name='any_day' id="any_day">
+    <button type="submit" name="submit"></button>>
+ </form>
