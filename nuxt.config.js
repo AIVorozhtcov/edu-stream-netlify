@@ -1,6 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'static',
+  target: 'server',
   
   //server: {     
     //port: 8000, // default: 3000     
@@ -83,7 +83,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/i18n',
     //'nuxt-compress',
-    //'@nuxt/image'
+    '@nuxt/image'
     
   ],
   /*'nuxt-compress': {
