@@ -1,5 +1,5 @@
 export const state = () => ({
-    is_mobile: true
+    is_mobile: null
   })
 
   export const mutations = {

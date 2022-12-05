@@ -11,6 +11,7 @@
             </div>
           </template> 
           <form name="modalContacts"
+          @submit.prevent="handleFormSubmit"
               method="POST"
               :action="$nuxt.$route.path"
               data-netlify="true"
@@ -124,6 +125,21 @@
       }
     },
     methods:{   
+      async handleFormSubmit ($event) {
+    const form = $event.target
+    const body = new URLSearchParams(new FormData(form))
+    try {
+      const res = await fetch(form.action, { method: 'POST', body })
+      if (res.ok) {
+        $nuxt.$emit('bv::hide::modal','modal-1');
+      } else {
+        throw res
+      }
+    } catch (err) {
+      console.error(err)
+      // you don't have an error page but maybe you should add one
+    }
+  },
       checkEmail(){
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.response_email))
         {
