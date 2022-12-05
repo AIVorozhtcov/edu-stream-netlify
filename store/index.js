@@ -11,12 +11,12 @@ export const state = () => ({
     setIsMobile(state, result_is_mobile) {
       state.is_mobile = result_is_mobile
     },
-    setUtmSource(state, cookieSource, cookieContent, cookieCpc, cookieCampaign, cookieReferrer){
-      state.utmSource = cookieSource,
-      state.utmContent = cookieContent,
-      state.utmCpc = cookieCpc,
-      state.utmCampaign = cookieCampaign,
-      state.utmReferrer = cookieReferrer
+    setUtmSource(state, cookieSource){
+      state.utmSource = cookieSource.utm_source,
+      state.utmContent = cookieSource.utm_content,
+      state.utmCpc = cookieSource.utm_cpc,
+      state.utmCampaign = cookieSource.utm_campaign,
+      state.utmReferrer = cookieSource.utm_referrer
     }
   }
 
