@@ -31,15 +31,15 @@
             <div class="pt-3 font-bold text-red-600 text-xs" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
             <input type="hidden" name="checkedTimes" :value="checkedTimes" />
             <div class="pt-3 flex flex-row">
-                <input @animationend="checkTimes" type="checkbox" name="mon_wed" id="mon_wed" :value="$t('modals.mon_wed')" v-model="checkedTimes">
+                <input @animationend="checkTimes" type="checkbox"  id="mon_wed" :value="$t('modals.mon_wed')" v-model="checkedTimes">
               <label for="mon_wed"><div class="pl-3" v-html="$t('modals.mon_wed')"></div></label>
             </div>
             <div class="pt-1 flex flex-row">
-              <input @animationend="checkTimes" type="checkbox" name="tue_thu" id="tue_thu"  :value="$t('modals.tue_thu')" v-model="checkedTimes">
+              <input @animationend="checkTimes" type="checkbox"  id="tue_thu"  :value="$t('modals.tue_thu')" v-model="checkedTimes">
               <label for="tue_thu"><div class="pl-3" v-html="$t('modals.tue_thu')"></div></label>
             </div>
             <div class="pt-1 flex flex-row">
-              <input @animationend="checkTimes" type="checkbox" name='any_day' id="any_day" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
+              <input @animationend="checkTimes" type="checkbox"  id="any_day" style="accent-color:rgba(67, 133, 245, 1) !important" :value="$t('modals.any_day')" v-model="checkedTimes">
               <label for="any_day"><div class="pl-3" v-html="$t('modals.any_day')"></div></label>
             </div>
             <div class="pt-3 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
