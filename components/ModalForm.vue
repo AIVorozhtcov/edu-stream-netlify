@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-modal  centered :busy="true" id="modal-1" :hide-header='true' :hide-footer='true' style="width:30%;">
+    <b-modal :class="[this.$store.getters['getIsMobile'] ? 'mobile-width' : 'desktop-width']"  centered :busy="true" id="modal-1" :hide-header='true' :hide-footer='true'>
           <template #modal-header class="">
             <header class=""></header>
             
@@ -56,7 +56,7 @@
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%; height:80vh; width:70vw"
+              :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
               >
               <input type="hidden" name="form-name" value="modalContacts" />
             <div class="mx-auto font-bold mobile-text-base-responsive" style="color:rgba(90, 90, 90, 1); margin-top:1vh; margin-bottom:1vh" v-html="$t('modals.title')"></div>
@@ -102,6 +102,13 @@
   input::placeholder {
     opacity: 1;
     color:rgba(18, 18, 18, 1);
+  }
+  .desktop-width{
+    width:30%;
+  }
+
+  .mobile-width{
+    width:75%;
   }
   
   </style>
