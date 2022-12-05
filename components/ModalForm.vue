@@ -12,7 +12,7 @@
           </template> 
           <form name="modalContacts"
               method="POST"
-              action="/courses/english"
+              :action="$nuxt.$route.path"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
@@ -51,17 +51,26 @@
             </div>
             <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
           </form>
+          <form name="modalContacts"
+              method="POST"
+              :action="$nuxt.$route.path"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
+              >
+              <input type="hidden" name="form-name" value="modalContacts" />
           <div :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%">
             <div class="mx-auto font-bold mobile-text-base-responsive" style="color:rgba(90, 90, 90, 1); margin-top:1vh; margin-bottom:1vh" v-html="$t('modals.title')"></div>
             <div class="pt-3 mobile-text-base-responsive font-bold" v-html="$t('modals.name_title')"></div>
-            <input @focusout="checkName" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" type="text" style="height:3vh;" v-model="response_name" :placeholder="$t('modals.name')" required>
+            <input @focusout="checkName" type="text" name="name" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" style="height:3vh;" v-model="response_name" :placeholder="$t('modals.name')" required>
             <div class="pt-3 font-bold text-red-600 mobile-text-sm-responsive" v-if="isNameWrong" v-html="$t('modals.required')"></div>
             <div class="pt-3 mobile-text-base-responsive font-bold" style="margin-top:2vh" v-html="$t('modals.email_title')"></div>
-            <input @focusout="checkEmail" type="email" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" style="height:3vh;" v-model="response_email" :placeholder="$t('modals.email')" required>
+            <input @focusout="checkEmail" type="email" name="email" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" style="height:3vh;" v-model="response_email" :placeholder="$t('modals.email')" required>
             <div class="pt-3 font-bold text-red-600 mobile-text-sm-responsive" v-if="isEmailWrong" v-html="$t('modals.required')"></div>
             <div class="pt-3 mobile-text-base-responsive font-bold" style="margin-top:2vh" v-html="$t('modals.phone_title')"></div>
-            <input @focusout="checkPhone" type="tel" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" style="height:3vh;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
+            <input @focusout="checkPhone" type="tel" name="phone" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" style="height:3vh;" v-model="response_phone" :placeholder="$t('modals.phone')" required>
             <div class="pt-3 font-bold text-red-600 mobile-text-sm-responsive" v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
+            <input type="hidden" name="checkedTimes" :value="checkedTimes" />
             <div class="pt-3 flex flex-row">
                 <input @animationend="checkTimes" id="mon_wed" type="checkbox" :value="$t('modals.mon_wed')" v-model="checkedTimes">
               <label for="mon_wed"><div class="pl-3 mobile-text-base-responsive" v-html="$t('modals.mon_wed')"></div></label>
@@ -75,15 +84,17 @@
               <label for="any_day"><div class="pl-3 mobile-text-base-responsive" v-html="$t('modals.any_day')"></div></label>
             </div>
             <div class="pt-3 font-bold text-red-600 text-xs" v-if="isTimesWrong" v-html="$t('modals.required')"></div>
+            
             <div
               @click="checkAll" class="w-full flex cursor-pointer">
-                <div class="rounded-md mx-auto flex flex-column items-center h-fit w-full " style="background-color:rgba(67, 133, 245, 1); margin-top:3vh">
-                  <div class="mx-auto text-white py-2 mobile-text-base-responsive " v-html="$t('modals.send')"></div>
-                </div>
+                <button type="submit" name="submit" class="rounded-md mx-auto flex flex-column items-center h-fit w-full" style="background-color:rgba(67, 133, 245, 1); margin-top:3vh">
+                  <div class="mx-auto text-white py-2mobile-text-base-responsive" v-html="$t('modals.send')"></div>
+                </button>
             </div>
             <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
   
           </div>
+          </form>
         </b-modal>
     </div>
   </template>
