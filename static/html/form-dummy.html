@@ -1,17 +1,11 @@
-<form name="modalContactsCollect" method="POST" data-netlify="true" :action="$nuxt.$route.path" data-netlify-honeypot="bot-field" hidden >
+<form name="modalContacts" method="POST" data-netlify="true" :action="$nuxt.$route.path" data-netlify-honeypot="bot-field" hidden >
     
-    <input type="hidden" name="form-name" value="modalContactsCollect" />
-    <input type="hidden" name="utmSource" >
-    <input type="hidden" name="utmContent" >
-    <input type="hidden" name="utmCpc" >
-    <input type="hidden" name="utmCampaign" >
-    <input type="hidden" name="utmReferrer" >
-    <input type="text" name="name">
-    <input type="email" name="email">
-    <input type="tel" name="phone">
-    <input type="checkbox" id="mon_wed">
-    <input type="checkbox" id="tue_thu">
-    <input type="checkbox" id="any_day">
-    <input type="hidden" name="checkedTimes" />
+    <input @focusout="checkName" type="text" name="name">
+    <input @focusout="checkEmail" type="email" name="email">
+    <input @focusout="checkPhone" type="tel" name="phone">
+    <input @animationend="checkTimes" type="checkbox" id="mon_wed">
+    <input @animationend="checkTimes" type="checkbox" id="tue_thu">
+    <input @animationend="checkTimes" type="checkbox" id="any_day">
+    <input type="hidden" name="checkedTimes" :value="checkedTimes" />
     <button type="submit" name="submit"></button>>
  </form>
