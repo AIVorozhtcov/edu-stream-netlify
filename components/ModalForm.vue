@@ -13,7 +13,7 @@
           <form name="modalContacts"
               method="POST" 
               :action="$nuxt.$route.path"
-              @submit.prevent="sendForm()"
+              @submit="$nuxt.$emit('bv::hide::modal','modal-1'); "
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
@@ -168,7 +168,6 @@
         
       },
       sendForm(){
-        $nuxt.$emit('bv::hide::modal','modal-1');
         fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
