@@ -13,7 +13,7 @@
           <form name="modalContacts"
               method="POST" 
               :action="$nuxt.$route.path"
-              @submit.prevent="$nuxt.$emit('bv::hide::modal','modal-1')"
+              @submit.prevent="sendForm()"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
@@ -166,6 +166,14 @@
         //  window.open('https://checkout.stripe.com', '_blank');
         //}
         
+      },
+      sendForm(){
+        $nuxt.$emit('bv::hide::modal','modal-1');
+        fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
       }
     }
   
