@@ -56,7 +56,7 @@
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
+              :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%; height:80vh; width:70vw"
               >
               <input type="hidden" name="form-name" value="modalContacts" />
             <div class="mx-auto font-bold mobile-text-base-responsive" style="color:rgba(90, 90, 90, 1); margin-top:1vh; margin-bottom:1vh" v-html="$t('modals.title')"></div>
