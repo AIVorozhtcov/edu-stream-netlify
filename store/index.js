@@ -8,8 +8,8 @@ export const state = () => ({
   })
 
   export const mutations = {
-    setIsMobile(state, is_mobile) {
-      state.is_mobile = is_mobile
+    setIsMobile(state, result_is_mobile) {
+      state.is_mobile = result_is_mobile
     },
     setUtmSource(state, cookieSource, cookieContent, cookieCpc, cookieCampaign, cookieReferrer){
       state.utmSource = cookieSource,
