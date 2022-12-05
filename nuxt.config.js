@@ -93,6 +93,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/i18n',
+    'cookie-universal-nuxt',
     //'nuxt-compress',
     //'@nuxt/image'
     
