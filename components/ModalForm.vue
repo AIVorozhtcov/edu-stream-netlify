@@ -18,14 +18,14 @@
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
               >
               <input type="hidden" name="form-name" value="modalContacts" />
-              <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" />
-              <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" />
-              <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" />
-              <input type="hidden" name="utmCampaign" :value="this.$store.getters['getUtmCampaign']" />
-              <input type="hidden" name="utmReferrer" :value="this.$store.getters['getUtmReferrer']" />
+              <input type="hidden" name="utmSource" value="this.$store.getters['getUtmSource']" />
+              <input type="hidden" name="utmContent" value="this.$store.getters['getUtmContent']" />
+              <input type="hidden" name="utmCpc" value="this.$store.getters['getUtmCpc']" />
+              <input type="hidden" name="utmCampaign" value="this.$store.getters['getUtmCampaign']" />
+              <input type="hidden" name="utmReferrer" value="this.$store.getters['getUtmReferrer']" />
             <div class="mx-auto font-bold text-xl" style="color:rgba(90, 90, 90, 1); margin-top:3vh; margin-bottom:3vh" v-html="$t('modals.title')"></div>
             <div class="pt-3 font-bold" v-html="$t('modals.name_title')"></div>
-            <input @focusout="checkName" type="text" name="name" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_name" :placeholder="this.$store.getters['getUtmSource']" required>
+            <input @focusout="checkName" type="text" name="name" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_name" :placeholder="$t('modals.name')" required>
             <div class="pt-3 font-bold text-red-600 text-xs" v-if="isNameWrong" v-html="$t('modals.required')"></div>
             <div class="pt-3 font-bold" style="margin-top:2vh" v-html="$t('modals.email_title')"></div>
             <input @focusout="checkEmail" type="email" name="email" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_email" :placeholder="$t('modals.email')" required>
