@@ -63,11 +63,11 @@
               :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
               >
               <input type="hidden" name="form-name" value="modalContacts" />
-              <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" />
-              <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" />
-              <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" />
-              <input type="hidden" name="utmCampaign" :value="this.$store.getters['getUtmCampaign']" />
-              <input type="hidden" name="utmReferrer" :value="this.$store.getters['getUtmReferrer']" />
+              <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" >
+              <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" >
+              <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" >
+              <input type="hidden" name="utmCampaign" :value="this.$store.getters['getUtmCampaign']" >
+              <input type="hidden" name="utmReferrer" :value="this.$store.getters['getUtmReferrer']" >
             <div class="mx-auto font-bold mobile-text-base-responsive" style="color:rgba(90, 90, 90, 1); margin-top:1vh; margin-bottom:1vh" v-html="$t('modals.title')"></div>
             <div class="pt-3 mobile-text-base-responsive font-bold" v-html="$t('modals.name_title')"></div>
             <input @focusout="checkName" type="text" name="name" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" style="height:3vh;" v-model="response_name" :placeholder="$t('modals.name')" required>
