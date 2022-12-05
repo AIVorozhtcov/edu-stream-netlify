@@ -13,7 +13,6 @@
           <form name="modalContacts"
           @submit.prevent="handleFormSubmit"
               method="POST"
-              :action="$nuxt.$route.path"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
@@ -53,8 +52,8 @@
             <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
           </form>
           <form name="modalContacts"
+          @submit.prevent="handleFormSubmit"
               method="POST"
-              :action="$nuxt.$route.path"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
