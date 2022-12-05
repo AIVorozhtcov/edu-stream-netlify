@@ -10,14 +10,14 @@
               
             </div>
           </template> 
-          <form name="modalContactsCollect"
+          <form name="modalContacts"
           @submit.prevent="handleFormSubmit"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
               >
-              <input type="hidden" name="form-name" value="modalContactsCollect" />
+              <input type="hidden" name="form-name" value="modalContacts" />
               <input type="text" name="utmSource" :value="this.$store.getters['getUtmSource']" >
               <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" >
               <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" >
@@ -55,14 +55,14 @@
             </div>
             <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
           </form>
-          <form name="modalContactsCollect"
+          <form name="modalContacts"
           @submit.prevent="handleFormSubmit"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
               >
-              <input type="hidden" name="form-name" value="modalContactsCollect" />
+              <input type="hidden" name="form-name" value="modalContacts" />
               <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" >
               <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" >
               <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" >
