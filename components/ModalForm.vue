@@ -55,7 +55,7 @@
             </div>
             <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
           </form>
-          <form name="modalContacts"
+          <form name="modalContactsCollect"
           @submit.prevent="handleFormSubmit"
               method="POST"
               data-netlify="true"
