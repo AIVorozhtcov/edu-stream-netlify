@@ -44,13 +44,16 @@ export default {
   },
   },
   mounted(){
+    this.isMobile();
+  },
+  created(){
     const cookieSource = this.$cookies.get('utm_source');
     const cookieContent = this.$cookies.get('utm_content');
     const cookieCpc = this.$cookies.get('utm_cpc');
     const cookieCampaign = this.$cookies.get('utm_campaign');
     const cookieReferrer = this.$cookies.get('utm_referrer');
     this.$store.commit("setUtmSource", cookieSource, cookieContent, cookieCpc, cookieCampaign, cookieReferrer);
-    this.isMobile();
+    
   } 
   
 }
