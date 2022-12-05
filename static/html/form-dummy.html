@@ -1,4 +1,4 @@
-<form name="modalContacts" method="POST" data-netlify="true" :action="$nuxt.$route.path" data-netlify-honeypot="bot-field" hidden >
+<form name="modalContacts" method="POST" data-netlify="true" :action="$nuxt.$route.name" data-netlify-honeypot="bot-field" hidden >
     <input @focusout="checkName" type="text" name="name">
     <input @focusout="checkEmail" type="email" name="email">
     <input @focusout="checkPhone" type="tel" name="phone">
