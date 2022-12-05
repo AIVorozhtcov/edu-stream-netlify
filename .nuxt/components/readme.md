@@ -11,6 +11,7 @@ You can directly use them in pages and other components without the need to impo
 - `<MobileNavBar>` | `<mobile-nav-bar>` (components/MobileNavBar.vue)
 - `<MobileNavFooter>` | `<mobile-nav-footer>` (components/MobileNavFooter.vue)
 - `<ModalForm>` | `<modal-form>` (components/ModalForm.vue)
+- `<ModalFormBuyExam>` | `<modal-form-buy-exam>` (components/ModalFormBuyExam.vue)
 - `<ModalFormCourses>` | `<modal-form-courses>` (components/ModalFormCourses.vue)
 - `<ModalFormOIF>` | `<modal-form-o-i-f>` (components/ModalFormOIF.vue)
 - `<ModalFormOSD>` | `<modal-form-o-s-d>` (components/ModalFormOSD.vue)

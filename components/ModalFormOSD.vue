@@ -1,6 +1,6 @@
 <template>
     <div>
-      <b-modal  centered :busy="true" id="modal-1" :hide-header='true' :hide-footer='true'  style="width:30%;">
+      <b-modal  centered :busy="true" id="modal-osd" :hide-header='true' :hide-footer='true'  style="width:30%;">
             <template #modal-header class="">
               <header class=""></header>
               

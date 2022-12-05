@@ -46,7 +46,7 @@
             <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag' : 'price-tag', 'text-blue-600 font-bold']">{{$t('courses.english.cards.1.price_2')}}</p>
             
           </div>
-          <button :class="[this.$store.getters['getIsMobile'] ? 'w-full py-1' : 'h-fit w-fit', 'btn rounded-lg']" type="button"  style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+          <button :class="[this.$store.getters['getIsMobile'] ? 'w-full py-1' : 'h-fit w-fit', 'btn rounded-lg']" type="button"  style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-courses')" >
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'button-text', 'text-white']"  v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
@@ -79,7 +79,7 @@
             <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag' : 'price-tag', 'text-blue-600 font-bold']">{{$t('courses.english.cards.2.price_2')}}</p>
             
           </div>
-          <button :class="[this.$store.getters['getIsMobile'] ? 'w-full py-1' : 'h-fit w-fit', 'btn rounded-lg']" type="button"  style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+          <button :class="[this.$store.getters['getIsMobile'] ? 'w-full py-1' : 'h-fit w-fit', 'btn rounded-lg']" type="button"  style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-courses')" >
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'button-text', 'text-white']"  v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
@@ -112,13 +112,15 @@
             <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag' : 'price-tag', 'text-blue-600 font-bold']">{{$t('courses.english.cards.3.price_2')}}</p>
             
           </div>
-          <button :class="[this.$store.getters['getIsMobile'] ? 'w-full py-1' : 'h-fit w-fit', 'btn rounded-lg']" type="button"  style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-1')" >
+          <button :class="[this.$store.getters['getIsMobile'] ? 'w-full py-1' : 'h-fit w-fit', 'btn rounded-lg']" type="button"  style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-courses')" >
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'button-text', 'text-white']"  v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
       </div>
       <div>
+        
       <ModalForm index="modal-1" />
+      <ModalFormCourses index="modal-courses" />
       
     </div>
   </div>
@@ -179,50 +181,5 @@ export default {
     
     }
   },
-  methods:{
-    checkEmail(){
-      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.response_email))
-      {
-        this.isEmailWrong = false;
-      } else{
-        this.isEmailWrong = true;
-      } 
-    },
-    checkPhone(){
-      if (/^\+?\d*$/.test(this.response_phone)) 
-      {
-        this.isPhoneWrong = false;
-      } else{
-        this.isPhoneWrong = true;
-      } 
-    },
-    checkName(){
-      if (this.response_name == "") 
-      {
-        this.isNameWrong = true;
-      } else{
-        this.isNameWrong = false;
-      } 
-    },
-    checkTimes(){
-      if (this.checkedTimes.length == 0) 
-      {
-        this.isTimesWrong = true;
-      } else{
-        this.isTimesWrong = false;
-      } 
-    },
-    checkAll(){
-      this.checkEmail();
-      this.checkName();
-      this.checkTimes();
-      this.checkPhone();
-      if (!this.isNameWrong && !this.isEmailWrong && !this.isPhoneWrong && !this.isTimesWrong){
-      let routeData = this.$router.resolve({name: 'https://checkout.stripe.com/c/pay/cs_live_a18PAktLRCExf4QbCUahRYb2YzgjJYrWSZhmctnue81qkIPRJWEwkivg4y#fidkdWxOYHwnPyd1blppbHNgWjA0TnZVUn1AV19LRjZhVUtWf0JsbTBiV2g9VWxuZmo1MjRqXHNsd2pOalVCN0Rhan1mVzZ2VjVfREFjQ1Z3V20wQT1GfTZUcjdTNjJSajZ1XXFpT2xuQVFANTVGa3ZjbXB1aicpJ2hsYXYnP34nYnBsYSc%2FJ0tEJyknaHBsYSc%2FJ0tEJykndmxhJz8nS0QneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%2FJ21xcXV2PyoqYGFwKHZxd2BkaCtkcSd4JSUl', /*query: {data: "someData"}*/});
-        window.open('https://checkout.stripe.com', '_blank');
-      }
-      
-    },
-  }
 }
 </script>

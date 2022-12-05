@@ -46,14 +46,13 @@
             <br>
           </div>
           <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">160€</p>
-          <a 
+          <button 
           class="px-4 pt-3 pb-3"
-          href="https://buy.stripe.com/6oE7vm9WJ4dx1EIfYZ"
-          target="_blank" style="text-decoration:none">
+          @click="$bvModal.show('modal-osd')">
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 124, 51, 1)">
               <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
             </div>
-          </a>
+          </button>
         </div>
         <div class="px-5 bg-white"></div>
         <div :class="[this.$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit', 'bg-slate-100 rounded flex flex-column']">
@@ -87,14 +86,13 @@
             <br>
           </div>
           <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">160€</p>
-          <a 
+          <button 
           class="px-4 pt-3 pb-3"
-          href="https://buy.stripe.com/6oE7vm9WJ4dx1EIfYZ"
-          target="_blank" style="text-decoration:none">
+          @click="$bvModal.show('modal-osd')">
             <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" class="rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)">
               <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
             </div>
-          </a>
+          </button>
         </div>      
       </div>
     </div>
@@ -138,6 +136,7 @@
   
     <div>
       <ModalForm index="modal-1" />
+      <ModalFormOSD index="modal-osd" />
       
     </div>
   </div>
@@ -194,7 +193,6 @@ import osdWelcome from "/osd_welcome.png"
 import oeifLogo from "/oeif-logo.png"
 import overlappingStudentGroup from "/overlapping_student_group.png"
 */
-import ModalForm from '/components/ModalForm.vue'
 import FAQAccordion2 from '/components/FAQAccordion2.vue'
 
 export default {
@@ -205,7 +203,6 @@ export default {
       oeifLogo: oeifLogo,
       overlappingStudentGroup: overlappingStudentGroup,
       */
-      ModalForm:ModalForm,
       FAQAccordion2: FAQAccordion2,
       showModal: false,
       isNameWrong: false,
