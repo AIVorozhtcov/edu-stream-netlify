@@ -11,15 +11,15 @@
             </div>
           </template> 
           <form name="modalContacts"
-              method="POST"
+              method="POST" 
               :action="$nuxt.$route.path"
-              
+              @submit.prevent="$nuxt.$emit('bv::hide::modal','modal-1')"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
               >
               <input type="hidden" name="form-name" value="modalContacts" />
-            
+            <button class="absolute"></button>
             <div class="mx-auto font-bold text-xl" style="color:rgba(90, 90, 90, 1); margin-top:3vh; margin-bottom:3vh" v-html="$t('modals.title')"></div>
             <div class="pt-3 font-bold" v-html="$t('modals.name_title')"></div>
             <input @focusout="checkName" type="text" name="name" class="pl-3 bg-slate-200 w-full rounded-sm" style="height:9vh;" v-model="response_name" :placeholder="$t('modals.name')" required>
@@ -161,10 +161,10 @@
         this.checkEmail();
         this.checkName();
         this.checkPhone();
-        if (!this.isNameWrong && !this.isEmailWrong && !this.isPhoneWrong){
-        let routeData = this.$router.resolve({name: 'https://checkout.stripe.com/c/pay/cs_live_a18PAktLRCExf4QbCUahRYb2YzgjJYrWSZhmctnue81qkIPRJWEwkivg4y#fidkdWxOYHwnPyd1blppbHNgWjA0TnZVUn1AV19LRjZhVUtWf0JsbTBiV2g9VWxuZmo1MjRqXHNsd2pOalVCN0Rhan1mVzZ2VjVfREFjQ1Z3V20wQT1GfTZUcjdTNjJSajZ1XXFpT2xuQVFANTVGa3ZjbXB1aicpJ2hsYXYnP34nYnBsYSc%2FJ0tEJyknaHBsYSc%2FJ0tEJykndmxhJz8nS0QneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%2FJ21xcXV2PyoqYGFwKHZxd2BkaCtkcSd4JSUl', /*query: {data: "someData"}*/});
-          window.open('https://checkout.stripe.com', '_blank');
-        }
+        //if (!this.isNameWrong && !this.isEmailWrong && !this.isPhoneWrong){
+        //let routeData = this.$router.resolve({name: 'https://checkout.stripe.com/c/pay/cs_live_a18PAktLRCExf4QbCUahRYb2YzgjJYrWSZhmctnue81qkIPRJWEwkivg4y#fidkdWxOYHwnPyd1blppbHNgWjA0TnZVUn1AV19LRjZhVUtWf0JsbTBiV2g9VWxuZmo1MjRqXHNsd2pOalVCN0Rhan1mVzZ2VjVfREFjQ1Z3V20wQT1GfTZUcjdTNjJSajZ1XXFpT2xuQVFANTVGa3ZjbXB1aicpJ2hsYXYnP34nYnBsYSc%2FJ0tEJyknaHBsYSc%2FJ0tEJykndmxhJz8nS0QneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%2FJ21xcXV2PyoqYGFwKHZxd2BkaCtkcSd4JSUl', /*query: {data: "someData"}*/});
+        //  window.open('https://checkout.stripe.com', '_blank');
+        //}
         
       }
     }
