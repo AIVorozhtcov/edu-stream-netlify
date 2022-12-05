@@ -1,10 +1,10 @@
 <fform name="modalContacts" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden >
     
-    <input type="hidden" name="utmSource" />
-    <input type="hidden" name="utmContent" />
-    <input type="hidden" name="utmCpc" />
-    <input type="hidden" name="utmCampaign" />
-    <input type="hidden" name="utmReferrer" />
+    <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" />
+              <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" />
+              <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" />
+              <input type="hidden" name="utmCampaign" :value="this.$store.getters['getUtmCampaign']" />
+              <input type="hidden" name="utmReferrer" :value="this.$store.getters['getUtmReferrer']" />
     <input type="text" name="name" />
     <input type="email" name="email" />
     <input type="tel" name="phone" />
