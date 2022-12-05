@@ -12,7 +12,7 @@
           </template> 
           <form name="modalContacts"
               method="POST" 
-              :action="$nuxt.$route.name"
+              :action="$nuxt.$route.path"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
@@ -166,13 +166,6 @@
         //}
         
       },
-      sendForm(){
-        fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-      }
     }
   
   }
