@@ -14,8 +14,14 @@
   "ModalForm": {
     "description": "Auto imported from components/ModalForm.vue"
   },
-  "ModalForm2": {
-    "description": "Auto imported from components/ModalForm2.vue"
+  "ModalFormCourses": {
+    "description": "Auto imported from components/ModalFormCourses.vue"
+  },
+  "ModalFormOIF": {
+    "description": "Auto imported from components/ModalFormOIF.vue"
+  },
+  "ModalFormOSD": {
+    "description": "Auto imported from components/ModalFormOSD.vue"
   },
   "NavBar": {
     "description": "Auto imported from components/NavBar.vue"

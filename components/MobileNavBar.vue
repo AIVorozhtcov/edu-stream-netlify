@@ -20,7 +20,7 @@
         </div>
         <div :class="[aboutIsSelected ? '' : 'isHidden','flex flex-column mobile-text-menu-link-responsive font-bold justify-between']" style="margin-left:10vw">
           <nuxt-link class="hover:no-underline w-full pl-7 pb-3"  :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
-          <nuxt-link class="hover:no-underline w-full pl-7 pb-3"  :to="localePath('/about/events')">{{$t('menu.about_us.events')}}</nuxt-link>
+          <!--<nuxt-link class="hover:no-underline w-full pl-7 pb-3"  :to="localePath('/about/events')">{{$t('menu.about_us.events')}}</nuxt-link>-->
           <nuxt-link class="hover:no-underline w-full pl-7 pb-3"  :to="localePath('/about/contacts')">{{$t('menu.about_us.contacts')}}</nuxt-link>
         </div>
         <div @click="examsIsSelected = true; coursesIsSelected = false; aboutIsSelected = false"  :class="[examsIsSelected ? 'menu-selected' : '', 'mobile-text-menu-title-responsive flex flex-row items-center']" style="margin-top:2vh; margin-left:5vw">

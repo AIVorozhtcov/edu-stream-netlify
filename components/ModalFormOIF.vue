@@ -10,14 +10,14 @@
               
             </div>
           </template> 
-          <form name="welcomeForm"
+          <form name="oifForm"
           @submit.prevent="handleFormSubmit"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
               >
-              <input type="hidden" name="form-name" value="welcomeForm" >
+              <input type="hidden" name="form-name" value="oifForm" >
               <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" />
               <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" />
               <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" />
@@ -41,14 +41,14 @@
             </div>
             <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
           </form>
-          <form name="welcomeForm"
+          <form name="oifForm"
           @submit.prevent="handleFormSubmit"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
               >
-              <input type="hidden" name="form-name" value="welcomeForm" />
+              <input type="hidden" name="form-name" value="oifForm" />
               <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" />
               <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" />
               <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" />
@@ -110,6 +110,8 @@
       const res = await fetch(form.action, { method: 'POST', body })
       if (res.ok) {
         $nuxt.$emit('bv::hide::modal','modal-1');
+        window.open('https://buy.stripe.com/cN2dTKd8V9xR0AEfZ0', '_blank');
+        
       } else {
         throw res
       }

@@ -135,7 +135,7 @@
     </div>
     
     <div>
-      <ModalForm2 index="modal-42" />
+      <ModalForm index="modal-1" />
       
     </div>
 
@@ -197,7 +197,7 @@ import oifWelcome from "/oif_welcome.png"
 import oeifLogo from "/oeif-logo.png"
 import overlappingStudentGroup from "/overlapping_student_group.png"
 */
-import ModalForm2 from '/components/ModalForm2.vue'
+import ModalForm from '/components/ModalForm.vue'
 import FAQAccordion from '/components/FAQAccordion.vue'
 
 export default {
@@ -208,7 +208,7 @@ export default {
       oeifLogo: oeifLogo,
       overlappingStudentGroup: overlappingStudentGroup,
       */
-      ModalForm2: ModalForm2,
+      ModalForm: ModalForm,
       FAQAccordion: FAQAccordion,
       showModal: false,
       isNameWrong: false,
