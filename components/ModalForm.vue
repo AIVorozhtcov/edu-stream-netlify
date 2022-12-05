@@ -10,14 +10,14 @@
               
             </div>
           </template> 
-          <form name="modalContacts"
+          <form name="modalContactsNew"
           @submit.prevent="handleFormSubmit"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
               >
-              <input type="hidden" name="form-name" value="modalContacts" />
+              <input type="hidden" name="form-name" value="modalContactsNew" />
               <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" />
               <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" />
               <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" />
