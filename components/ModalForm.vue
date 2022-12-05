@@ -59,7 +59,6 @@
               :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
               >
               <input type="hidden" name="form-name" value="modalContacts" />
-          <div :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%">
             <div class="mx-auto font-bold mobile-text-base-responsive" style="color:rgba(90, 90, 90, 1); margin-top:1vh; margin-bottom:1vh" v-html="$t('modals.title')"></div>
             <div class="pt-3 mobile-text-base-responsive font-bold" v-html="$t('modals.name_title')"></div>
             <input @focusout="checkName" type="text" name="name" class="pl-3 bg-slate-200 w-full rounded-sm mobile-text-sm-responsive" style="height:3vh;" v-model="response_name" :placeholder="$t('modals.name')" required>
@@ -93,7 +92,6 @@
             </div>
             <div class="w-full" style="color:rgba(71, 71, 71, 1); font-size:calc(0.75px + 0.60625vw);" v-html="$t('modals.agreement')"></div>
   
-          </div>
           </form>
         </b-modal>
     </div>
