@@ -94,13 +94,21 @@ import instagramLogoBlack from "/instagram_logo_black.png"
 */
 
 export default {
-  data: function () {
-    return {
-      /*
-      facebookLogoBlack:facebookLogoBlack,
-      instagramLogoBlack: instagramLogoBlack,
-      */
-    }
-  }
+  head() {
+        return {
+    title: this.$t('meta.about.contacts.title'),
+    
+    htmlAttrs: {
+      lang: this.$i18n.locale
+    },
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.$t('meta.about.contacts.description')
+          }
+        ],
+        };
+      }
 }
 </script>

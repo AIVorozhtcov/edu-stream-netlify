@@ -200,6 +200,22 @@ import overlappingStudentGroup from "/overlapping_student_group.png"
 import FAQAccordion from '/components/FAQAccordion.vue'
 
 export default {
+  head() {
+        return {
+    title: this.$t('meta.exams.oif.title'),
+    
+    htmlAttrs: {
+      lang: this.$i18n.locale
+    },
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.$t('meta.exams.oif.description')
+          }
+        ],
+        };
+      },
   data: function () {
     return {
       /*

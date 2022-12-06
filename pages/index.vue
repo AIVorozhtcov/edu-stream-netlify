@@ -553,6 +553,22 @@ import locationPhoto from "/location_photo.png"
 import ModalForm from '/components/ModalForm.vue'
 
 export default {
+  head() {
+        return {
+    title: this.$t('meta.index.title'),
+    
+    htmlAttrs: {
+      lang: this.$i18n.locale
+    },
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.$t('meta.index.description')
+          }
+        ],
+        };
+      },
   data: function () {
     return {
       /*

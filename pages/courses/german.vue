@@ -409,6 +409,22 @@
 //import germanCoursesWelcome from "/german_courses_welcome.png"
 
 export default {
+  head() {
+        return {
+    title: this.$t('meta.courses.german.title'),
+    
+    htmlAttrs: {
+      lang: this.$i18n.locale
+    },
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.$t('meta.courses.german.description')
+          }
+        ],
+        };
+      },
   data: function () {
     return {
       //germanCoursesWelcome: germanCoursesWelcome,

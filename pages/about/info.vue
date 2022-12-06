@@ -16,4 +16,23 @@
 </style>
 
 <script>
+export default{
+  head() {
+        return {
+    title: this.$t('meta.about.info.title'),
+    
+    htmlAttrs: {
+      lang: this.$i18n.locale
+    },
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.$t('meta.about.info.description')
+          }
+        ],
+        };
+      },
+}
+
 </script>

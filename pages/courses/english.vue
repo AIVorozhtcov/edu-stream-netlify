@@ -164,6 +164,22 @@
 //import englishCoursesWelcome from "/english_courses_welcome.png"
 
 export default {
+  head() {
+        return {
+    title: this.$t('meta.courses.english.title'),
+    
+    htmlAttrs: {
+      lang: this.$i18n.locale
+    },
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.$t('meta.courses.english.description')
+          }
+        ],
+        };
+      },
   data: function () {
     return {
       //englishCoursesWelcome: englishCoursesWelcome,
