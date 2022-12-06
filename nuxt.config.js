@@ -8,14 +8,14 @@ export default {
    // host: '0.0.0.0', // default: localhost   
  // },  
   head: {
-    title: 'Edu-Stream',
+    title: 'EduStream',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=-100vw' },
       {
         hid: 'description',
         name: 'description',
-        content: 'my website description'
+        content: 'Bei EduStream können wir Ihnen helfen, Englisch und Deutsch zu sprechen. Sie können auch ÖIF- und ÖSD-Zertifikate erwerben.'
       }
     ],
     htmlAttrs: {
@@ -107,7 +107,7 @@ export default {
     icons: true
   },
   i18n: {
-    locales: ['de','en', 'ru'],
+    locales: ['de','en','ru'],
     baseUrl: '',
     langDir:'~/locales/',
     locales: [

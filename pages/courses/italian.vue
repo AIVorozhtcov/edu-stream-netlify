@@ -166,6 +166,22 @@
 //import italianCoursesWelcome from "/italian_courses_welcome.png"
 
 export default {
+  head() {
+        return {
+    title: this.$t('meta.courses.italian.title'),
+    
+    htmlAttrs: {
+      lang: this.$i18n.locale
+    },
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.$t('meta.courses.italian.description')
+          }
+        ],
+        };
+      },
   data: function () {
     return {
       //italianCoursesWelcome: italianCoursesWelcome,

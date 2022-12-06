@@ -1,5 +1,59 @@
 {
     "flag":"de",
+    "meta":{
+        "index":{            
+            "title":"EduStream ist ein Sprach- und Zertifizierungszentrum in Wien",
+            "description":"Bei EduStream können wir Ihnen helfen, Englisch und Deutsch zu sprechen. Sie können auch ÖIF- und ÖSD-Zertifikate erwerben."
+        },
+        "courses":{
+            "italian":{
+                "title":"Italienischkurse",
+                "description":"Italienischkurse in Wien"
+            },
+            "german":{
+                "title":"Deutschkurs Wien - Deutsch Lernen in Wien - Von A1 bis C2",
+                "description":"Deutschkurse in Wien"
+            },
+            "english":{
+                "title":"Englisch Lernen in Wien - Sprachschule für Englischkurse",
+                "description":"Englischkurse in Wien"
+            }
+        },
+        "exams":{
+            "oif":{
+                "title":"ÖIF Prüfung A1, A2, B1, B2 in Wien an der EDUStream",
+                "description":"Machen Sie die OIF-Prüfung bei EduStream Sprachschule"
+            },
+            "osd":{
+                "title":"ÖSD-Prüfungen in Wien an der EDUStream",
+                "description":"Machen Sie die OSD-Prüfung an der EduStream Sprachschule"
+            }
+        },
+        "about":{
+            "contacts":{
+                "title":"Kontakte EDUStream - Rennweg 9/6, 1030 Wien",
+                "description":""
+            },
+            "info":{
+                "title":"Über uns - Sprachschule EDUStream",
+                "description":""
+            }
+        }
+    },
+    "months":{
+        "1":"Januar",
+        "2":"Februar",
+        "3":"März",
+        "4":"April",
+        "5":"Mai",
+        "6":"Juni",
+        "7":"Juli",
+        "8":"August",
+        "9":"September",
+        "10":"Oktober",
+        "11":"November",
+        "12":"Dezember"
+    },
     "main":{
         "image_text":"Sprachschule<br />im Zentrum von Wien",
         "form_text": "Schicken Sie uns eine Anfrage und wir werden für Sie den bestmöglichen Kurs auswählen",

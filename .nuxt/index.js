@@ -90,7 +90,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Edu-Stream","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=-100vw"},{"hid":"description","name":"description","content":"my website description"}],"htmlAttrs":{"lang":"en"},"menpm":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Montserrat:300,400,500,600,700,800,900"}],"style":[],"script":[]},
+    head: {"title":"EduStream","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=-100vw"},{"hid":"description","name":"description","content":"Bei EduStream können wir Ihnen helfen, Englisch und Deutsch zu sprechen. Sie können auch ÖIF- und ÖSD-Zertifikate erwerben."}],"htmlAttrs":{"lang":"en"},"menpm":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Montserrat:300,400,500,600,700,800,900"}],"style":[],"script":[]},
 
     store,
     router,

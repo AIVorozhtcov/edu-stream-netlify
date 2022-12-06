@@ -1,5 +1,59 @@
 {
     "flag":"gb",
+    "meta":{
+        "index":{            
+            "title":"EduStream is a language and certification center in Vienna",
+            "description":"At EduStream we can help you speak English and German. You can also acquire ÖIF and ÖSD certificates."
+        },
+        "courses":{
+            "italian":{
+                "title":"Italian language courses",
+                "description":"Italian language courses Vienna"
+            },
+            "german":{
+                "title":"German language courses in Vienna",
+                "description":"German language courses in Vienna"
+            },
+            "english":{
+                "title":"English language courses in Vienna",
+                "description":"English language courses in Vienna"
+            }
+        },
+        "exams":{
+            "oif":{
+                "title":"ÖIF Exam",
+                "description":"Take the ÖIF exam at EduStream Language School"
+            },
+            "osd":{
+                "title":"ÖSD Exam",
+                "description":"Take the ÖSD exam at EduStream Language School"
+            }
+        },
+        "about":{
+            "contacts":{
+                "title":"Contacts EDUStream - Rennweg 9/6, 1030 Wien",
+                "description":""
+            },
+            "info":{
+                "title":"About us - language school EDUStream",
+                "description":""
+            }
+        }
+    },
+    "months":{
+        "1":"January",
+        "2":"February",
+        "3":"March",
+        "4":"April",
+        "5":"May",
+        "6":"June",
+        "7":"July",
+        "8":"August",
+        "9":"September",
+        "10":"October",
+        "11":"November",
+        "12":"December"
+    },
     "main":{
         "image_text":"Language school<br />in the center of Vienna",
         "form_text": "Send us request and we will select the best possible course for you",
