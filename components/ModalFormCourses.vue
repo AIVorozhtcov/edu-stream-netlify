@@ -137,7 +137,7 @@
       try {
         const res = await fetch(form.action, { method: 'POST', body })
         if (res.ok) {
-          $nuxt.$emit('bv::hide::modal','modal-1');
+          $nuxt.$emit('bv::hide::modal','modal-courses');
         } else {
           throw res
         }

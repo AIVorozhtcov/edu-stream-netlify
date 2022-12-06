@@ -104,15 +104,14 @@
     },
     methods:{   
       async handleFormSubmit ($event) {
-        if (!this.isEmailWrong&!this.isPhoneWrong&!this.isNameWrong){
+        //if (!this.isEmailWrong&!this.isPhoneWrong&!this.isNameWrong){
           const form = $event.target
           const body = new URLSearchParams(new FormData(form))
           try {
             const res = await fetch(form.action, { method: 'POST', body })
             if (res.ok) {
-              $nuxt.$emit('bv::hide::modal','modal-1');
+              $nuxt.$emit('bv::hide::modal','modal-oif');
               window.open('https://buy.stripe.com/cN2dTKd8V9xR0AEfZ0', '_blank');
-              
             } else {
               throw res
             }
@@ -120,7 +119,7 @@
             console.error(err)
             // you don't have an error page but maybe you should add one
           }
-        }
+        //}
   },
       checkEmail(){
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.response_email))
