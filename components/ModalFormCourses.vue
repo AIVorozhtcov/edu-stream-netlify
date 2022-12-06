@@ -132,19 +132,22 @@
       },
       methods:{   
         async handleFormSubmit ($event) {
-      const form = $event.target
-      const body = new URLSearchParams(new FormData(form))
-      try {
-        const res = await fetch(form.action, { method: 'POST', body })
-        if (res.ok) {
-          $nuxt.$emit('bv::hide::modal','modal-courses');
-        } else {
-          throw res
-        }
-      } catch (err) {
-        console.error(err)
-        // you don't have an error page but maybe you should add one
-      }
+          
+          if (!this.isEmailWrong&!this.isPhoneWrong&!this.isNameWrong){
+            const form = $event.target
+            const body = new URLSearchParams(new FormData(form))
+            try {
+              const res = await fetch(form.action, { method: 'POST', body })
+              if (res.ok) {
+                $nuxt.$emit('bv::hide::modal','modal-courses');
+              } else {
+                throw res
+              }
+            } catch (err) {
+              console.error(err)
+              // you don't have an error page but maybe you should add one
+            }
+          }
     },
         checkEmail(){
           if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.response_email))
