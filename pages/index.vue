@@ -676,7 +676,7 @@ export default {
       } 
     },
     checkPhone(){
-      if (/^\+?\d*$/.test(this.response_phone)) 
+      if (/^(?=.*[0-9])[- +()0-9]+$/.test(this.response_phone)) 
       {
         this.isPhoneWrong = false;
       } else{
