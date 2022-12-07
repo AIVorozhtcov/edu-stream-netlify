@@ -27,6 +27,19 @@
     <input type="hidden" name="checkedTimes" />
     <button type="submit" name="submit"></button>>
  </form>
+ <form name="indexForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden >
+    
+    <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" />
+              <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" />
+              <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" />
+              <input type="hidden" name="utmCampaign" :value="this.$store.getters['getUtmCampaign']" />
+              <input type="hidden" name="utmReferrer" :value="this.$store.getters['getUtmReferrer']" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="hidden" name="checkedTimes" />
+    <button type="submit" name="submit"></button>>
+ </form>
  <form name="oifForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden >
     
     <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" />

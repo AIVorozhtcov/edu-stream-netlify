@@ -317,30 +317,46 @@
         
 
       </div>
-      <div class="flex flex-column w-full py-5 items-center justify-between rounded-3xl" style="background-color:rgba(37, 57, 132, 1)">
+      <form name="indexForm"
+        @submit.prevent="handleIndexFormSubmit"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        class="flex flex-column w-full py-5 items-center justify-between rounded-3xl" style="background-color:rgba(37, 57, 132, 1)"
+        >
+        <input type="hidden" name="form-name" value="indexForm" >
+        <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" />
+        <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" />
+        <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" />
+        <input type="hidden" name="utmCampaign" :value="this.$store.getters['getUtmCampaign']" />
+        <input type="hidden" name="utmReferrer" :value="this.$store.getters['getUtmReferrer']" />
         <h1 :class="[this.$store.getters['getIsMobile'] ? 'w-11/12 pb-6' : 'w-10/12']"><div :class="[this.$store.getters['getIsMobile'] ? 'mobile-form-text-responsive' : 'text-2xl-responsive', 'font-bold text-white text-center']" v-html="$t('main.form_text')"> </div></h1>
         <div :class="[this.$store.getters['getIsMobile'] ? 'flex-column items-start w-11/12' : 'flex-row items-start w-9/12', 'flex justify-around']" style="margin-top:3vh">
           <div :class="[this.$store.getters['getIsMobile'] ? 'w-full items-start' : 'w-1/4 items-center', 'flex flex-column justify-center mr-1']">
-            <input @focusout="checkName" :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive mobile-modal-field py-4 rounded-xl' : 'text-base-responsive py-2 rounded-md', 'w-full text-white pl-2']" style="background-color:rgba(255, 255, 255, 0.42);  " type="text" v-model="response_name" :placeholder="$t('modals.name')" required>
-            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1' : 'pt-3 font-bold', 'text-red-600 text-s']"  v-if="isNameWrong" v-html="$t('modals.required')"></div>
-            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1' : 'pt-3', 'font-bold text-red-600 text-xs invisible']" v-else v-html="$t('modals.required')"></div>
+            <input @focusout="checkName" :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive mobile-modal-field py-4 rounded-xl' : 'text-base-responsive py-2 rounded-md', 'w-full text-white pl-2']" style="background-color:rgba(255, 255, 255, 0.42);  " type="text" name="name" v-model="response_name" :placeholder="$t('modals.name')" required>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1 pb-1 mobile-text-sm-responsive' : 'pt-2 font-bold text-xs pb-1', 'text-red-600']"  v-if="isNameWrong" v-html="$t('modals.required')"></div>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1 pb-1 mobile-text-sm-responsive' : 'pt-2 text-xs pb-1', 'font-bold text-red-600 invisible']" v-else v-html="$t('modals.required')"></div>
           </div>
           <div :class="[this.$store.getters['getIsMobile'] ? 'w-full items-start' : 'w-1/4 items-center', 'flex flex-column justify-center mr-1']">
-            <input @focusout="checkEmail" :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive mobile-modal-field py-4 rounded-xl' : 'text-base-responsive py-2 rounded-md', 'w-full text-white pl-2']" style="background-color:rgba(255, 255, 255, 0.42);  " type="email" v-model="response_email" :placeholder="$t('modals.email')" required>
-            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1' : 'pt-3 font-bold', 'text-red-600 text-s']"  v-if="isEmailWrong" v-html="$t('modals.required')"></div>
-            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1' : 'pt-3', 'font-bold text-red-600 text-xs invisible']" v-else v-html="$t('modals.required')"></div>
+            <input @focusout="checkEmail" :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive mobile-modal-field py-4 rounded-xl' : 'text-base-responsive py-2 rounded-md', 'w-full text-white pl-2']" style="background-color:rgba(255, 255, 255, 0.42);  " type="email" name="email" v-model="response_email" :placeholder="$t('modals.email')" required>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1 pb-1 mobile-text-sm-responsive' : 'pt-2 font-bold text-xs pb-1', 'text-red-600']"  v-if="isEmailWrong" v-html="$t('modals.required')"></div>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1 pb-1 mobile-text-sm-responsive' : 'pt-2 text-xs pb-1', 'font-bold text-red-600 invisible']" v-else v-html="$t('modals.required')"></div>
           </div>
           <div :class="[this.$store.getters['getIsMobile'] ? 'w-full items-start' : 'w-1/4 items-center', 'flex flex-column justify-center mr-1']">
-            <input @focusout="checkPhone" :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive mobile-modal-field py-4 rounded-xl' : 'text-base-responsive py-2 rounded-md', 'w-full text-white pl-2']" style="background-color:rgba(255, 255, 255, 0.42);  " type="tel" v-model="response_phone" :placeholder="$t('modals.phone_title')" required>
-            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1' : 'pt-3 font-bold', 'text-red-600 text-s']"  v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
-            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1' : 'pt-3', 'font-bold text-red-600 text-xs invisible']" v-else v-html="$t('modals.required')"></div>
+            <input @focusout="checkPhone" :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive mobile-modal-field py-4 rounded-xl' : 'text-base-responsive py-2 rounded-md', 'w-full text-white pl-2']" style="background-color:rgba(255, 255, 255, 0.42);  " type="tel" name="phone" v-model="response_phone" :placeholder="$t('modals.phone_title')" required>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1 pb-1 mobile-text-sm-responsive' : 'pt-2 font-bold text-xs pb-1', 'text-red-600']"  v-if="isPhoneWrong" v-html="$t('modals.required')"></div>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'pt-1 pb-1 mobile-text-sm-responsive' : 'pt-2 text-xs pb-1', 'font-bold text-red-600 invisible']" v-else v-html="$t('modals.required')"></div>
           </div>
-          <div @click="checkAllNoTimes" :class="[this.$store.getters['getIsMobile'] ? 'mobile-modal-field py-4 w-full rounded-xl' : 'rounded-md text-base-responsive w-1/4', 'flex']"  style="background-color:rgba(255, 124, 51, 1);">
-            <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'mx-auto my-auto text-white py-2']" v-html="$t('modals.send')"></div>
-          </div>
+          <div
+          @click="checkAllNoTimes" :class="[this.$store.getters['getIsMobile'] ? 'mobile-modal-field py-4 w-full rounded-xl' : 'rounded-md text-base-responsive w-1/4', 'flex']"  style="background-color:rgba(255, 124, 51, 1);">
+                  <button class="mx-auto" type="submit" name="submit">
+                    <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'mx-auto my-auto text-white py-2']" v-html="$t('modals.send')"></div>
+                  </button>
+              </div>
+          
         </div>
         <div class="mx-center"><div :class="[this.$store.getters['getIsMobile'] ? 'modal-info-text-responsive w-11/12 mx-auto' : 'text-xs-responsive', 'text-center font-normal text-white']" v-html="$t('main.form_subtext')"> </div></div>
-      </div>
+      </form>
       <div class="my-16 h-full w-full flex flex-column items-start ignore-r-global-margin">
         <client-only :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full pl-30 justify-center']">        
           <carousel ref="logoGallery" :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full justify-between']" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="true" :adjustableHeight="false" :perPage="3" :scrollPerPage="true" :spacePadding="40" >
@@ -621,6 +637,24 @@ export default {
     }
   },
   methods:{
+    async handleIndexFormSubmit ($event) {
+        
+        if (!this.isEmailWrong&!this.isPhoneWrong&!this.isNameWrong){
+          const form = $event.target
+          const body = new URLSearchParams(new FormData(form))
+          try {
+            const res = await fetch(form.action, { method: 'POST', body })
+            if (res.ok) {
+              
+            } else {
+              throw res
+            }
+          } catch (err) {
+            console.error(err)
+            // you don't have an error page but maybe you should add one
+          }
+        }
+  },
     nextBanner() {
       this.$refs.bannerCarousel.goToPage(this.$refs.bannerCarousel.getNextPage());
     },
