@@ -25,7 +25,7 @@
         <div :class="[this.$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit', 'bg-slate-100 rounded flex flex-column']" >
           <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.osd.exam-1')"></div>
           <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="13/12/2022" name="A2_time" value="13/12/2022">
+            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked id="13/12/2022" name="A2_time" value="13/12/2022">
             <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="13/12/2022">13.12.2022; 13:00</label>
             <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="13/12/2022">December 13 2022</label>
             <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="13/12/2022">13:00</label>
@@ -58,7 +58,7 @@
         <div :class="[this.$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit', 'bg-slate-100 rounded flex flex-column']">
           <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.osd.exam-2')"></div>
           <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="21/11/2022" name="B1_time" value="21/11/2022">
+            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked id="21/11/2022" name="B1_time" value="21/11/2022">
             <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="21/11/2022">21.11.2022; 13:00</label>
             <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="21/11/2022">November 21 2022</label>
             <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="21/11/2022">13:00</label>
