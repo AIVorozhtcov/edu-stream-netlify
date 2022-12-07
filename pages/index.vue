@@ -350,7 +350,7 @@
           <input type="hidden" name="checkedTimes" value=" " />
           <div
           @click="checkAllNoTimes" :class="[this.$store.getters['getIsMobile'] ? 'mobile-modal-field py-4 w-full rounded-xl' : 'rounded-md text-base-responsive w-1/4', 'flex cursor-pointer']"  style="background-color:rgba(255, 124, 51, 1);">
-                  <button class="mx-auto" type="submit" name="submit">
+                  <button :class="[this.$store.getters['getIsMobile'] ? 'mobile-submit-index-form-width' : '', 'mx-auto']" type="submit" name="submit">
                     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'mx-auto my-auto text-white py-2']" v-html="$t('modals.send')"></div>
                   </button>
               </div>
@@ -731,6 +731,9 @@ export default {
   input::placeholder {
     opacity: 1;
     color: white;
+}
+.mobile-submit-index-form-width{
+  width:90vw
 }
 .color-tab-text{
   font-size: calc(3px + 0.890625vw);
