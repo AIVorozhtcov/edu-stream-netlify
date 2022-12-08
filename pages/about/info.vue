@@ -39,6 +39,9 @@ export default{
     },
     infopage:{
       prefetch: true,
+      variables() {
+        return { locale: this.$i18n.locale }
+      },
       query: infoPageQuery
     }
   },

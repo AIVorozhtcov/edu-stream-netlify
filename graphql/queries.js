@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export const infoPageQuery = gql`
-query {
-    infopage {
+query ($locale: I18NLocaleCode) {
+    infopage (locale: $locale) {
       data {
           attributes {
               infoText
@@ -13,7 +13,7 @@ query {
 `
 
 export const coursesQuery = gql`
-query {
+query   {
     coursescollections {
       data {
         id

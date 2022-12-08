@@ -24,6 +24,7 @@ import SideNavBar from '/components/SideNavBar.vue'
 import MobileNavBar from '/components/MobileNavBar.vue'
 import MobileNavFooter from '/components/MobileNavFooter.vue'
 export default {
+ // middleware: "layout-middleware",
   components: {
     NavBar: NavBar,
     NavFooter: NavFooter,
@@ -44,7 +45,7 @@ export default {
   },
   },
   mounted(){
-    this.isMobile();
+    //this.isMobile();
     const cookieSource = this.$cookies.getAll()
     this.$store.commit("setUtmSource", cookieSource);
   },
