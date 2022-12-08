@@ -325,9 +325,11 @@
         class="flex flex-column w-full py-5 items-center justify-between rounded-3xl" style="background-color:rgba(37, 57, 132, 1)"
         >
         <input type="hidden" name="form-name" value="indexForm" >
+        <input type="hidden" name="form-id" value="indexForm" />
         <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" />
         <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" />
-        <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" />
+        <input type="hidden" name="utmMedium" :value="this.$store.getters['getUtmMedium']" />
+        <input type="hidden" name="utmTerm" :value="this.$store.getters['getUtmTerm']" />
         <input type="hidden" name="utmCampaign" :value="this.$store.getters['getUtmCampaign']" />
         <input type="hidden" name="utmReferrer" :value="this.$store.getters['getUtmReferrer']" />
         <h1 :class="[this.$store.getters['getIsMobile'] ? 'w-11/12 pb-6' : 'w-10/12']"><div :class="[this.$store.getters['getIsMobile'] ? 'mobile-form-text-responsive' : 'text-2xl-responsive', 'font-bold text-white text-center']" v-html="$t('main.form_text')"> </div></h1>

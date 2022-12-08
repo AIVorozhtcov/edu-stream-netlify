@@ -18,9 +18,11 @@
                 :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
                 >
                 <input type="hidden" name="form-name" value="modalContactsNew" >
+                <input type="hidden" name="form-id" value="modalContactsNew" />
                 <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" />
                 <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" />
-                <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" />
+                <input type="hidden" name="utmMedium" :value="this.$store.getters['getUtmMedium']" />
+                <input type="hidden" name="utmTerm" :value="this.$store.getters['getUtmTerm']" />
                 <input type="hidden" name="utmCampaign" :value="this.$store.getters['getUtmCampaign']" />
                 <input type="hidden" name="utmReferrer" :value="this.$store.getters['getUtmReferrer']" />
               <div class="mx-auto font-bold text-xl" style="color:rgba(90, 90, 90, 1); margin-top:3vh; margin-bottom:3vh" v-html="$t('modals.title')"></div>
@@ -48,10 +50,12 @@
                 data-netlify-honeypot="bot-field"
                 :class="[!this.$store.getters['getIsMobile'] ? 'hidden' : 'flex flex-column items-start']" style="margin-left:7%; margin-right:7%"
                 >
-                <input type="hidden" name="form-name" value="modalContactsNew" />
+                <input type="hidden" name="form-name" value="modalContactsNew" />                
+                <input type="hidden" name="form-id" value="modalContactsNew" />
                 <input type="hidden" name="utmSource" :value="this.$store.getters['getUtmSource']" />
                 <input type="hidden" name="utmContent" :value="this.$store.getters['getUtmContent']" />
-                <input type="hidden" name="utmCpc" :value="this.$store.getters['getUtmCpc']" />
+                <input type="hidden" name="utmMedium" :value="this.$store.getters['getUtmMedium']" />
+                <input type="hidden" name="utmTerm" :value="this.$store.getters['getUtmTerm']" />
                 <input type="hidden" name="utmCampaign" :value="this.$store.getters['getUtmCampaign']" />
                 <input type="hidden" name="utmReferrer" :value="this.$store.getters['getUtmReferrer']" />
               <div class="mx-auto font-bold mobile-text-base-responsive" style="color:rgba(90, 90, 90, 1); margin-top:1vh; margin-bottom:1vh" v-html="$t('modals.title')"></div>
