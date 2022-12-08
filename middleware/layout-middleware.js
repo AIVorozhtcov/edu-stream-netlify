@@ -1,3 +1,6 @@
-export default function({ store, context }) {
-    store.commit("setIsMobile", true)
+export default function( { store, req }) {
+    const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
+   const isMobile = /mobile/i.test(userAgent)
+   store.commit("setIsMobile", isMobile)
+    
   }
