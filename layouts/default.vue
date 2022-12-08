@@ -45,7 +45,7 @@ export default {
   },
   },
   mounted(){
-    //this.isMobile();
+    this.isMobile();
     const cookieSource = this.$cookies.getAll()
     this.$store.commit("setUtmSource", cookieSource);
   },
