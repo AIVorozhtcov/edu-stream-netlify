@@ -1,6 +1,8 @@
 export default function( { store, req }) {
-    const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
+    if (process.client){
+        const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
    const isMobile = /mobile/i.test(userAgent)
    store.commit("setIsMobile", isMobile)
+      }
     
   }
