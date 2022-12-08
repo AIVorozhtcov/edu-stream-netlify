@@ -1,8 +1,13 @@
 <template>
     <div class="pt-5 pb-5 flex flex-column items-start">
       <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : 'text-3xl-responsive', 'font-bold']" style="padding-bottom:4%">{{$t('about_us.title')}}</h1>
-      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive']" v-html="$t('about_us.text')"></div>
-  
+      <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive']" v-html="infopage.data.attributes.infoText"></div>
+      
+
+      <!--<div :v-if="coursescollections" v-for="course in coursescollections.data" v-bind:key="course.id">
+        <p>{{course.attributes.CourseText}}</p>
+      
+      </div>-->
     </div>
 </template>
 
@@ -16,7 +21,27 @@
 </style>
 
 <script>
+
+import { infoPageQuery } from '~/graphql/queries';
+import { coursesQuery } from '~/graphql/queries';
+
 export default{
+  data() {
+    return{
+      coursescollections: [],
+      infopage: null,
+    }
+  },
+  apollo:{
+    coursescollections:{
+      prefetch: true,
+      query: coursesQuery
+    },
+    infopage:{
+      prefetch: true,
+      query: infoPageQuery
+    }
+  },
   head() {
         return {
     title: this.$t('meta.about.info.title'),

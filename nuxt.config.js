@@ -94,10 +94,18 @@ export default {
     '@nuxt/content',
     '@nuxtjs/i18n',
     'cookie-universal-nuxt',
+    '@nuxtjs/apollo'
     //'nuxt-compress',
     //'@nuxt/image'
     
   ],
+  apollo:{
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.BACKEND_URL || "https://edustream-strapi.up.railway.app/graphql"
+      }
+    }
+  },
   /*'nuxt-compress': {
     brotli: {
       threshold: 8192,
