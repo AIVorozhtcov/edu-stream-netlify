@@ -19,86 +19,49 @@
     
    
     <div class="flex flex-column w-full bg-white py-10">
+      
+
       <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mobile-text-xl-responsive' : 'w-5/12 text-3xl', 'py-5 font-bold']" v-html="$t('exams.oif.subtitle')"></div>
-      <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column mobile-label-text-responsive' : 'flex flex-row', 'items-start']">
-        <div :class="[this.$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit', 'bg-slate-100 rounded flex flex-column']" >
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.oif.exam-1')"></div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked id="13/12/2022" name="A2_time" value="13/12/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="13/12/2022">13.12.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="13/12/2022">December 13 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="13/12/2022">13:00</label>
+        
+      <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column mobile-label-text-responsive' : 'flex flex-row flex-wrap', 'items-start']">
+        <div v-for="oifExam in oifExams.data" v-bind:key="oifExam.Title">
+          <div :class="[$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit mr-3 mb-5', 'bg-slate-100 rounded flex flex-column ']" >
+          <div :class="[$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="oifExam.attributes.Title"></div>
+          <div v-for="timeSlot in oifExam.attributes.Dates" v-bind:key="timeSlot.Date">
+          <div :class="[$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-center justify-between w-full']" >
+            <input :class="[$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked :id="timeSlot.Date.slice(0, 10)" :name="oifExam.attributes.Title" :value="timeSlot.Date.slice(0, 10)">
+            <label :class="[$store.getters['getIsMobile'] ? 'hidden' : '']" :for="timeSlot.Date.slice(0, 10)">{{timeSlot.Date.slice(0, 10) + '; ' + timeSlot.Date.slice(11, 16)}}</label>
+            <label :class="[$store.getters['getIsMobile'] ? 'mx-center' : 'hidden']" :for="timeSlot.Date.slice(0, 10)">{{timeSlot.Date.slice(0, 10) + ', ' + timeSlot.Date.slice(11, 16)}}</label>
+            <div></div>
+            
             <br>
           </div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="14/12/2022" name="A2_time" value="14/12/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="14/12/2022">14.12.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="14/12/2022">December 14 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="13/12/2022">14:00</label>
-            <br>
           </div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4 ' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="15/12/2022" name="A2_time" value="15/12/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="15/12/2022">15.12.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="15/12/2022">December 15 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="15/12/2022">13:00</label>
-            <br>
-          </div>
-          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">160€</p>
+          <p :class="[$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">{{oifExam.attributes.Price}}</p>
           <button 
           class="px-4 pt-3 pb-3"
           @click="$bvModal.show('modal-oif')">
-            <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 124, 51, 1)">
-              <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
+            <div :class="[$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 124, 51, 1)">
+              <div :class="[$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
             </div>
           </button>
         </div>
-        <div class="px-5 bg-white"></div>
-        <div :class="[this.$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit', 'bg-slate-100 rounded flex flex-column']">
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.oif.exam-2')"></div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="21/11/2022" checked name="B1_time" value="21/11/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="21/11/2022">21.11.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="21/11/2022">November 21 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="21/11/2022">13:00</label>
-            <br>
-          </div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="05/12/2022" name="B1_time" value="05/12/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="05/12/2022">05.12.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="05/12/2022">December 5 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="05/12/2022">13:00</label>
-            <br>
-          </div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="06/12/2022" name="B1_time" value="06/12/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="05/12/2022">06.12.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="06/12/2022">December 5 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="05/12/2022">13:00</label>
-            <br>
-          </div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="07/12/2022" name="B1_time" value="07/12/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="07/12/2022">07.12.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="07/12/2022">December 7 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="07/12/2022">13:00</label>
-            <br>
-          </div>
-          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">160€</p>
-          <button 
-          class="px-4 pt-3 pb-3"
-          @click="$bvModal.show('modal-oif')">
-            <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" class="rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)">
-              <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
-            </div>
-          </button>
-        </div>          
+            
+        </div>  
+
+
+
+
+
+
+
+                 
       </div>
     </div>
     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-global-margins' : 'ignore-global-margins', 'flex']" style="background-color:rgba(248, 248, 248, 1); padding-top:5vh;">
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-global-margins' : 'global-margins', 'flex flex-column']">
         <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '', 'pb-3']" v-html="$t('exams.oif.FAQ-preview')"></div>
-        <FAQAccordion />
+        <FAQAccordion :class="[this.$store.getters['getIsMobile'] ? 'pb-5' : '']" />
         <!-- <b-button v-b-toggle="'collapse-2'" class="m-1">Toggle Collapse</b-button>
         <p v-b-toggle="'collapse-2'"> also open</p>        
         <b-collapse class="container bg-slate-800" id="collapse-2">
@@ -197,6 +160,7 @@ import oifWelcome from "/oif_welcome.png"
 import oeifLogo from "/oeif-logo.png"
 import overlappingStudentGroup from "/overlapping_student_group.png"
 */
+import { oifExamsQuery } from '~/graphql/queries';
 import FAQAccordion from '/components/FAQAccordion.vue'
 
 export default {
@@ -233,7 +197,18 @@ export default {
       response_email: null,
       response_phone: null,
       checkedTimes:[],
+      oifExams:[]
       
+    }
+  },
+  apollo:{
+    
+    oifExams:{
+      prefetch: true,
+      variables() {
+        return { locale: this.$i18n.locale }
+      },
+      query: oifExamsQuery
     }
   },
   }

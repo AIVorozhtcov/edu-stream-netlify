@@ -11,6 +11,21 @@ query ($locale: I18NLocaleCode) {
   }
   }
 `
+export const oifExamsQuery = gql`
+query ($locale: I18NLocaleCode) {
+    oifExams (locale: $locale) {
+      data {
+          attributes {
+              Title
+            	Price
+              PaymentLink
+            	Dates{
+                Date
+              }
+          }
+      }
+  }
+  }`
 
 export const englishCoursesQuery = gql`
 query ($locale: I18NLocaleCode) {

@@ -99,7 +99,7 @@
     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-global-margins' : 'ignore-global-margins', 'flex']" style="background-color:rgba(248, 248, 248, 1); padding-top:5vh;">
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-global-margins' : 'global-margins', 'flex flex-column']">
         <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '', 'pb-3']" v-html="$t('exams.osd.FAQ-preview')"></div>
-        <FAQAccordion2 />
+        <FAQAccordion2 :class="[this.$store.getters['getIsMobile'] ? 'pb-5' : '']" />
         <!-- <b-button v-b-toggle="'collapse-2'" class="m-1">Toggle Collapse</b-button>
         <p v-b-toggle="'collapse-2'"> also open</p>        
         <b-collapse class="container bg-slate-800" id="collapse-2">
