@@ -130,7 +130,7 @@ export default {
       response_name: "",
       response_email: null,
       response_phone: null,
-      englishCourses: null
+      englishCourses: []
     
     }
   },

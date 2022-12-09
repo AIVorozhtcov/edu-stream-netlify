@@ -132,7 +132,7 @@ export default {
       response_name: "",
       response_email: null,
       response_phone: null,
-      italianCourses: null
+      italianCourses: []
     
     }
   },
