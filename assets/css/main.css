@@ -129,6 +129,7 @@ body
   }
 
   .card-right-column{
+    width: 19vw;
     margin-top:3%;
     padding-top:4%;
     margin-bottom:2%; 
@@ -137,6 +138,7 @@ body
     padding-right:2%;
   }
   .mobile-card-right-column{
+    width:30vw;
     margin-top:3%;
     padding-top:4%;
     margin-bottom:2%; 
@@ -179,6 +181,7 @@ body
     .price-tag-comment{
       color:rgba(155, 155, 155, 1);
       font-size: calc(0.7px + 0.60625vw);
+      width:7vw
     }
     .mobile-price-tag-comment{
       color:rgba(155, 155, 155, 1);

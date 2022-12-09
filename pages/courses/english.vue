@@ -195,6 +195,7 @@ export default {
     
     }
   },
+  
   methods:{
     checkEmail(){
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.response_email))

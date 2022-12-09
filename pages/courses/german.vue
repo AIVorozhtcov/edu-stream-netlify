@@ -207,7 +207,7 @@
           <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-week-number' : 'week-number',]">4 {{$t('courses.weeks')}}</p>
           <div class="flex flex-row items-end">
             <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag' : 'price-tag', 'text-blue-600 font-bold']">{{$t('courses.german.cards.5.price_1')}}</p>
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag-comment' : 'price-tag-comment',]"></p>
+            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag-comment' : 'price-tag-comment',]">{{$t('courses.german.cards.5.comment_price_1')}}</p>
             
           </div>
           <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-week-number' : 'week-number',]" style="padding-top:10%">8 {{$t('courses.weeks')}}</p>
