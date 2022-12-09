@@ -33,6 +33,27 @@ query ($locale: I18NLocaleCode) {
   }
 `
 
+export const italianCoursesQuery = gql`
+query ($locale: I18NLocaleCode) {
+    italianCourses  (locale: $locale) {
+      data {
+          attributes  {
+            Title
+            Price1
+            Period1
+            PriceComment1
+            Price2
+            Period2
+            PriceComment2
+            FeaturesList
+            
+            
+          }
+      }
+  }
+  }
+`
+
 /*export const coursesQuery = gql`
 query   {
     coursescollections {

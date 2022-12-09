@@ -18,105 +18,43 @@
 />         
     </div>      
     
+
+    <div v-for="italianCourse in italianCourses.data" v-bind:key="italianCourse.Title">
+      
       <div class="flex flex-row mx-auto items-start justify-between w-full course-card">
         <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 3%;">
           <div class="flex flex-row items-center">          
-            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'course-card-h1', 'font-bold pl-5']">{{$t('courses.english.cards.1.title')}}</h1>
-            <div class="offline-tag" v-if="$t('courses.english.cards.1.is_offline')=='true'">Offline</div>
-            <div class="online-tag" v-if="$t('courses.english.cards.1.is_online')=='true'">Online</div>
+            <h1 :class="[$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'course-card-h1', 'font-bold pl-5']">{{italianCourse.attributes.Title}}</h1>
+            <!--<div class="offline-tag" v-if="$t('courses.italian.cards.1.is_offline')=='true'">Offline</div>
+            <div class="online-tag" v-if="$t('courses.italian.cards.1.is_online')=='true'">Online</div>-->
           </div>
-          <ul :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '', 'font-bold pl-5']">
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.1.1')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.1.2')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.1.3')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.1.4')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.1.5')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.1.6')"></li>
+          <ul :class="[$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '', 'font-bold pl-5']">
+            <div  v-for="feature in italianCourse.attributes.FeaturesList" v-bind:key="feature">
+              <li :class="[$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="feature"></li>
+            </div>
           </ul>
         </div>
-        <div  :class="[this.$store.getters['getIsMobile'] ? 'mobile-card-right-column w-1/3' : 'card-right-column', 'flex flex-column h-full border-l-2']">
-          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-week-number' : 'week-number',]">4 {{$t('courses.weeks')}}</p>
-          <div class="flex flex-row items-end">
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag' : 'price-tag', 'text-blue-600 font-bold']">{{$t('courses.english.cards.1.price_1')}}</p>
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag-comment' : 'price-tag-comment',]">{{$t('courses.english.cards.1.comment_price_1')}}</p>
+        <div  :class="[$store.getters['getIsMobile'] ? 'mobile-card-right-column w-1/3' : 'card-right-column', 'flex flex-column h-full border-l-2']">
+          <p :class="[$store.getters['getIsMobile'] ? 'mobile-week-number' : 'week-number',]">{{italianCourse.attributes.Period1}}</p>
+          <div :class="[$store.getters['getIsMobile'] ? 'flex-column' : 'flex-row items-end', 'flex']">
+            <p :class="[$store.getters['getIsMobile'] ? 'mobile-price-tag' : 'price-tag', 'text-blue-600 font-bold']">{{italianCourse.attributes.Price1}}</p>
+            <p :class="[$store.getters['getIsMobile'] ? 'mobile-price-tag-comment' : 'price-tag-comment',]">{{italianCourse.attributes.PriceComment1}}</p>
             
           </div>
-          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-week-number' : 'week-number',]" style="padding-top:10%">8 {{$t('courses.weeks')}}</p>
-          <div class="flex flex-row items-end">
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag' : 'price-tag', 'text-blue-600 font-bold']">{{$t('courses.english.cards.1.price_2')}}</p>
-            
+          <p :class="[$store.getters['getIsMobile'] ? 'mobile-week-number' : 'week-number',]" style="padding-top:10%">{{italianCourse.attributes.Period2}}</p>
+          <div :class="[$store.getters['getIsMobile'] ? 'flex-column' : 'flex-row items-end', 'flex']">
+            <p :class="[$store.getters['getIsMobile'] ? 'mobile-price-tag' : 'price-tag', 'text-blue-600 font-bold']">{{italianCourse.attributes.Price2}}</p>
+            <p :class="[$store.getters['getIsMobile'] ? 'mobile-price-tag-comment' : 'price-tag-comment',]">{{italianCourse.attributes.PriceComment2}}</p>
+
           </div>
-          <button :class="[this.$store.getters['getIsMobile'] ? 'w-full py-1' : 'h-fit w-fit', 'btn rounded-lg']" type="button"  style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-courses')" >
-            <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'button-text', 'text-white']"  v-html="$t('exams.oif.register')"></div>
+          <button :class="[$store.getters['getIsMobile'] ? 'w-full py-1' : 'h-fit w-fit', 'btn rounded-lg']" type="button"  style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-courses')" >
+            <div :class="[$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'button-text', 'text-white']"  v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
       </div>
-      <div class="flex flex-row mx-auto items-start justify-between w-full course-card">
-        <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 3%;">
-          <div class="flex flex-row items-center">          
-            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'course-card-h1', 'font-bold pl-5']">{{$t('courses.english.cards.2.title')}}</h1>
-            <div class="offline-tag" v-if="$t('courses.english.cards.2.is_offline')=='true'">Offline</div>
-            <div class="online-tag" v-if="$t('courses.english.cards.2.is_online')=='true'">Online</div>
-          </div>
-          <ul :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '', 'font-bold pl-5']">
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.2.1')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.2.2')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.2.3')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.2.4')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.2.5')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.2.6')"></li>
-          </ul>
-        </div>
-        <div  :class="[this.$store.getters['getIsMobile'] ? 'mobile-card-right-column w-1/3' : 'card-right-column', 'flex flex-column h-full border-l-2']">
-          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-week-number' : 'week-number',]">4 {{$t('courses.weeks')}}</p>
-          <div class="flex flex-row items-end">
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag' : 'price-tag', 'text-blue-600 font-bold']">{{$t('courses.english.cards.2.price_1')}}</p>
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag-comment' : 'price-tag-comment',]">{{$t('courses.english.cards.2.comment_price_1')}}</p>
-            
-          </div>
-          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-week-number' : 'week-number',]" style="padding-top:10%">8 {{$t('courses.weeks')}}</p>
-          <div class="flex flex-row items-end">
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag' : 'price-tag', 'text-blue-600 font-bold']">{{$t('courses.english.cards.2.price_2')}}</p>
-            
-          </div>
-          <button :class="[this.$store.getters['getIsMobile'] ? 'w-full py-1' : 'h-fit w-fit', 'btn rounded-lg']" type="button"  style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-courses')" >
-            <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'button-text', 'text-white']"  v-html="$t('exams.oif.register')"></div>
-          </button>
-        </div>
-      </div>
-      <div class="flex flex-row mx-auto items-start justify-between w-full course-card">
-        <div class="flex flex-column justify-around" style="padding-top:5%; padding-bottom: 3%;">
-          <div class="flex flex-row items-center">          
-            <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'course-card-h1', 'font-bold pl-5']">{{$t('courses.english.cards.3.title')}}</h1>
-            <div class="offline-tag" v-if="$t('courses.english.cards.3.is_offline')=='true'">Offline</div>
-            <div class="online-tag" v-if="$t('courses.english.cards.3.is_online')=='true'">Online</div>
-          </div>
-          <ul :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '', 'font-bold pl-5']">
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.3.1')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.3.2')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.3.3')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.3.4')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.3.5')"></li>
-            <li :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="$t('courses.english.cards.3.6')"></li>
-          </ul>
-        </div>
-        <div  :class="[this.$store.getters['getIsMobile'] ? 'mobile-card-right-column w-1/3' : 'card-right-column', 'flex flex-column h-full border-l-2']">
-          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-week-number' : 'week-number',]">4 {{$t('courses.weeks')}}</p>
-          <div class="flex flex-row items-end">
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag' : 'price-tag', 'text-blue-600 font-bold']">{{$t('courses.english.cards.3.price_1')}}</p>
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag-comment' : 'price-tag-comment',]">{{$t('courses.english.cards.3.comment_price_1')}}</p>
-            
-          </div>
-          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-week-number' : 'week-number',]" style="padding-top:10%">8 {{$t('courses.weeks')}}</p>
-          <div class="flex flex-row items-end">
-            <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-price-tag' : 'price-tag', 'text-blue-600 font-bold']">{{$t('courses.english.cards.3.price_2')}}</p>
-            
-          </div>
-          <button :class="[this.$store.getters['getIsMobile'] ? 'w-full py-1' : 'h-fit w-fit', 'btn rounded-lg']" type="button"  style="background-color:rgba(255, 124, 51, 1); margin-top:10%;" @click="$bvModal.show('modal-courses')" >
-            <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'button-text', 'text-white']"  v-html="$t('exams.oif.register')"></div>
-          </button>
-        </div>
-      </div>
+    </div> 
+
+      
       <div>
         
       <ModalForm index="modal-1" />
@@ -164,7 +102,7 @@
 <script>
 
 //import italianCoursesWelcome from "/italian_courses_welcome.png"
-
+import { italianCoursesQuery } from '~/graphql/queries';
 export default {
   head() {
         return {
@@ -193,8 +131,19 @@ export default {
       checkedTimes:[],
       response_name: "",
       response_email: null,
-      response_phone: null
+      response_phone: null,
+      italianCourses: null
     
+    }
+  },
+  apollo:{
+    
+    italianCourses:{
+      prefetch: true,
+      variables() {
+        return { locale: this.$i18n.locale }
+      },
+      query: italianCoursesQuery
     }
   },
 }
