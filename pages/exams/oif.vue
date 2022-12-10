@@ -27,12 +27,11 @@
         <div v-for="oifExam in oifExams.data" v-bind:key="oifExam.Title">
           <div :class="[$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit mr-3 mb-5', 'bg-slate-100 rounded flex flex-column ']" >
           <div :class="[$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="oifExam.attributes.Title"></div>
-          <div v-for="timeSlot in oifExam.attributes.Dates" v-bind:key="timeSlot.Date">
-          <div :class="[$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-center justify-between w-full']" >
-            <input :class="[$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked :id="timeSlot.Date.slice(0, 10)" :name="oifExam.attributes.Title" :value="timeSlot.Date.slice(0, 10)">
-            <label :class="[$store.getters['getIsMobile'] ? 'hidden' : '']" :for="timeSlot.Date.slice(0, 10)">{{timeSlot.Date.slice(0, 10) + '; ' + timeSlot.Date.slice(11, 16)}}</label>
-            <label :class="[$store.getters['getIsMobile'] ? 'mx-center' : 'hidden']" :for="timeSlot.Date.slice(0, 10)">{{timeSlot.Date.slice(0, 10) + ', ' + timeSlot.Date.slice(11, 16)}}</label>
-            <div></div>
+          <div v-for="timeSlot in oifExam.attributes.Dates" v-bind:key="timeSlot.Date + ',' + timeSlot.Time">
+          <div :class="[$store.getters['getIsMobile'] ? 'mt-4' : 'justify-start', 'flex flex-row items-center  w-full']" >
+            <input :class="[$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked :id="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)" :name="oifExam.attributes.Title" :value="timeSlot.Date.slice(0, 10)">
+            <label :class="[$store.getters['getIsMobile'] ? 'hidden' : '']" style="margin-left:1vw" :for="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)">{{$t('months.' + timeSlot.Date.slice(5,7)) + ' ' + timeSlot.Date.slice(8) + ' ' + timeSlot.Date.slice(0, 4) + '; ' + timeSlot.Time.slice(0, 5)}}</label>
+            <label :class="[$store.getters['getIsMobile'] ? 'mx-center' : 'hidden']" style="margin-left:6vw" :for="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)">{{$t('months.' + timeSlot.Date.slice(5,7)) + ' ' + timeSlot.Date.slice(8) + ' ' + timeSlot.Date.slice(0, 4) + '; ' + timeSlot.Time.slice(0, 5)}}</label>
             
             <br>
           </div>
@@ -40,7 +39,7 @@
           <p :class="[$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">{{oifExam.attributes.Price}}</p>
           <button 
           class="px-4 pt-3 pb-3"
-          @click="$bvModal.show('modal-oif')">
+          v-b-modal="'modal-oif'" @click="insertDynamicLink(oifExam.attributes.PaymentLink)">
             <div :class="[$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 124, 51, 1)">
               <div :class="[$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
             </div>
@@ -97,7 +96,7 @@
     
     <div>
       <ModalForm index="modal-1" />
-      <ModalFormOIF index="modal-oif" />
+      <ModalFormOIF index="modal-oif" :paymentLink="dynamicLink" />
     
       
     </div>
@@ -196,9 +195,15 @@ export default {
       response_name: "",
       response_email: null,
       response_phone: null,
+      dynamicLink: null,
       checkedTimes:[],
       oifExams:[]
       
+    }
+  },
+  methods:{
+    insertDynamicLink(paymentLink) {
+      this.dynamicLink = paymentLink
     }
   },
   apollo:{

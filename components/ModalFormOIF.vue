@@ -93,6 +93,8 @@
   
   <script>
     export default {
+    props: ['paymentLink'],
+
     data: function () {
       return {      
         showModal: false,
@@ -115,7 +117,7 @@
             const res = await fetch(form.action, { method: 'POST', body })
             if (res.ok) {
               $nuxt.$emit('bv::hide::modal','modal-oif');
-              window.open('https://buy.stripe.com/cN2dTKd8V9xR0AEfZ0', '_blank');
+              window.open(this.paymentLink, '_blank');
             } else {
               throw res
             }

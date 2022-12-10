@@ -21,11 +21,29 @@ query ($locale: I18NLocaleCode) {
               PaymentLink
             	Dates{
                 Date
+                Time
               }
           }
       }
   }
   }`
+
+  export const osdExamsQuery = gql`
+  query ($locale: I18NLocaleCode) {
+      osdExams (locale: $locale) {
+        data {
+            attributes {
+                Title
+                Price
+                PaymentLink
+                Dates{
+                  Date
+                  Time
+                }
+            }
+        }
+    }
+    }`
 
 export const englishCoursesQuery = gql`
 query ($locale: I18NLocaleCode) {

@@ -22,77 +22,28 @@
     <div class="flex flex-column w-full bg-white py-10">
       <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mobile-text-xl-responsive' : 'w-5/12 text-3xl', 'py-5 font-bold']" v-html="$t('exams.osd.subtitle')"></div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column mobile-label-text-responsive' : 'flex flex-row', 'items-start']">
-        <div :class="[this.$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit', 'bg-slate-100 rounded flex flex-column']" >
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.osd.exam-1')"></div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked id="13/12/2022" name="A2_time" value="13/12/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="13/12/2022">13.12.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="13/12/2022">December 13 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="13/12/2022">13:00</label>
+        <div v-for="osdExam in osdExams.data" v-bind:key="osdExam.Title">
+          <div :class="[$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit mr-3 mb-5', 'bg-slate-100 rounded flex flex-column ']" >
+          <div :class="[$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="osdExam.attributes.Title"></div>
+          <div v-for="timeSlot in osdExam.attributes.Dates" v-bind:key="timeSlot.Date + ',' + timeSlot.Time">
+          <div :class="[$store.getters['getIsMobile'] ? 'mt-4' : 'justify-start', 'flex flex-row items-center  w-full']" >
+            <input :class="[$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked :id="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)" :name="osdExam.attributes.Title" :value="timeSlot.Date.slice(0, 10)">
+            <label :class="[$store.getters['getIsMobile'] ? 'hidden' : '']" style="margin-left:1vw" :for="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)">{{$t('months.' + timeSlot.Date.slice(5,7)) + ' ' + timeSlot.Date.slice(8) + ' ' + timeSlot.Date.slice(0, 4) + '; ' + timeSlot.Time.slice(0, 5)}}</label>
+            <label :class="[$store.getters['getIsMobile'] ? 'mx-center' : 'hidden']" style="margin-left:6vw" :for="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)">{{$t('months.' + timeSlot.Date.slice(5,7)) + ' ' + timeSlot.Date.slice(8) + ' ' + timeSlot.Date.slice(0, 4) + '; ' + timeSlot.Time.slice(0, 5)}}</label>
+            
             <br>
           </div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="14/12/2022" name="A2_time" value="14/12/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="14/12/2022">14.12.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="14/12/2022">December 14 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="13/12/2022">14:00</label>
-            <br>
           </div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4 ' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="15/12/2022" name="A2_time" value="15/12/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="15/12/2022">15.12.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="15/12/2022">December 15 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="15/12/2022">13:00</label>
-            <br>
-          </div>
-          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">160€</p>
+          <p :class="[$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">{{osdExam.attributes.Price}}</p>
           <button 
           class="px-4 pt-3 pb-3"
-          @click="$bvModal.show('modal-osd')">
-            <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 124, 51, 1)">
-              <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
+          v-b-modal="'modal-osd'" @click="insertDynamicLink(osdExam.attributes.PaymentLink)">
+            <div :class="[$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 124, 51, 1)">
+              <div :class="[$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
             </div>
           </button>
         </div>
-        <div class="px-5 bg-white"></div>
-        <div :class="[this.$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit', 'bg-slate-100 rounded flex flex-column']">
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="$t('exams.osd.exam-2')"></div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked id="21/11/2022" name="B1_time" value="21/11/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="21/11/2022">21.11.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="21/11/2022">November 21 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="21/11/2022">13:00</label>
-            <br>
-          </div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="05/12/2022" name="B1_time" value="05/12/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="05/12/2022">05.12.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="05/12/2022">December 5 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="05/12/2022">13:00</label>
-            <br>
-          </div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="06/12/2022" name="B1_time" value="06/12/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="05/12/2022">06.12.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="06/12/2022">December 5 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="05/12/2022">13:00</label>
-            <br>
-          </div>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mt-4' : '', 'flex flex-row items-around w-full']" >
-            <input :class="[this.$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" id="07/12/2022" name="B1_time" value="07/12/2022">
-            <label :class="[this.$store.getters['getIsMobile'] ? 'hidden' : '']" for="07/12/2022">07.12.2022; 13:00</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? 'radio-padding' : 'hidden']" for="07/12/2022">December 7 2022</label>
-            <label :class="[this.$store.getters['getIsMobile'] ? '' : 'hidden']" for="07/12/2022">13:00</label>
-            <br>
-          </div>
-          <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">160€</p>
-          <button 
-          class="px-4 pt-3 pb-3"
-          @click="$bvModal.show('modal-osd')">
-            <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" class="rounded-2xl h-fit w-fit" style="background-color:rgba(255, 124, 51, 1)">
-              <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
-            </div>
-          </button>
+            
         </div>      
       </div>
     </div>
@@ -136,7 +87,7 @@
   
     <div>
       <ModalForm index="modal-1" />
-      <ModalFormOSD index="modal-osd" />
+      <ModalFormOSD index="modal-osd" :paymentLink="dynamicLink" />
       
     </div>
   </div>
@@ -194,6 +145,7 @@ import oeifLogo from "/oeif-logo.png"
 import overlappingStudentGroup from "/overlapping_student_group.png"
 */
 import FAQAccordion2 from '/components/FAQAccordion2.vue'
+import { osdExamsQuery } from '~/graphql/queries';
 
 export default {
   head() {
@@ -228,11 +180,26 @@ export default {
       response_name: "",
       response_email: null,
       response_phone: null,
+      dynamicLink: null,
       checkedTimes:[],
+      osdExams: []
       
     }
   },
+  apollo:{
+    
+    osdExams:{
+      prefetch: true,
+      variables() {
+        return { locale: this.$i18n.locale }
+      },
+      query: osdExamsQuery
+    }
+  },
   methods:{
+    insertDynamicLink(paymentLink) {
+      this.dynamicLink = paymentLink
+  },
     checkEmail(){
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.response_email))
       {
