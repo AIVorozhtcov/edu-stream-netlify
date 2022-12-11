@@ -26,22 +26,22 @@
         <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mobile-text-xl-responsive' : 'w-5/12 text-3xl', 'py-5 font-bold']"><h1>{{examPages.data[0].attributes.ExamListTitle}}</h1></div>
           
         <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column mobile-label-text-responsive' : 'flex flex-row flex-wrap', 'items-start']">
-          <div v-for="oifExam in examPages.data[0].attributes.Exams" v-bind:key="oifExam.Title">
+          <div v-for="exam in examPages.data[0].attributes.Exams" v-bind:key="exam.Title">
             <div :class="[$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit mr-3 mb-5', 'bg-slate-100 rounded flex flex-column ']" >
-            <div :class="[$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']"><h2>{{oifExam.Title}}</h2></div>
-            <div v-for="timeSlot in oifExam.Dates" v-bind:key="timeSlot.Date + ',' + timeSlot.Time">
+            <div :class="[$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']"><h2>{{exam.Title}}</h2></div>
+            <div v-for="timeSlot in exam.Dates" v-bind:key="timeSlot.Date + ',' + timeSlot.Time">
             <div :class="[$store.getters['getIsMobile'] ? 'mt-4' : 'justify-start', 'flex flex-row items-center  w-full']" >
-              <input :class="[$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked :id="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)" :name="oifExam.Title" :value="timeSlot.Date.slice(0, 10)">
+              <input :class="[$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked :id="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)" :name="exam.Title" :value="timeSlot.Date.slice(0, 10)">
               <label :class="[$store.getters['getIsMobile'] ? 'hidden' : '']" style="margin-left:1vw" :for="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)">{{$t('months.' + timeSlot.Date.slice(5,7)) + ' ' + timeSlot.Date.slice(8) + ' ' + timeSlot.Date.slice(0, 4) + '; ' + timeSlot.Time.slice(0, 5)}}</label>
               <label :class="[$store.getters['getIsMobile'] ? 'mx-center' : 'hidden']" style="margin-left:6vw" :for="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)">{{$t('months.' + timeSlot.Date.slice(5,7)) + ' ' + timeSlot.Date.slice(8) + ' ' + timeSlot.Date.slice(0, 4) + '; ' + timeSlot.Time.slice(0, 5)}}</label>
               
               <br>
             </div>
             </div>
-            <p :class="[$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">{{oifExam.Price}}</p>
+            <p :class="[$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">{{exam.Price}}</p>
             <button 
             class="px-4 pt-3 pb-3"
-            v-b-modal="'modal-oif'" @click="insertDynamicLink(oifExam.PaymentLink)">
+            v-b-modal="'modal-oif'" @click="insertDynamicLink(exam.PaymentLink)">
               <div :class="[$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 124, 51, 1)">
                 <div :class="[$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
               </div>

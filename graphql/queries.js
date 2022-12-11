@@ -26,6 +26,72 @@ query ($locale: I18NLocaleCode)  {
 }
 }
 `
+
+export const coursesListQuery = gql`
+
+query ($locale: I18NLocaleCode)  {
+    coursePages(locale: $locale) {
+      data {
+        id
+          attributes {
+            Title   
+            LinkName
+            
+          }
+      }
+  }
+}
+`
+
+export const coursePageQuery = gql`
+query ($locale: I18NLocaleCode, $title: String)  {
+  coursePages(locale: $locale,  filters: {LinkName: { eq: $title}}) {
+    data {
+      id
+        attributes {
+          Title          
+          WelcomeText
+          LinkName
+          Courses{
+            Title
+            Price1
+            Period1
+            PriceComment1
+            Price2
+            Period2
+            PriceComment2
+            Features{
+              Feature
+            }
+          }
+          WelcomeImage{
+            data{
+              attributes{
+                name
+                alternativeText
+                url
+                formats
+                
+              }
+            }
+          }
+          MobileWelcomeImage{
+            data{
+              attributes{
+                name
+                alternativeText
+                url
+                formats
+                
+              }
+            }
+          }
+          
+        }
+    }
+}
+}
+`
 export const examPageQuery = gql`
 query ($locale: I18NLocaleCode, $title: String)  {
   examPages(locale: $locale, filters: {LinkName: { eq: $title}}) {

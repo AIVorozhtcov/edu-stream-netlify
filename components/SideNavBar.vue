@@ -136,8 +136,9 @@
                       </div>
                       <div :class="[coursesIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 items-start justify-end font-bold text-5xl']" style="padding-left:33%; ">
                         <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
-                        <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/courses/english')">{{$t('menu.courses.en')}}</nuxt-link>
-                        <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
+                        <div class="pb-3"  v-for="course in coursePages.data" v-bind:key="course.Title">
+                          <nuxt-link class="hover:no-underline w-full " style="font-size: calc(12px + 2.090625vw);" :to="localePath({ name: 'courses-slug', params: { slug: course.attributes.LinkName }})">{{course.attributes.Title}}</nuxt-link>
+                        </div>
                       </div>
                       <div :class="[examsIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 items-start justify-end font-bold text-5xl']" style="padding-left:33%; ">
                         <div  v-for="exam in examPages.data" v-bind:key="exam.Title">
@@ -224,6 +225,7 @@
 
 //import logo from "/edu-stream_logo.png"
 import { examsListQuery } from '~/graphql/queries';
+import { coursesListQuery } from '~/graphql/queries';
 
 
 export default {
@@ -235,7 +237,8 @@ export default {
       examsIsSelected: false,
       aboutIsSelected: false,
       coursesIsSelected: false,
-      examPages:[]
+      examPages:[],
+      coursePages:[]
     }
   },
   apollo:{
@@ -246,6 +249,13 @@ export default {
         return { locale: this.$i18n.locale }
       },
       query: examsListQuery
+    },
+    coursePages:{
+      prefetch: true,
+      variables() {
+        return { locale: this.$i18n.locale }
+      },
+      query: coursesListQuery
     },
   },
   created () {

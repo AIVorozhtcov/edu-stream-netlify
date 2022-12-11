@@ -3,189 +3,126 @@
     "name": "index___en",
     "path": "/en",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_6dff6a6a"
+    "chunkName": "pages/index"
   },
   {
     "name": "index___ru",
     "path": "/ru",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_6dff6a6a"
+    "chunkName": "pages/index"
   },
   {
     "name": "about-contacts___de",
     "path": "/about/contacts",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\about\\\\contacts.vue",
-    "chunkName": "pages/about/contacts",
-    "_name": "_bbc26e4e"
+    "chunkName": "pages/about/contacts"
   },
   {
     "name": "about-events___de",
     "path": "/about/events",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\about\\\\events.vue",
-    "chunkName": "pages/about/events",
-    "_name": "_b58b0bc2"
+    "chunkName": "pages/about/events"
   },
   {
     "name": "about-info___de",
     "path": "/about/info",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\about\\\\info.vue",
-    "chunkName": "pages/about/info",
-    "_name": "_12a40eb4"
-  },
-  {
-    "name": "courses-english___de",
-    "path": "/courses/english",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\english.vue",
-    "chunkName": "pages/courses/english",
-    "_name": "_2362fc62"
+    "chunkName": "pages/about/info"
   },
   {
     "name": "courses-german___de",
     "path": "/courses/german",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\german.vue",
-    "chunkName": "pages/courses/german",
-    "_name": "_9b837912"
-  },
-  {
-    "name": "courses-italian___de",
-    "path": "/courses/italian",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\italian.vue",
-    "chunkName": "pages/courses/italian",
-    "_name": "_639cab5f"
-  },
-  {
-    "name": "courses-online___de",
-    "path": "/courses/online",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\online.vue",
-    "chunkName": "pages/courses/online",
-    "_name": "_5dc1e5c4"
+    "chunkName": "pages/courses/german"
   },
   {
     "name": "about-contacts___en",
     "path": "/en/about/contacts",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\about\\\\contacts.vue",
-    "chunkName": "pages/about/contacts",
-    "_name": "_bbc26e4e"
+    "chunkName": "pages/about/contacts"
   },
   {
     "name": "about-events___en",
     "path": "/en/about/events",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\about\\\\events.vue",
-    "chunkName": "pages/about/events",
-    "_name": "_b58b0bc2"
+    "chunkName": "pages/about/events"
   },
   {
     "name": "about-info___en",
     "path": "/en/about/info",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\about\\\\info.vue",
-    "chunkName": "pages/about/info",
-    "_name": "_12a40eb4"
-  },
-  {
-    "name": "courses-english___en",
-    "path": "/en/courses/english",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\english.vue",
-    "chunkName": "pages/courses/english",
-    "_name": "_2362fc62"
+    "chunkName": "pages/about/info"
   },
   {
     "name": "courses-german___en",
     "path": "/en/courses/german",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\german.vue",
-    "chunkName": "pages/courses/german",
-    "_name": "_9b837912"
-  },
-  {
-    "name": "courses-italian___en",
-    "path": "/en/courses/italian",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\italian.vue",
-    "chunkName": "pages/courses/italian",
-    "_name": "_639cab5f"
-  },
-  {
-    "name": "courses-online___en",
-    "path": "/en/courses/online",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\online.vue",
-    "chunkName": "pages/courses/online",
-    "_name": "_5dc1e5c4"
+    "chunkName": "pages/courses/german"
   },
   {
     "name": "about-contacts___ru",
     "path": "/ru/about/contacts",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\about\\\\contacts.vue",
-    "chunkName": "pages/about/contacts",
-    "_name": "_bbc26e4e"
+    "chunkName": "pages/about/contacts"
   },
   {
     "name": "about-events___ru",
     "path": "/ru/about/events",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\about\\\\events.vue",
-    "chunkName": "pages/about/events",
-    "_name": "_b58b0bc2"
+    "chunkName": "pages/about/events"
   },
   {
     "name": "about-info___ru",
     "path": "/ru/about/info",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\about\\\\info.vue",
-    "chunkName": "pages/about/info",
-    "_name": "_12a40eb4"
-  },
-  {
-    "name": "courses-english___ru",
-    "path": "/ru/courses/english",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\english.vue",
-    "chunkName": "pages/courses/english",
-    "_name": "_2362fc62"
+    "chunkName": "pages/about/info"
   },
   {
     "name": "courses-german___ru",
     "path": "/ru/courses/german",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\german.vue",
-    "chunkName": "pages/courses/german",
-    "_name": "_9b837912"
+    "chunkName": "pages/courses/german"
   },
   {
-    "name": "courses-italian___ru",
-    "path": "/ru/courses/italian",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\italian.vue",
-    "chunkName": "pages/courses/italian",
-    "_name": "_639cab5f"
-  },
-  {
-    "name": "courses-online___ru",
-    "path": "/ru/courses/online",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\online.vue",
-    "chunkName": "pages/courses/online",
-    "_name": "_5dc1e5c4"
+    "name": "courses-slug___en",
+    "path": "/en/courses/:slug?",
+    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\_slug.vue",
+    "chunkName": "pages/courses/_slug"
   },
   {
     "name": "exams-slug___en",
     "path": "/en/exams/:slug?",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\exams\\\\_slug.vue",
-    "chunkName": "pages/exams/_slug",
-    "_name": "_3274096d"
+    "chunkName": "pages/exams/_slug"
+  },
+  {
+    "name": "courses-slug___ru",
+    "path": "/ru/courses/:slug?",
+    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\_slug.vue",
+    "chunkName": "pages/courses/_slug"
   },
   {
     "name": "exams-slug___ru",
     "path": "/ru/exams/:slug?",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\exams\\\\_slug.vue",
-    "chunkName": "pages/exams/_slug",
-    "_name": "_3274096d"
+    "chunkName": "pages/exams/_slug"
+  },
+  {
+    "name": "courses-slug___de",
+    "path": "/courses/:slug?",
+    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\_slug.vue",
+    "chunkName": "pages/courses/_slug"
   },
   {
     "name": "exams-slug___de",
     "path": "/exams/:slug?",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\exams\\\\_slug.vue",
-    "chunkName": "pages/exams/_slug",
-    "_name": "_3274096d"
+    "chunkName": "pages/exams/_slug"
   },
   {
     "name": "index___de",
     "path": "/",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_6dff6a6a"
+    "chunkName": "pages/index"
   }
 ]

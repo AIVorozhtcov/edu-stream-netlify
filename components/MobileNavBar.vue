@@ -39,8 +39,9 @@
         </div>
         <div :class="[coursesIsSelected ? '' : 'isHidden','flex flex-column mobile-text-menu-link-responsive font-bold justify-between']" style="margin-left:10vw">
           <nuxt-link class="hover:no-underline w-full pl-7 pb-3"  :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
-          <nuxt-link class="hover:no-underline w-full pl-7 pb-3"  :to="localePath('/courses/english')">{{$t('menu.courses.en')}}</nuxt-link>
-          <nuxt-link class="hover:no-underline w-full pl-7 pb-3"  :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
+          <div class="pl-7 pb-3 w-full"  v-for="course in coursePages.data" v-bind:key="course.Title">
+                          <nuxt-link class="hover:no-underline"  :to="localePath({ name: 'courses-slug', params: { slug: course.attributes.LinkName }})">{{course.attributes.Title}}</nuxt-link>
+                        </div>
         </div>
         
         
@@ -214,6 +215,7 @@ import mobileCloseNavbarIcon from "/mobile_close_navbar_icon.png"
 
 import countryFlag from 'vue-country-flag'
 import { examsListQuery } from '~/graphql/queries';
+import { coursesListQuery } from '~/graphql/queries';
 
 
 export default {
@@ -234,7 +236,8 @@ export default {
       examsIsSelected: false,
       aboutIsSelected: false,
       coursesIsSelected: false,
-      examPages:[]
+      examPages:[],
+      coursePages:[]
     }
   },
   apollo:{
@@ -245,6 +248,14 @@ export default {
         return { locale: this.$i18n.locale }
       },
       query: examsListQuery
+    },
+    
+    coursePages:{
+      prefetch: true,
+      variables() {
+        return { locale: this.$i18n.locale }
+      },
+      query: coursesListQuery
     },
   },
   created () {

@@ -16,8 +16,9 @@
                     <div class="flex flex-column items-start">
                         <h1 class="text-xs-header-responsive font-bold">{{$t('menu.courses.self')}}</h1>
                         <nuxt-link class="hover:no-underline text-white" :to="localePath('/courses/german')">{{$t('menu.courses.de_short')}}</nuxt-link>
-                        <nuxt-link class="hover:no-underline text-white" :to="localePath('/courses/english')">{{$t('menu.courses.en_short')}}</nuxt-link>
-                        <nuxt-link class="hover:no-underline text-white" :to="localePath('/courses/italian')">{{$t('menu.courses.it_short')}}</nuxt-link>
+                        <div  v-for="course in coursePages.data" v-bind:key="course.Title">
+                          <nuxt-link class="hover:no-underline text-white" :to="localePath({ name: 'courses-slug', params: { slug: course.attributes.LinkName }})">{{course.attributes.Title}}</nuxt-link>
+                        </div>
                     </div>
                 </div>
                 <div class="w-1/12">
@@ -157,6 +158,7 @@ import phoneIcon from "/phone_icon.svg"
 import emailIcon from "/email_icon.svg"*/
 
 import { examsListQuery } from '~/graphql/queries';
+import { coursesListQuery } from '~/graphql/queries';
 
 
 export default {
@@ -167,7 +169,8 @@ export default {
       instagramLogo: instagramLogo,
       phoneIcon: phoneIcon,
       emailIcon: emailIcon*/
-      examPages:[]
+      examPages:[],
+      coursePages:[]
     }
   },
   apollo:{
@@ -178,6 +181,13 @@ export default {
         return { locale: this.$i18n.locale }
       },
       query: examsListQuery
+    },    
+    coursePages:{
+      prefetch: true,
+      variables() {
+        return { locale: this.$i18n.locale }
+      },
+      query: coursesListQuery
     },
   }
 }
