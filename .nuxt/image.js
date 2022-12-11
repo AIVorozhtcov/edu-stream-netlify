@@ -17,7 +17,9 @@ const imageOptions = {
   },
   "presets": {},
   "provider": "static",
-  "domains": [],
+  "domains": [
+    "res.cloudinary.com"
+  ],
   "alias": {}
 }
 

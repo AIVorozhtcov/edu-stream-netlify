@@ -10,10 +10,10 @@
         </div>
         <nuxt-picture
         :class="this.$store.getters['getIsMobile'] ? 'mobile-welcome-image' : 'w-full h-3/4'"
-        src='https://upload.wikimedia.org/wikipedia/ru/b/b7/Enterthematrix.jpg'
+        :src="this.$store.getters['getIsMobile'] ? examPage.data.attributes.WelcomeImage.data.attributes.formats.small.url : examPage.data.attributes.WelcomeImage.data.attributes.formats.large.url"
         format="webp"
   :alt=examPage.data.attributes.WelcomeImage.data.attributes.alternativeText
-  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  :imgAttrs="{style:'width: 100vw'}"
 />
         </div>
     

@@ -54,7 +54,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     'nuxt-compress',
-    '@nuxt/image',
+    //'@nuxt/image',
     '@nuxt/postcss8',
     
     /*'@nuxtjs/google-fonts',
@@ -76,17 +76,6 @@ export default {
   'nuxt-compress': {
     brotli: {
       threshold: 8192,
-    },
-    image: {
-      domains:['https://upload.wikimedia.org',],
-      screens: {
-        xs: 320,
-        sm: 640,
-        md: 768,
-        lg: 1024,
-        xl: 1280,
-        xxl: 1536,
-      }
     }
   },
 
@@ -100,7 +89,7 @@ export default {
     'cookie-universal-nuxt',
     '@nuxtjs/apollo',
     //'nuxt-compress',
-    //'@nuxt/image'
+    '@nuxt/image'
     
   ],
   apollo:{
@@ -117,6 +106,18 @@ export default {
   },*/
   bootstrapVue: {
     icons: true
+  },
+  
+  image: {
+    domains:['res.cloudinary.com',],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    }
   },
   i18n: {
     locales: ['de','en','ru'],
