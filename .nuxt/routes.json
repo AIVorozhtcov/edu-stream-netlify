@@ -54,24 +54,6 @@
     "chunkName": "pages/courses/online"
   },
   {
-    "name": "exams-new___de",
-    "path": "/exams/new",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\exams\\\\new.vue",
-    "chunkName": "pages/exams/new"
-  },
-  {
-    "name": "exams-oif___de",
-    "path": "/exams/oif",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\exams\\\\oif.vue",
-    "chunkName": "pages/exams/oif"
-  },
-  {
-    "name": "exams-osd___de",
-    "path": "/exams/osd",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\exams\\\\osd.vue",
-    "chunkName": "pages/exams/osd"
-  },
-  {
     "name": "about-contacts___en",
     "path": "/en/about/contacts",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\about\\\\contacts.vue",
@@ -114,24 +96,6 @@
     "chunkName": "pages/courses/online"
   },
   {
-    "name": "exams-new___en",
-    "path": "/en/exams/new",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\exams\\\\new.vue",
-    "chunkName": "pages/exams/new"
-  },
-  {
-    "name": "exams-oif___en",
-    "path": "/en/exams/oif",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\exams\\\\oif.vue",
-    "chunkName": "pages/exams/oif"
-  },
-  {
-    "name": "exams-osd___en",
-    "path": "/en/exams/osd",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\exams\\\\osd.vue",
-    "chunkName": "pages/exams/osd"
-  },
-  {
     "name": "about-contacts___ru",
     "path": "/ru/about/contacts",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\about\\\\contacts.vue",
@@ -172,24 +136,6 @@
     "path": "/ru/courses/online",
     "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\courses\\\\online.vue",
     "chunkName": "pages/courses/online"
-  },
-  {
-    "name": "exams-new___ru",
-    "path": "/ru/exams/new",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\exams\\\\new.vue",
-    "chunkName": "pages/exams/new"
-  },
-  {
-    "name": "exams-oif___ru",
-    "path": "/ru/exams/oif",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\exams\\\\oif.vue",
-    "chunkName": "pages/exams/oif"
-  },
-  {
-    "name": "exams-osd___ru",
-    "path": "/ru/exams/osd",
-    "component": "C:\\\\src\\\\austrian_school_project_heroku_copy\\\\edu-stream\\\\pages\\\\exams\\\\osd.vue",
-    "chunkName": "pages/exams/osd"
   },
   {
     "name": "exams-slug___en",

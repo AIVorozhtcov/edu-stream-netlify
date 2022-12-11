@@ -143,8 +143,6 @@
                         <div  v-for="exam in examPages.data" v-bind:key="exam.Title">
                           <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath({ name: 'exams-slug', params: { slug: exam.attributes.LinkName }, query: { title: exam.attributes.Title }})">{{exam.attributes.Title}}</nuxt-link>
                         </div>
-                        <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/exams/oif')">ÖIF</nuxt-link>
-                        <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/exams/osd')">ÖSD</nuxt-link>
                       </div>
                     </div>
                   </div>    

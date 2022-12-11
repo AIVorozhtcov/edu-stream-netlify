@@ -12,9 +12,6 @@ const _2362fc62 = () => interopDefault(import('..\\pages\\courses\\english.vue' 
 const _9b837912 = () => interopDefault(import('..\\pages\\courses\\german.vue' /* webpackChunkName: "pages/courses/german" */))
 const _639cab5f = () => interopDefault(import('..\\pages\\courses\\italian.vue' /* webpackChunkName: "pages/courses/italian" */))
 const _5dc1e5c4 = () => interopDefault(import('..\\pages\\courses\\online.vue' /* webpackChunkName: "pages/courses/online" */))
-const _8fd8a97a = () => interopDefault(import('..\\pages\\exams\\new.vue' /* webpackChunkName: "pages/exams/new" */))
-const _1a448d22 = () => interopDefault(import('..\\pages\\exams\\oif.vue' /* webpackChunkName: "pages/exams/oif" */))
-const _03d200a3 = () => interopDefault(import('..\\pages\\exams\\osd.vue' /* webpackChunkName: "pages/exams/osd" */))
 const _3274096d = () => interopDefault(import('..\\pages\\exams\\_slug.vue' /* webpackChunkName: "pages/exams/_slug" */))
 
 const emptyFn = () => {}
@@ -65,18 +62,6 @@ export const routerOptions = {
     component: _5dc1e5c4,
     name: "courses-online___de"
   }, {
-    path: "/exams/new",
-    component: _8fd8a97a,
-    name: "exams-new___de"
-  }, {
-    path: "/exams/oif",
-    component: _1a448d22,
-    name: "exams-oif___de"
-  }, {
-    path: "/exams/osd",
-    component: _03d200a3,
-    name: "exams-osd___de"
-  }, {
     path: "/en/about/contacts",
     component: _bbc26e4e,
     name: "about-contacts___en"
@@ -105,18 +90,6 @@ export const routerOptions = {
     component: _5dc1e5c4,
     name: "courses-online___en"
   }, {
-    path: "/en/exams/new",
-    component: _8fd8a97a,
-    name: "exams-new___en"
-  }, {
-    path: "/en/exams/oif",
-    component: _1a448d22,
-    name: "exams-oif___en"
-  }, {
-    path: "/en/exams/osd",
-    component: _03d200a3,
-    name: "exams-osd___en"
-  }, {
     path: "/ru/about/contacts",
     component: _bbc26e4e,
     name: "about-contacts___ru"
@@ -144,18 +117,6 @@ export const routerOptions = {
     path: "/ru/courses/online",
     component: _5dc1e5c4,
     name: "courses-online___ru"
-  }, {
-    path: "/ru/exams/new",
-    component: _8fd8a97a,
-    name: "exams-new___ru"
-  }, {
-    path: "/ru/exams/oif",
-    component: _1a448d22,
-    name: "exams-oif___ru"
-  }, {
-    path: "/ru/exams/osd",
-    component: _03d200a3,
-    name: "exams-osd___ru"
   }, {
     path: "/en/exams/:slug?",
     component: _3274096d,
