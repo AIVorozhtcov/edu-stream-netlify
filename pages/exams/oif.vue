@@ -222,7 +222,7 @@ export default {
     examPage:{
       prefetch: true,
       variables() {
-        return { locale: this.$i18n.locale }
+        return { locale: this.$i18n.locale, title:'ÖIF1' }
       },
       query: examPageQuery
     }

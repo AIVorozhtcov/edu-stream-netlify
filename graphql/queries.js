@@ -11,14 +11,30 @@ query ($locale: I18NLocaleCode) {
   }
   }
 `
-export const examPageQuery = gql`
-query  {
-  examPage (id:2) {
+
+export const examsListQuery = gql`
+query ($locale: I18NLocaleCode)  {
+  examPages(locale: $locale) {
     data {
       id
-      attributes {
+        attributes {
+          Title   
+          LinkName
+          
+        }
+    }
+}
+}
+`
+export const examPageQuery = gql`
+query ($locale: I18NLocaleCode, $title: String)  {
+  examPages(locale: $locale, filters: {Title: { eq: $title}}) {
+    data {
+      id
+        attributes {
           Title          
           WelcomeText
+          LinkName
           ExamListTitle
           ExamDescription
           Exams{

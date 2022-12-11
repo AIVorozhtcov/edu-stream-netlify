@@ -15,6 +15,7 @@ const _5dc1e5c4 = () => interopDefault(import('..\\pages\\courses\\online.vue' /
 const _8fd8a97a = () => interopDefault(import('..\\pages\\exams\\new.vue' /* webpackChunkName: "pages/exams/new" */))
 const _1a448d22 = () => interopDefault(import('..\\pages\\exams\\oif.vue' /* webpackChunkName: "pages/exams/oif" */))
 const _03d200a3 = () => interopDefault(import('..\\pages\\exams\\osd.vue' /* webpackChunkName: "pages/exams/osd" */))
+const _3274096d = () => interopDefault(import('..\\pages\\exams\\_slug.vue' /* webpackChunkName: "pages/exams/_slug" */))
 
 const emptyFn = () => {}
 
@@ -155,6 +156,18 @@ export const routerOptions = {
     path: "/ru/exams/osd",
     component: _03d200a3,
     name: "exams-osd___ru"
+  }, {
+    path: "/en/exams/:slug?",
+    component: _3274096d,
+    name: "exams-slug___en"
+  }, {
+    path: "/ru/exams/:slug?",
+    component: _3274096d,
+    name: "exams-slug___ru"
+  }, {
+    path: "/exams/:slug?",
+    component: _3274096d,
+    name: "exams-slug___de"
   }, {
     path: "/",
     component: _6dff6a6a,

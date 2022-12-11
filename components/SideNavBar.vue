@@ -140,6 +140,9 @@
                         <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/courses/italian')">{{$t('menu.courses.it')}}</nuxt-link>
                       </div>
                       <div :class="[examsIsSelected ? '' : 'isHidden', 'flex flex-column h-3/4 items-start justify-end font-bold text-5xl']" style="padding-left:33%; ">
+                        <div  v-for="exam in examPages.data" v-bind:key="exam.Title">
+                          <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath({ name: 'exams-slug', params: { slug: exam.attributes.LinkName }, query: { title: exam.attributes.Title }})">{{exam.attributes.Title}}</nuxt-link>
+                        </div>
                         <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/exams/oif')">ÖIF</nuxt-link>
                         <nuxt-link class="hover:no-underline w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/exams/osd')">ÖSD</nuxt-link>
                       </div>
@@ -222,6 +225,7 @@
 <script>
 
 //import logo from "/edu-stream_logo.png"
+import { examsListQuery } from '~/graphql/queries';
 
 
 export default {
@@ -232,8 +236,19 @@ export default {
       isSidebarOpen: false,
       examsIsSelected: false,
       aboutIsSelected: false,
-      coursesIsSelected: false
+      coursesIsSelected: false,
+      examPages:[]
     }
+  },
+  apollo:{
+    
+    examPages:{
+      prefetch: true,
+      variables() {
+        return { locale: this.$i18n.locale }
+      },
+      query: examsListQuery
+    },
   },
   created () {
     if (process.browser){
