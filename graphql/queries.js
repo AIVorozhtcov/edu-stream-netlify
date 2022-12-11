@@ -28,7 +28,7 @@ query ($locale: I18NLocaleCode)  {
 `
 export const examPageQuery = gql`
 query ($locale: I18NLocaleCode, $title: String)  {
-  examPages(locale: $locale, filters: {Title: { eq: $title}}) {
+  examPages(locale: $locale, filters: {LinkName: { eq: $title}}) {
     data {
       id
         attributes {
@@ -78,40 +78,6 @@ query ($locale: I18NLocaleCode, $title: String)  {
     }
 }
 }`
-
-export const oifExamsQuery = gql`
-query ($locale: I18NLocaleCode) {
-    oifExams (locale: $locale) {
-      data {
-          attributes {
-              Title
-            	Price
-              PaymentLink
-            	Dates{
-                Date
-                Time
-              }
-          }
-      }
-  }
-  }`
-
-  export const osdExamsQuery = gql`
-  query ($locale: I18NLocaleCode) {
-      osdExams (locale: $locale) {
-        data {
-            attributes {
-                Title
-                Price
-                PaymentLink
-                Dates{
-                  Date
-                  Time
-                }
-            }
-        }
-    }
-    }`
 
 export const englishCoursesQuery = gql`
 query ($locale: I18NLocaleCode) {

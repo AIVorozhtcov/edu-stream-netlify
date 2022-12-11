@@ -28,8 +28,10 @@
           <b-icon style="width:4vw; height:auto" class="menu-arrow-icon" :icon="this.examsHoverHandler()"/>
         </div>
         <div :class="[examsIsSelected ? '' : 'isHidden','flex flex-column mobile-text-menu-link-responsive font-bold justify-between']" style="margin-left:10vw">
-          <nuxt-link class="hover:no-underline w-full pl-7 pb-3"  :to="localePath('/exams/oif')">OIF</nuxt-link>
-          <nuxt-link class="hover:no-underline w-full pl-7 pb-3"  :to="localePath('/exams/osd')">OSD</nuxt-link>
+          
+          <div  v-for="exam in examPages.data" v-bind:key="exam.Title">
+            <nuxt-link class="hover:no-underline w-full pl-7 pb-3" :to="localePath({ name: 'exams-slug', params: { slug: exam.attributes.LinkName }})">{{exam.attributes.Title}}</nuxt-link>
+          </div>
         </div>
         <div @click="coursesIsSelected = true; aboutIsSelected = false; examsIsSelected = false"  :class="[coursesIsSelected ? 'menu-selected' : '', 'mobile-text-menu-title-responsive flex flex-row items-center']" style="margin-top:2vh; margin-left:5vw">
           <p>{{$t('menu.courses.self')}}</p>
@@ -211,6 +213,7 @@ import mobileCloseNavbarIcon from "/mobile_close_navbar_icon.png"
 */
 
 import countryFlag from 'vue-country-flag'
+import { examsListQuery } from '~/graphql/queries';
 
 
 export default {
@@ -230,10 +233,20 @@ export default {
       isMobileSidebarOpen: false,
       examsIsSelected: false,
       aboutIsSelected: false,
-      coursesIsSelected: false
+      coursesIsSelected: false,
+      examPages:[]
     }
   },
-  
+  apollo:{
+    
+    examPages:{
+      prefetch: true,
+      variables() {
+        return { locale: this.$i18n.locale }
+      },
+      query: examsListQuery
+    },
+  },
   created () {
     if (process.browser){
       window.addEventListener('scroll', this.handleScroll);

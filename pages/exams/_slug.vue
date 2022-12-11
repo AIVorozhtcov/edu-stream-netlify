@@ -23,12 +23,12 @@
       <div class="flex flex-column w-full bg-white py-10">
         
   
-        <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mobile-text-xl-responsive' : 'w-5/12 text-3xl', 'py-5 font-bold']" v-html="examPages.data[0].attributes.ExamListTitle"></div>
+        <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mobile-text-xl-responsive' : 'w-5/12 text-3xl', 'py-5 font-bold']"><h1>{{examPages.data[0].attributes.ExamListTitle}}</h1></div>
           
         <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column mobile-label-text-responsive' : 'flex flex-row flex-wrap', 'items-start']">
           <div v-for="oifExam in examPages.data[0].attributes.Exams" v-bind:key="oifExam.Title">
             <div :class="[$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit mr-3 mb-5', 'bg-slate-100 rounded flex flex-column ']" >
-            <div :class="[$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="oifExam.Title"></div>
+            <div :class="[$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']"><h2>{{oifExam.Title}}</h2></div>
             <div v-for="timeSlot in oifExam.Dates" v-bind:key="timeSlot.Date + ',' + timeSlot.Time">
             <div :class="[$store.getters['getIsMobile'] ? 'mt-4' : 'justify-start', 'flex flex-row items-center  w-full']" >
               <input :class="[$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked :id="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)" :name="oifExam.Title" :value="timeSlot.Date.slice(0, 10)">
@@ -161,7 +161,6 @@
   import oeifLogo from "/oeif-logo.png"
   import overlappingStudentGroup from "/overlapping_student_group.png"
   */
-  import { oifExamsQuery } from '~/graphql/queries';
   import { examPageQuery } from '~/graphql/queries';
   import FAQAccordion from '/components/FAQAccordion.vue'
   
@@ -200,7 +199,6 @@
         response_phone: null,
         dynamicLink: null,
         checkedTimes:[],
-        oifExams:[],
         examPages: null
         
       }
@@ -212,17 +210,10 @@
     },
     apollo:{
       
-      oifExams:{
-        prefetch: true,
-        variables() {
-          return { locale: this.$i18n.locale }
-        },
-        query: oifExamsQuery
-      },
       examPages:{
         prefetch: true,
         variables() {
-          return {locale: this.$i18n.locale, title: this.$route.query.title}
+          return {locale: this.$i18n.locale, title: this.$route.params.slug}
         },
         query: examPageQuery
       }

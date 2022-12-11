@@ -23,8 +23,9 @@
                 <div class="w-1/12">
                     <div class="flex flex-column items-start">
                         <h1 class="text-xs-header-responsive font-bold">{{$t('menu.exams.self')}}</h1>
-                        <nuxt-link class="hover:no-underline text-white" :to="localePath('/exams/oif')">OIF</nuxt-link>
-                        <nuxt-link class="hover:no-underline text-white" :to="localePath('/exams/osd')">OSD</nuxt-link>
+                        <div  v-for="exam in examPages.data" v-bind:key="exam.Title">
+                            <nuxt-link class="hover:no-underline text-white" :to="localePath({ name: 'exams-slug', params: { slug: exam.attributes.LinkName }})">{{exam.attributes.Title}}</nuxt-link>
+                        </div>
                     </div>
                 </div>
                 <div class="flex flex-column w-1/12">
@@ -155,6 +156,8 @@ import instagramLogo from "/instagram_logo.svg"
 import phoneIcon from "/phone_icon.svg"
 import emailIcon from "/email_icon.svg"*/
 
+import { examsListQuery } from '~/graphql/queries';
+
 
 export default {
   data: function () {
@@ -164,7 +167,18 @@ export default {
       instagramLogo: instagramLogo,
       phoneIcon: phoneIcon,
       emailIcon: emailIcon*/
+      examPages:[]
     }
+  },
+  apollo:{
+    
+    examPages:{
+      prefetch: true,
+      variables() {
+        return { locale: this.$i18n.locale }
+      },
+      query: examsListQuery
+    },
   }
 }
 
