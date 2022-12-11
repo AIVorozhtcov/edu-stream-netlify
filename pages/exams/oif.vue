@@ -10,13 +10,14 @@
         </div>
         <nuxt-picture
         :class="this.$store.getters['getIsMobile'] ? 'mobile-welcome-image' : 'w-full h-3/4'"
-        src="https://upload.wikimedia.org/wikipedia/ru/b/b7/Enterthematrix.jpg"
+        src='https://upload.wikimedia.org/wikipedia/ru/b/b7/Enterthematrix.jpg'
         format="webp"
   :alt=examPage.data.attributes.WelcomeImage.data.attributes.alternativeText
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />
         </div>
     
+        
    
     <div class="flex flex-column w-full bg-white py-10">
       

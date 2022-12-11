@@ -15,7 +15,6 @@ import { createStore } from './store.js'
 
 import nuxt_plugin_plugin_4b35fe50 from 'nuxt_plugin_plugin_4b35fe50' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_bootstrapvue_2eedb4bc from 'nuxt_plugin_bootstrapvue_2eedb4bc' // Source: .\\bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_image_91793124 from 'nuxt_plugin_image_91793124' // Source: .\\image.js (mode: 'all')
 import nuxt_plugin_apollomodule_4599d982 from 'nuxt_plugin_apollomodule_4599d982' // Source: .\\apollo-module.js (mode: 'all')
 import nuxt_plugin_cookieuniversalnuxt_491e77ca from 'nuxt_plugin_cookieuniversalnuxt_491e77ca' // Source: .\\cookie-universal-nuxt.js (mode: 'all')
 import nuxt_plugin_pluginutils_42d7d85b from 'nuxt_plugin_pluginutils_42d7d85b' // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
@@ -23,6 +22,7 @@ import nuxt_plugin_pluginrouting_bb788a34 from 'nuxt_plugin_pluginrouting_bb788a
 import nuxt_plugin_pluginmain_00bb8a49 from 'nuxt_plugin_pluginmain_00bb8a49' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
 import nuxt_plugin_pluginclient_2fcfb706 from 'nuxt_plugin_pluginclient_2fcfb706' // Source: .\\content\\plugin.client.js (mode: 'client')
 import nuxt_plugin_pluginserver_d4edaee4 from 'nuxt_plugin_pluginserver_d4edaee4' // Source: .\\content\\plugin.server.js (mode: 'server')
+import nuxt_plugin_image_91793124 from 'nuxt_plugin_image_91793124' // Source: .\\image.js (mode: 'all')
 import nuxt_plugin_vuecarousel_0d4d0f1e from 'nuxt_plugin_vuecarousel_0d4d0f1e' // Source: ..\\plugins\\vue-carousel (mode: 'client')
 
 // Component: <ClientOnly>
@@ -228,10 +228,6 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_bootstrapvue_2eedb4bc(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_image_91793124 === 'function') {
-    await nuxt_plugin_image_91793124(app.context, inject)
-  }
-
   if (typeof nuxt_plugin_apollomodule_4599d982 === 'function') {
     await nuxt_plugin_apollomodule_4599d982(app.context, inject)
   }
@@ -258,6 +254,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.server && typeof nuxt_plugin_pluginserver_d4edaee4 === 'function') {
     await nuxt_plugin_pluginserver_d4edaee4(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_image_91793124 === 'function') {
+    await nuxt_plugin_image_91793124(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_vuecarousel_0d4d0f1e === 'function') {
