@@ -101,7 +101,7 @@ export default {
   },
   
   image: {
-    domain:['https://res.cloudinary.com'],
+    domain:['upload.wikimedia.org'],
     screens: {
       xs: 320,
       sm: 640,

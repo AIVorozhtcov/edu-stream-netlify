@@ -8,11 +8,11 @@
             <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-button-text' : 'button-text', 'text-white']" v-html="$t('exams.oif.register')"></div>
           </button>
         </div>
-        <nuxt-img
+        <nuxt-picture
         :class="this.$store.getters['getIsMobile'] ? 'mobile-welcome-image' : 'w-full h-3/4'"
-        :src="this.$store.getters['getIsMobile'] ? '/oif_welcome.png' : '/oif_welcome.png'"
+        src="https://upload.wikimedia.org/wikipedia/ru/b/b7/Enterthematrix.jpg"
         format="webp"
-  alt="Welcome to OIF exam!"
+  :alt=examPage.data.attributes.WelcomeImage.data.attributes.alternativeText
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />
         </div>
@@ -198,7 +198,8 @@ export default {
       response_phone: null,
       dynamicLink: null,
       checkedTimes:[],
-      oifExams:[]
+      oifExams:[],
+      examPage: null
       
     }
   },
@@ -215,6 +216,13 @@ export default {
         return { locale: this.$i18n.locale }
       },
       query: oifExamsQuery
+    },
+    examPage:{
+      prefetch: true,
+      variables() {
+        return { locale: this.$i18n.locale }
+      },
+      query: examPageQuery
     }
   },
   }
