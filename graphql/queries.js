@@ -11,6 +11,37 @@ query ($locale: I18NLocaleCode) {
   }
   }
 `
+export const examPageQuery = gql`
+query  {
+  examPage (id:1) {
+    data {
+      id
+      attributes {
+          Title          
+          WelcomeText
+          ExamListTitle
+          ExamDescription
+          FAQ{
+            Question
+            Answer
+          }
+          WelcomeImage{
+            data{
+              attributes{
+                name
+                alternativeText
+                url
+                formats
+                
+              }
+            }
+          }
+          
+        }
+    }
+}
+}`
+
 export const oifExamsQuery = gql`
 query ($locale: I18NLocaleCode) {
     oifExams (locale: $locale) {

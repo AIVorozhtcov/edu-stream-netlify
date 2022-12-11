@@ -54,7 +54,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     'nuxt-compress',
-    '@nuxt/image',
+    //'@nuxt/image',
     '@nuxt/postcss8',
     
     /*'@nuxtjs/google-fonts',
@@ -78,16 +78,6 @@ export default {
       threshold: 8192,
     },
   },
-  image: {
-    screens: {
-      xs: 320,
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      xxl: 1536,
-    }
-  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -97,9 +87,9 @@ export default {
     '@nuxt/content',
     '@nuxtjs/i18n',
     'cookie-universal-nuxt',
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
     //'nuxt-compress',
-    //'@nuxt/image'
+    '@nuxt/image'
     
   ],
   apollo:{
@@ -107,6 +97,18 @@ export default {
       default: {
         httpEndpoint: process.env.BACKEND_URL || "https://edustream-strapi.up.railway.app/graphql"
       }
+    }
+  },
+  
+  image: {
+    domain:['https://res.cloudinary.com'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
     }
   },
   /*'nuxt-compress': {

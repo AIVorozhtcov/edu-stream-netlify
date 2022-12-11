@@ -160,6 +160,7 @@ import oeifLogo from "/oeif-logo.png"
 import overlappingStudentGroup from "/overlapping_student_group.png"
 */
 import { oifExamsQuery } from '~/graphql/queries';
+import { examPageQuery } from '~/graphql/queries';
 import FAQAccordion from '/components/FAQAccordion.vue'
 
 export default {
