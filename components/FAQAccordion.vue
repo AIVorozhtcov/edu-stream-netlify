@@ -1,19 +1,19 @@
 <template>
   <div class="">
     <div
-      v-for="(question, index) in Questions"
-      :key="question.questionTitle"
+      v-for="FAQEntry in FAQContent"
+      :key="FAQEntry.Question"
     >
-        <div class="flex flex-row items-center justify-between cursor-pointer py-3 border-b-2"  style="border-bottom-color: rgba(67, 133, 245, 1);" @click="questionItemClick(index)">
+        <div class="flex flex-row items-center justify-between cursor-pointer py-3 border-b-2"  style="border-bottom-color: rgba(67, 133, 245, 1);" @click="questionItemClick(FAQEntry.id)">
         
             <p :class="[rpthis.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '',]" >
-                {{ question.questionTitle }}
+                {{ FAQEntry.Question }}
             </p>
             <b-icon icon="plus" />
 
     </div>
-      <div :data-question-id="index" class="p-6 hidden"  style="background-color:rgba(248, 248, 248, 1);">
-        <div :class="[rpthis.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'pt-3']" v-html="question.questionAnswer"></div>
+      <div :data-question-id="FAQEntry.id" class="p-6 hidden"  style="background-color:rgba(248, 248, 248, 1);">
+        <div :class="[rpthis.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'pt-3']" v-html="FAQEntry.Answer"></div>
       </div>
     </div>
   </div>
@@ -25,6 +25,8 @@
 
 <script>
 export default {
+  props: ['FAQContent'],
+
   data () {
     return {
       rpthis: this.$store,

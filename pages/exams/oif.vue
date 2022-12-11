@@ -10,10 +10,11 @@
         </div>
         <nuxt-picture
         :class="this.$store.getters['getIsMobile'] ? 'mobile-welcome-image' : 'w-full h-3/4'"
-        :src="this.$store.getters['getIsMobile'] ? examPage.data.attributes.WelcomeImage.data.attributes.formats.small.url : examPage.data.attributes.WelcomeImage.data.attributes.formats.large.url"
+        :src="this.$store.getters['getIsMobile'] ? examPage.data.attributes.MobileWelcomeImage.data.attributes.formats.small.url : examPage.data.attributes.WelcomeImage.data.attributes.formats.large.url"
         format="webp"
   :alt=examPage.data.attributes.WelcomeImage.data.attributes.alternativeText
-  :imgAttrs="{style:'width: 100vw'}"
+  :imgAttrs="{style:'width: 100vw; height: auto'}"
+  sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />
         </div>
     
@@ -22,25 +23,25 @@
     <div class="flex flex-column w-full bg-white py-10">
       
 
-      <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mobile-text-xl-responsive' : 'w-5/12 text-3xl', 'py-5 font-bold']" v-html="$t('exams.oif.subtitle')"></div>
+      <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mobile-text-xl-responsive' : 'w-5/12 text-3xl', 'py-5 font-bold']" v-html="examPage.data.attributes.ExamListTitle"></div>
         
       <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column mobile-label-text-responsive' : 'flex flex-row flex-wrap', 'items-start']">
-        <div v-for="oifExam in oifExams.data" v-bind:key="oifExam.Title">
+        <div v-for="oifExam in examPage.data.attributes.Exams" v-bind:key="oifExam.Title">
           <div :class="[$store.getters['getIsMobile'] ? ' w-full mb-5' : 'h-fit w-fit mr-3 mb-5', 'bg-slate-100 rounded flex flex-column ']" >
-          <div :class="[$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="oifExam.attributes.Title"></div>
-          <div v-for="timeSlot in oifExam.attributes.Dates" v-bind:key="timeSlot.Date + ',' + timeSlot.Time">
+          <div :class="[$store.getters['getIsMobile'] ? 'mx-auto mobile-text-xlabel-responsive mt-2' : 'flex flex-row', 'px-4 font-bold pb-3 pt-3']" v-html="oifExam.Title"></div>
+          <div v-for="timeSlot in oifExam.Dates" v-bind:key="timeSlot.Date + ',' + timeSlot.Time">
           <div :class="[$store.getters['getIsMobile'] ? 'mt-4' : 'justify-start', 'flex flex-row items-center  w-full']" >
-            <input :class="[$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked :id="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)" :name="oifExam.attributes.Title" :value="timeSlot.Date.slice(0, 10)">
+            <input :class="[$store.getters['getIsMobile'] ? 'mobile-radio' : '']" type="radio" checked :id="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)" :name="oifExam.Title" :value="timeSlot.Date.slice(0, 10)">
             <label :class="[$store.getters['getIsMobile'] ? 'hidden' : '']" style="margin-left:1vw" :for="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)">{{$t('months.' + timeSlot.Date.slice(5,7)) + ' ' + timeSlot.Date.slice(8) + ' ' + timeSlot.Date.slice(0, 4) + '; ' + timeSlot.Time.slice(0, 5)}}</label>
             <label :class="[$store.getters['getIsMobile'] ? 'mx-center' : 'hidden']" style="margin-left:6vw" :for="timeSlot.Date + ',' + timeSlot.Time.slice(0, 5)">{{$t('months.' + timeSlot.Date.slice(5,7)) + ' ' + timeSlot.Date.slice(8) + ' ' + timeSlot.Date.slice(0, 4) + '; ' + timeSlot.Time.slice(0, 5)}}</label>
             
             <br>
           </div>
           </div>
-          <p :class="[$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">{{oifExam.attributes.Price}}</p>
+          <p :class="[$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto font-semibold mt-4' : '', 'px-4 font-bold py-1']">{{oifExam.Price}}</p>
           <button 
           class="px-4 pt-3 pb-3"
-          v-b-modal="'modal-oif'" @click="insertDynamicLink(oifExam.attributes.PaymentLink)">
+          v-b-modal="'modal-oif'" @click="insertDynamicLink(oifExam.PaymentLink)">
             <div :class="[$store.getters['getIsMobile'] ? 'mobile-buy-exam-button mx-auto' : 'rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 124, 51, 1)">
               <div :class="[$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive mx-auto py-2 text-center' : 'px-5 py-1', 'text-white' ]"  v-html="$t('exams.oif.register')"></div>
             </div>
@@ -60,8 +61,8 @@
     </div>
     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-global-margins' : 'ignore-global-margins', 'flex']" style="background-color:rgba(248, 248, 248, 1); padding-top:5vh;">
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-global-margins' : 'global-margins', 'flex flex-column']">
-        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '', 'pb-3']" v-html="$t('exams.oif.FAQ-preview')"></div>
-        <FAQAccordion :class="[this.$store.getters['getIsMobile'] ? 'pb-5' : '']" />
+        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '', 'pb-3']" v-html="examPage.data.attributes.ExamDescription"></div>
+        <FAQAccordion :FAQContent="examPage.data.attributes.FAQ" :class="[this.$store.getters['getIsMobile'] ? 'pb-5' : '']" />
         <!-- <b-button v-b-toggle="'collapse-2'" class="m-1">Toggle Collapse</b-button>
         <p v-b-toggle="'collapse-2'"> also open</p>        
         <b-collapse class="container bg-slate-800" id="collapse-2">
@@ -78,9 +79,9 @@
       </div>-->
       </div>
     </div>
-    <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'ignore-global-margins', 'h-fit relative ']" >
-      <nuxt-link class="w-full pb-3" style="font-size: calc(12px + 2.090625vw);" :to="localePath('/exams/osd')">
-        <button class="z-40 btn absolute rounded-lg h-fit w-fit" style="margin-top:30vh; margin-left:21.75vw; background-color:rgba(255, 124, 51, 1)"  >
+    <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'ignore-global-margins', 'h-fit relative overflow-hidden']" >
+      <nuxt-link class="z-40 absolute pb-3" style="font-size: calc(12px + 2.090625vw); margin-top:30vh; margin-left:21.75vw;" :to="localePath('/exams/osd')">
+        <button class="z-40 btn  rounded-lg h-fit w-fit" style=" background-color:rgba(255, 124, 51, 1)"  >
           <div class="text-white my-auto" style="font-size: calc(2px + 0.70625vw); padding-top:0.25vw; padding-right: 1.6vw; padding-left: 1.6vw" v-html="$t('exams.oif.register')"></div>
         </button>
       </nuxt-link>

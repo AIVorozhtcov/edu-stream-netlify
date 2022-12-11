@@ -13,7 +13,7 @@ query ($locale: I18NLocaleCode) {
 `
 export const examPageQuery = gql`
 query  {
-  examPage (id:1) {
+  examPage (id:2) {
     data {
       id
       attributes {
@@ -21,11 +21,32 @@ query  {
           WelcomeText
           ExamListTitle
           ExamDescription
+          Exams{
+            Title
+            Price
+            PaymentLink
+            Dates{
+              Date
+              Time
+            }
+          }
           FAQ{
+            id
             Question
             Answer
           }
           WelcomeImage{
+            data{
+              attributes{
+                name
+                alternativeText
+                url
+                formats
+                
+              }
+            }
+          }
+          MobileWelcomeImage{
             data{
               attributes{
                 name

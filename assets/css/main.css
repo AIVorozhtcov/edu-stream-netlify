@@ -36,7 +36,7 @@ body
 }
 
 .mobile-welcome-content{
-  bottom:0%;
+  bottom:-3%;
 }
 .mobile-welcome-content-background{
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 71.58%);
