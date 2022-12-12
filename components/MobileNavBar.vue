@@ -11,12 +11,12 @@
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />        
       </b-button>
-      <b-sidebar v-model="isMobileSidebarOpen" class="mobile-text-base-responsive flex flex-column justify-around items-start" @focusout="closeMobileSidebar" id="sidebar-2" width="63%" no-header>
-        
+      <b-sidebar v-model="isMobileSidebarOpen" class="mobile-text-base-responsive flex flex-column justify-around items-start" @focusout="closeMobileSidebar" :backdrop-variant="whiteBackdrop" style=""  :backdrop="false" id="sidebar-2" width="63%" no-header>
+        <div class="b-sidebar-backdrop bg-white" style="top:0vh;"></div>
         <div class="flex flex-column justify-between w-full" @mouseleave="closeMobileSidebar">
         <div @click="aboutIsSelected = true; coursesIsSelected = false; examsIsSelected = false"  :class="[aboutIsSelected ? 'menu-selected' : '', 'mobile-text-menu-title-responsive flex flex-row items-center']" style="margin-top:5vh; margin-left:5vw">
           <p>{{$t('menu.about_us.self')}}</p>
-          <b-icon style="width:4vw; height:auto" class="menu-arrow-icon" :icon="this.aboutHoverHandler()"/>
+          <b-icon style="width:3vw; height:auto" class="menu-arrow-icon" :icon="this.aboutHoverHandler()"/>
         </div>
         <div :class="[aboutIsSelected ? '' : 'isHidden','flex flex-column mobile-text-menu-link-responsive font-bold justify-between']" style="margin-left:10vw">
           <nuxt-link class="hover:no-underline w-full pl-7 pb-3"  :to="localePath('/about/info')">{{$t('menu.about_us.about_us')}}</nuxt-link>
@@ -25,7 +25,7 @@
         </div>
         <div @click="examsIsSelected = true; coursesIsSelected = false; aboutIsSelected = false"  :class="[examsIsSelected ? 'menu-selected' : '', 'mobile-text-menu-title-responsive flex flex-row items-center']" style="margin-top:2vh; margin-left:5vw">
           <p>{{$t('menu.exams.self')}}</p>
-          <b-icon style="width:4vw; height:auto" class="menu-arrow-icon" :icon="this.examsHoverHandler()"/>
+          <b-icon style="width:3vw; height:auto" class="menu-arrow-icon" :icon="this.examsHoverHandler()"/>
         </div>
         <div :class="[examsIsSelected ? '' : 'isHidden','flex flex-column mobile-text-menu-link-responsive font-bold justify-between']" style="margin-left:10vw">
           
@@ -35,7 +35,7 @@
         </div>
         <div @click="coursesIsSelected = true; aboutIsSelected = false; examsIsSelected = false"  :class="[coursesIsSelected ? 'menu-selected' : '', 'mobile-text-menu-title-responsive flex flex-row items-center']" style="margin-top:2vh; margin-left:5vw">
           <p>{{$t('menu.courses.self')}}</p>
-          <b-icon style="width:4vw; height:auto" class="menu-arrow-icon" :icon="this.coursesHoverHandler()"/>
+          <b-icon style="width:3vw; height:auto" class="menu-arrow-icon" :icon="this.coursesHoverHandler()"/>
         </div>
         <div :class="[coursesIsSelected ? '' : 'isHidden','flex flex-column mobile-text-menu-link-responsive font-bold justify-between']" style="margin-left:10vw">
           <nuxt-link class="hover:no-underline w-full pl-7 pb-3"  :to="localePath('/courses/german')">{{$t('menu.courses.de')}}</nuxt-link>
@@ -135,11 +135,10 @@
       
 </template>
 
-<style scoped>
+<style>
  .isHidden {
   display: none;
 }
-
 .text-navbar-sm{
   font-size:calc(1px + 0.730625vw);  
 }
@@ -236,6 +235,7 @@ export default {
       examsIsSelected: false,
       aboutIsSelected: false,
       coursesIsSelected: false,
+      whiteBackdrop: 'white',
       examPages:[],
       coursePages:[]
     }

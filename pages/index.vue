@@ -12,7 +12,7 @@
           :src="this.$store.getters['getIsMobile'] ? indexPage.data.attributes.MobileWelcomeImage.data.attributes.url : indexPage.data.attributes.WelcomeImage.data.attributes.formats.large.url"
           format="webp"
     :alt=indexPage.data.attributes.WelcomeImage.data.attributes.alternativeText
-    :imgAttrs="{style:'width: 100vw; height: auto'}"
+    :imgAttrs="this.$store.getters['getIsMobile'] ? {style:'width: 100vw; height: 40vh'} : {style:'width: 100vw; height: auto'}"
     sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
   />
     </div>

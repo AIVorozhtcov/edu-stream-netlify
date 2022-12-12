@@ -129,9 +129,11 @@ query ($locale: I18NLocaleCode)  {
 export const examsListQuery = gql`
 query ($locale: I18NLocaleCode)  {
   examPages(locale: $locale) {
+    
     data {
       id
         attributes {
+          
           Title   
           LinkName
           
@@ -168,6 +170,7 @@ query ($locale: I18NLocaleCode, $title: String)  {
           WelcomeText
           MetaTitle
           MetaDescription
+          MobileWelcomeText
           LinkName
           Courses{
             Title
@@ -222,6 +225,7 @@ query ($locale: I18NLocaleCode)  {
           MetaTitle
           MetaDescription
           LinkName
+          MobileWelcomeText
           Courses{
             Title
             Price1
@@ -270,6 +274,7 @@ query ($locale: I18NLocaleCode, $title: String)  {
     data {
       id
         attributes {
+          MobileWelcomeText
           Title          
           WelcomeText
           MetaTitle

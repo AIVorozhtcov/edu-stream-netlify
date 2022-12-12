@@ -3,7 +3,8 @@
       
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-ignore-global-margins' : 'ignore-global-margins', 'relative flex h-fit']">   
           <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-welcome-content mobile-welcome-content-background w-full pl-3' : 'welcome-content', 'absolute flex flex-column']">       
-            <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-welcome-text-responsive ml-5 font-bold' : 'welcome-text font-extrabold', 'h-fit text-white flex-wrap']" v-html="examPages.data[0].attributes.WelcomeText"></div>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive ml-5 hidden' : 'welcome-subtext font-bold', 'mb-4 text-white']" v-html=examPages.data[0].attributes.WelcomeText></div>
+            <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive ml-5' : 'welcome-subtext font-bold hidden', 'mb-4 text-white']" v-html=examPages.data[0].attributes.MobileWelcomeText></div>
             <button type="button" :class="[this.$store.getters['getIsMobile'] ? 'mobile-button mobile-welcome-button-margin' : '', 'btn rounded-2xl h-fit w-fit']" style="background-color:rgba(255, 124, 51, 1);" @click="$bvModal.show('modal-1')" >
               <div :class="[this.$store.getters['getIsMobile'] ? 'mx-auto mobile-button-text' : 'button-text', 'text-white']" v-html="$t('exams.oif.register')"></div>
             </button>
@@ -13,7 +14,7 @@
           :src="this.$store.getters['getIsMobile'] ? examPages.data[0].attributes.MobileWelcomeImage.data.attributes.formats.small.url : examPages.data[0].attributes.WelcomeImage.data.attributes.formats.large.url"
           format="webp"
     :alt=examPages.data[0].attributes.WelcomeImage.data.attributes.alternativeText
-    :imgAttrs="{style:'width: 100vw; height: auto'}"
+    :imgAttrs="this.$store.getters['getIsMobile'] ? {style:'width: 100vw; height: 40vh'} : {style:'width: 100vw; height: auto'}"
     sizes="xl:100vw lg:100vw md:20vw sm:20vw xs:20vw"
   />
           </div>
