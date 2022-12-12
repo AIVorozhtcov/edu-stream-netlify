@@ -632,7 +632,7 @@ export default {
         }
   },
     nextBanner() {
-      this.$refs.bannerCarousel.goToPage(this.$refs.bannerCarousel.getNextPage());
+      $refs.bannerCarousel.goToPage($refs.bannerCarousel.getNextPage());
     },
     prevBanner() {
       $refs.bannerCarousel.goToPage($refs.bannerCarousel.getPreviousPage());
