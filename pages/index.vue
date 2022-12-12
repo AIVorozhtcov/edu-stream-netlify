@@ -28,7 +28,7 @@
   alt="Welcome to german courses!"
   sizes="xl:5vw lg:5vw md:5vw sm:5vw xs:5vw"
 />       
-        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_1')"></div>
+        <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html=indexPage.data.attributes.ColorTab1></div>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-2', ' text-white']"  style="background-color:#96BDFF;">
         <nuxt-img
@@ -36,7 +36,7 @@
         src="/color_tabs_icon_2_mobile.png"
   alt="Welcome to german courses!"
   sizes="xl:5vw lg:5vw md:5vw sm:5vw xs:5vw"
-/>       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_2')"></div>
+/>       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html=indexPage.data.attributes.ColorTab2></div>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-2', ' text-white']"  style="background-color:#4385F5;">
         <nuxt-img
@@ -45,7 +45,7 @@
   alt="Welcome to german courses!"
   sizes="xl:5vw lg:5vw md:5vw sm:5vw xs:5vw"
 />       
-       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_3')"></div>
+       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html=indexPage.data.attributes.ColorTab3></div>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab items-center flex flex-row' : 'color-tab items-start flex flex-column pl-2', ' text-white']"  style="background-color:#253984;">
         <nuxt-img
@@ -54,7 +54,7 @@
   alt="Welcome to german courses!"
   sizes="xl:5vw lg:5vw md:5vw sm:5vw xs:5vw"
 />       
-<div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html="$t('main.color_tabs.t_4')"></div>
+<div :class="[this.$store.getters['getIsMobile'] ? 'mobile-color-tab-text' : 'color-tab-text pr-6 pb-6']"   v-html=indexPage.data.attributes.ColorTab4></div>
       </div>
       <div :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'flex w-full flex-column items-start text-white']" style="padding-top:5%; padding-bottom:5%;background-color:#253984; padding-left:1%; width:20%"></div>
       
@@ -129,41 +129,19 @@
       
     </div>
     <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-banners-border' : 'border-b', 'py-16 flex flex-row justify-around']">
-      <nuxt-img
-      class="h-auto w-1/5"
-      src="/banner_row_1.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:15vw lg:15vw md:15vw sm:15vw xs:15vw"
-/>       
-<nuxt-img
-      class="h-auto w-1/5"
-      src="/banner_row_2.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:15vw lg:15vw md:15vw sm:15vw xs:15vw"
-/>       
-<nuxt-img
-      class="h-auto w-1/5"
-      src="/banner_row_3.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:15vw lg:15vw md:15vw sm:15vw xs:15vw"
-/>       
-<nuxt-img
-      class="h-auto w-1/5"
-      src="/banner_row_4.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:15vw lg:15vw md:15vw sm:15vw xs:15vw"
-/>       
-<nuxt-img
-      class="h-auto w-1/5"
-      src="/banner_row_5.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:15vw lg:15vw md:15vw sm:15vw xs:15vw"
-/>       
+      
+      <div  v-for="certificate in indexPage.data.attributes.Certificates.data" v-bind:key="certificate.attributes.name">
+        <nuxt-picture
+        class="h-auto w-1/5"
+          :src=certificate.attributes.url
+          format="webp"
+    :alt=certificate.attributes.name.alternativeText
+    :imgAttrs="{style:'width: 100vw; height: auto'}"
+    sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+  />
+        
+
+      </div>
     </div>
       <client-only>
         <div :class="[this.$store.getters['getIsMobile'] ? 'pb-32' : 'ignore-r-global-margin', 'relative py-16 flex flex-row items-center h-1/12']" >
@@ -180,39 +158,30 @@
             </button>
           </div>
           <carousel class="w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :scrollPerPage="false" :spacePadding="40" >
-            
-            <slide class="w-1/2 mr-2 rounded">
-              <nuxt-img
-              :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']"
-              :src="this.$store.getters['getIsMobile'] ? '/mobile_promo_banner_1_group.png' : '/promo_banner_1_group.png'"
-      style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:65vw lg:65vw md:65vw sm:65vw xs:65vw"
-/>       
-            </slide>
-            <slide class="w-1/2 mr-2 rounded">
-              <nuxt-img
-              :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']"
-              :src="this.$store.getters['getIsMobile'] ? '/mobile_promo_banner_1_group.png' : '/promo_banner_1_group.png'"
-      style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:65vw lg:65vw md:65vw sm:65vw xs:65vw"
-/>       
-            </slide>
-            <slide class="w-1/2 rounded">
-              <nuxt-img
-              :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : '', 'rounded']"
-              :src="this.$store.getters['getIsMobile'] ? '/mobile_promo_banner_1_group.png' : '/promo_banner_1_group.png'"
-      style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:65vw lg:65vw md:65vw sm:65vw xs:65vw"
-/>       
-            </slide>
-            
-          
+            <div :v-if="!$store.getters['getIsMobile']"  v-for="promo in indexPage.data.attributes.PromoCarousel.data" v-bind:key="promo.attributes.name">
+              <slide class="w-1/2 mr-2 rounded">
+              <nuxt-picture
+              class="rounded"
+                :src=promo.attributes.url
+                format="webp"
+                style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
+          :alt=promo.attributes.name.alternativeText
+          sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+        />
+        </slide>
+        </div>
+        <div :v-if="$store.getters['getIsMobile']"  v-for="promoMobile in indexPage.data.attributes.MobilePromoCarousel.data" v-bind:key="promoMobile.attributes.name">
+              <slide class="w-1/2 mr-2 rounded">
+              <nuxt-picture
+              class="rounded mobile-banner-size"
+                :src=promoMobile.attributes.url
+                format="webp"
+                style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
+          :alt=promoMobile.attributes.name.alternativeText
+          sizes="image.png"
+        />
+        </slide>
+        </div>
           </carousel>
           <div class="absolute right-14 z-40">
             <button @click.prevent="nextBanner" class="">

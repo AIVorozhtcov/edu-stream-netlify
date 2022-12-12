@@ -76,6 +76,17 @@ query ($locale: I18NLocaleCode)  {
               }
             }
           }
+          MobilePromoCarousel{
+            data{
+              attributes{
+                name
+                alternativeText
+                url
+                formats
+                
+              }
+            }
+          }
           LogoCarousel{
             data{
               attributes{
