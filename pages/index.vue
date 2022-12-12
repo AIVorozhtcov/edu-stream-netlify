@@ -135,7 +135,7 @@
         class="h-auto w-1/5"
           :src=certificate.attributes.url
           format="webp"
-    :alt=certificate.attributes.name.alternativeText
+    :alt=certificate.attributes.alternativeText
     :imgAttrs="{style:'width: 100vw; height: auto'}"
     sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
   />
@@ -143,8 +143,8 @@
 
       </div>
     </div>
-      <client-only>
-        <div :class="[this.$store.getters['getIsMobile'] ? 'pb-32' : 'ignore-r-global-margin', 'relative py-16 flex flex-row items-center h-1/12']" >
+      <client-only v-if="indexPage.data.attributes.PromoCarousel.data">
+        <div  :class="[this.$store.getters['getIsMobile'] ? 'pb-32' : 'ignore-r-global-margin', 'relative py-16 flex flex-row items-center h-1/12']" >
           <div class="absolute z-40">
             <button @click.prevent="prevBanner" class="">
               <nuxt-img
@@ -157,20 +157,31 @@
 />       
             </button>
           </div>
-          <carousel v-if="showSlider" class="w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :spacePadding="40" :scrollPerPage="false"  >
-            <div :v-if="!$store.getters['getIsMobile']"  v-for="promo in indexPage.data.attributes.PromoCarousel.data" v-bind:key="promo.attributes.name">
-              <slide class="mr-2 rounded">
+          <carousel  class="w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :scrollPerPage="false"  >
+            
+              <slide class="mr-2 rounded" :v-if="!$store.getters['getIsMobile']"  v-for="promo in indexPage.data.attributes.PromoCarousel.data" v-bind:key="promo.attributes.name">
               <nuxt-picture
               class="rounded"
                 :src=promo.attributes.url
                 format="webp"
                 style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
-          :alt=promo.attributes.name.alternativeText
-          sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
-          :imgAttrs="{style:'width: 80vw; max-width:100vw; height: auto'}"
+          :alt=promo.attributes.alternativeText
+          sizes="xl:70vw lg:70vw md:70vw sm:70vw xs:70vw"
+          :imgAttrs="{style:'width: 75vw; max-width:100vw; height: 20vw'}"
         />
         </slide>
-        </div>
+        
+              <slide class="mr-2 rounded" :v-if="$store.getters['getIsMobile']"  v-for="promoMobile in indexPage.data.attributes.MobilePromoCarousel.data" v-bind:key="promoMobile.attributes.name">
+              <nuxt-picture
+              class="rounded mobile-banner-size"
+                :src=promoMobile.attributes.url
+                format="webp"
+                style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
+          :alt=promoMobile.attributes.alternativeText
+          sizes="xl:60vw lg:60vw md:60vw sm:60vw xs:60vw"
+          :imgAttrs="{style:'width: 90vw; max-width:100vw; height: auto'}"
+        />
+        </slide>
           </carousel>
           <div class="absolute right-14 z-40">
             <button @click.prevent="nextBanner" class="">
@@ -188,62 +199,28 @@
       </client-only>
     
     
-    <div class="flex flex-column items-start w-full">
-      <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : 'text-xl-responsive', 'font-bold']" > {{$t('main.about.our_school')}}</h1>
-      <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'pt-6 pb-16']">{{$t('main.about.our_school_expanded')}}</p>
+      <div :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'flex flex-column items-start']">
+      <h1 :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : 'text-xl-responsive', 'font-bold']" > {{indexPage.data.attributes.AboutBlock.Title}}</h1>
+      <p :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'pt-6 pb-16']">{{indexPage.data.attributes.AboutBlock.SubTitle}}</p>
+      
       <client-only :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'justify-center h-1/12 w-full']">
         
         <carousel ref="gallery" :class="[this.$store.getters['getIsMobile'] ? 'w-full' : 'w-11/12', 'justify-between']" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="false" :adjustableHeight="false" :perPage="this.$store.getters['getIsMobile'] ? 1 : 3" :scrollPerPage="false" :spacePadding="40" >
-          <slide class="w-1/2 mr-2 rounded">
-            <nuxt-img
-            :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
-              src="/promo_banner_1_group.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:25vw lg:25vw md:25vw sm:25vw xs:25vw"
-/>       
-          </slide>
-          <slide class="w-1/2 mr-2 rounded">
-            <nuxt-img
-            :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
-              src="/promo_banner_1_group.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:25vw lg:25vw md:25vw sm:25vw xs:25vw"
-/>       
-          </slide>
-          <slide class="w-1/2 mr-2 rounded">
-            <nuxt-img
-            :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
-              src="/promo_banner_1_group.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:25vw lg:25vw md:25vw sm:25vw xs:25vw"
-/>       
-          </slide>
-          <slide class="w-1/2 mr-2 rounded">
-            <nuxt-img
-            :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
-              src="/promo_banner_1_group.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:25vw lg:25vw md:25vw sm:25vw xs:25vw"
-/>       
-          </slide>
-          <slide class="w-1/2 rounded">
-            <nuxt-img
-            :class="[this.$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
-              src="/promo_banner_1_group.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:25vw lg:25vw md:25vw sm:25vw xs:25vw"
-/>       
-          </slide>
-          
-          
+          <slide  class="w-1/2 mr-2 rounded"  v-for="galleryPhoto in indexPage.data.attributes.AboutBlock.PhotoGallery.data" v-bind:key="galleryPhoto.attributes.name">
+            <nuxt-picture
+            :class="[$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
+            :src=galleryPhoto.attributes.url
+            format="webp"
+                style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
+          :alt=galleryPhoto.attributes.alternativeText
+          sizes="xl:60vw lg:60vw md:60vw sm:60vw xs:60vw"
+          :imgAttrs=" $store.getters['getIsMobile'] ? {style:'width: 80vw; max-width:100vw; height: 20vw'} : {style:'width: 21vw; max-width:100vw; height: 10vw'}"
+        />
+        </slide>
         </carousel>
+      
       </client-only>
-    
+   
     
       <div :class="[this.$store.getters['getIsMobile'] ? 'justify-center' : 'justify-between', 'py-3 flex flex-row  items-center w-full mx-auto']">
         <nuxt-link :to="localePath('/about/info')">
@@ -260,22 +237,26 @@
 />       
         </button>
       </div>
-      <div :class="[this.$store.getters['getIsMobile'] ? 'flex-column items-center' : 'flex-row', 'flex py-16 justify-between']">
-        <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mr-8 ml-4' : 'w-5/12', 'flex flex-column']">              
+      <div :class="[this.$store.getters['getIsMobile'] ? 'flex-column items-center' : 'flex-row global-r-margin', 'flex py-16 justify-between']">
+        <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mr-8 ml-4' : '', 'flex flex-column']">              
           
-          <h1 class=""><div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : 'text-xl-responsive', 'font-bold']" v-html="$t('main.about.location')"> </div></h1>
-          <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'pt-6 pb-16']" v-html="$t('main.about.location_expanded')"></div>
+          <h1 class=""><div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-xl-responsive' : 'text-xl-responsive', 'font-bold']" v-html=indexPage.data.attributes.LocationBlock.Title> </div></h1>
+          <div :class="[this.$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : 'text-base-responsive', 'pt-6 pb-16']" v-html=indexPage.data.attributes.LocationBlock.AboutText></div>
         </div>
-        <nuxt-img
-        :class="[this.$store.getters['getIsMobile'] ? 'mobile-banner-size' : 'w-5/12 h-auto']"
-        src="/location_photo.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:40vw lg:40vw md:40vw sm:40vw xs:40vw"
-/>       
+        <nuxt-picture
+            :class="[$store.getters['getIsMobile'] ? 'mobile-gallery-image-size' : '', 'rounded']"
+            :src=indexPage.data.attributes.LocationBlock.LocationPhoto.data.attributes.url
+            format="webp"
+               
+          :alt=indexPage.data.attributes.LocationBlock.LocationPhoto.data.attributes.alternativeText
+          sizes="xl:60vw lg:60vw md:60vw sm:60vw xs:60vw"
+          
+          :imgAttrs=" $store.getters['getIsMobile'] ? {style:'width: 80vw; max-width:100vw; height: auto'} : {style:'width: 35vw; max-width:100vw; height: auto; margin-left:5vw'}"
+        />
         
 
       </div>
+      <div class="global-r-margin">
       <form name="indexForm"
         @submit.prevent="handleIndexFormSubmit"
         method="POST"
@@ -319,120 +300,21 @@
         </div>
         <div class="mx-center"><div :class="[this.$store.getters['getIsMobile'] ? 'modal-info-text-responsive w-11/12 mx-auto' : 'text-xs-responsive', 'text-center font-normal text-white']" v-html="$t('main.form_subtext')"> </div></div>
       </form>
+    </div>
       <div class="my-16 h-full w-full flex flex-column items-start ignore-r-global-margin">
         <client-only :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full pl-30 justify-center']">        
           <carousel ref="logoGallery" :class="[this.$store.getters['getIsMobile'] ? '' : 'ignore-r-global-margin', 'w-full h-full justify-between']" :paginationEnabled="false" :loop="true" :navigationEnabled="false" :autoplay="true" :adjustableHeight="false" :perPage="3" :scrollPerPage="true" :spacePadding="40" >
-            <slide class="w-full">
-              <nuxt-img
-              src="/logo_gallery/1.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-full">
-            <nuxt-img
-              src="/logo_gallery/2.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-1/2">
-            <nuxt-img
-              src="/logo_gallery/3.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-1/2">
-            <nuxt-img
-              src="/logo_gallery/4.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-1/2">
-            <nuxt-img
-              src="/logo_gallery/5.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-1/2">
-            <nuxt-img
-              src="/logo_gallery/6.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-1/2">
-            <nuxt-img
-              src="/logo_gallery/7.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-1/2">
-            <nuxt-img
-              src="/logo_gallery/8.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-1/2">
-            <nuxt-img
-              src="/logo_gallery/9.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-1/2">
-              <nuxt-img
-              src="/logo_gallery/10.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-1/2">
-              <nuxt-img
-              src="/logo_gallery/11.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-1/2">
-              <nuxt-img
-              src="/logo_gallery/12.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-1/2">
-              <nuxt-img
-              src="/logo_gallery/13.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
-            </slide>
-            <slide class="w-1/2">
-              <nuxt-img
-              src="/logo_gallery/14.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:17vw lg:17vw md:17vw sm:17vw xs:17vw"
-/>       
+            <slide v-for="logo in indexPage.data.attributes.LogoCarousel.data" v-bind:key="logo.attributes.name" class="w-full">
+              <nuxt-picture
+            
+            :src=logo.attributes.url
+            format="webp"
+               
+          :alt=logo.attributes.alternativeText
+          sizes="xl:60vw lg:60vw md:60vw sm:60vw xs:60vw"
+          
+          
+        />
             </slide>
             
             
@@ -597,8 +479,7 @@ export default {
       checkedTimes:[],
       slide: 0,
       sliding: null,
-      indexPage: null,
-      showSlider: true
+      indexPage: null
     }
   },
   
@@ -632,10 +513,10 @@ export default {
         }
   },
     nextBanner() {
-      $refs.bannerCarousel.goToPage($refs.bannerCarousel.getNextPage());
+      this.$refs.bannerCarousel.goToPage(this.$refs.bannerCarousel.getNextPage());
     },
     prevBanner() {
-      $refs.bannerCarousel.goToPage($refs.bannerCarousel.getPreviousPage());
+      this.$refs.bannerCarousel.goToPage(this.$refs.bannerCarousel.getPreviousPage());
     },
       nextGalleryImage() {
       this.$refs.gallery.goToPage(this.$refs.gallery.getNextPage());
