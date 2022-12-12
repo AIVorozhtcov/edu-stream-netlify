@@ -9,7 +9,7 @@
         </div>
         <nuxt-picture
           :class="this.$store.getters['getIsMobile'] ? 'mobile-welcome-image' : 'w-full h-3/4'"
-          :src="this.$store.getters['getIsMobile'] ? indexPage.data.attributes.MobileWelcomeImage.data.attributes.formats.small.url : indexPage.data.attributes.WelcomeImage.data.attributes.formats.large.url"
+          :src="this.$store.getters['getIsMobile'] ? indexPage.data.attributes.MobileWelcomeImage.data.attributes.url : indexPage.data.attributes.WelcomeImage.data.attributes.formats.large.url"
           format="webp"
     :alt=indexPage.data.attributes.WelcomeImage.data.attributes.alternativeText
     :imgAttrs="{style:'width: 100vw; height: auto'}"
