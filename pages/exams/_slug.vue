@@ -141,10 +141,6 @@
     .mobile-welcome-text-responsive{
       font-size: calc(3px + 2.60625vw);
     }
-    .mobile-welcome-image{
-      height:24vh;
-      width:auto;
-    }
     
     .mobile-buy-exam-button{
       
@@ -167,7 +163,7 @@
   export default {
     head() {
           return {
-      title: this.$t('meta.exams.oif.title'),
+      title: this.examPages.data[0].attributes.MetaTitle,
       
       htmlAttrs: {
         lang: this.$i18n.locale
@@ -176,7 +172,7 @@
             {
               hid: 'description',
               name: 'description',
-              content: this.$t('meta.exams.oif.description')
+              content: this.examPages.data[0].attributes.MetaDescription
             }
           ],
           };

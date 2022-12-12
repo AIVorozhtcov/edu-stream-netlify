@@ -82,10 +82,6 @@
 .welcome-subtext{
   font-size: calc(2px + 1.150625vw);
 }
-.mobile-welcome-image{
-    height:24vh;
-    width:auto;
-  }
   
   .mobile-welcome-text-responsive{
     font-size: calc(3px + 2.60625vw);
@@ -102,10 +98,6 @@
   .welcome-content{
     margin-left:21%; margin-top:20%
 }
- .mobile-welcome-image{
-    height:24vh;
-    width:auto;
-  }
   .nav-link.active.tab-active-class {
   background-color: red;
 }

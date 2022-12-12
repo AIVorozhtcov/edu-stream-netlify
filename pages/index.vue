@@ -8,7 +8,7 @@
           </button>
         </div>
         <nuxt-img
-        :class="[this.$store.getters['getIsMobile'] ? 'h-1/2 w-full' : 'w-full h-3/4']"
+        :class="[this.$store.getters['getIsMobile'] ? 'mobile-welcome-image' : 'w-full h-3/4']"
         :src="this.$store.getters['getIsMobile'] ? '/mobile_frontpage_welcome.png' : '/frontpage_welcome.png'"
         format="webp"
   alt="Welcome to Edu-stream!"

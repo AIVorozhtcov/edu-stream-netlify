@@ -34,9 +34,13 @@ body
 .mobile-welcome-button-margin{
   margin-bottom:3vh
 }
+.mobile-welcome-image{
+  height:fit-content;
+  width:auto;
+}
 
 .mobile-welcome-content{
-  bottom:-3%;
+  bottom:0%;
 }
 .mobile-welcome-content-background{
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 71.58%);

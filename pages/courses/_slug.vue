@@ -28,7 +28,7 @@
               <div class="online-tag" v-if="$t('courses.english.cards.1.is_online')=='true'">Online</div>-->
             </div>
             <ul :class="[$store.getters['getIsMobile'] ? 'mobile-text-base-responsive' : '', 'font-bold pl-5']">
-              <div  v-for="feature in course.Features" v-bind:key="feature">
+              <div  v-for="feature in course.Features" v-bind:key="feature.Feature">
                 <li :class="[$store.getters['getIsMobile'] ? 'mobile-text-sm-responsive font-normal pl-3' : 'course-card-li', 'py-1']" v-html="feature.Feature"></li>
               </div>
             </ul>
@@ -73,10 +73,6 @@
   .welcome-subtext{
     font-size: calc(2px + 1.150625vw);
   }
-  .mobile-welcome-image{
-      height:24vh;
-      width:auto;
-    }
     
     .mobile-welcome-text-responsive{
       font-size: calc(3px + 2.60625vw);
@@ -93,10 +89,6 @@
     .welcome-content{
       margin-left:21%; margin-top:20%
   }
-   .mobile-welcome-image{
-      height:27vh;
-      width:auto;
-    }
   </style>
   <script>
   
@@ -105,7 +97,7 @@
   export default {
     head() {
           return {
-      title: this.$t('meta.courses.english.title'),
+      title: this.coursePages.data[0].attributes.MetaTitle,
       
       htmlAttrs: {
         lang: this.$i18n.locale
@@ -114,7 +106,7 @@
             {
               hid: 'description',
               name: 'description',
-              content: this.$t('meta.courses.english.description')
+              content: this.coursePages.data[0].attributes.MetaDescription
             }
           ],
           };

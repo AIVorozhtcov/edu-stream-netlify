@@ -51,6 +51,8 @@ query ($locale: I18NLocaleCode, $title: String)  {
         attributes {
           Title          
           WelcomeText
+          MetaTitle
+          MetaDescription
           LinkName
           Courses{
             Title
@@ -100,6 +102,8 @@ query ($locale: I18NLocaleCode, $title: String)  {
         attributes {
           Title          
           WelcomeText
+          MetaTitle
+          MetaDescription
           LinkName
           ExamListTitle
           ExamDescription
