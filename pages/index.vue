@@ -143,12 +143,12 @@
 
       </div>
     </div>
-      <client-only v-if="indexPage.data.attributes.PromoCarousel.data">
-        <div  :class="[this.$store.getters['getIsMobile'] ? 'pb-32' : 'ignore-r-global-margin', 'relative py-16 flex flex-row items-center h-1/12']" >
+      <client-only v-if="!$store.getters['getIsMobile']">
+        <div  class='ignore-r-global-margin relative py-16 flex flex-row items-center h-1/12' >
           <div class="absolute z-40">
             <button @click.prevent="prevBanner" class="">
               <nuxt-img
-              :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'w-2/12']"
+              class="getIsMobile w-2/12"
       src="/banner_arrow_left.png"
       style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
         format="webp"
@@ -159,7 +159,7 @@
           </div>
           <carousel  class="w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :scrollPerPage="false"  >
             
-              <slide class="mr-2 rounded" :v-if="!$store.getters['getIsMobile']"  v-for="promo in indexPage.data.attributes.PromoCarousel.data" v-bind:key="promo.attributes.name">
+              <slide class="mr-2 rounded"   v-for="promo in indexPage.data.attributes.PromoCarousel.data" v-bind:key="promo.attributes.name">
               <nuxt-picture
               class="rounded"
                 :src=promo.attributes.url
@@ -170,6 +170,29 @@
           :imgAttrs="{style:'width: 75vw; max-width:100vw; height: 20vw'}"
         />
         </slide>
+          </carousel>
+          <div class="absolute right-14 z-40">
+            <button @click.prevent="nextBanner" class="">
+              <nuxt-img
+              class='w-4/12'
+              style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
+              src="/banner_arrow_right.png"
+        format="webp"
+  alt="Welcome to german courses!"
+  sizes="xl:20vw lg:20vw md:20vw sm:20vw xs:20vw"
+/>       
+            </button>
+          </div>
+        </div>
+      </client-only>
+      <client-only v-if="$store.getters['getIsMobile']">
+        <div  class='pb-32 relative py-16 flex flex-row items-center h-1/12' >
+          <div class="absolute z-40">
+            
+          </div>
+          <carousel  class="w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :scrollPerPage="false"  >
+            
+              
         
               <slide class="mr-2 rounded" :v-if="$store.getters['getIsMobile']"  v-for="promoMobile in indexPage.data.attributes.MobilePromoCarousel.data" v-bind:key="promoMobile.attributes.name">
               <nuxt-picture
@@ -183,18 +206,7 @@
         />
         </slide>
           </carousel>
-          <div class="absolute right-14 z-40">
-            <button @click.prevent="nextBanner" class="">
-              <nuxt-img
-              :class="[this.$store.getters['getIsMobile'] ? 'hidden' : 'w-4/12']"
-              style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
-              src="/banner_arrow_right.png"
-        format="webp"
-  alt="Welcome to german courses!"
-  sizes="xl:20vw lg:20vw md:20vw sm:20vw xs:20vw"
-/>       
-            </button>
-          </div>
+          
         </div>
       </client-only>
     
