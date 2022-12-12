@@ -157,7 +157,7 @@
 />       
             </button>
           </div>
-          <carousel class="w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :spacePadding="40" :scrollPerPage="false"  >
+          <carousel v-if="showSlider" class="w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :spacePadding="40" :scrollPerPage="false"  >
             <div :v-if="!$store.getters['getIsMobile']"  v-for="promo in indexPage.data.attributes.PromoCarousel.data" v-bind:key="promo.attributes.name">
               <slide class="mr-2 rounded">
               <nuxt-picture
@@ -168,18 +168,6 @@
           :alt=promo.attributes.name.alternativeText
           sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
           :imgAttrs="{style:'width: 80vw; max-width:100vw; height: auto'}"
-        />
-        </slide>
-        </div>
-        <div :v-if="$store.getters['getIsMobile']"  v-for="promoMobile in indexPage.data.attributes.MobilePromoCarousel.data" v-bind:key="promoMobile.attributes.name">
-              <slide class="mr-2 rounded">
-              <nuxt-picture
-              class="rounded mobile-banner-size"
-                :src=promoMobile.attributes.url
-                format="webp"
-                style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
-          :alt=promoMobile.attributes.name.alternativeText
-          sizes="image.png"
         />
         </slide>
         </div>
@@ -609,7 +597,8 @@ export default {
       checkedTimes:[],
       slide: 0,
       sliding: null,
-      indexPage: null
+      indexPage: null,
+      showSlider: true
     }
   },
   
@@ -646,7 +635,7 @@ export default {
       this.$refs.bannerCarousel.goToPage(this.$refs.bannerCarousel.getNextPage());
     },
     prevBanner() {
-      this.$refs.bannerCarousel.goToPage(this.$refs.bannerCarousel.getPreviousPage());
+      $refs.bannerCarousel.goToPage($refs.bannerCarousel.getPreviousPage());
     },
       nextGalleryImage() {
       this.$refs.gallery.goToPage(this.$refs.gallery.getNextPage());
