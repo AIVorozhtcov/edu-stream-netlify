@@ -157,9 +157,9 @@
 />       
             </button>
           </div>
-          <carousel class="w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :scrollPerPage="false" :spacePadding="40" >
+          <carousel class="w-full" ref="bannerCarousel" :loop="true" :paginationEnabled="false" :navigationEnable="true" :centerMode="true" :autoplay="true" :adjustableHeight="false" :perPage="1" :spacePadding="40" :scrollPerPage="false"  >
             <div :v-if="!$store.getters['getIsMobile']"  v-for="promo in indexPage.data.attributes.PromoCarousel.data" v-bind:key="promo.attributes.name">
-              <slide class="w-1/2 mr-2 rounded">
+              <slide class="mr-2 rounded">
               <nuxt-picture
               class="rounded"
                 :src=promo.attributes.url
@@ -167,11 +167,12 @@
                 style="border-radius: 50%; background-color:rgba(255, 255, 255, 1)"
           :alt=promo.attributes.name.alternativeText
           sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+          :imgAttrs="{style:'width: 80vw; max-width:100vw; height: auto'}"
         />
         </slide>
         </div>
         <div :v-if="$store.getters['getIsMobile']"  v-for="promoMobile in indexPage.data.attributes.MobilePromoCarousel.data" v-bind:key="promoMobile.attributes.name">
-              <slide class="w-1/2 mr-2 rounded">
+              <slide class="mr-2 rounded">
               <nuxt-picture
               class="rounded mobile-banner-size"
                 :src=promoMobile.attributes.url
