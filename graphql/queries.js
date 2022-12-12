@@ -11,6 +11,109 @@ query ($locale: I18NLocaleCode) {
   }
   }
 `
+export const indexPageQuery = gql`
+
+query ($locale: I18NLocaleCode)  {
+  indexPage(locale: $locale) {
+    data {
+      id
+        attributes {
+          MetaTitle            
+          MetaDescription
+          WelcomeText
+          ColorTab1
+          ColorTab2
+          ColorTab3
+          ColorTab4
+          AboutBlock{
+            Title
+            SubTitle
+            PhotoGallery{
+              data{
+                attributes{
+                  name
+                  alternativeText
+                  url
+                  formats
+
+                }
+              }
+            }
+          }
+          LocationBlock{
+            Title
+            AboutText
+            LocationPhoto{
+              data{
+              attributes{
+                name
+                alternativeText
+                url
+                formats
+                
+              }
+            }
+            }
+          }
+          Certificates{
+            data{
+              attributes{
+                name
+                alternativeText
+                url
+                
+              }
+            }
+          }
+          PromoCarousel{
+            data{
+              attributes{
+                name
+                alternativeText
+                url
+                formats
+                
+              }
+            }
+          }
+          LogoCarousel{
+            data{
+              attributes{
+                name
+                alternativeText
+                url
+                
+              }
+            }
+          }
+          WelcomeImage{
+            data{
+              attributes{
+                name
+                alternativeText
+                url
+                formats
+                
+              }
+            }
+          }
+          MobileWelcomeImage{
+            data{
+              attributes{
+                name
+                alternativeText
+                url
+                formats
+                
+              }
+            }
+          }
+          
+        }
+    }
+}
+}
+`
 
 export const examsListQuery = gql`
 query ($locale: I18NLocaleCode)  {
@@ -36,6 +139,7 @@ query ($locale: I18NLocaleCode)  {
           attributes {
             Title   
             LinkName
+            FooterName
             
           }
       }

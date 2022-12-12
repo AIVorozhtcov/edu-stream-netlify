@@ -112,7 +112,7 @@ import { germanCourseCategoriesQuery } from '~/graphql/queries';
 export default {
   head() {
         return {
-    title: this.$t('meta.courses.german.title'),
+    title: this.germanCoursePage.data.attributes.MetaTitle,
     
     htmlAttrs: {
       lang: this.$i18n.locale
@@ -121,7 +121,7 @@ export default {
           {
             hid: 'description',
             name: 'description',
-            content: this.$t('meta.courses.german.description')
+            content: this.germanCoursePage.data.attributes.MetaDescription
           }
         ],
         };

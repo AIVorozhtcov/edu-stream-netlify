@@ -17,7 +17,7 @@
                         <h1 class="text-xs-header-responsive font-bold">{{$t('menu.courses.self')}}</h1>
                         <nuxt-link class="hover:no-underline text-white" :to="localePath('/courses/german')">{{$t('menu.courses.de_short')}}</nuxt-link>
                         <div  v-for="course in coursePages.data" v-bind:key="course.Title">
-                          <nuxt-link class="hover:no-underline text-white" :to="localePath({ name: 'courses-slug', params: { slug: course.attributes.LinkName }})">{{course.attributes.Title}}</nuxt-link>
+                          <nuxt-link class="hover:no-underline text-white" :to="localePath({ name: 'courses-slug', params: { slug: course.attributes.LinkName }})">{{course.attributes.FooterName}}</nuxt-link>
                         </div>
                     </div>
                 </div>

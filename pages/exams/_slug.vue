@@ -14,7 +14,7 @@
           format="webp"
     :alt=examPages.data[0].attributes.WelcomeImage.data.attributes.alternativeText
     :imgAttrs="{style:'width: 100vw; height: auto'}"
-    sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+    sizes="xl:100vw lg:100vw md:20vw sm:20vw xs:20vw"
   />
           </div>
       

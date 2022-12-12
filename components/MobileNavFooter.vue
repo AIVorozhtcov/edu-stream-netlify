@@ -38,7 +38,7 @@
                         <h1 class="mobile-page-title-text pb-10 font-bold">{{$t('menu.courses.self')}}</h1>
                         <nuxt-link class="pt-7 hover:no-underline text-white" :to="localePath('/courses/german')">{{$t('menu.courses.de_short')}}</nuxt-link>
                         <div class="pt-7"  v-for="course in coursePages.data" v-bind:key="course.Title">
-                          <nuxt-link class="hover:no-underline text-white" :to="localePath({ name: 'courses-slug', params: { slug: course.attributes.LinkName }})">{{course.attributes.Title}}</nuxt-link>
+                          <nuxt-link class="hover:no-underline text-white" :to="localePath({ name: 'courses-slug', params: { slug: course.attributes.LinkName }})">{{course.attributes.FooterName}}</nuxt-link>
                         </div>
                     </div>
                 </div>
@@ -63,23 +63,23 @@
                     <p class="mobile-address-margin">{{$t('footer.mon_thu')}}</p>
                     <p class="mobile-address-margin">{{$t('footer.friday')}}</p>
                     <p class="mobile-address-margin" style="margin-bottom:3vh">{{$t('footer.sat_sun')}}</p>
-                    <div class="flex flex-row" style="margin-bottom:2vh">
+                    <div class="flex flex-row items-center" style="margin-bottom:2vh">
                         <nuxt-img
                         style="width: 5vw; height: auto"
                         src="/phone_icon.svg"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />        
-                        <div class="text-white pl-1" v-html="$t('footer.phone_number')"></div>
+                        <div class="text-white" style="margin-left:5vw" v-html="$t('footer.phone_number')"></div>
                     </div>
-                    <div class="flex flex-row" style="">
+                    <div class="flex flex-row items-center" style="">
                         <nuxt-img
                         style="width: 5vw; height: auto"
                         src="/email_icon.svg"
   alt="Welcome to german courses!"
   sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
 />        
-                        <div class="text-white pl-1" v-html="$t('footer.email_address')"></div>
+                        <div class="text-white" style="margin-left:5vw" v-html="$t('footer.email_address')"></div>
                     </div>
                 </div>
             <div class="font-normal flex w-full w-full items-center justify-between  py-7 mobile-mwd-text-responsive" style="border-bottom: 1px solid #6A8ACA; border-top: 1px solid #6A8ACA;">
