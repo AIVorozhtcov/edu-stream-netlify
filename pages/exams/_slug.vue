@@ -23,7 +23,7 @@
       <div class="flex flex-column w-full bg-white py-10">
         
   
-        <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mobile-text-xl-responsive' : 'w-5/12 text-3xl', 'py-5 font-bold']"><h1>{{examPages.data[0].attributes.ExamListTitle}}</h1></div>
+        <div :class="[this.$store.getters['getIsMobile'] ? 'w-full mobile-text-xl-responsive' : 'w-full text-3xl', 'py-5 font-bold']"><h1>{{examPages.data[0].attributes.ExamListTitle}}</h1></div>
           
         <div :class="[this.$store.getters['getIsMobile'] ? 'flex flex-column mobile-label-text-responsive' : 'flex flex-row flex-wrap', 'items-start']">
           <div v-for="exam in examPages.data[0].attributes.Exams" v-bind:key="exam.Title">

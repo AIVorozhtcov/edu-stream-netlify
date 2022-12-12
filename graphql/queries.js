@@ -94,6 +94,61 @@ query ($locale: I18NLocaleCode, $title: String)  {
 }
 }
 `
+
+export const germanCoursePageQuery = gql`
+
+query ($locale: I18NLocaleCode)  {
+  germanCoursePage(locale: $locale) {
+    data {
+      id
+        attributes {
+          Title          
+          WelcomeText
+          MetaTitle
+          MetaDescription
+          LinkName
+          Courses{
+            Title
+            Price1
+            Period1
+            PriceComment1
+            Price2
+            Period2
+            PriceComment2
+            Category
+            Features{
+              Feature
+            }
+          }
+          WelcomeImage{
+            data{
+              attributes{
+                name
+                alternativeText
+                url
+                formats
+                
+              }
+            }
+          }
+          MobileWelcomeImage{
+            data{
+              attributes{
+                name
+                alternativeText
+                url
+                formats
+                
+              }
+            }
+          }
+          
+        }
+    }
+}
+}
+`
+
 export const examPageQuery = gql`
 query ($locale: I18NLocaleCode, $title: String)  {
   examPages(locale: $locale, filters: {LinkName: { eq: $title}}) {
@@ -149,6 +204,8 @@ query ($locale: I18NLocaleCode, $title: String)  {
 }
 }`
 
+/*
+
 export const englishCoursesQuery = gql`
 query ($locale: I18NLocaleCode) {
     englishCourses  (locale: $locale) {
@@ -190,6 +247,7 @@ query ($locale: I18NLocaleCode) {
   }
   }
 `
+*//*
 export const germanCoursesQuery =gql`
 query ($locale: I18NLocaleCode) {
     germanCourses (locale: $locale) {
@@ -216,7 +274,7 @@ query ($locale: I18NLocaleCode) {
   }
   }
 `
-
+*/
 export const germanCourseCategoriesQuery =gql`
 query ($locale: I18NLocaleCode) {
     germanCoursesCategories (locale: $locale) {
